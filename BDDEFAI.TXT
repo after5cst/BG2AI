@@ -33,6 +33,14 @@ THEN
 		Continue()
 END
 
+// BDAI_SKILL_MODE (settable in GUI):
+// 0 == Not Set
+// 1 == Find Traps
+// 2 == Hide in Shadows
+// 3 == Bard Song
+// 4 == Turn Undead
+
+// If no skill mode is set, set find traps if class capable
 IF
 	ActionListEmpty()
 	Global("BDAI_INIT_SKILL","LOCALS",0)
