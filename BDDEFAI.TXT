@@ -1,5 +1,6 @@
 IF
-	Global("BDAI_RESET_TIMERS","GLOBAL",1)
+  ActionListEmpty()
+	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_Blind","LOCALS",0)
@@ -25,6 +26,7 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_INIT_SKILL","LOCALS",0)
 	Global("BDAI_SKILL_MODE","LOCALS",0)
 	OR(3)
@@ -39,6 +41,7 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_INIT_ATTACK","LOCALS",0)
 	!Global("BDAI_ATTACK_MODE","LOCALS",2)
 	OR(6)
@@ -56,6 +59,7 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_INIT_ITEMS","LOCALS",0)
 THEN
 	RESPONSE #100
@@ -65,9 +69,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_NO_ARCANE","LOCALS",1)
 	Global("BribedCowled","GLOBAL",1)
-	ActionListEmpty()
 	InParty(Myself)
 THEN
 	RESPONSE #100
@@ -75,9 +79,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	Global("BribedCowled","GLOBAL",0)
-	ActionListEmpty()
 	InParty(Myself)
 	AreaType(OUTDOOR)
 	OR(7)
@@ -94,8 +98,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_NO_ARCANE","LOCALS",1)
-	ActionListEmpty()
 	InParty(Myself)
 	!AreaType(OUTDOOR)
 THEN
@@ -104,8 +108,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_NO_ARCANE","LOCALS",1)
-	ActionListEmpty()
 	InParty(Myself)
 	!AreaCheck("AR0020")
 	!AreaCheck("AR0300")
@@ -120,6 +124,7 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	ModalState(SHAMANDANCE)
 	InParty(Myself)
 THEN
@@ -128,8 +133,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_ATTACK_MODE","LOCALS",1)
-	ActionListEmpty()
 	InParty(Myself)
 	IsWeaponRanged(Myself)
 THEN
@@ -139,8 +144,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_ATTACK_MODE","LOCALS",2)
-	ActionListEmpty()
 	InParty(Myself)
 	IsWeaponRanged(Myself)
 	Range(NearestEnemyOf(Myself),4)
@@ -151,8 +156,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_ATTACK_MODE","LOCALS",2)
-	ActionListEmpty()
 	InParty(Myself)
 	!IsWeaponRanged(Myself)
 	CanEquipRanged()
@@ -164,8 +169,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(Myself,STATE_POISONED)
@@ -178,8 +183,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		StateCheck(Myself,STATE_POISONED)
@@ -194,8 +199,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(Myself,STATE_SILENCED)
@@ -211,8 +216,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(Myself,STATE_POISONED)
@@ -230,8 +235,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(Myself,STATE_POISONED)
@@ -249,8 +254,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	OR(3)
@@ -269,8 +274,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	OR(4)
@@ -292,8 +297,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -312,8 +317,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -346,8 +351,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SANCTUARY)  // SPPR109.SPL (Sanctuary)
@@ -373,8 +378,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	CheckStatLT(Myself,1,STONESKINS)
@@ -390,8 +395,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,81)
@@ -404,8 +409,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,81)
@@ -418,8 +423,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,70)
@@ -433,8 +438,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,85)
@@ -448,8 +453,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,85)
@@ -463,8 +468,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,85)
@@ -478,8 +483,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 	Global("BD_Cloud","LOCALS",0)
@@ -501,8 +506,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 	Global("BD_Cloud","LOCALS",0)
@@ -524,8 +529,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 	Global("BD_Cloud","LOCALS",0)
@@ -547,8 +552,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 	Global("BD_Cloud","LOCALS",0)
@@ -570,8 +575,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 	Global("BD_Cloud","LOCALS",0)
@@ -593,8 +598,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 	Global("BD_Cloud","LOCALS",0)
@@ -616,10 +621,10 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BD_Cloud","LOCALS",1)
 	GlobalTimerExpired("BD_CLTM","LOCALS")
-	ActionListEmpty()
 	InParty(Myself)
 THEN
 	RESPONSE #100
@@ -627,8 +632,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
@@ -647,8 +652,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(PALADIN_PROTECTION_FROM_EVIL)  // SPCL213.SPL (Protection From Evil)
@@ -665,8 +670,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
@@ -683,8 +688,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -708,8 +713,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(BERSERKER_RAGE)  // SPCL321.SPL (Enrage)
 	!CheckSpellState(Myself,BERSERKER_RAGE)
@@ -740,8 +745,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(BARBARIAN_RAGE)  // SPCL152.SPL (Barbarian Rage)
 	!CheckSpellState(Myself,BARBARIAN_RAGE)
@@ -771,8 +776,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See([GOODCUTOFF])
@@ -800,8 +805,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SecondNearest([GOODCUTOFF]))
@@ -829,8 +834,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(ThirdNearest([GOODCUTOFF]))
@@ -858,8 +863,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FourthNearest([GOODCUTOFF]))
@@ -887,8 +892,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
@@ -916,8 +921,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
@@ -945,8 +950,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck([GOODCUTOFF],STATE_PANIC)
@@ -969,8 +974,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
@@ -993,8 +998,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1017,8 +1022,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1041,8 +1046,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1065,8 +1070,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1089,8 +1094,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck([GOODCUTOFF],STATE_PANIC)
@@ -1114,8 +1119,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1139,8 +1144,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1164,8 +1169,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1189,8 +1194,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1214,8 +1219,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1239,8 +1244,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck([GOODCUTOFF],STATE_PANIC)
@@ -1263,8 +1268,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1287,8 +1292,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1311,8 +1316,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1335,8 +1340,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1359,8 +1364,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
@@ -1383,8 +1388,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
@@ -1412,8 +1417,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
@@ -1441,8 +1446,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
@@ -1470,8 +1475,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
@@ -1499,8 +1504,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
@@ -1528,8 +1533,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
@@ -1557,8 +1562,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See([PC])
@@ -1586,8 +1591,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SecondNearest([PC]))
@@ -1615,8 +1620,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(ThirdNearest([PC]))
@@ -1644,8 +1649,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FourthNearest([PC]))
@@ -1673,8 +1678,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FifthNearest([PC]))
@@ -1702,8 +1707,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SixthNearest([PC]))
@@ -1731,8 +1736,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See([PC])
@@ -1759,8 +1764,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SecondNearest([PC]))
@@ -1787,8 +1792,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(ThirdNearest([PC]))
@@ -1815,8 +1820,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FourthNearest([PC]))
@@ -1843,8 +1848,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FifthNearest([PC]))
@@ -1871,8 +1876,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SixthNearest([PC]))
@@ -1899,8 +1904,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN102")  // Slow Poison
@@ -1927,8 +1932,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN102")  // Slow Poison
@@ -1955,8 +1960,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN102")  // Slow Poison
@@ -1983,8 +1988,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN102")  // Slow Poison
@@ -2011,8 +2016,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN102")  // Slow Poison
@@ -2039,8 +2044,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN102")  // Slow Poison
@@ -2067,8 +2072,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
@@ -2092,8 +2097,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
@@ -2117,8 +2122,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
@@ -2142,8 +2147,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
@@ -2167,8 +2172,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
@@ -2192,8 +2197,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
@@ -2217,8 +2222,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(LATHANDER_BOON)  // SPCL741.SPL (Boon of Lathander)
@@ -2246,8 +2251,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
@@ -2276,8 +2281,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	CheckStatGT(Myself,0,LEVELDRAIN)
@@ -2293,8 +2298,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	CheckStatGT(Myself,0,LEVELDRAIN)
@@ -2310,8 +2315,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See([PC])
@@ -2334,8 +2339,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SecondNearest([PC]))
@@ -2358,8 +2363,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(ThirdNearest([PC]))
@@ -2382,8 +2387,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FourthNearest([PC]))
@@ -2406,8 +2411,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FifthNearest([PC]))
@@ -2430,8 +2435,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SixthNearest([PC]))
@@ -2454,8 +2459,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See([PC])
@@ -2478,8 +2483,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SecondNearest([PC]))
@@ -2502,8 +2507,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(ThirdNearest([PC]))
@@ -2526,8 +2531,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FourthNearest([PC]))
@@ -2550,8 +2555,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(FifthNearest([PC]))
@@ -2574,8 +2579,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(SixthNearest([PC]))
@@ -2598,8 +2603,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	Global("BD_DInv","LOCALS",0)
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2616,8 +2621,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	Global("BD_DInv","LOCALS",1)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -2636,8 +2641,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2655,8 +2660,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2678,8 +2683,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2701,8 +2706,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2724,8 +2729,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2747,8 +2752,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2770,8 +2775,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
@@ -2793,8 +2798,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_MASS_CURE)  // SPPR514.SPL (Mass Cure)
@@ -2821,8 +2826,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
@@ -2852,8 +2857,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
@@ -2882,8 +2887,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
@@ -2912,8 +2917,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
@@ -2942,8 +2947,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN101")  // Cure Light Wounds
@@ -2975,8 +2980,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
@@ -3005,8 +3010,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(KENSAI_KIA)  // SPCL144.SPL (Kai)
 	!CheckSpellState(Myself,KENSAI_KIA)
@@ -3024,6 +3029,7 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	HaveSpellRES("SPDWD02")  // Defensive Stance
 	!CheckSpellState(Myself,DEFENSIVE_STANCE)
@@ -3042,8 +3048,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(BLADE_OFFENSIVE_SPIN)  // SPCL521.SPL (Offensive Spin)
 	!CheckSpellState(Myself,OFFENSIVE_SPIN)
@@ -3062,6 +3068,7 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(ARCHER_CALL_SHOT)  // SPCL121.SPL (Called Shot)
@@ -3081,8 +3088,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_CHAOS_SHIELD)  // SPWI222.SPL (Chaos Shield)
@@ -3101,8 +3108,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
@@ -3139,8 +3146,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
@@ -3177,8 +3184,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
@@ -3545,8 +3552,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3575,8 +3582,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3605,8 +3612,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3635,8 +3642,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3666,8 +3673,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3697,8 +3704,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3728,8 +3735,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3757,8 +3764,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3786,8 +3793,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3815,8 +3822,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3846,8 +3853,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3877,8 +3884,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3908,8 +3915,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3939,8 +3946,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -3970,8 +3977,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4001,8 +4008,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4031,8 +4038,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4061,8 +4068,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4091,8 +4098,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4121,8 +4128,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4151,8 +4158,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4181,8 +4188,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4211,8 +4218,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4241,8 +4248,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4271,8 +4278,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_ARMOR)  // SPWI102.SPL (Armor)
@@ -4289,8 +4296,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Dharm","LOCALS")
@@ -4314,8 +4321,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -4337,8 +4344,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpellRES("SPIN103")  // Draw Upon Holy Might
@@ -4358,8 +4365,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -4381,8 +4388,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,51)
@@ -4417,8 +4424,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
@@ -4452,8 +4459,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
@@ -4487,8 +4494,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
@@ -4522,8 +4529,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
@@ -4550,8 +4557,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
@@ -4578,8 +4585,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
@@ -4606,8 +4613,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4639,8 +4646,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4672,8 +4679,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -4705,8 +4712,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4734,8 +4741,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4763,8 +4770,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4792,8 +4799,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4821,8 +4828,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4850,8 +4857,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4879,8 +4886,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4911,8 +4918,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4943,8 +4950,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
@@ -4975,8 +4982,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
@@ -5005,8 +5012,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
@@ -5035,8 +5042,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
@@ -5065,8 +5072,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
@@ -5095,8 +5102,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
@@ -5125,8 +5132,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
@@ -5155,8 +5162,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -5184,8 +5191,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -5213,8 +5220,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -5242,8 +5249,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -5271,8 +5278,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -5300,8 +5307,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
@@ -5329,8 +5336,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5350,8 +5357,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5371,8 +5378,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5392,8 +5399,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5413,8 +5420,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5434,8 +5441,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5455,8 +5462,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
@@ -5476,8 +5483,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -5501,8 +5508,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	Global("BD_Shield","LOCALS",0)
 	HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (Shield)
@@ -5526,8 +5533,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (Shield)
@@ -5547,8 +5554,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_SHIELD)  // SPWI114.SPL (Shield)
@@ -5578,8 +5585,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	Global("BD_DInv","LOCALS",0)
 	HaveSpell(WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
@@ -5596,8 +5603,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	Global("BD_DInv","LOCALS",1)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -5619,8 +5626,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Haste","LOCALS")
@@ -5647,8 +5654,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Haste","LOCALS")
@@ -5675,8 +5682,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Haste","LOCALS")
@@ -5703,8 +5710,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5727,8 +5734,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5750,8 +5757,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5774,8 +5781,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5798,8 +5805,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5822,8 +5829,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5846,8 +5853,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
@@ -5870,8 +5877,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Slow","LOCALS")
@@ -5905,8 +5912,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Slow","LOCALS")
@@ -5940,8 +5947,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Slow","LOCALS")
@@ -5975,8 +5982,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
@@ -6009,8 +6016,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
@@ -6043,8 +6050,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
@@ -6077,8 +6084,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
@@ -6112,8 +6119,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
@@ -6147,8 +6154,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
@@ -6184,8 +6191,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
@@ -6221,8 +6228,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6244,8 +6251,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6267,8 +6274,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6301,8 +6308,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(PALADIN_PROTECTION_FROM_EVIL)  // SPCL213.SPL (Protection From Evil)
@@ -6327,8 +6334,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6355,8 +6362,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6390,8 +6397,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6425,8 +6432,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6460,8 +6467,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
@@ -6482,8 +6489,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Horror","LOCALS")
@@ -6526,8 +6533,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Horror","LOCALS")
@@ -6570,8 +6577,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Horror","LOCALS")
@@ -6614,8 +6621,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Horror","LOCALS")
@@ -6658,8 +6665,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Glitter","LOCALS")
@@ -6691,8 +6698,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Glitter","LOCALS")
@@ -6724,8 +6731,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Glitter","LOCALS")
@@ -6757,8 +6764,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
@@ -6792,8 +6799,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
@@ -6828,8 +6835,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
@@ -6864,8 +6871,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
@@ -6900,8 +6907,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
@@ -6936,8 +6943,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
@@ -6972,8 +6979,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(WIZARD_MONSTER_SUMMONING_2)  // SPWI407.SPL (Monster Summoning II)
@@ -6992,8 +6999,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Wand","LOCALS")
@@ -7011,8 +7018,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	RandomNum(8,1)
@@ -7041,8 +7048,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	RandomNum(8,1)
@@ -7071,8 +7078,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Spook","LOCALS")
@@ -7112,8 +7119,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Spook","LOCALS")
@@ -7153,8 +7160,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Spook","LOCALS")
@@ -7194,8 +7201,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Blind","LOCALS")
@@ -7232,8 +7239,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Blind","LOCALS")
@@ -7270,8 +7277,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Blind","LOCALS")
@@ -7308,8 +7315,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)
@@ -7343,8 +7350,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)
@@ -7378,8 +7385,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)
@@ -7413,8 +7420,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)
@@ -7446,8 +7453,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)
@@ -7479,8 +7486,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)
@@ -7512,8 +7519,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
@@ -7547,8 +7554,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
@@ -7582,8 +7589,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
@@ -7619,8 +7626,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
@@ -7656,8 +7663,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -7690,8 +7697,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -7724,8 +7731,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -7758,8 +7765,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HaveSpell(BLADE_DEFENSIVE_SPIN)  // SPCL522.SPL (Defensive Spin)
 	!CheckSpellState(Myself,DEFENSIVE_SPIN)
@@ -7781,8 +7788,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,71)
@@ -7814,8 +7821,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,71)
@@ -7846,8 +7853,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,71)
@@ -7878,8 +7885,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
@@ -7911,8 +7918,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
@@ -7946,8 +7953,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
@@ -7981,8 +7988,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_SKILL_MODE","LOCALS",1)
-	ActionListEmpty()
 	InParty(Myself)
 	!See([EVILCUTOFF])
 	!ModalState(DETECTTRAPS)
@@ -7997,8 +8004,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_SKILL_MODE","LOCALS",2)
-	ActionListEmpty()
 	InParty(Myself)
 	!GlobalTimerNotExpired("BD_HIDE","LOCALS")
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -8017,8 +8024,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_SKILL_MODE","LOCALS",3)
-	ActionListEmpty()
 	InParty(Myself)
 	!ModalState(BATTLESONG)
 	OR(2)
@@ -8034,8 +8041,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_SKILL_MODE","LOCALS",3)
-	ActionListEmpty()
 	InParty(Myself)
 	ModalState(BATTLESONG)
 	!See([EVILCUTOFF])
@@ -8052,8 +8059,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_SKILL_MODE","LOCALS",4)
-	ActionListEmpty()
 	InParty(Myself)
 	!ModalState(TURNUNDEAD)
 	Range([EVILCUTOFF.UNDEAD],12)
@@ -8073,9 +8080,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	!StateCheck(Myself,STATE_INVISIBLE)
 	CheckStat([EVILCUTOFF.0.TROLL],100,RESISTSLASHING)
@@ -8090,9 +8097,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HasItem("MELFMET",Myself)  // Melf's Minute Meteor
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -8107,9 +8114,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HasItem("MELFMET",Myself)  // Melf's Minute Meteor
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -8124,9 +8131,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HasItem("MELFMET",Myself)  // Melf's Minute Meteor
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -8141,9 +8148,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HasItem("MELFMET",Myself)  // Melf's Minute Meteor
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -8158,9 +8165,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	HasItem("MELFMET",Myself)  // Melf's Minute Meteor
 	!StateCheck(Myself,STATE_INVISIBLE)
@@ -8175,9 +8182,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	CheckStat(Myself,0,SANCTUARY)
 	WeaponEffectiveVs(NearestEnemyOf(Myself),MAINHAND)
@@ -8192,9 +8199,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	CheckStat(Myself,0,SANCTUARY)
 	WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)
@@ -8209,9 +8216,9 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	!ModalState(BATTLESONG)
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	CheckStat(Myself,0,SANCTUARY)
 	WeaponEffectiveVs(ThirdNearestEnemyOf(Myself),MAINHAND)
@@ -8226,8 +8233,8 @@ THEN
 END
 
 IF
+  ActionListEmpty()
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
-	ActionListEmpty()
 	InParty(Myself)
 	CheckStat(Myself,0,SANCTUARY)
 	!ModalState(BATTLESONG)
