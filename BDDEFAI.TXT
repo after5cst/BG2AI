@@ -1,9 +1,43 @@
+// BDAI_SKILL_MODE (settable in GUI):
+// 0 == Not Set
+// 1 == Find Traps
+// 2 == Hide in Shadows
+// 3 == Bard Song
+// 4 == Turn Undead
+//
+// BDAI_ATTACK_MODE (settable in GUI):
+// 0 == Not Set
+// 1 == Prefer Melee
+// 2 == Prefer Ranged
+
 IF
 	ActionListEmpty()
 	!InParty(Myself)
 THEN
 	RESPONSE #100
 		NoAction()
+END
+
+// If we are:
+// -- doing a reset
+// -- are great at ranged attacks
+// -- don't have an attack mode set
+// Then:
+// -- Set attack mode to PREFER RANGED (2)
+IF
+	ActionListEmpty()
+	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
+	Global("BDAI_ATTACK_MODE","LOCALS",0)
+	OR(6)
+		Kit(Myself,FERALAN)
+		CheckStatGT(Myself,2,PROFICIENCYCROSSBOW)
+		CheckStatGT(Myself,2,PROFICIENCYLONGBOW)
+		CheckStatGT(Myself,2,PROFICIENCYSHORTBOW)
+		CheckStatGT(Myself,2,PROFICIENCYDART)
+		CheckStatGT(Myself,2,PROFICIENCYSLING)
+THEN
+	RESPONSE #100
+		SetGlobal("BDAI_ATTACK_MODE","LOCALS",2)
 END
 
 IF
@@ -27,18 +61,10 @@ THEN
 		SetGlobal("BD_Support","LOCALS",0)
 		SetGlobal("BD_Wand","LOCALS",0)
 		SetGlobal("BDAI_INIT_SKILL","LOCALS",0)
-		SetGlobal("BDAI_INIT_ATTACK","LOCALS",0)
 		SetGlobal("BDAI_INIT_ITEMS","LOCALS",0)
 		SetGlobal("BDAI_RESET_TIMERS","GLOBAL",0)
 		Continue()
 END
-
-// BDAI_SKILL_MODE (settable in GUI):
-// 0 == Not Set
-// 1 == Find Traps
-// 2 == Hide in Shadows
-// 3 == Bard Song
-// 4 == Turn Undead
 
 // If no skill mode is set, set find traps if class capable
 IF
@@ -53,24 +79,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("BDAI_INIT_SKILL","LOCALS",1)
 		SetGlobal("BDAI_SKILL_MODE","LOCALS",1)
-		Continue()
-END
-
-IF
-	ActionListEmpty()
-	Global("BDAI_INIT_ATTACK","LOCALS",0)
-	!Global("BDAI_ATTACK_MODE","LOCALS",2)
-	OR(6)
-		Kit(Myself,FERALAN)
-		CheckStatGT(Myself,2,PROFICIENCYCROSSBOW)
-		CheckStatGT(Myself,2,PROFICIENCYLONGBOW)
-		CheckStatGT(Myself,2,PROFICIENCYSHORTBOW)
-		CheckStatGT(Myself,2,PROFICIENCYDART)
-		CheckStatGT(Myself,2,PROFICIENCYSLING)
-THEN
-	RESPONSE #100
-		SetGlobal("BDAI_INIT_ATTACK","LOCALS",1)
-		SetGlobal("BDAI_ATTACK_MODE","LOCALS",2)
 		Continue()
 END
 
