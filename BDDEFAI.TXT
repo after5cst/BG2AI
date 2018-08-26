@@ -20,6 +20,25 @@ END
 
 // If we are:
 // -- doing a reset
+// -- have a class skill for find traps
+// -- don't have an skill mode set
+// Then:
+// -- Set skill mode to FIND TRAPS (1)
+IF
+	ActionListEmpty()
+	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
+	Global("BDAI_SKILL_MODE","LOCALS",0)
+	OR(3)
+		Class(Myself,THIEF_ALL)
+		Class(Myself,MONK)
+		Class(Myself,SHAMAN)
+THEN
+	RESPONSE #100
+		SetGlobal("BDAI_SKILL_MODE","LOCALS",1)
+END
+
+// If we are:
+// -- doing a reset
 // -- are great at ranged attacks
 // -- don't have an attack mode set
 // Then:
@@ -60,25 +79,8 @@ THEN
 		SetGlobal("BD_Spook","LOCALS",0)
 		SetGlobal("BD_Support","LOCALS",0)
 		SetGlobal("BD_Wand","LOCALS",0)
-		SetGlobal("BDAI_INIT_SKILL","LOCALS",0)
 		SetGlobal("BDAI_INIT_ITEMS","LOCALS",0)
 		SetGlobal("BDAI_RESET_TIMERS","GLOBAL",0)
-		Continue()
-END
-
-// If no skill mode is set, set find traps if class capable
-IF
-	ActionListEmpty()
-	Global("BDAI_INIT_SKILL","LOCALS",0)
-	Global("BDAI_SKILL_MODE","LOCALS",0)
-	OR(3)
-		Class(Myself,THIEF_ALL)
-		Class(Myself,MONK)
-		Class(Myself,SHAMAN)
-THEN
-	RESPONSE #100
-		SetGlobal("BDAI_INIT_SKILL","LOCALS",1)
-		SetGlobal("BDAI_SKILL_MODE","LOCALS",1)
 		Continue()
 END
 
