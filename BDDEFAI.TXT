@@ -62,6 +62,15 @@ END
 IF
 	ActionListEmpty()
 	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("BDAI_DISABLE_ITEMS","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_Blind","LOCALS",0)
@@ -79,18 +88,7 @@ THEN
 		SetGlobal("BD_Spook","LOCALS",0)
 		SetGlobal("BD_Support","LOCALS",0)
 		SetGlobal("BD_Wand","LOCALS",0)
-		SetGlobal("BDAI_INIT_ITEMS","LOCALS",0)
-		SetGlobal("BDAI_RESET_TIMERS","GLOBAL",0)
-		Continue()
-END
-
-IF
-	ActionListEmpty()
-	Global("BDAI_INIT_ITEMS","LOCALS",0)
-THEN
-	RESPONSE #100
-		SetGlobal("BDAI_INIT_ITEMS","LOCALS",1)
-		SetGlobal("BDAI_DISABLE_ITEMS","LOCALS",1)
+		SetGlobal("BDAI_RESET_TIMERS","LOCALS",0)
 		Continue()
 END
 
