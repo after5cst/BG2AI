@@ -89,7 +89,6 @@ THEN
 		SetGlobal("BD_Support","LOCALS",0)
 		SetGlobal("BD_Wand","LOCALS",0)
 		SetGlobal("BDAI_RESET_TIMERS","LOCALS",0)
-		Continue()
 END
 
 IF
@@ -116,6 +115,7 @@ IF
 		AreaCheck("AR1000")
 THEN
 	RESPONSE #100
+		DisplayStringHead(Myself,46517)  // Travel safely, then, and beware the Cowled Wizards.
 		SetGlobal("BDAI_NO_ARCANE","LOCALS",1)
 END
 
