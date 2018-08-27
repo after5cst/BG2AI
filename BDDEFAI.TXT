@@ -1,15 +1,3 @@
-// BDAI_SKILL_MODE (settable in GUI):
-// 0 == Not Set
-// 1 == Find Traps
-// 2 == Hide in Shadows
-// 3 == Bard Song
-// 4 == Turn Undead
-//
-// BDAI_ATTACK_MODE (settable in GUI):
-// 0 == Not Set
-// 1 == Prefer Melee
-// 2 == Prefer Ranged
-
 IF
 	ActionListEmpty()
 	!InParty(Myself)
@@ -18,12 +6,6 @@ THEN
 		NoAction()
 END
 
-// If we are:
-// -- doing a reset
-// -- have a class skill for find traps
-// -- don't have an skill mode set
-// Then:
-// -- Set skill mode to FIND TRAPS (1)
 IF
 	ActionListEmpty()
 	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
@@ -37,12 +19,6 @@ THEN
 		SetGlobal("BDAI_SKILL_MODE","LOCALS",1)
 END
 
-// If we are:
-// -- doing a reset
-// -- are great at ranged attacks
-// -- don't have an attack mode set
-// Then:
-// -- Set attack mode to PREFER RANGED (2)
 IF
 	ActionListEmpty()
 	!Global("BDAI_RESET_TIMERS","GLOBAL",0)
@@ -151,7 +127,6 @@ THEN
 		NoAction()
 END
 
-// Equip melee if enemy close or I prefer melee
 IF
 	ActionListEmpty()
 	IsWeaponRanged(Myself)
@@ -163,7 +138,6 @@ THEN
 		EquipMostDamagingMelee()
 END
 
-// Equip ranged if enemy far and I prefer ranged
 IF
 	ActionListEmpty()
 	!IsWeaponRanged(Myself)
@@ -2503,7 +2477,6 @@ THEN
 		SetInterrupt(TRUE)
 END
 
-// JOJO -- STOPPED HERE.  MOVING HaveSpell AND HaveSpellRES
 IF
 	ActionListEmpty()
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
