@@ -2,16 +2,39 @@
 import argparse
 import logging
 import os
+from pprint import pprint
+import re
 import shutil
 import sys
 
-_this_dir =  os.path.dirname(os.path.realpath(__file__))
+_this_dir = os.path.dirname(os.path.realpath(__file__))
+
+# This breaks a file into a series of statements
+_stmt_regex = "(?P<statement>IF(.|\n)*?END)"
+# _stmt_regex = ".*^IF$(?P<statement>(.|\n)*?)?^END$"
+# This breaks a statement into an if and a then block
+_if_then_regex = "^IF$(?P<if>(.|\n)*?)?^THEN$(?P<then>(.|\n)*?)?^END"
 
 
 def split_file(source_file: str, target_dir: str):
     """Split a script file into component pieces"""
     logging.info("Creating directory '{}'".format(target))
     os.makedirs(target_dir)
+
+    logging.debug("Loading file '{}'".format(source_file))
+    with open(source_file) as f:
+        source_text = f.read()
+    logging.debug("Read {} bytes".format(len(source_text)))
+
+    r = re.compile(_stmt_regex)
+    count = 0
+    for m in r.finditer(source_text):
+        count = count + 1
+        output_name = os.path.join(target_dir, "{:03}.txt".format(count))
+        with open(output_name, "w") as f:
+            f.write(m.groupdict()["statement"])
+    logging.info("Found {} statements".format(count))
+
 
 if __name__ == "__main__":
     source = os.path.join(_this_dir, "..", "BDDEFAI.TXT")
