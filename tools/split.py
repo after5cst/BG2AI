@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 import argparse
 import logging
 import os
@@ -9,8 +9,6 @@ import sys
 
 _this_dir = os.path.dirname(os.path.realpath(__file__))
 
-# This breaks a file into a series of statements
-_stmt_regex = r"(?P<statement>IF(.|\n)*?END)"
 # This breaks a statement into an if and a then block
 _if_then_regex = r"(?P<statement>IF(?P<if>(.|\n)*?)^THEN$(?P<then>(.|\n)*?)END)"
 
@@ -25,7 +23,7 @@ def split_file(source_file: str, target_dir: str) -> list:
         source_text = f.read()
     logging.debug("Read {} bytes".format(len(source_text)))
 
-    r = re.compile(_stmt_regex)
+    r = re.compile(_if_then_regex, flags=re.MULTILINE)
     count = 0
     outputs = []
     for m in r.finditer(source_text):
@@ -47,12 +45,39 @@ def split_if_then(source_file: str) -> dict:
     logging.debug("Read {} bytes".format(len(source_text)))
 
     r = re.compile(_if_then_regex, flags=re.MULTILINE)
+    r_or = re.compile( "OR\((\d+)\)")
+
     count = 0
-    output = {}
+    output = {"if": [], "then": [], "ActionListEmpty": False}
     for m in r.finditer(source_text):
         count = count + 1
-        pprint(m.group('if'))
-        # output = dict(m.group_dict())
+
+        or_count = 0
+        # Break if conditions into separate lines.
+        for line in m.group('if').split('\n'):
+            line = line.strip()
+            or_check = r_or.match(line)
+
+            if 0 == len(line):
+                pass
+            elif 0 == or_count and "ActionListEmpty()" == line:
+                output["ActionListEmpty"] = True
+            elif or_check:
+                or_count = int(or_check.group(1))
+                output["if"].append( {"OR": []})
+            elif or_count > 0:
+                output["if"][-1]["OR"].append(line)
+                or_count = or_count - 1
+            else:
+                output["if"].append(line)
+
+        # Break then conditions into separate lines.
+        for line in m.group("then").split('\n'):
+            line = line.rstrip()
+            if 0 == len(line):
+                pass
+            else:
+                output["then"].append(line)
 
     if count > 1:
         raise RuntimeError("IF/THEN Parse found multiple matches in '{}'"
@@ -88,5 +113,7 @@ if __name__ == "__main__":
 
     for file in files:
         if_then = split_if_then(file)
+        if "030" not in file:
+            continue
         pprint(if_then)
         break
