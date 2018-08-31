@@ -68,24 +68,49 @@ def replace_double_quotes_with_single_outside_comment(data: str) -> str:
     return data
 
 
-def get_name(lines: list):
+def get_name_from_actions(regex, actions: list):
+    """
+    Return the name from a set of actions, using a regular expression.
+    :param regex:  The regular expression to be used.
+    :param actions:  The list of actions
+    :return:  The NAME parameter from the regular expression, or None
+    """
+    for action in actions:
+        assert 1 == len(action)
+        lines = action[list(action.keys())[0]]
+        for line in lines:
+            if isinstance(line, str):
+                m = regex.match(line)
+                if m:
+                    groupdict = m.groupdict()
+                    if 'NAME' in groupdict:
+                        return groupdict['NAME']
+            else:
+                assert isinstance(line, dict), "Bad entry in action list"
+    return None
+
+
+def get_name(actions: list):
     """
     Return the 'name' of the block if it can be parsed from triggers.
-    :param lines:
-    :return:
+    :param actions: The actions list to interrogate
+    :return: The name or None
     """
-    # Look for and return HaveSpell if it is found in the trigger list.
-    r = re.compile(r"HaveSpell\((?P<SPELL_ID>(\w+))\)")
-    for line in lines:
-        if isinstance(line, str):
-            m = r.match(line)
-            if m:
-                groupdict = m.groupdict()
-                if 'SPELL_ID' in groupdict:
-                    return groupdict['SPELL_ID']
-        else:
-            assert isinstance(line, dict), "Bad entry in trigger list"
-    return None
+    # "Spell(Myself,WIZARD_VOCALIZE)  // SPWI219.SPL (Vocalize)"
+    r = re.compile(r"Spell\(.*\)\s*//(.*)\((?P<NAME>(.*))\)")
+    name = get_name_from_actions(r, actions)
+    if name is None:
+        r = re.compile(r"SpellRES\(.*\)\s*//\s*(?P<NAME>(.*))")
+        name = get_name_from_actions(r, actions)
+    if name is None:
+        r = re.compile(r"UseItem\(.*\)\s*//\s*(?P<NAME>(.*))")
+        name = get_name_from_actions(r, actions)
+
+    if name is not None:
+        name = name.replace(' ', '-')
+        name = re.sub('[^0-9a-zA-Z\-]+', '', name)
+
+    return name
 
 
 def split_if_then(source_file: str) -> dict:
@@ -153,7 +178,7 @@ def split_if_then(source_file: str) -> dict:
     # triggers = promote_trigger(triggers, "^HaveSpell")
     # triggers = promote_trigger(triggers, "^ActionListEmpty")
     result = {"triggers": triggers, "actions": actions}
-    name = get_name(triggers)
+    name = get_name(actions)
     if name:
         result["name"] = name
     return result
