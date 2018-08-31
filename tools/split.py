@@ -68,6 +68,26 @@ def replace_double_quotes_with_single_outside_comment(data: str) -> str:
     return data
 
 
+def get_name(lines: list):
+    """
+    Return the 'name' of the block if it can be parsed from triggers.
+    :param lines:
+    :return:
+    """
+    # Look for and return HaveSpell if it is found in the trigger list.
+    r = re.compile(r"HaveSpell\((?P<SPELL_ID>(\w+))\)")
+    for line in lines:
+        if isinstance(line, str):
+            m = r.match(line)
+            if m:
+                groupdict = m.groupdict()
+                if 'SPELL_ID' in groupdict:
+                    return groupdict['SPELL_ID']
+        else:
+            assert isinstance(line, dict), "Bad entry in trigger list"
+    return None
+
+
 def split_if_then(source_file: str) -> dict:
     """Split a script file into component pieces"""
     logging.debug("Splitting '{}' into IF/THEN blocks".format(source_file))
@@ -132,7 +152,11 @@ def split_if_then(source_file: str) -> dict:
 
     # triggers = promote_trigger(triggers, "^HaveSpell")
     # triggers = promote_trigger(triggers, "^ActionListEmpty")
-    return {"triggers": triggers, "actions": actions}
+    result = {"triggers": triggers, "actions": actions}
+    name = get_name(triggers)
+    if name:
+        result["name"] = name
+    return result
 
 
 if __name__ == "__main__":
@@ -163,5 +187,15 @@ if __name__ == "__main__":
 
     for file in files:
         data = split_if_then(file)
+
+        if "name" in data:
+            source = file
+            prefix, postfix = os.path.splitext(file)
+            dest = prefix + "-" + data["name"] + postfix
+            print(source)
+            print(dest)
+            file = dest
+            os.remove(source)
+
         with open(file, "w") as fp:
             json.dump(data, fp, indent=4)
