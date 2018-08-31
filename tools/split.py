@@ -8,10 +8,6 @@ import re
 import shutil
 import sys
 
-***
-*** TODO : CONVERT DOUBLE TO SINGLE QUOTES
-***
-
 _this_dir = os.path.dirname(os.path.realpath(__file__))
 
 # This breaks a statement into an if and a then block
@@ -55,6 +51,23 @@ def split_file(source_file: str, target_dir: str) -> list:
     return outputs
 
 
+def replace_double_quotes_with_single_outside_comment(data: str) -> str:
+    """"
+    Replace double quotes in non-comment with single quotes.
+    Returns the string with replacements
+    """
+    r = re.compile(r"^(.*)\/\/.*$|^(.*)$", re.MULTILINE)
+    matches = [m.span(m.lastindex) for m in r.finditer(data)]
+    for start, end in matches:
+        before = data[:start]
+        mid = data[start:end]
+        after = data[end:]
+        assert "'" not in mid
+        mid = mid.replace('"', "'")
+        data = before + mid + after
+    return data
+
+
 def split_if_then(source_file: str) -> dict:
     """Split a script file into component pieces"""
     logging.debug("Splitting '{}' into IF/THEN blocks".format(source_file))
@@ -65,6 +78,10 @@ def split_if_then(source_file: str) -> dict:
     r = re.compile(_if_then_regex, flags=re.MULTILINE)
     r_or = re.compile(r"OR\((\d+)\)")
     r_resp = re.compile(r"RESPONSE #(\d+)")
+
+    # Replace all double quotes outside comments with single quotes.
+    source_text = replace_double_quotes_with_single_outside_comment(
+        source_text)
 
     count = 0
     triggers = []
