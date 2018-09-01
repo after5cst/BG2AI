@@ -8,10 +8,22 @@ import re
 import shutil
 import sys
 
+from triggers import TriggerTemplate, app_name
+
 _this_dir = os.path.dirname(os.path.realpath(__file__))
 
 # This breaks a statement into an if and a then block
 _if_then_regex = r"(?P<statement>IF(?P<if>(.|\n)*?)^THEN$(?P<then>(.|\n)*?)END)"
+
+
+def _load_trigger_templates():
+    """Return a list of applicable trigger templates"""
+    out = []
+    dir_name = os.path.join(_this_dir, "..", app_name, "if")
+    for file_name in os.listdir(dir_name):
+        prefix, suffix = os.path.splitext(file_name)
+        out.append(TriggerTemplate(prefix))
+    return out
 
 
 def promote_trigger(source: list, trigger: str) -> list:
@@ -42,7 +54,7 @@ def split_file(source_file: str, target_dir: str) -> list:
     for m in r.finditer(source_text):
         count = count + 1
         # It's not json... yet.  But it will be after split_if_then.
-        output_name = os.path.join(target_dir, "{:03}.json".format(count))
+        output_name = os.path.join(target_dir, "{:04}.json".format(count*10))
         with open(output_name, "w") as f:
             f.write(m.groupdict()["statement"])
         outputs.append(output_name)
@@ -177,7 +189,7 @@ def split_if_then(source_file: str) -> dict:
 
     # triggers = promote_trigger(triggers, "^HaveSpell")
     # triggers = promote_trigger(triggers, "^ActionListEmpty")
-    result = {"triggers": triggers, "actions": actions}
+    result = {"if": triggers, "then": actions}
     name = get_name(actions)
     if name:
         result["name"] = name
@@ -210,17 +222,21 @@ if __name__ == "__main__":
         shutil.rmtree(target, ignore_errors=True)
     files = split_file(source, target)
 
+    trigger_templates = _load_trigger_templates()
+
     for file in files:
         data = split_if_then(file)
+        for template in trigger_templates:
+            data["if"] = template.collapse(data["if"])
 
         if "name" in data:
             source = file
             prefix, postfix = os.path.splitext(file)
             dest = prefix + "-" + data["name"] + postfix
-            print(source)
-            print(dest)
+            # print(source)
+            # print(dest)
             file = dest
             os.remove(source)
 
         with open(file, "w") as fp:
-            json.dump(data, fp, indent=4)
+            json.dump(data, fp, indent=2)

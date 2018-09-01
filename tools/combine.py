@@ -8,6 +8,8 @@ import re
 import shutil
 import sys
 
+from triggers import TriggerTemplate
+
 _this_dir = os.path.dirname(os.path.realpath(__file__))
 
 
@@ -61,14 +63,13 @@ def convert_triggers_to_text(source: list, in_or: bool=False) -> list:
             assert 1 == len(item), "Detected dict with multiple trigger keys"
             key, value = item.popitem()
             if key.upper() == "OR":
-                assert not in_or, "Double OR statements detected"
                 or_lines = convert_triggers_to_text(value, True)
                 lines.append("OR({})".format(len(or_lines)))
-                lines = lines + or_lines
+                lines += or_lines
             else:
-                assert False, "Trigger contains unknown dict key '{}'".format(
-                    key
-                )
+                templ = TriggerTemplate(key)
+                template_lines = templ.expand(value)
+                lines += template_lines
         elif isinstance(item, str):
             lines.append(item)
         else:
@@ -85,11 +86,11 @@ def convert_json_to_baf(source: dict) ->str:
     """
     Return a BAF string that represents the JSON provided.
     """
-    out = ["IF"] + convert_triggers_to_text(source["triggers"])
+    out = ["IF"] + convert_triggers_to_text(source["if"])
 
     out.append("THEN")
 
-    for item in source["actions"]:
+    for item in source["then"]:
         assert 1 == len(item), "Detected dict with multiple action keys"
         key, value = item.popitem()
         weight = int(key)
