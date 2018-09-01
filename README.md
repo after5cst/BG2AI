@@ -45,7 +45,13 @@ task.
 
 ## HELPFUL NOTES:
 
-###  BDAI_SKILL_MODE (settable in GUI):
+### BDAI_RESET_TIMERS
+
+It doesn't seem to be driven by the GUI in any meaningful way.  I believe
+that it is only used by the script itself as a "have I ever been
+initialized" timer.
+
+### BDAI_SKILL_MODE (settable in GUI):
 * 0 == Not Set
 
 * 1 == Find Traps

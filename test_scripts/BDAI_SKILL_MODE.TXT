@@ -1,0 +1,57 @@
+//
+// This script written to prove that BDAI_SKILL_MODE is set by the GUI
+// and that we as a script can read it.
+//
+IF
+	ActionListEmpty()
+	Global("BDAI_SKILL_MODE","LOCALS",1)
+	Delay(6)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,4927)  // Find Traps / Detect Illusion
+END
+
+IF
+	ActionListEmpty()
+	Global("BDAI_SKILL_MODE","LOCALS",2)
+	Delay(6)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,34120)  // Hide In Shadows
+END
+
+IF
+	ActionListEmpty()
+	Global("BDAI_SKILL_MODE","LOCALS",3)
+	Delay(6)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,4918)  // Bard Song
+END
+
+IF
+	ActionListEmpty()
+	Global("BDAI_SKILL_MODE","LOCALS",4)
+	Delay(6)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,4974)  // Turn Undead
+END
+
+IF
+	ActionListEmpty()
+	Global("BDAI_SKILL_MODE","LOCALS",0)
+	Delay(6)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,16470)  // Off
+END
+
+IF
+	ActionListEmpty()
+	!GlobalTimerNotExpired("X_ACT","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_ACT","LOCALS",5)
+		DisplayString(Myself,2305)  // Hello.
+END
