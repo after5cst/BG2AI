@@ -1,0 +1,8 @@
+
+    {
+      "OR": [
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "CheckStatGT(Myself,0,AURACLEANSING)"
+      ]
+    },
+

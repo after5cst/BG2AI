@@ -22,7 +22,8 @@ def _load_trigger_templates():
     dir_name = os.path.join(_this_dir, "..", app_name, "if")
     for file_name in os.listdir(dir_name):
         prefix, suffix = os.path.splitext(file_name)
-        out.append(TriggerTemplate(prefix))
+        if ".json" == suffix:
+            out.append(TriggerTemplate(prefix))
     return out
 
 
