@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+from copy import deepcopy
 import json
 import os
 import pprint
@@ -46,8 +47,49 @@ class TriggerTemplate(object):
         list of triggers if a match is made.
         :return: a list of triggers, and a dict of fields.
         """
-        pprint.pprint(triggers)
+        unmatched = deepcopy(triggers)
+        print(type(unmatched))
+        pprint.pprint(unmatched)
+        assert isinstance(unmatched, list)
         fields = {}
+        for regex in self.regex:
+            found = False
+            for i in range(len(unmatched)):
+                if isinstance(unmatched[i], dict):
+                    # An OR statement, or a trigger.  Today I don't do this.
+                    continue
+
+                match = regex.search(unmatched[i])
+                if not match:
+                    # Doesn't match, keep looking.
+                    continue
+
+                found = True
+                found_fields = match.groupdict()
+                for key in found_fields:
+                    if key in fields:
+                        if found_fields[key] != fields[key]:
+                            # Field name is different.  This doesn't match.
+                            found = False
+                            break
+                    else:
+                        fields[key] = found_fields[key]
+
+                if found:
+                    del unmatched[i]
+                    break
+
+            if not found:
+                # Regex had no match, so we are done (failed)
+                return triggers
+
+        # All REGEX items were found, so we have a match.  Append
+        # our findings to the matched list and move along.
+        this_template = {self.name: fields}
+        unmatched.append(this_template)
+        return unmatched
+
+        # OLD code
         for i in range(1 + len(triggers) - len(self.regex)):
             found = True  # optimism!
             for j in range(len(self.regex)):
