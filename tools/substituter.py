@@ -9,13 +9,13 @@ _this_dir = os.path.dirname(os.path.realpath(__file__))
 app_name = "bg2"
 
 
-class TriggerTemplate(object):
+class Substituter(object):
     """
-    A Template container for triggers.
+    A Template container.
     """
     def __init__(self, name):
         """
-        Create a TriggerTemplate.  This loads the template
+        Create a Substituter.  This loads the template
         from disk so it can be used.
         :param name: The file name of the template.
         """
@@ -48,8 +48,6 @@ class TriggerTemplate(object):
         :return: a list of triggers, and a dict of fields.
         """
         unmatched = deepcopy(triggers)
-        print(type(unmatched))
-        pprint.pprint(unmatched)
         assert isinstance(unmatched, list)
         fields = {}
         for regex in self.regex:
@@ -172,7 +170,7 @@ class TriggerTemplate(object):
 
 
 if __name__ == "__main__":
-    test = TriggerTemplate("CanUseWand")
+    test = Substituter("CanUseWand")
 
     source = os.path.join(_this_dir, "..", "BDDEFAI",
                           "2680-Wand-of-Monster-Summoning.json")

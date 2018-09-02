@@ -8,7 +8,7 @@ import re
 import shutil
 import sys
 
-from triggers import TriggerTemplate, app_name
+from substituter import Substituter, app_name
 
 _this_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -16,14 +16,17 @@ _this_dir = os.path.dirname(os.path.realpath(__file__))
 _if_then_regex = r"(?P<statement>IF(?P<if>(.|\n)*?)^THEN$(?P<then>(.|\n)*?)END)"
 
 
-def _load_trigger_templates():
-    """Return a list of applicable trigger templates"""
+def _load_templates(which: str):
+    """
+    Return a list of applicable templates
+    :param which: Which template set to load, "lf" or "then"
+    """
     out = []
     dir_name = os.path.join(_this_dir, "..", app_name, "if")
     for file_name in os.listdir(dir_name):
         prefix, suffix = os.path.splitext(file_name)
         if ".json" == suffix:
-            out.append(TriggerTemplate(prefix))
+            out.append(Substituter(prefix))
     return out
 
 
@@ -223,12 +226,15 @@ if __name__ == "__main__":
         shutil.rmtree(target, ignore_errors=True)
     files = split_file(source, target)
 
-    trigger_templates = _load_trigger_templates()
+    trigger_templates = _load_templates("if")
+    action_templates = _load_templates("then")
 
     for file in files:
         data = split_if_then(file)
         for template in trigger_templates:
             data["if"] = template.collapse(data["if"])
+        for template in action_templates:
+            data["then"] = template.collapse(data["then"])
 
         if "name" in data:
             source = file

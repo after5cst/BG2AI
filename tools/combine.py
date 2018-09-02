@@ -8,7 +8,7 @@ import re
 import shutil
 import sys
 
-from triggers import TriggerTemplate
+from substituter import Substituter
 
 _this_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -38,7 +38,16 @@ def convert_actions_to_text(weight:int, actions:list) -> list:
     """
     lines = ["RESPONSE #{}".format(weight)]
     for action in actions:
-        if isinstance(action, str):
+        if isinstance(action, dict):
+            assert 1 == len(action), "Detected dict with multiple trigger keys"
+            key, value = action.popitem()
+
+            template = Substituter(key)
+            template_lines = template.expand(value)
+            for template_line in template_lines:
+                lines.append('\t' + template_line)
+
+        elif isinstance(action, str):
             lines.append('\t' + action)
         else:
             assert False, "Action contains unknown type"
@@ -67,7 +76,7 @@ def convert_triggers_to_text(source: list, in_or: bool=False) -> list:
                 lines.append("OR({})".format(len(or_lines)))
                 lines += or_lines
             else:
-                templ = TriggerTemplate(key)
+                templ = Substituter(key)
                 template_lines = templ.expand(value)
                 lines += template_lines
         elif isinstance(item, str):
@@ -101,7 +110,7 @@ def convert_json_to_baf(source: dict) ->str:
 
 
 def combine_file(source_dir: str, target_file: str):
-    """Take snippets and put them back toggether"""
+    """Take snippets and put them back together"""
     logging.info("Sorting directory '{}'".format(source_dir))
     files = []
     for file in os.listdir(source_dir):

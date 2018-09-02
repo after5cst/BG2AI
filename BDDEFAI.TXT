@@ -2697,7 +2697,6 @@ IF
 	ActionListEmpty()
 	HaveSpell(PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	See(MostDamagedOf([PC]))
 	HPPercentLT(LastSeenBy(Myself),40)
 	InParty(LastSeenBy(Myself))
@@ -2713,9 +2712,10 @@ IF
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
