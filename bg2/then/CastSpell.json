@@ -1,0 +1,7 @@
+[
+    "SetInterrupt(FALSE)",
+    "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+    "DisplayString(Myself,<STRING_ID>)  // <STRING_DESC>",
+    "Spell(<TARGET>,<SPELL>)  // <DESC>",
+    "SetInterrupt(TRUE)"
+]

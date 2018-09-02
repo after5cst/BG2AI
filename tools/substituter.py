@@ -21,6 +21,8 @@ class Substituter(object):
         """
         self.name = name
         path = os.path.join(_this_dir, "..", app_name, "if", name + ".json")
+        if not os.path.exists(path):
+            path = os.path.join(_this_dir, "..", app_name, "then", name + ".json")
         self.path = os.path.realpath(path)
         with open(self.path) as fp:
             self.triggers = json.load(fp)

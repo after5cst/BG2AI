@@ -22,7 +22,7 @@ def _load_templates(which: str):
     :param which: Which template set to load, "lf" or "then"
     """
     out = []
-    dir_name = os.path.join(_this_dir, "..", app_name, "if")
+    dir_name = os.path.join(_this_dir, "..", app_name, which)
     for file_name in os.listdir(dir_name):
         prefix, suffix = os.path.splitext(file_name)
         if ".json" == suffix:
@@ -234,7 +234,10 @@ if __name__ == "__main__":
         for template in trigger_templates:
             data["if"] = template.collapse(data["if"])
         for template in action_templates:
-            data["then"] = template.collapse(data["then"])
+            for response in data["then"]:
+                assert 1 == len(response)
+                for key, value in response.items():
+                    response[key] = template.collapse(value)
 
         if "name" in data:
             source = file
