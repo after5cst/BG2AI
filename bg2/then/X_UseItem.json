@@ -1,0 +1,5 @@
+[
+  "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+  "UseItem('<ITEM>',<TARGET>)  // <DESC>",
+  "DisplayString(Myself,<STRING_ID>)  // <STRING_DESC>"
+]
