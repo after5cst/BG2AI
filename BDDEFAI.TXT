@@ -223,11 +223,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(Myself,CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -264,11 +262,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(Myself,CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -338,11 +334,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12084)  // Sanctuary
 		Spell(Myself,CLERIC_SANCTUARY)  // SPPR109.SPL (Sanctuary)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -591,11 +585,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_Cloud","LOCALS",0)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38581)  // Zone of Sweet Air
 		Spell(Myself,CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -738,11 +730,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -766,11 +756,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -794,11 +782,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -822,11 +808,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -850,11 +834,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -878,11 +860,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -901,11 +881,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -924,11 +902,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -947,11 +923,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -970,11 +944,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -993,11 +965,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1016,11 +986,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1040,11 +1008,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1064,11 +1030,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1088,11 +1052,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1112,11 +1074,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1136,11 +1096,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1160,11 +1118,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1183,11 +1139,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1206,11 +1160,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1229,11 +1181,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1252,11 +1202,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1275,11 +1223,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1298,11 +1244,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1326,11 +1270,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1354,11 +1296,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1382,11 +1322,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1410,11 +1348,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1438,11 +1374,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1466,11 +1400,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1494,11 +1426,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1522,11 +1452,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1550,11 +1478,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1578,11 +1504,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1606,11 +1530,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1634,11 +1556,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1661,11 +1581,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1688,11 +1606,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1715,11 +1631,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1742,11 +1656,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1769,11 +1681,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1796,11 +1706,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -1988,11 +1896,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2012,11 +1918,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2036,11 +1940,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2060,11 +1962,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2084,11 +1984,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2108,11 +2006,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2220,11 +2116,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2243,11 +2137,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2266,11 +2158,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2289,11 +2179,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2312,11 +2200,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2335,11 +2221,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2358,11 +2242,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2381,11 +2263,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2404,11 +2284,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2427,11 +2305,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2450,11 +2326,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2473,11 +2347,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2718,11 +2590,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12032)  // Lay On Hands
 		Spell(LastSeenBy(Myself),PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2747,11 +2617,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2776,11 +2644,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2805,11 +2671,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2866,11 +2730,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -2998,11 +2860,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3035,11 +2895,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3072,11 +2930,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3093,11 +2949,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25765)  // Resurrection
 		Spell(Player2,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3114,11 +2968,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25765)  // Resurrection
 		Spell(Player3,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3135,11 +2987,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25765)  // Resurrection
 		Spell(Player4,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3156,11 +3006,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25765)  // Resurrection
 		Spell(Player5,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3177,11 +3025,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25765)  // Resurrection
 		Spell(Player6,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3198,11 +3044,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12117)  // Raise Dead
 		Spell(Player2,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3219,11 +3063,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12117)  // Raise Dead
 		Spell(Player3,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3240,11 +3082,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12117)  // Raise Dead
 		Spell(Player4,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3261,11 +3101,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12117)  // Raise Dead
 		Spell(Player5,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3282,11 +3120,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12117)  // Raise Dead
 		Spell(Player6,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3303,11 +3139,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103073)  // Recall Spirit
 		Spell(Player2,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3324,11 +3158,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103073)  // Recall Spirit
 		Spell(Player3,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3345,11 +3177,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103073)  // Recall Spirit
 		Spell(Player4,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3366,11 +3196,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103073)  // Recall Spirit
 		Spell(Player5,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3387,11 +3215,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,103073)  // Recall Spirit
 		Spell(Player6,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3414,11 +3240,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3441,11 +3265,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3468,11 +3290,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3496,11 +3316,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3524,11 +3342,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3552,11 +3368,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3578,11 +3392,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3604,11 +3416,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3630,11 +3440,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3658,11 +3466,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3686,11 +3492,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3714,11 +3518,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3742,11 +3544,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3770,11 +3570,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3798,11 +3596,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3825,11 +3621,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3852,11 +3646,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3879,11 +3671,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3906,11 +3696,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3933,11 +3721,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3960,11 +3746,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -3987,11 +3771,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25884)  // Secret Word
 		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -4014,11 +3796,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25884)  // Secret Word
 		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -4041,11 +3821,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25884)  // Secret Word
 		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -5360,11 +5138,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12080)  // Haste
 		Spell([GOODCUTOFF.0.0.FIGHTER_ALL],WIZARD_HASTE)  // SPWI305.SPL (Haste)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -5387,11 +5163,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12080)  // Haste
 		Spell([GOODCUTOFF.0.0.RANGER_ALL],WIZARD_HASTE)  // SPWI305.SPL (Haste)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -5414,11 +5188,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12080)  // Haste
 		Spell([GOODCUTOFF.0.0.PALADIN_ALL],WIZARD_HASTE)  // SPWI305.SPL (Haste)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6078,11 +5850,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6112,11 +5882,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6146,11 +5914,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6253,11 +6019,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
 		Spell([EVILCUTOFF],WIZARD_HORROR)  // SPWI205.SPL (Horror)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6296,11 +6060,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
 		Spell(SecondNearest([EVILCUTOFF]),WIZARD_HORROR)  // SPWI205.SPL (Horror)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6339,11 +6101,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
 		Spell(ThirdNearest([EVILCUTOFF]),WIZARD_HORROR)  // SPWI205.SPL (Horror)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6504,11 +6264,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6539,11 +6297,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6574,11 +6330,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6609,11 +6363,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6644,11 +6396,9 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -6681,11 +6431,11 @@ IF
 	HasItem("WAND10",Myself)  // Wand of Monster Summoning
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		SetGlobalTimer("BD_Wand","LOCALS",THREE_ROUNDS)
-		DisplayString(Myself,12037)  // Monster Summoning II
-		UseItem("WAND10",Myself)  // Wand of Monster Summoning
 		SetSequence(SEQ_CAST)
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("WAND10",Myself)  // Wand of Monster Summoning
+		DisplayString(Myself,12037)  // Monster Summoning II
 END
 
 IF
@@ -7004,11 +6754,9 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -7038,11 +6786,9 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -7072,11 +6818,9 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -7104,11 +6848,9 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -7136,11 +6878,9 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
-		SetInterrupt(TRUE)
 END
 
 IF
@@ -7168,11 +6908,9 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 THEN
 	RESPONSE #100
-		SetInterrupt(FALSE)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
-		SetInterrupt(TRUE)
 END
 
 IF
