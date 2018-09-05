@@ -179,12 +179,12 @@ END
 
 IF
 	ActionListEmpty()
+	StateCheck(Myself,STATE_SILENCED)
 	HaveSpell(WIZARD_VOCALIZE)  // SPWI219.SPL (Vocalize)
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
