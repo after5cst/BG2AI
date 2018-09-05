@@ -43,13 +43,24 @@ class Substituter(object):
                 escaped = escaped.replace(field_name, named_group)
             self.regex.append(re.compile(escaped))
 
-    def collapse(self, triggers: list) -> list:
+    def match_str(self, item: str) -> dict:
+        """
+        Match a single string item from the list
+        :param item: The item to be compared against our regular expressions.
+        :return: Returns None if failed.  Otherwise returns a dict of
+            field names and values.
+        """
+        # TODO
+        assert(False, "TODO")
+        return None
+
+    def collapse(self, field_data: list) -> list:
         """
         Scan a list of triggers, and substitute ourselves in the
         list of triggers if a match is made.
         :return: a list of triggers, and a dict of fields.
         """
-        unmatched = deepcopy(triggers)
+        unmatched = deepcopy(field_data)
         assert isinstance(unmatched, list)
         fields = {}
         for regex in self.regex:
@@ -81,7 +92,7 @@ class Substituter(object):
 
             if not found:
                 # Regex had no match, so we are done (failed)
-                return triggers
+                return field_data
 
         # All REGEX items were found, so we have a match.  Append
         # our findings to the matched list and move along.
@@ -90,7 +101,7 @@ class Substituter(object):
         return unmatched
 
         # OLD code
-        for i in range(1 + len(triggers) - len(self.regex)):
+        for i in range(1 + len(field_data) - len(self.regex)):
             found = True  # optimism!
             for j in range(len(self.regex)):
                 if not found:
@@ -98,15 +109,15 @@ class Substituter(object):
                     break
 
                 k = i + j
-                if isinstance(triggers[k], dict):
+                if isinstance(field_data[k], dict):
                     # An OR statement.  We don't currently do this.
                     found = False
                     break
 
                 print('*' * 10)
-                pprint.pprint(triggers[k])
+                pprint.pprint(field_data[k])
                 pprint.pprint(self.triggers[j])
-                match = self.regex[j].search(triggers[k])
+                match = self.regex[j].search(field_data[k])
                 if not match:
                     # Nope, no good.  Start over with the next 'i'
                     found = False
@@ -123,13 +134,13 @@ class Substituter(object):
                         fields[key] = found_fields[key]
 
             if found:
-                before = triggers[:i]
+                before = field_data[:i]
                 mid = [{ self.name : fields }, ]
-                after = triggers[i+len(self.regex):]
+                after = field_data[i + len(self.regex):]
                 return before + mid + after
 
         # No match, just return the original input.
-        return triggers
+        return field_data
 
     def expand(self, field_data) -> list:
         """
