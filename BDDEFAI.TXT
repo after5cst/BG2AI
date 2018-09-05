@@ -6402,10 +6402,10 @@ IF
 		NumCreatureGT([EVILCUTOFF],4)
 		CheckStatGT([EVILCUTOFF],12,LEVEL)
 	ActionListEmpty()
+	HasItem("WAND10",Myself)  // Wand of Monster Summoning
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	!GlobalTimerNotExpired("BD_Wand","LOCALS")
-	HasItem("WAND10",Myself)  // Wand of Monster Summoning
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Wand","LOCALS",THREE_ROUNDS)
