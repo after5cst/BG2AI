@@ -9,6 +9,55 @@ _this_dir = os.path.dirname(os.path.realpath(__file__))
 app_name = "bg2"
 
 
+def combine_dicts(dict1, dict2):
+    """Combine two dicts if there are no duplicate keys.
+    :param dict1: First dict to be combined
+    :param dict2: Second dict to be conbined
+    "return" None if duplicate key, otherwise a combined dictionary.
+    """
+    result = {}
+    for key, value in dict1.items():
+        result[key] = value
+    for key, value in dict2.items():
+        if key in result:
+            return None
+        result[key] = value
+    return result
+
+
+class ElementRegex(object):
+    """
+    A regular expression used as a trigger or action element.
+    """
+    key_regex = re.compile(r"<(\w+)>")
+
+    def __init__(self, element: str):
+        assert isinstance(element, str), "Regex element must be a string"
+        self.element = element
+        self.field_names = ElementRegex.key_regex.findall(element)
+
+        escaped = re.escape(element)  # Turn things like '(' into '\('
+        for field in self.field_names:
+            named_group = "(?P<{}>.*)".format(field)
+            field_name = re.escape("<{}>".format(field))
+            escaped = escaped.replace(field_name, named_group)
+        self.regex = re.compile(escaped)
+
+    def match(self, data):
+        """
+        Look to see if the provided data matches this element.
+        :param data:  Source data to compare.
+        :return: None or a dict of matched fields.
+        """
+        result = None
+        if isinstance(data, str):
+            match = self.regex.search(data)
+            if match:
+                result = match.groupdict()
+        return result
+
+
+
 class FoundInRegexList(object):
     """
     An object returned from find_*_in_regex_list in the Subustituter class
@@ -28,59 +77,28 @@ class Substituter(object):
         :param name: The file name of the template.
         """
         self.name = name
+        self.elements = []
+        self.fields = []
+        self.path = None
+
         path = os.path.join(_this_dir, "..", app_name, "if", name + ".json")
         if not os.path.exists(path):
             path = os.path.join(_this_dir, "..", app_name, "then", name + ".json")
         self.path = os.path.realpath(path)
-        with open(self.path) as fp:
-            self.triggers = json.load(fp)
 
-        # Go find any field names in our template data.
-        # Also compile regex for searches in the template data.
-        self.fields = list()
-        self.regex = list()
-        regex = re.compile(r"<(\w+)>")
-        for trigger in self.triggers:
-            fields = regex.findall(trigger)
-            self.fields += fields
+        elements = []
+        with open(self.path) as file:
+            elements = json.load(file)
+            assert isinstance(elements, list)
 
-            escaped = re.escape(trigger) # Turn things like '(' into '\('
-            for field in fields:
-                named_group = "(?P<{}>.*)".format(field)
-                field_name = re.escape("<{}>".format(field))
-                escaped = escaped.replace(field_name, named_group)
-            self.regex.append(re.compile(escaped))
-
-    @staticmethod
-    def find_str_in_regex_list(item: str, regexes: list, fields: dict)\
-            -> FoundInRegexList:
-        """
-        Test item against regular expressions for a match.
-        :param item: The string to be checked against the regular expressions.
-        :param regexes: The list of regular expressions.
-        :return: None if not found, otherwise a FoundInRegexList object.
-        """
-        regex_inputs = regexes[:]
-        for i, regex in enumerate(regex_inputs):
-            # Since I'm new to 'enumerate':
-            #   i is the current index in regex_inputs
-            #   regex is the actual item from regex_inputs
-            match = regex.search(item)
-            if match:
-                out = FoundInRegexList()
-                out.index = i
-                out.fields = match.groupdict()
-
-                field_collision = False
-                for key in out.fields:
-                    if key in fields:
-                        if out.fields[key] != fields[key]:
-                            field_collision = True
-                            break
-                if not field_collision:
-                    out.fields.update(fields)
-                    return out
-        return None
+        for element in elements:
+            if isinstance(element, str):
+                self.elements.append(ElementRegex(element))
+            else:
+                pprint.pprint(element)
+                assert False, "unknown data type {} in template file".format(
+                    type(element)
+                )
 
     def collapse(self, list_in: list) -> list:
         """
@@ -89,29 +107,26 @@ class Substituter(object):
         :return: a list, and a dict of fields.
         """
         input_list = deepcopy(list_in)
-        regexes = self.regex[:]
+        elements = self.elements[:]
         first_match = None
         unmatched = []
         fields = {}
 
         for input_item in input_list:
-            if isinstance(input_item, str):
-                match = self.find_str_in_regex_list(
-                    input_item, regexes, fields)
-            else:
-                match = None
-            if match is None:
-                unmatched.append(input_item)
-            else:
-                if first_match is None:
-                    first_match = len(unmatched)
-                fields = match.fields
-                del regexes[match.index]
+            for i, element in enumerate(elements):
+                temp_fields = element.match(input_item)
+                if temp_fields:
+                    # We matched the record.  Check for field collisions.
+                    temp_fields = combine_dicts(temp_fields, fields)
+                if temp_fields:
+                    fields = temp_fields
+                    del elements[i]
+                    if first_match is None:
+                        first_match = len(unmatched)
 
-        if 0 == len(regexes):
-            # Found all items in th regex list, this
-            # is a match.  Make the substitution at the
-            # earliest point.
+        if 0 == len(elements):
+            # Found all items, this is a match.  Make the substitution
+            # at the earliest point.
             replacement = {self.name: fields}
             unmatched.insert(first_match, replacement)
             return unmatched
