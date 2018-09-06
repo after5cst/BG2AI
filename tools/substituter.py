@@ -60,7 +60,7 @@ class Substituter(object):
         :param regexes: The list of regular expressions.
         :return: None if not found, otherwise a FoundInRegexList object.
         """
-        regex_inputs = deepcopy(regexes)
+        regex_inputs = regexes[:]
         for i, regex in enumerate(regex_inputs):
             # Since I'm new to 'enumerate':
             #   i is the current index in regex_inputs
@@ -89,7 +89,7 @@ class Substituter(object):
         :return: a list, and a dict of fields.
         """
         input_list = deepcopy(list_in)
-        regexes = deepcopy(self.regex)
+        regexes = self.regex[:]
         first_match = None
         unmatched = []
         fields = {}
