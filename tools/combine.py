@@ -68,17 +68,19 @@ def convert_triggers_to_text(source: list, in_or: bool=False) -> list:
     """
     lines = list()
     for item in source:
-        if isinstance(item, dict):
+        if isinstance(item, list):
+            assert not in_or, "Nested OR block found"
+            # A list within a list is an OR block.
+            or_lines = convert_triggers_to_text(item, True)
+            lines.append("OR({})".format(len(or_lines)))
+            lines += or_lines
+        elif isinstance(item, dict):
             assert 1 == len(item), "Detected dict with multiple trigger keys"
             key, value = item.popitem()
-            if key.upper() == "OR":
-                or_lines = convert_triggers_to_text(value, True)
-                lines.append("OR({})".format(len(or_lines)))
-                lines += or_lines
-            else:
-                templ = Substituter(key)
-                template_lines = templ.expand(value)
-                lines += template_lines
+
+            templ = Substituter(key)
+            template_lines = templ.expand(value)
+            lines += template_lines
         elif isinstance(item, str):
             lines.append(item)
         else:

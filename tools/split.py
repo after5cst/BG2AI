@@ -162,9 +162,9 @@ def split_if_then(source_file: str) -> dict:
             #     output["ActionListEmpty"] = True
             elif or_check:
                 or_count = int(or_check.group(1))
-                triggers.append({"OR": []})
+                triggers.append([])
             elif or_count > 0:
-                triggers[-1]["OR"].append(line)
+                triggers[-1].append(line)
                 or_count = or_count - 1
             else:
                 triggers.append(line)
