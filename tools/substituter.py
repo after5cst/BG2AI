@@ -9,6 +9,14 @@ _this_dir = os.path.dirname(os.path.realpath(__file__))
 app_name = "bg2"
 
 
+class FoundInRegexList(object):
+    """
+    An object returned from find_*_in_regex_list in the Subustituter class
+    """
+    index = -1
+    fields = {}
+
+
 class Substituter(object):
     """
     A Template container.
@@ -43,104 +51,75 @@ class Substituter(object):
                 escaped = escaped.replace(field_name, named_group)
             self.regex.append(re.compile(escaped))
 
-    def match_str(self, item: str) -> dict:
+    @staticmethod
+    def find_str_in_regex_list(item: str, regexes: list, fields: dict)\
+            -> FoundInRegexList:
         """
-        Match a single string item from the list
-        :param item: The item to be compared against our regular expressions.
-        :return: Returns None if failed.  Otherwise returns a dict of
-            field names and values.
+        Test item against regular expressions for a match.
+        :param item: The string to be checked against the regular expressions.
+        :param regexes: The list of regular expressions.
+        :return: None if not found, otherwise a FoundInRegexList object.
         """
-        # TODO
-        assert(False, "TODO")
+        regex_inputs = deepcopy(regexes)
+        for i, regex in enumerate(regex_inputs):
+            # Since I'm new to 'enumerate':
+            #   i is the current index in regex_inputs
+            #   regex is the actual item from regex_inputs
+            match = regex.search(item)
+            if match:
+                out = FoundInRegexList()
+                out.index = i
+                out.fields = match.groupdict()
+
+                field_collision = False
+                for key in out.fields:
+                    if key in fields:
+                        if out.fields[key] != fields[key]:
+                            field_collision = True
+                            break
+                if not field_collision:
+                    out.fields.update(fields)
+                    return out
         return None
 
-    def collapse(self, field_data: list) -> list:
+    def collapse(self, list_in: list) -> list:
         """
-        Scan a list of triggers, and substitute ourselves in the
-        list of triggers if a match is made.
-        :return: a list of triggers, and a dict of fields.
+        Scan a list, and substitute ourselves in the
+        list if a match is made.
+        :return: a list, and a dict of fields.
         """
-        unmatched = deepcopy(field_data)
-        assert isinstance(unmatched, list)
+        input_list = deepcopy(list_in)
+        regexes = deepcopy(self.regex)
+        first_match = None
+        unmatched = []
         fields = {}
-        for regex in self.regex:
-            found = False
-            for i in range(len(unmatched)):
-                if isinstance(unmatched[i], dict):
-                    # An OR statement, or a trigger.  Today I don't do this.
-                    continue
 
-                match = regex.search(unmatched[i])
-                if not match:
-                    # Doesn't match, keep looking.
-                    continue
+        for input_item in input_list:
+            if isinstance(input_item, str):
+                match = self.find_str_in_regex_list(
+                    input_item, regexes, fields)
+            else:
+                match = None
+            if match is None:
+                unmatched.append(input_item)
+            else:
+                if first_match is None:
+                    first_match = len(unmatched)
+                fields = match.fields
+                del regexes[match.index]
 
-                found = True
-                found_fields = match.groupdict()
-                for key in found_fields:
-                    if key in fields:
-                        if found_fields[key] != fields[key]:
-                            # Field name is different.  This doesn't match.
-                            found = False
-                            break
-                    else:
-                        fields[key] = found_fields[key]
+        if 0 == len(regexes):
+            # Found all items in th regex list, this
+            # is a match.  Make the substitution at the
+            # earliest point.
+            replacement = {self.name: fields}
+            unmatched.insert(first_match, replacement)
+            return unmatched
 
-                if found:
-                    del unmatched[i]
-                    break
-
-            if not found:
-                # Regex had no match, so we are done (failed)
-                return field_data
-
-        # All REGEX items were found, so we have a match.  Append
-        # our findings to the matched list and move along.
-        this_template = {self.name: fields}
-        unmatched.append(this_template)
-        return unmatched
-
-        # OLD code
-        for i in range(1 + len(field_data) - len(self.regex)):
-            found = True  # optimism!
-            for j in range(len(self.regex)):
-                if not found:
-                    # The match has failed.  Move along.
-                    break
-
-                k = i + j
-                if isinstance(field_data[k], dict):
-                    # An OR statement.  We don't currently do this.
-                    found = False
-                    break
-
-                print('*' * 10)
-                pprint.pprint(field_data[k])
-                pprint.pprint(self.triggers[j])
-                match = self.regex[j].search(field_data[k])
-                if not match:
-                    # Nope, no good.  Start over with the next 'i'
-                    found = False
-                    break
-
-                found_fields = match.groupdict()
-                for key in found_fields:
-                    if key in fields:
-                        if found_fields[key] != fields[key]:
-                            # Uh, keys must be consistent.
-                            found = False
-                            break
-                    else:
-                        fields[key] = found_fields[key]
-
-            if found:
-                before = field_data[:i]
-                mid = [{ self.name : fields }, ]
-                after = field_data[i + len(self.regex):]
-                return before + mid + after
-
-        # No match, just return the original input.
-        return field_data
+        # We didn't match every regex line somewhere.  This fails
+        # the match as a whole and we will just return the original
+        # list of items.
+        return list_in
 
     def expand(self, field_data) -> list:
         """
