@@ -87,6 +87,18 @@ class ElementRegex(object):
                     return result
         return None
 
+    def format(self, fields: dict):
+        """
+        Return a formatted string with the field data.
+        :param fields: The key/values for substitutions
+        :return: The formmated string.
+        """
+        data = self.element
+        for key, value in fields.items():
+            search_term = "<{}>".format(key)
+            data = data.replace(search_term, value)
+        return [data]
+
     def __str__(self):
         return "ElementRegex({})".format(self.element)
 
@@ -174,6 +186,17 @@ class ElementTemplate(object):
                 result.after = result.after[1:]
         return result
 
+    def format(self, fields: dict):
+        """
+        Return a formatted string with the field data.
+        :param fields: The key/values for substitutions
+        :return: The formmated string.
+        """
+        result = []
+        for element in self.elements:
+            result += element.format(fields)
+        return result
+
     def __str__(self):
         return "ElementTemplate({})".format(self.name)
 
@@ -206,59 +229,15 @@ class Substituter(object):
         """
         TODO
         """
-        out = list()
+        logging.debug("{}: expand {}".format(
+            self.template.name, pprint.pformat(field_data)
+        ))
+        result = self.template.format(field_data)
+        logging.debug("{}: {}".format(
+            self.template.name, pprint.pformat(result)
+        ))
 
-        for my_trigger in self.triggers:
-            assert isinstance(my_trigger, str), "No ORs or recursion (yet)"
-            for key, value in field_data.items():
-                search_term = "<{}>".format(key)
-                my_trigger = my_trigger.replace(search_term, value)
-
-            out.append(my_trigger)
-        return out
-
-    def expand_all(self, triggers: list) -> list:
-        """
-        Expand the template in the input if found.
-        :param triggers: The list of triggers.
-        :return: The modified list.
-        """
-        out = list()
-        for trigger in triggers:
-            if not isinstance(trigger, dict):
-                # Trivial: this isn't a possible template.
-                out.append(trigger)
-                continue
-
-            if self.name not in trigger:
-                # Trivial: This dict isn't our trigger
-                out.append(trigger)
-                continue
-
-            out += self.expand(trigger[self.name])
-        return out
+        return result
 
     def __str__(self):
         return str(self.fields)
-
-
-if __name__ == "__main__":
-    test = Substituter("CanUseWand")
-
-    source = os.path.join(_this_dir, "..", "BDDEFAI",
-                          "2680-Wand-of-Monster-Summoning.json")
-    with open(source) as fp:
-        data = json.load(fp)
-    temp = data["if"]
-
-    print('*' * 80)
-    pprint.pprint(temp)
-    temp2 = test.expand_all(temp)
-
-    print('*' * 80)
-    pprint.pprint(temp2)
-    temp3 = test.collapse(temp2)
-
-    print('*' * 80)
-    pprint.pprint(temp3)
-    assert temp3 == temp, "collapse + expand failed"
