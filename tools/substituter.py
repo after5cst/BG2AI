@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 from copy import deepcopy
 import json
+import logging
 import os
 import pprint
 import re
@@ -12,7 +13,7 @@ app_name = "bg2"
 def combine_dicts(dict1, dict2):
     """Combine two dicts if there are no duplicate keys.
     :param dict1: First dict to be combined
-    :param dict2: Second dict to be conbined
+    :param dict2: Second dict to be combined
     "return" None if duplicate key, otherwise a combined dictionary.
     """
     result = {}
@@ -23,6 +24,32 @@ def combine_dicts(dict1, dict2):
             return None
         result[key] = value
     return result
+
+
+def get_json_path(name: str) -> str:
+    """
+    Return the path to the JSON file for the provided name.  This
+    is hackery because I didn't design things correctly.
+    :param name: Name of the template file.
+    :return: The path to the template file.
+    """
+    path = os.path.join(_this_dir, "..", app_name, "if", name + ".json")
+    if not os.path.exists(path):
+        path = os.path.join(_this_dir, "..", app_name, "then", name + ".json")
+    return os.path.realpath(path)
+
+
+class ElementMatch(object):
+    """
+    A container for element matches.
+    attributes:
+    * before : A list of unmatched elements prior to the match
+    * fields : A dict of field names and values from the match
+    * after  : A list of unmatched elements after the match
+    """
+    before = None
+    fields = {}
+    after = None
 
 
 class ElementRegex(object):
@@ -43,27 +70,112 @@ class ElementRegex(object):
             escaped = escaped.replace(field_name, named_group)
         self.regex = re.compile(escaped)
 
-    def match(self, data):
+    def match(self, element_list: list):
+        """
+        Look to see if the provided data contains this element.
+        :param element_list:  Source data to compare.
+        :return: None or an ElementMatch object.
+        """
+        for i, entry in enumerate(element_list):
+            if isinstance(entry, str):
+                match = self.regex.search(entry)
+                if match:
+                    result = ElementMatch()
+                    result.before = element_list[:i]
+                    result.fields = match.groupdict()
+                    result.after = element_list[i + 1:]
+                    return result
+        return None
+
+    def __str__(self):
+        return "ElementRegex({})".format(self.element)
+
+
+class ElementTemplate(object):
+    """
+    Another template file used as a trigger or action element.
+    """
+    def __init__(self, name):
+        self.name = name
+        self.path = get_json_path(name)
+        self.elements = []
+
+        with open(self.path) as file:
+            elements = json.load(file)
+            assert isinstance(elements, list)
+
+        for element in elements:
+            if isinstance(element, str):
+                self.elements.append(ElementRegex(element))
+            elif isinstance(element, list):
+                # TODO : This is an OR list.
+                assert False, "TODO : OR"
+            elif isinstance(element, dict):
+                assert 1 == len(element), "template can only have one dict entry"
+                key, value = next(iter(element.items()))
+                assert {} == value, "template dict must be empty"
+                self.elements.append(ElementTemplate(key))
+            else:
+                pprint.pprint(element)
+                assert False, "unknown data type {} in template file".format(
+                    type(element)
+                )
+
+    def match(self, element_list):
         """
         Look to see if the provided data matches this element.
-        :param data:  Source data to compare.
-        :return: None or a dict of matched fields.
+        :param element_list:  Source data to compare.
+        :return: None or an ElementMatch object.
         """
-        result = None
-        if isinstance(data, str):
-            match = self.regex.search(data)
-            if match:
-                result = match.groupdict()
+        input_list = deepcopy(element_list)
+        elements = self.elements[:]
+        fields = {}
+
+        for i, element in enumerate(elements):
+            logging.debug("{}: Examining {}".format(
+                self.name, str(element)
+            ))
+
+            match = element.match(input_list)
+            if not match:
+                # All for one and one for all.
+                # Since one element didn't match, there is no match.
+                logging.debug("Element '{}' does not match".format(element))
+                return None
+            combined_fields = combine_dicts(fields, match.fields)
+            if combined_fields is None:
+                # We found a match, but we have a named parameter that
+                # holds two different values.  That fails the match.
+                logging.debug("Element '{}' has field conflict".format(element))
+                logging.debug("match fields = '{}'".format(
+                    pprint.pformat(match.fields)
+                ))
+                logging.debug("fields = '{}'".format(
+                    pprint.pformat(fields)
+                ))
+                return None
+            fields = combined_fields
+            logging.debug("Element '{}' MATCHES".format(element))
+            input_list = match.before + match.after
+
+        result = ElementMatch()
+        result.before = []  # Assume templates come first.  *sigh*
+        result.fields = fields
+        result.after = input_list
+
+        # Now, compare what's left with the original list to figure out
+        # a good place to split the list.
+        for item in element_list:
+            if 0 == len(result.after):
+                break
+            if item == result.after[0]:
+                # Item wasn't taken, it's a "before"
+                result.before.append(result.after[0])
+                result.after = result.after[1:]
         return result
 
-
-
-class FoundInRegexList(object):
-    """
-    An object returned from find_*_in_regex_list in the Subustituter class
-    """
-    index = -1
-    fields = {}
+    def __str__(self):
+        return "ElementTemplate({})".format(self.name)
 
 
 class Substituter(object):
@@ -76,64 +188,18 @@ class Substituter(object):
         from disk so it can be used.
         :param name: The file name of the template.
         """
-        self.name = name
-        self.elements = []
-        self.fields = []
-        self.path = None
-
-        path = os.path.join(_this_dir, "..", app_name, "if", name + ".json")
-        if not os.path.exists(path):
-            path = os.path.join(_this_dir, "..", app_name, "then", name + ".json")
-        self.path = os.path.realpath(path)
-
-        elements = []
-        with open(self.path) as file:
-            elements = json.load(file)
-            assert isinstance(elements, list)
-
-        for element in elements:
-            if isinstance(element, str):
-                self.elements.append(ElementRegex(element))
-            else:
-                pprint.pprint(element)
-                assert False, "unknown data type {} in template file".format(
-                    type(element)
-                )
+        self.template = ElementTemplate(name)
 
     def collapse(self, list_in: list) -> list:
         """
         Scan a list, and substitute ourselves in the
         list if a match is made.
-        :return: a list, and a dict of fields.
+        :return: The (possibly modified) list.
         """
-        input_list = deepcopy(list_in)
-        elements = self.elements[:]
-        first_match = None
-        unmatched = []
-        fields = {}
-
-        for input_item in input_list:
-            for i, element in enumerate(elements):
-                temp_fields = element.match(input_item)
-                if temp_fields:
-                    # We matched the record.  Check for field collisions.
-                    temp_fields = combine_dicts(temp_fields, fields)
-                if temp_fields:
-                    fields = temp_fields
-                    del elements[i]
-                    if first_match is None:
-                        first_match = len(unmatched)
-
-        if 0 == len(elements):
-            # Found all items, this is a match.  Make the substitution
-            # at the earliest point.
-            replacement = {self.name: fields}
-            unmatched.insert(first_match, replacement)
-            return unmatched
-
-        # We didn't match every regex line somewhere.  This fails
-        # the match as a whole and we will just return the original
-        # list of items.
+        match = self.template.match(deepcopy(list_in))
+        if match is not None:
+            replacement = {self.template.name: match.fields}
+            return match.before + [replacement] + match.after
         return list_in
 
     def expand(self, field_data) -> list:
