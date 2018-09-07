@@ -1,5 +1,8 @@
 [
-    "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+    [
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "CheckStatGT(Myself,0,AURACLEANSING)"
+    ],
     "CheckStatLT(Myself,50,<FAIL_TYPE>)",
     "!StateCheck(Myself,STATE_SILENCED)",
     "!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)"

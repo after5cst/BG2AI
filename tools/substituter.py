@@ -80,11 +80,15 @@ class ElementRegex(object):
             if isinstance(entry, str):
                 match = self.regex.search(entry)
                 if match:
+                    logging.debug("'{}' == '{}'".format(
+                        self.element, entry))
                     result = ElementMatch()
                     result.before = element_list[:i]
                     result.fields = match.groupdict()
                     result.after = element_list[i + 1:]
                     return result
+                logging.debug("'{}' != '{}'".format(
+                    self.element, entry))
         return None
 
     def format(self, fields: dict):
@@ -111,6 +115,108 @@ class ElementRegex(object):
         return "ElementRegex({})".format(self.element)
 
 
+class ElementOR(object):
+    """
+    A list of elements joined together as an OR
+    """
+    def __init__(self, elements):
+        self.elements = []
+
+        for element in elements:
+            if isinstance(element, str):
+                self.elements.append(ElementRegex(element))
+            elif isinstance(element, list):
+                assert False, "Nested OR detected"
+            elif isinstance(element, dict):
+                assert 1 == len(element), "template can only have one dict entry"
+                key, value = next(iter(element.items()))
+                assert {} == value, "template dict must be empty"
+                self.elements.append(ElementTemplate(key))
+            else:
+                pprint.pprint(element)
+                assert False, "unknown data type {} in OR list".format(
+                    type(element)
+                )
+        logging.debug("ElementOR(): Added {}".format(pprint.pformat(
+            self.elements)))
+
+    def match(self, element_list):
+        """
+        Look to see if the provided data matches this element.
+        :param element_list:  Source data to compare.
+        :return: None or an ElementMatch object.
+        """
+        fields = {}
+
+        # Narrow our possibilities to lists.
+        candidates = {}
+        for i, element in enumerate(element_list):
+            if isinstance(element, list):
+                candidates[i] = deepcopy(element)
+
+        for i, candidate in candidates.items():
+            if len(candidate) != len(self.elements):
+                # Can't be an exact match: not the same length
+                continue
+
+            for element in self.elements:
+                match = element.match(candidate)
+                if not match:
+                    # All for one and one for all.
+                    # Since one element didn't match, there is no match.
+                    logging.debug("OR: Element '{}' does not match".format(element))
+                    break
+                combined_fields = combine_dicts(fields, match.fields)
+                if combined_fields is None:
+                    # We found a match, but we have a named parameter that
+                    # holds two different values.  That fails the match.
+                    logging.debug("OR: Element '{}' has conflict".format(element))
+                    logging.debug("match fields = '{}'".format(
+                        pprint.pformat(match.fields)
+                    ))
+                    logging.debug("fields = '{}'".format(
+                        pprint.pformat(fields)
+                    ))
+                    break
+                fields = combined_fields
+                logging.debug("OR: Element '{}' MATCHES".format(element))
+                candidate = match.before + match.after
+
+            if 0 == len(candidate):
+                result = ElementMatch()
+                result.before = element_list[:i]
+                result.fields = fields
+                result.after = element_list[i+1:]
+                return result
+
+        return False
+
+    def format(self, fields: dict):
+        """
+        Return a formatted string with the field data.
+        :param fields: The key/values for substitutions
+        :return: The formmated string.
+        """
+        result = []
+        for element in self.elements:
+            result += element.format(fields)
+        return [result,]
+
+    def line_count(self) -> int:
+        """
+        Get the number of lines this element contains.
+        Used to sort elements by size.
+        :return: The number of lienes.
+        """
+        result = 0
+        for element in self.elements:
+            result += element.line_count()
+        return result
+
+    def __str__(self):
+        return "ElementOR({})".format(len(self.elements))
+
+
 class ElementTemplate(object):
     """
     Another template file used as a trigger or action element.
@@ -128,8 +234,7 @@ class ElementTemplate(object):
             if isinstance(element, str):
                 self.elements.append(ElementRegex(element))
             elif isinstance(element, list):
-                # TODO : This is an OR list.
-                assert False, "TODO : OR"
+                self.elements.append(ElementOR(element))
             elif isinstance(element, dict):
                 assert 1 == len(element), "template can only have one dict entry"
                 key, value = next(iter(element.items()))
@@ -175,7 +280,8 @@ class ElementTemplate(object):
                 ))
                 return None
             fields = combined_fields
-            logging.debug("Element '{}' MATCHES".format(element))
+            logging.debug("{}: Element '{}' MATCHES".format(
+                self.name, element))
             input_list = match.before + match.after
 
         result = ElementMatch()

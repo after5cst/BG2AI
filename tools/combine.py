@@ -3,7 +3,7 @@ import argparse
 import json
 import logging
 import os
-from pprint import pprint
+from pprint import pprint, pformat
 import re
 import shutil
 import sys
@@ -18,6 +18,7 @@ def replace_single_quotes_with_double_outside_comment(data: str) -> str:
     Replace single quotes in non-comment with double quotes.
     Returns the string with replacements
     """
+    logging.debug("rsq: {}".format(pformat(data)))
     r = re.compile(r"^(.*)\/\/.*$|^(.*)$", re.MULTILINE)
     matches = [m.span(m.lastindex) for m in r.finditer(data)]
     for start, end in matches:
@@ -59,7 +60,7 @@ def convert_actions_to_text(weight:int, actions:list) -> list:
     return out
 
 
-def convert_triggers_to_text(source: list, in_or: bool=False) -> list:
+def convert_triggers_to_text(source_in: list, in_or: bool=False) -> list:
     """
     Convert a list of triggers into a list of strings.
     :param source: The list of triggers from the JSON.
@@ -67,8 +68,11 @@ def convert_triggers_to_text(source: list, in_or: bool=False) -> list:
     :return: a list of strings.
     """
     lines = list()
+    source = source_in[:]
     for item in source:
+        logging.debug(pformat(item))
         if isinstance(item, list):
+            logging.debug("Converting OR block to text")
             assert not in_or, "Nested OR block found"
             # A list within a list is an OR block.
             or_lines = convert_triggers_to_text(item, True)
@@ -80,7 +84,7 @@ def convert_triggers_to_text(source: list, in_or: bool=False) -> list:
 
             templ = Substituter(key)
             template_lines = templ.expand(value)
-            lines += template_lines
+            source += template_lines
         elif isinstance(item, str):
             lines.append(item)
         else:
