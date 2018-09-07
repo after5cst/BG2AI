@@ -99,6 +99,14 @@ class ElementRegex(object):
             data = data.replace(search_term, value)
         return [data]
 
+    def line_count(self) -> int:
+        """
+        Get the number of lines this element contains.
+        Used to sort elements by size.
+        :return: The number of lienes.
+        """
+        return 1
+
     def __str__(self):
         return "ElementRegex({})".format(self.element)
 
@@ -197,6 +205,17 @@ class ElementTemplate(object):
             result += element.format(fields)
         return result
 
+    def line_count(self) -> int:
+        """
+        Get the number of lines this element contains.
+        Used to sort elements by size.
+        :return: The number of lienes.
+        """
+        result = 0
+        for element in self.elements:
+            result += element.line_count()
+        return result
+
     def __str__(self):
         return "ElementTemplate({})".format(self.name)
 
@@ -238,6 +257,12 @@ class Substituter(object):
         ))
 
         return result
+
+    def line_count(self) -> int:
+        """
+        :return: The number of lines in contained items.
+        """
+        return self.template.line_count()
 
     def __str__(self):
         return str(self.fields)

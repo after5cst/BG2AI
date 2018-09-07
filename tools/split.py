@@ -27,6 +27,11 @@ def _load_templates(which: str):
         prefix, suffix = os.path.splitext(file_name)
         if ".json" == suffix:
             out.append(Substituter(prefix))
+    out.sort(key=lambda x: x.line_count(), reverse=True)
+
+    for item in out:
+        logging.debug("{} : {} lines".format(item.template.name,
+                                             item.line_count()))
     return out
 
 
