@@ -1,0 +1,9 @@
+[
+    "See(<LOOK_FOR>)",
+    [
+        "StateCheck(<TARGET>,STATE_PANIC)",
+        "StateCheck(<TARGET>,STATE_CHARMED)",
+        "StateCheck(<TARGET>,STATE_CONFUSED)",
+        "StateCheck(<TARGET>,STATE_FEEBLEMINDED)"
+    ]
+]
