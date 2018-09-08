@@ -7344,6 +7344,8 @@ IF
 	See([EVILCUTOFF.HUMANOID.0.FIGHTER])
 	!InParty(LastSeenBy(Myself))
 	!Class(LastSeenBy(Myself),MONK)
+	!Kit(LastSeenBy(Myself),INQUISITOR)
+	!Kit(LastSeenBy(Myself),CAVALIER)
 	!Race(LastSeenBy(Myself),ELF)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -7380,6 +7382,8 @@ IF
 	See(SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER]))
 	!InParty(LastSeenBy(Myself))
 	!Class(LastSeenBy(Myself),MONK)
+	!Kit(LastSeenBy(Myself),INQUISITOR)
+	!Kit(LastSeenBy(Myself),CAVALIER)
 	!Race(LastSeenBy(Myself),ELF)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -7636,7 +7640,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12068)  // Larloch's Minor Drain
-		SpellRES("SPIN104",NearestEnemyOf(Myself))  // Larloch's Minor Drain
+		SpellRES("SPIN104",LastSeenBy(Myself))  // Larloch's Minor Drain
 END
 
 IF
@@ -7664,6 +7668,7 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
 	CheckStatLT(LastSeenBy(Myself),75,MAGICDAMAGERESISTANCE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -7671,7 +7676,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12068)  // Larloch's Minor Drain
-		Spell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
+		Spell(LastSeenBy(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
 
 IF
@@ -7699,6 +7704,7 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
 	CheckStatLT(LastSeenBy(Myself),75,MAGICDAMAGERESISTANCE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -7706,7 +7712,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12068)  // Larloch's Minor Drain
-		Spell(SecondNearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
+		Spell(LastSeenBy(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
 
 IF
@@ -7751,8 +7757,6 @@ IF
 	See(SecondNearest([EVILCUTOFF.ANIMAL]))
 	!Race(LastSeenBy(Myself),DEMONIC)
 	Range(LastSeenBy(Myself),6)
-	!Class(LastSeenBy(Myself),MONK)
-	!Race(LastSeenBy(Myself),ELF)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
@@ -7785,8 +7789,6 @@ IF
 	See(ThirdNearest([EVILCUTOFF.ANIMAL]))
 	!Race(LastSeenBy(Myself),DEMONIC)
 	Range(LastSeenBy(Myself),6)
-	!Class(LastSeenBy(Myself),MONK)
-	!Race(LastSeenBy(Myself),ELF)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
