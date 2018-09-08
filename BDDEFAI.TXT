@@ -7037,7 +7037,7 @@ THEN
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38586)  // Spook
-		Spell([EVILCUTOFF],WIZARD_SPOOK)  // SPWI125.SPL (Spook)
+		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
 
 IF
@@ -7079,7 +7079,7 @@ THEN
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38586)  // Spook
-		Spell(SecondNearest([EVILCUTOFF]),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
+		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
 
 IF
@@ -7121,7 +7121,7 @@ THEN
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38586)  // Spook
-		Spell(ThirdNearest([EVILCUTOFF]),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
+		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
 
 IF
@@ -7161,7 +7161,7 @@ THEN
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12015)  // Blindness
-		Spell(NearestEnemyOf(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
+		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
 IF
@@ -7201,7 +7201,7 @@ THEN
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12015)  // Blindness
-		Spell(SecondNearestEnemyOf(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
+		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
 IF
@@ -7241,7 +7241,7 @@ THEN
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12015)  // Blindness
-		Spell(ThirdNearestEnemyOf(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
+		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
 IF
