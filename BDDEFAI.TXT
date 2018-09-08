@@ -5656,30 +5656,6 @@ IF
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	!GlobalTimerNotExpired("BD_DInv","LOCALS")
-	See(NearestEnemyOf(Myself))
-	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
-	CheckStat(Myself,0,TRUE_SIGHT)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12042)  // Detect Invisibility
-		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(SecondNearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -5831,7 +5807,7 @@ THEN
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12081)  // Slow
-		Spell(NearestEnemyOf(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
+		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
 
 IF
@@ -5868,7 +5844,7 @@ THEN
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12081)  // Slow
-		Spell(SecondNearestEnemyOf(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
+		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
 
 IF
@@ -5905,7 +5881,7 @@ THEN
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12081)  // Slow
-		Spell(ThirdNearestEnemyOf(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
+		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
 
 IF
