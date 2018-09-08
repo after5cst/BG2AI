@@ -212,7 +212,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--auto_delete', action='store_true', default=True)
-    parser.add_argument('-v', '--verbose', action='count', default=0)
+    parser.add_argument('-v', '--verbose', action='count', default=2)
 
     args = parser.parse_args()
     if args.verbose == 0:

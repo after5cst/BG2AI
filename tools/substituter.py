@@ -251,6 +251,7 @@ class ElementTemplate(object):
         self.elements = []
 
         with open(self.path) as file:
+            logging.debug("Loading {}".format(self.path))
             elements = json.load(file)
             assert isinstance(elements, list)
 
@@ -262,7 +263,8 @@ class ElementTemplate(object):
             elif isinstance(element, dict):
                 assert 1 == len(element), "template can only have one dict entry"
                 key, value = next(iter(element.items()))
-                assert {} == value, "template dict must be empty"
+                assert {} == value or None == value, \
+                    "template dict must be empty: {}".format(value)
                 self.elements.append(ElementTemplate(key))
             else:
                 pprint.pprint(element)

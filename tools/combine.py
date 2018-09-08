@@ -198,7 +198,7 @@ if __name__ == "__main__":
     target = source + ".TXT"
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', '--verbose', action='count', default=0
+    parser.add_argument('-v', '--verbose', action='count', default=0)
 
     args = parser.parse_args()
     if args.verbose == 0:
