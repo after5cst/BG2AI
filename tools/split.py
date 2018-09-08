@@ -236,13 +236,16 @@ if __name__ == "__main__":
 
     for file in files:
         data = split_if_then(file)
+        fields = {}
         for template in trigger_templates:
-            data["if"] = template.collapse(data["if"])
+            data["if"], fields = template.collapse(data["if"], fields)
         for template in action_templates:
             for response in data["then"]:
                 assert 1 == len(response)
                 for key, value in response.items():
-                    response[key] = template.collapse(value)
+                    response[key], fields = template.collapse(
+                        value, fields)
+        data["fields"] = [fields]
 
         if "name" in data:
             source = file
@@ -254,4 +257,4 @@ if __name__ == "__main__":
             os.remove(source)
 
         with open(file, "w") as fp:
-            json.dump(data, fp, indent=2)
+            json.dump(data, fp, indent=4)

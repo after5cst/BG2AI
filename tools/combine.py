@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 import argparse
+import collections
 import json
 import logging
 import os
@@ -30,11 +31,12 @@ def replace_single_quotes_with_double_outside_comment(data: str) -> str:
     return data
 
 
-def convert_actions_to_text(weight:int, actions:list) -> list:
+def convert_actions_to_text(weight:int, actions:list, fields_in: dict) -> list:
     """
     Convert a list of actions into a list of strings.
     :param weight: The weight of the response block.
     :param actions: The list of actions for that weight.
+    :param fields_in: A dict of field values.
     :return: a list of strings.
     """
     lines = ["RESPONSE #{}".format(weight)]
@@ -42,6 +44,11 @@ def convert_actions_to_text(weight:int, actions:list) -> list:
         if isinstance(action, dict):
             assert 1 == len(action), "Detected dict with multiple trigger keys"
             key, value = action.popitem()
+
+            if value:
+                value.update(fields_in)
+            else:
+                value = fields_in
 
             template = Substituter(key)
             template_lines = template.expand(value)
@@ -60,35 +67,50 @@ def convert_actions_to_text(weight:int, actions:list) -> list:
     return out
 
 
-def convert_triggers_to_text(source_in: list, in_or: bool=False) -> list:
+def convert_triggers_to_text(source_in: list, fields_in: dict, in_or: bool=False) -> list:
     """
     Convert a list of triggers into a list of strings.
-    :param source: The list of triggers from the JSON.
+    :param source_in: The list of triggers from the JSON.
+    :param fields_in: A dict of substitutable fields.
     :param in_or: If True, then processing statements from an OR
     :return: a list of strings.
     """
     lines = list()
-    source = source_in[:]
-    for item in source:
-        logging.debug(pformat(item))
+
+    deque = collections.deque(source_in)
+
+    while deque:
+        item = deque.popleft()
         if isinstance(item, list):
+            logging.debug("T2T: LIST {}".format(pformat(item)))
             logging.debug("Converting OR block to text")
             assert not in_or, "Nested OR block found"
             # A list within a list is an OR block.
-            or_lines = convert_triggers_to_text(item, True)
-            lines.append("OR({})".format(len(or_lines)))
-            lines += or_lines
+            or_lines = convert_triggers_to_text(item, fields_in, True)
+            or_statement = "OR({})".format(len(or_lines))
+            while or_lines:
+                deque.appendleft(or_lines.pop())
+            deque.appendleft(or_statement)
+
         elif isinstance(item, dict):
+            logging.debug("T2T: DICT {}".format(pformat(item)))
             assert 1 == len(item), "Detected dict with multiple trigger keys"
             key, value = item.popitem()
+            if value:
+                value.update(fields_in)
+            else:
+                value = fields_in
 
-            templ = Substituter(key)
-            template_lines = templ.expand(value)
-            source += template_lines
+            data = Substituter(key).expand(value)
+            while data:
+                deque.appendleft(data.pop())
+
         elif isinstance(item, str):
-            lines.append(item)
+            logging.debug("T2T: STR {}".format(pformat(item)))
+            lines += [item]
         else:
             assert False, "Trigger contains unknown type"
+        logging.debug("T2T: END {}".format(pformat(item)))
 
     out = list()
     for line in lines:
@@ -101,18 +123,19 @@ def convert_json_to_baf(source: dict) ->str:
     """
     Return a BAF string that represents the JSON provided.
     """
-    out = ["IF"] + convert_triggers_to_text(source["if"])
+    for fields in source["fields"]:
+        out = ["IF"] + convert_triggers_to_text(source["if"], fields)
 
-    out.append("THEN")
+        out.append("THEN")
 
-    for item in source["then"]:
-        assert 1 == len(item), "Detected dict with multiple action keys"
-        key, value = item.popitem()
-        weight = int(key)
-        out = out + convert_actions_to_text(weight, value)
+        for item in source["then"]:
+            assert 1 == len(item), "Detected dict with multiple action keys"
+            key, value = item.popitem()
+            weight = int(key)
+            out = out + convert_actions_to_text(weight, value, fields)
 
-    out.append("END")
-    return '\n'.join(out) + '\n\n'
+        out.append("END")
+        return '\n'.join(out) + '\n\n'
 
 
 def combine_file(source_dir: str, target_file: str):

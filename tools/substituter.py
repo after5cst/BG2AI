@@ -20,9 +20,13 @@ def combine_dicts(dict1, dict2):
     for key, value in dict1.items():
         result[key] = value
     for key, value in dict2.items():
-        if key in result:
+        if key in result and result[key] != value:
             return None
         result[key] = value
+
+    logging.debug("combine: dict1 = {}".format(pprint.pformat(dict1)))
+    logging.debug("combine: dict2 = {}".format(pprint.pformat(dict2)))
+    logging.debug("combine: result = {}".format(pprint.pformat(result)))
     return result
 
 
@@ -70,22 +74,40 @@ class ElementRegex(object):
             escaped = escaped.replace(field_name, named_group)
         self.regex = re.compile(escaped)
 
-    def match(self, element_list: list):
+    def match(self, inputs_in: list, fields_in: dict) -> ElementMatch:
         """
-        Look to see if the provided data contains this element.
-        :param element_list:  Source data to compare.
+        Look to see if the provided data matches this element.
+        :param inputs_in:  Source data to compare.
+        :param fields_in:  Source fields to compare.
         :return: None or an ElementMatch object.
         """
-        for i, entry in enumerate(element_list):
+        fields = deepcopy(fields_in)
+
+        for i, entry in enumerate(inputs_in):
             if isinstance(entry, str):
                 match = self.regex.search(entry)
                 if match:
+
+                    combined_fields = combine_dicts(fields, match.groupdict())
+                    if combined_fields is None:
+                        # We found a match, but we have a named parameter that
+                        # holds two different values.  That fails the match.
+                        logging.debug("{}: Element has conflict".format(
+                            self.element))
+                        logging.debug("match fields = '{}'".format(
+                            pprint.pformat( match.groupdict())
+                        ))
+                        logging.debug("fields = '{}'".format(
+                            pprint.pformat(fields)
+                        ))
+                        continue
+
                     logging.debug("'{}' == '{}'".format(
                         self.element, entry))
                     result = ElementMatch()
-                    result.before = element_list[:i]
-                    result.fields = match.groupdict()
-                    result.after = element_list[i + 1:]
+                    result.before = inputs_in[:i]
+                    result.fields = combined_fields
+                    result.after = inputs_in[i + 1:]
                     return result
                 logging.debug("'{}' != '{}'".format(
                     self.element, entry))
@@ -140,17 +162,18 @@ class ElementOR(object):
         logging.debug("ElementOR(): Added {}".format(pprint.pformat(
             self.elements)))
 
-    def match(self, element_list):
+    def match(self, inputs_in: list, fields_in: dict) -> ElementMatch:
         """
         Look to see if the provided data matches this element.
-        :param element_list:  Source data to compare.
+        :param inputs_in:  Source data to compare.
+        :param fields_in:  Source fields to compare.
         :return: None or an ElementMatch object.
         """
-        fields = {}
+        fields = deepcopy(fields_in)
 
         # Narrow our possibilities to lists.
         candidates = {}
-        for i, element in enumerate(element_list):
+        for i, element in enumerate(inputs_in):
             if isinstance(element, list):
                 candidates[i] = deepcopy(element)
 
@@ -160,7 +183,7 @@ class ElementOR(object):
                 continue
 
             for element in self.elements:
-                match = element.match(candidate)
+                match = element.match(candidate, fields)
                 if not match:
                     # All for one and one for all.
                     # Since one element didn't match, there is no match.
@@ -184,12 +207,11 @@ class ElementOR(object):
 
             if 0 == len(candidate):
                 result = ElementMatch()
-                result.before = element_list[:i]
+                result.before = inputs_in[:i]
                 result.fields = fields
-                result.after = element_list[i+1:]
+                result.after = inputs_in[i+1:]
                 return result
-
-        return False
+        return None
 
     def format(self, fields: dict):
         """
@@ -199,8 +221,10 @@ class ElementOR(object):
         """
         result = []
         for element in self.elements:
-            result += element.format(fields)
-        return [result,]
+            element_fmt = element.format(fields)
+            result += element_fmt
+        logging.debug("OR: format {}".format(pprint.pformat(result)))
+        return [result]
 
     def line_count(self) -> int:
         """
@@ -246,22 +270,24 @@ class ElementTemplate(object):
                     type(element)
                 )
 
-    def match(self, element_list):
+    def match(self, inputs_in: list, fields_in: dict) -> ElementMatch:
         """
         Look to see if the provided data matches this element.
-        :param element_list:  Source data to compare.
+        :param inputs_in:  Source data to compare.
+        :param fields_in:  Source fields to compare.
         :return: None or an ElementMatch object.
         """
-        input_list = deepcopy(element_list)
+        input_list = deepcopy(inputs_in)
         elements = self.elements[:]
-        fields = {}
+        fields = deepcopy(fields_in)
+        logging.debug("1: fields={}".format(pprint.pformat(fields)))
 
         for i, element in enumerate(elements):
             logging.debug("{}: Examining {}".format(
                 self.name, str(element)
             ))
 
-            match = element.match(input_list)
+            match = element.match(input_list, fields)
             if not match:
                 # All for one and one for all.
                 # Since one element didn't match, there is no match.
@@ -280,42 +306,62 @@ class ElementTemplate(object):
                 ))
                 return None
             fields = combined_fields
+            logging.debug("2: fields={}".format(pprint.pformat(fields)))
             logging.debug("{}: Element '{}' MATCHES".format(
                 self.name, element))
             input_list = match.before + match.after
 
         result = ElementMatch()
         result.before = []  # Assume templates come first.  *sigh*
+        logging.debug("3: fields={}".format(pprint.pformat(fields)))
         result.fields = fields
         result.after = input_list
 
         # Now, compare what's left with the original list to figure out
         # a good place to split the list.
-        for item in element_list:
+        logging.debug("FindLoc: {}".format(pprint.pformat(inputs_in)))
+        for item in inputs_in:
             if 0 == len(result.after):
+                logging.debug("FindLoc: End of results.after")
                 break
             if item == result.after[0]:
                 # Item wasn't taken, it's a "before"
+                logging.debug("FindLoc: Moving {} to results.before".format(
+                    pprint.pformat(result.after[0])
+                ))
                 result.before.append(result.after[0])
                 result.after = result.after[1:]
+            else:
+                logging.debug("FindLoc: End found at '{}'".format(
+                    pprint.pformat(result.after[0])
+                ))
+                break
+
+        logging.debug("4: fields={}".format(pprint.pformat(result.fields)))
         return result
 
     def format(self, fields: dict):
         """
         Return a formatted string with the field data.
         :param fields: The key/values for substitutions
-        :return: The formmated string.
+        :return: The formatted string.
         """
         result = []
+        logging.debug("{}: START format".format(self.name))
         for element in self.elements:
-            result += element.format(fields)
+            element_fmt = element.format(fields)
+            logging.debug("{}: format {}".format(
+                self.name, pprint.pformat(element_fmt)))
+            result += element_fmt
+        logging.debug("{}: END format {}".format(
+            self.name, pprint.pformat(result)))
         return result
 
     def line_count(self) -> int:
         """
         Get the number of lines this element contains.
         Used to sort elements by size.
-        :return: The number of lienes.
+        :return: The number of lines.
         """
         result = 0
         for element in self.elements:
@@ -338,17 +384,17 @@ class Substituter(object):
         """
         self.template = ElementTemplate(name)
 
-    def collapse(self, list_in: list) -> list:
+    def collapse(self, list_in: list, fields_in: dict) -> (list, dict):
         """
         Scan a list, and substitute ourselves in the
         list if a match is made.
         :return: The (possibly modified) list.
         """
-        match = self.template.match(deepcopy(list_in))
+        match = self.template.match(deepcopy(list_in), fields_in)
         if match is not None:
-            replacement = {self.template.name: match.fields}
-            return match.before + [replacement] + match.after
-        return list_in
+            replacement = {self.template.name: None}
+            return match.before + [replacement] + match.after, match.fields
+        return list_in, fields_in
 
     def expand(self, field_data) -> list:
         """
@@ -358,7 +404,7 @@ class Substituter(object):
             self.template.name, pprint.pformat(field_data)
         ))
         result = self.template.format(field_data)
-        logging.debug("{}: {}".format(
+        logging.debug("{}: expanded {}".format(
             self.template.name, pprint.pformat(result)
         ))
 
