@@ -4607,7 +4607,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell([EVILCUTOFF.0.TROLL],WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4638,7 +4638,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(SecondNearest([EVILCUTOFF.0.TROLL]),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4669,7 +4669,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(ThirdNearest([EVILCUTOFF.0.TROLL]),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4700,7 +4700,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(FourthNearest([EVILCUTOFF.0.TROLL]),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4731,7 +4731,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(FifthNearest([EVILCUTOFF.0.TROLL]),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4762,7 +4762,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(SixthNearest([EVILCUTOFF.0.TROLL]),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4783,7 +4783,6 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
 	CheckStatLT(LastSeenBy(Myself),55,RESISTFIRE)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -4796,7 +4795,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(NearestEnemyOf(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4817,7 +4816,6 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
 	CheckStatLT(LastSeenBy(Myself),55,RESISTFIRE)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -4830,7 +4828,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(SecondNearestEnemyOf(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4863,7 +4861,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12034)  // Flame Arrow
-		Spell(ThirdNearestEnemyOf(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
 IF
@@ -4873,8 +4871,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat([EVILCUTOFF.0.TROLL],100,RESISTSLASHING)
 	See([EVILCUTOFF.0.TROLL])
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	Range(LastSeenBy(Myself),8)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4895,7 +4893,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12074)  // Burning Hands
-		Spell([EVILCUTOFF.0.TROLL],WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
 IF
@@ -4905,8 +4903,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SecondNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	Range(LastSeenBy(Myself),8)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4927,7 +4925,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12074)  // Burning Hands
-		Spell(SecondNearest([EVILCUTOFF.0.TROLL]),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
 IF
@@ -4937,8 +4935,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(ThirdNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	Range(LastSeenBy(Myself),8)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4959,7 +4957,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12074)  // Burning Hands
-		Spell(ThirdNearest([EVILCUTOFF.0.TROLL]),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
 IF
@@ -4969,8 +4967,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(FourthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(FourthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	Range(LastSeenBy(Myself),8)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4991,7 +4989,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12074)  // Burning Hands
-		Spell(FourthNearest([EVILCUTOFF.0.TROLL]),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
 IF
@@ -5001,8 +4999,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(FifthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(FifthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	Range(LastSeenBy(Myself),8)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -5023,7 +5021,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12074)  // Burning Hands
-		Spell(FifthNearest([EVILCUTOFF.0.TROLL]),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
 IF
@@ -5033,8 +5031,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SixthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SixthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	Range(LastSeenBy(Myself),8)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -5055,7 +5053,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12074)  // Burning Hands
-		Spell(SixthNearest([EVILCUTOFF.0.TROLL]),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
+		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
 IF
@@ -5065,8 +5063,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat([EVILCUTOFF.0.TROLL],100,RESISTSLASHING)
 	See([EVILCUTOFF.0.TROLL])
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -5086,7 +5084,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12033)  // Melf's Acid Arrow
-		Spell([EVILCUTOFF.0.TROLL],WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
 IF
@@ -5096,8 +5094,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SecondNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -5117,7 +5115,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12033)  // Melf's Acid Arrow
-		Spell(SecondNearest([EVILCUTOFF.0.TROLL]),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
 IF
@@ -5127,8 +5125,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(ThirdNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -5148,7 +5146,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12033)  // Melf's Acid Arrow
-		Spell(ThirdNearest([EVILCUTOFF.0.TROLL]),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
 IF
@@ -5158,8 +5156,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(FourthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(FourthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -5179,7 +5177,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12033)  // Melf's Acid Arrow
-		Spell(FourthNearest([EVILCUTOFF.0.TROLL]),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
 IF
@@ -5189,8 +5187,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(FifthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(FifthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -5210,7 +5208,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12033)  // Melf's Acid Arrow
-		Spell(FifthNearest([EVILCUTOFF.0.TROLL]),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
 IF
@@ -5220,8 +5218,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SixthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SixthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -5241,7 +5239,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12033)  // Melf's Acid Arrow
-		Spell(SixthNearest([EVILCUTOFF.0.TROLL]),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
+		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
 IF
