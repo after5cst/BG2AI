@@ -67,7 +67,7 @@ class ElementRegex(object):
         self.element = element
         self.field_names = ElementRegex.key_regex.findall(element)
 
-        escaped = re.escape(element)  # Turn things like '(' into '\('
+        escaped = '^' + re.escape(element) + '$'  # Turn things like '(' into '\('
         for field in self.field_names:
             named_group = "(?P<{}>.*)".format(field)
             field_name = re.escape("<{}>".format(field))

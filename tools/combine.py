@@ -52,7 +52,6 @@ def convert_actions_to_text(weight: int, actions: list, fields_in: dict) -> list
                 value = fields_in
 
             template = Substituter(key)
-            logging.warning('HIYA!')
             template_lines = template.expand(value)
             for template_line in template_lines:
                 lines.append('\t' + template_line)
@@ -202,7 +201,7 @@ if __name__ == "__main__":
     target = source + ".TXT"
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', '--verbose', action='count', default=2)
+    parser.add_argument('-v', '--verbose', action='count', default=0)
 
     args = parser.parse_args()
     if args.verbose == 0:
