@@ -4397,8 +4397,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat([EVILCUTOFF.0.TROLL],100,RESISTSLASHING)
 	See([EVILCUTOFF.0.TROLL])
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4406,8 +4406,8 @@ IF
 	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
 	CheckStatLT(LastSeenBy(Myself),75,RESISTFIRE)
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	TriggerOverride([EVILCUTOFF.0.TROLL],Range(NearestAllyOf(Myself),15))
-	!TriggerOverride([EVILCUTOFF.0.TROLL],Range(NearestEnemyOf(Myself),20))
+	TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))
+	!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))
 	!Range([NEUTRAL],30)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
@@ -4417,7 +4417,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,6618)  // Fireball
-		Spell([EVILCUTOFF.0.TROLL],WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
 IF
@@ -4427,8 +4427,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SecondNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4436,8 +4436,8 @@ IF
 	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
 	CheckStatLT(LastSeenBy(Myself),75,RESISTFIRE)
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	TriggerOverride(SecondNearest([EVILCUTOFF.0.TROLL]),Range(NearestAllyOf(Myself),15))
-	!TriggerOverride(SecondNearest([EVILCUTOFF.0.TROLL]),Range(NearestEnemyOf(Myself),20))
+	TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))
+	!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))
 	!Range([NEUTRAL],30)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
@@ -4447,7 +4447,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,6618)  // Fireball
-		Spell(SecondNearest([EVILCUTOFF.0.TROLL]),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
 IF
@@ -4457,8 +4457,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(ThirdNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4466,8 +4466,8 @@ IF
 	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
 	CheckStatLT(LastSeenBy(Myself),75,RESISTFIRE)
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	TriggerOverride(ThirdNearest([EVILCUTOFF.0.TROLL]),Range(NearestAllyOf(Myself),15))
-	!TriggerOverride(ThirdNearest([EVILCUTOFF.0.TROLL]),Range(NearestEnemyOf(Myself),20))
+	TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))
+	!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))
 	!Range([NEUTRAL],30)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
@@ -4477,7 +4477,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,6618)  // Fireball
-		Spell(ThirdNearest([EVILCUTOFF.0.TROLL]),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
 IF
@@ -4586,8 +4586,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat([EVILCUTOFF.0.TROLL],100,RESISTSLASHING)
 	See([EVILCUTOFF.0.TROLL])
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4617,8 +4617,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SecondNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4648,8 +4648,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(ThirdNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4679,8 +4679,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(FourthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(FourthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4710,8 +4710,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(FifthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(FifthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -4741,8 +4741,8 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	CheckStat(SixthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
 	See(SixthNearest([EVILCUTOFF.0.TROLL]))
+	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
 	!InParty(LastSeenBy(Myself))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
