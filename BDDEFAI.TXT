@@ -7367,7 +7367,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12099)  // Charm Person or Mammal
-		Spell([EVILCUTOFF.HUMANOID.0.FIGHTER],CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
 IF
@@ -7403,7 +7403,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12099)  // Charm Person or Mammal
-		Spell(SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER]),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
 IF
@@ -7441,7 +7441,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12099)  // Charm Person or Mammal
-		Spell([EVILCUTOFF.HUMANOID],CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
 IF
@@ -7479,7 +7479,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12099)  // Charm Person or Mammal
-		Spell(SecondNearest([EVILCUTOFF.HUMANOID]),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
 IF
