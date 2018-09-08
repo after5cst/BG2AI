@@ -5999,6 +5999,8 @@ IF
 	See([EVILCUTOFF.HUMANOID.0.FIGHTER])
 	!InParty(LastSeenBy(Myself))
 	!Class(LastSeenBy(Myself),MONK)
+	!Kit(LastSeenBy(Myself),INQUISITOR)
+	!Kit(LastSeenBy(Myself),CAVALIER)
 	!Race(LastSeenBy(Myself),ELF)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -6022,7 +6024,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,22618)  // Mental Domination
-		Spell([EVILCUTOFF.HUMANOID.0.FIGHTER],CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
+		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
 IF
@@ -6035,6 +6037,8 @@ IF
 	See(SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER]))
 	!InParty(LastSeenBy(Myself))
 	!Class(LastSeenBy(Myself),MONK)
+	!Kit(LastSeenBy(Myself),INQUISITOR)
+	!Kit(LastSeenBy(Myself),CAVALIER)
 	!Race(LastSeenBy(Myself),ELF)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
@@ -6058,7 +6062,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,22618)  // Mental Domination
-		Spell(SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER]),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
+		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
 IF
@@ -6096,7 +6100,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,22618)  // Mental Domination
-		Spell([EVILCUTOFF.HUMANOID],CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
+		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
 IF
@@ -6134,7 +6138,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,22618)  // Mental Domination
-		Spell(SecondNearest([EVILCUTOFF.HUMANOID]),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
+		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
 IF
