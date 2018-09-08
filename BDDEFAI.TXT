@@ -5564,7 +5564,7 @@ THEN
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12080)  // Haste
-		Spell([GOODCUTOFF.0.0.FIGHTER_ALL],WIZARD_HASTE)  // SPWI305.SPL (Haste)
+		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
 
 IF
@@ -5592,7 +5592,7 @@ THEN
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12080)  // Haste
-		Spell([GOODCUTOFF.0.0.RANGER_ALL],WIZARD_HASTE)  // SPWI305.SPL (Haste)
+		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
 
 IF
@@ -5620,7 +5620,7 @@ THEN
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12080)  // Haste
-		Spell([GOODCUTOFF.0.0.PALADIN_ALL],WIZARD_HASTE)  // SPWI305.SPL (Haste)
+		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
 
 IF
