@@ -6614,7 +6614,7 @@ THEN
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38594)  // Glitterdust
-		Spell(NearestEnemyOf(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
+		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
 IF
@@ -6649,7 +6649,7 @@ THEN
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38594)  // Glitterdust
-		Spell(SecondNearestEnemyOf(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
+		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
 IF
@@ -6684,7 +6684,7 @@ THEN
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,38594)  // Glitterdust
-		Spell(ThirdNearestEnemyOf(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
+		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
 IF
