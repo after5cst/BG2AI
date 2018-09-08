@@ -6231,6 +6231,7 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	CheckStat(Myself,0,PROTECTION_FROM_EVIL)
 	OR(7)
@@ -6246,6 +6247,7 @@ IF
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 THEN
 	RESPONSE #100
+		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(Myself,PALADIN_PROTECTION_FROM_EVIL)  // SPCL213.SPL (Protection From Evil)
@@ -6395,8 +6397,8 @@ IF
 	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See(WorstAC([PC]))
-	!CheckSpellState(WorstAC([PC]),BARKSKIN)
-	CheckStatGT(WorstAC([PC]),4,ARMORCLASS)
+	!CheckSpellState(LastSeenBy(Myself)),BARKSKIN)
+	CheckStatGT(LastSeenBy(Myself)),4,ARMORCLASS)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -6405,7 +6407,7 @@ THEN
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12121)  // Barkskin
-		Spell(WorstAC([PC]),CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
+		Spell(LastSeenBy(Myself),CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
 END
 
 IF
@@ -6448,7 +6450,7 @@ THEN
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
-		SpellRES("SPIN105",[EVILCUTOFF])  // Horror
+		SpellRES("SPIN105",LastSeenBy(Myself))  // Horror
 END
 
 IF
@@ -6491,7 +6493,7 @@ THEN
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
-		Spell([EVILCUTOFF],WIZARD_HORROR)  // SPWI205.SPL (Horror)
+		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
 
 IF
@@ -6534,7 +6536,7 @@ THEN
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
-		Spell(SecondNearest([EVILCUTOFF]),WIZARD_HORROR)  // SPWI205.SPL (Horror)
+		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
 
 IF
@@ -6577,7 +6579,7 @@ THEN
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12069)  // Horror
-		Spell(ThirdNearest([EVILCUTOFF]),WIZARD_HORROR)  // SPWI205.SPL (Horror)
+		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
 
 IF
