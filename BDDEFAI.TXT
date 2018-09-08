@@ -1890,7 +1890,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -1919,7 +1918,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -1948,7 +1946,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -1977,7 +1974,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -2006,7 +2002,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -2032,7 +2027,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2057,7 +2051,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2082,7 +2075,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2107,7 +2099,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2132,7 +2123,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2157,7 +2147,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2802,7 +2791,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -2832,7 +2820,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -2862,7 +2849,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -2892,7 +2878,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -2905,6 +2890,35 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	See(MostDamagedOf([PC]))
+	HPPercentLT(LastSeenBy(Myself),40)
+	InParty(LastSeenBy(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
+	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
+	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
+	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
+	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,6620)  // Cure Light Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
 END
 
 IF
@@ -2925,7 +2939,6 @@ IF
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -2938,36 +2951,6 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,6620)  // Cure Light Wounds
 		SpellRES("SPIN101",LastSeenBy(Myself))  // Cure Light Wounds
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	See(MostDamagedOf([PC]))
-	HPPercentLT(LastSeenBy(Myself),40)
-	InParty(LastSeenBy(Myself))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)
-	!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
-	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
-	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6620)  // Cure Light Wounds
-		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
 END
 
 IF
@@ -4283,7 +4266,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
@@ -4513,8 +4495,8 @@ IF
 	CheckStatLT(LastSeenBy(Myself),75,RESISTFIRE)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)
-	TriggerOverride(FarthestEnemyOf(Myself),Range(NearestAllyOf(Myself),15))
-	!TriggerOverride(FarthestEnemyOf(Myself),Range(NearestEnemyOf(Myself),20))
+	TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))
+	!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))
 	!Range([NEUTRAL],30)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
@@ -4524,7 +4506,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,6618)  // Fireball
-		Spell(FarthestEnemyOf(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
+		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
 IF
@@ -6985,7 +6967,6 @@ IF
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
 	!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)
@@ -7018,7 +6999,6 @@ IF
 	CheckStatGT(LastSeenBy(Myself),6,SAVEVSSPELL)
 	CheckStatLT(LastSeenBy(Myself),31,RESISTMAGIC)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)

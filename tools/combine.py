@@ -59,6 +59,8 @@ def convert_actions_to_text(weight: int, actions: list, fields_in: dict) -> list
         elif isinstance(action, str):
             for key, value in fields_in.items():
                 search_term = "<{}>".format(key)
+                # logging.debug("Replacing '{}' with '{}' in '{}'".format(
+                #     search_term, value, action))
                 action = action.replace(search_term, value)
             lines.append('\t' + action)
         else:
@@ -111,6 +113,11 @@ def convert_triggers_to_text(source_in: list, fields_in: dict, in_or: bool=False
 
         elif isinstance(item, str):
             logging.debug("T2T: STR {}".format(pformat(item)))
+            for key, value in fields_in.items():
+                search_term = "<{}>".format(key)
+                # logging.debug("Replacing '{}' with '{}' in '{}'".format(
+                #     search_term, value, action))
+                item = item.replace(search_term, value)
             lines += [item]
         else:
             assert False, "Trigger contains unknown type"
@@ -201,7 +208,7 @@ if __name__ == "__main__":
     target = source + ".TXT"
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', '--verbose', action='count', default=0)
+    parser.add_argument('-v', '--verbose', action='count', default=2)
 
     args = parser.parse_args()
     if args.verbose == 0:
