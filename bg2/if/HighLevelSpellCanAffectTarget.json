@@ -1,4 +1,4 @@
 [
     "!StateCheck(<TARGET>,STATE_NOT_TARGETABLE)",
-    "CheckStat(<TARGET>,0,MINORGLOBE)"
+	"!CheckStatGT(<TARGET>,0,WIZARD_SPELL_DEFLECTION)"
 ]

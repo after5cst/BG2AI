@@ -1,0 +1,15 @@
+[
+    "See(<LOOK_FOR>)",
+    [
+        "StateCheck(<TARGET>,STATE_FEEBLEMINDED)",
+        "StateCheck(<TARGET>,STATE_BLIND)",
+        "CheckSpellState(<TARGET>,DISEASED)",
+        "CheckSpellState(<TARGET>,DEAFENED)"
+    ],
+    {
+        "SpellCanAffectTarget": null
+    },
+    {
+        "AllyTargetNotDangerous": null
+    }
+]

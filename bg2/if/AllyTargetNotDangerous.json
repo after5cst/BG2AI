@@ -1,0 +1,4 @@
+[
+    "!StateCheck(<TARGET>,STATE_CONFUSED)",
+    "!StateCheck(<TARGET>,STATE_CHARMED)"
+]

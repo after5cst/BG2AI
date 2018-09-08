@@ -5,5 +5,8 @@
         "StateCheck(<TARGET>,STATE_CHARMED)",
         "StateCheck(<TARGET>,STATE_CONFUSED)",
         "StateCheck(<TARGET>,STATE_FEEBLEMINDED)"
-    ]
+    ],
+    {
+        "SpellCanAffectTarget": null
+    }
 ]
