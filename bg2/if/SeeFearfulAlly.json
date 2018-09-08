@@ -2,6 +2,6 @@
     "StateCheck(<LOOK_FOR>,STATE_PANIC)",
     "See(<LOOK_FOR>)",
     {
-        "TargetNotImpInvOrGlobed": null
+        "TargetNotUntargetableOrGlobed": null
     }
 ]

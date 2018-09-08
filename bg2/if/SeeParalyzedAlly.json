@@ -5,7 +5,7 @@
         "CheckStatGT(<TARGET>,0,HELD)"
     ],
     {
-        "TargetNotImpInvOrGlobed": null
+        "TargetNotUntargetableOrGlobed": null
     },
     "CheckStat(<TARGET>,0,WEB)"
 ]

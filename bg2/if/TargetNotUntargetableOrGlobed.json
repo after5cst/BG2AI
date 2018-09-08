@@ -1,0 +1,4 @@
+[
+    "!StateCheck(<TARGET>,STATE_NOT_TARGETABLE)",
+    "CheckStat(<TARGET>,0,MINORGLOBE)"
+]

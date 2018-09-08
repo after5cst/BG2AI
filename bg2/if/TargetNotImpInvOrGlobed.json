@@ -1,4 +1,0 @@
-[
-    "!StateCheck(<TARGET>,STATE_IMPROVEDINVISIBILITY)",
-    "CheckStat(<TARGET>,0,MINORGLOBE)"
-]
