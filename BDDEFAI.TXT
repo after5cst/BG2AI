@@ -196,12 +196,12 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
-	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	StateCheck(Myself,STATE_POISONED)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
+	StateCheck(Myself,STATE_POISONED)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1844,6 +1844,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See([PC])
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -1856,9 +1859,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1872,6 +1872,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(SecondNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -1885,9 +1888,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1901,6 +1901,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(ThirdNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -1914,9 +1917,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1930,6 +1930,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(FourthNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -1943,9 +1946,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1959,6 +1959,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(FifthNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -1972,9 +1975,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -1988,6 +1988,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN102")  // Slow Poison
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(SixthNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2001,9 +2004,6 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -2906,6 +2906,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN101")  // Cure Light Wounds
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(MostDamagedOf([PC]))
 	HPPercentLT(LastSeenBy(Myself),40)
@@ -2923,9 +2926,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -4216,15 +4216,15 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN103")  // Draw Upon Holy Might
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See([EVILCUTOFF])
 	OR(2)
 		CheckStatGT(LastSeenBy(Myself),12,LEVEL)
 		NumCreatureGT([EVILCUTOFF],3)
 	!StateCheck(Myself,STATE_DRAWUPONHOLYMIGHT)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -4262,6 +4262,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN106")  // Vampiric Touch
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	HPPercentLT(Myself,51)
 	See(NearestEnemyOf(Myself))
@@ -4283,9 +4286,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
 	CheckStatLT(LastSeenBy(Myself),75,MAGICDAMAGERESISTANCE)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -6442,6 +6442,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN105")  // Horror
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Horror","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
@@ -6471,9 +6474,6 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
@@ -7733,6 +7733,9 @@ END
 IF
 	ActionListEmpty()
 	HaveSpellRES("SPIN104")  // Larloch's Minor Drain
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	HPPercentLT(Myself,71)
 	See(NearestEnemyOf(Myself))
@@ -7753,9 +7756,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)
 	CheckStatLT(LastSeenBy(Myself),75,MAGICDAMAGERESISTANCE)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
@@ -7865,7 +7865,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,20678)  // Charm Animal
-		Spell([EVILCUTOFF.ANIMAL],RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
+		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 
 IF
@@ -7899,7 +7899,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,20678)  // Charm Animal
-		Spell(SecondNearest([EVILCUTOFF.ANIMAL]),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
+		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 
 IF
@@ -7933,7 +7933,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,20678)  // Charm Animal
-		Spell(ThirdNearest([EVILCUTOFF.ANIMAL]),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
+		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 
 IF

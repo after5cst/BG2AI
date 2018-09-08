@@ -1,5 +1,7 @@
 [
-    "See(<LOOK_FOR>)",
+    {
+        "SeeTarget": null
+    },
     [
         "StateCheck(<TARGET>,STATE_STUNNED)",
         "CheckStatGT(<TARGET>,0,HELD)"

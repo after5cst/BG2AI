@@ -1,0 +1,8 @@
+[
+    "ActionListEmpty()",
+    "HaveSpellRES('<SPELL>')  // <DESC>",
+    [
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "CheckStatGT(Myself,0,AURACLEANSING)"
+    ]
+]

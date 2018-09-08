@@ -1,5 +1,7 @@
 [
-    "See(<LOOK_FOR>)",
+    {
+        "SeeTarget": null
+    },
     [
         "StateCheck(<TARGET>,STATE_PANIC)",
         "StateCheck(<TARGET>,STATE_CHARMED)",

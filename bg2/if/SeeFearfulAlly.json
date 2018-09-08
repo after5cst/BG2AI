@@ -1,6 +1,8 @@
 [
     "StateCheck(<LOOK_FOR>,STATE_PANIC)",
-    "See(<LOOK_FOR>)",
+    {
+        "SeeTarget": null
+    },
     {
         "SpellCanAffectTarget": null
     }
