@@ -1,0 +1,10 @@
+[
+    "See(<TARGET>)",
+    [
+        "StateCheck(LastSeenBy(Myself),STATE_STUNNED)",
+        "CheckStatGT(LastSeenBy(Myself),0,HELD)"
+    ],
+    "!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)",
+    "CheckStat(LastSeenBy(Myself),0,MINORGLOBE)",
+    "CheckStat(LastSeenBy(Myself),0,WEB)"
+]
