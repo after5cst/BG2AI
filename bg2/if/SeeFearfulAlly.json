@@ -1,0 +1,6 @@
+[
+    "StateCheck(<LOOK_FOR>,STATE_PANIC)",
+    "See(<LOOK_FOR>)",
+    "!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)",
+    "CheckStat(LastSeenBy(Myself),0,MINORGLOBE)"
+]

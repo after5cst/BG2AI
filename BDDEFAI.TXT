@@ -1039,6 +1039,144 @@ END
 
 IF
 	ActionListEmpty()
+	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	StateCheck([GOODCUTOFF],STATE_PANIC)
+	See([GOODCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12083)  // Remove Fear
+		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
+	See(SecondNearest([GOODCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12083)  // Remove Fear
+		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
+	See(ThirdNearest([GOODCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12083)  // Remove Fear
+		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
+	See(FourthNearest([GOODCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12083)  // Remove Fear
+		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
+	See(FifthNearest([GOODCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12083)  // Remove Fear
+		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
+	See(SixthNearest([GOODCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
+	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
+	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12083)  // Remove Fear
+		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
+END
+
+IF
+	ActionListEmpty()
 	HaveSpell(WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
@@ -1179,144 +1317,6 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	StateCheck([GOODCUTOFF],STATE_PANIC)
-	See([GOODCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
-	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
-		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
-	See(SecondNearest([GOODCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
-	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
-		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
-	See(ThirdNearest([GOODCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
-	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
-		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
-	See(FourthNearest([GOODCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
-	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
-		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
-	See(FifthNearest([GOODCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
-	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
-		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
-	See(SixthNearest([GOODCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
-	CheckStat(LastSeenBy(Myself),0,MINORGLOBE)
-	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
-	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
-	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
-		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
 IF
