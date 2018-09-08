@@ -1,0 +1,7 @@
+[
+        {
+            "SpellCanAffectTarget": null
+        },
+        "CheckStatLT(<TARGET>,<MAX_MAGIC_RESIST>,RESISTMAGIC)",
+        "CheckStatLT(<TARGET>,<MAX_FIRE_RESIST>,RESISTFIRE)"
+]
