@@ -3,7 +3,7 @@ import argparse
 import json
 import logging
 import os
-# import pprint
+import pprint
 import re
 import shutil
 import sys
@@ -229,12 +229,14 @@ if __name__ == "__main__":
     if args.auto_delete and os.path.isdir(target):
         logging.warning("Removing directory '{}'".format(target))
         shutil.rmtree(target, ignore_errors=True)
-    files = split_file(source, target)
+    files_to_split = split_file(source, target)
 
     trigger_templates = _load_templates("if")
     action_templates = _load_templates("then")
 
-    for file in files:
+    files_to_merge = []
+
+    for file in files_to_split:
         data = split_if_then(file)
         fields = {}
         for template in trigger_templates:
@@ -258,3 +260,29 @@ if __name__ == "__main__":
 
         with open(file, "w") as fp:
             json.dump(data, fp, indent=4)
+            files_to_merge.append(file)
+
+    prev_file = None
+    prev_data = None
+    for curr_file in files_to_merge:
+        with open(curr_file) as fp:
+            curr_data = json.load(fp)
+
+        if prev_data and prev_data["if"] == curr_data["if"] and \
+                prev_data["then"] == curr_data["then"]:
+            logging.debug("left: {}".format(pprint.pformat(
+                curr_data["fields"]
+            )))
+            logging.debug("right: {}".format(pprint.pformat(
+                prev_data["fields"]
+            )))
+            curr_data["fields"] = prev_data["fields"] + curr_data["fields"]
+            logging.debug("both: {}".format(pprint.pformat(
+                curr_data["fields"]
+            )))
+            with open(curr_file, "w") as fp:
+                json.dump(curr_data, fp, indent=4)
+            os.remove(prev_file)
+
+        prev_file = curr_file
+        prev_data = curr_data

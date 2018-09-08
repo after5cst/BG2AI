@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 import argparse
 import collections
+from copy import deepcopy
 import json
 import logging
 import os
@@ -123,19 +124,45 @@ def convert_json_to_baf(source: dict) ->str:
     """
     Return a BAF string that represents the JSON provided.
     """
+    if 1 < len(source["fields"]):
+        if "name" in source:
+            logging.info ("Combining multi-part {} ({})".format(
+                source["name"], len(source["fields"])
+            ))
+        else:
+            logging.info ("Combining multi-part <unnamed> ({})".format(
+                len(source["fields"])
+            ))
+    else:
+        if "name" in source:
+            logging.info ("Combining single-part {} ({})".format(
+                source["name"], len(source["fields"])
+            ))
+        else:
+            logging.info ("Combining single-part <unnamed> ({})".format(
+                len(source["fields"])
+            ))
+
+    result = ""
+
     for fields in source["fields"]:
-        out = ["IF"] + convert_triggers_to_text(source["if"], fields)
+        fields = deepcopy(fields)
+        logging.debug("Handling fields {}".format(pformat(fields)))
+        out = ["IF"] + convert_triggers_to_text(
+            deepcopy(source["if"]), fields)
 
         out.append("THEN")
 
         for item in source["then"]:
+            item = deepcopy(item)
             assert 1 == len(item), "Detected dict with multiple action keys"
             key, value = item.popitem()
             weight = int(key)
             out = out + convert_actions_to_text(weight, value, fields)
 
         out.append("END")
-        return '\n'.join(out) + '\n\n'
+        result = result + '\n'.join(out) + '\n\n'
+    return result
 
 
 def combine_file(source_dir: str, target_file: str):
@@ -158,6 +185,7 @@ def combine_file(source_dir: str, target_file: str):
     with open(target_file, "w") as fout:
         for file in files:
             with open(file) as fin:
+                logging.info("Processing file '{}'".format(file))
                 # fout.write("// {}\n".format(file))
                 # data = fin.read()
                 data = convert_json_to_baf(json.load(fin))
@@ -170,7 +198,7 @@ if __name__ == "__main__":
     target = source + ".TXT"
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', '--verbose', action='count', default=logging.DEBUG)
+    parser.add_argument('-v', '--verbose', action='count', default=logging.INFO)
 
     args = parser.parse_args()
     if args.verbose == 0:
