@@ -372,8 +372,10 @@ END
 IF
 	ActionListEmpty()
 	HaveSpell(PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,81)
 THEN
 	RESPONSE #100
@@ -385,8 +387,10 @@ END
 IF
 	ActionListEmpty()
 	HaveSpell(MONK_LAY_ON_HANDS)  // SPCL815.SPL (Lay On Hands)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	HPPercentLT(Myself,81)
 THEN
 	RESPONSE #100
