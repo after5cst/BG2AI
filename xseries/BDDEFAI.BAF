@@ -1,0 +1,89 @@
+IF
+	ActionListEmpty()
+	HotKey(F)
+	GlobalLT("X_LDR","LOCALS",2)
+	See(Player2)
+THEN
+	RESPONSE #100
+		DisplayString(Player2,17571)  // Leader
+		SetGlobal("X_LDR","LOCALS",2)
+END
+
+IF
+	ActionListEmpty()
+	HotKey(F)
+	GlobalLT("X_LDR","LOCALS",3)
+	See(Player3)
+THEN
+	RESPONSE #100
+		DisplayString(Player3,17571)  // Leader
+		SetGlobal("X_LDR","LOCALS",3)
+END
+
+IF
+	ActionListEmpty()
+	HotKey(F)
+	GlobalLT("X_LDR","LOCALS",4)
+	See(Player4)
+THEN
+	RESPONSE #100
+		DisplayString(Player4,17571)  // Leader
+		SetGlobal("X_LDR","LOCALS",4)
+END
+
+IF
+	ActionListEmpty()
+	HotKey(F)
+	GlobalLT("X_LDR","LOCALS",5)
+	See(Player5)
+THEN
+	RESPONSE #100
+		DisplayString(Player5,17571)  // Leader
+		SetGlobal("X_LDR","LOCALS",5)
+END
+
+IF
+	ActionListEmpty()
+	HotKey(F)
+	GlobalLT("X_LDR","LOCALS",6)
+	See(Player6)
+THEN
+	RESPONSE #100
+		DisplayString(Player6,17571)  // Leader
+		SetGlobal("X_LDR","LOCALS",6)
+END
+
+IF
+	ActionListEmpty()
+	HotKey(F)
+THEN
+	RESPONSE #100
+		DisplayString(Player1,17571)  // Leader
+		SetGlobal("X_LDR","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	Global("X_LDR","LOCALS",2)
+	See(Player2)
+	!Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,88034)  // Where are you trying to go?
+		SetGlobal("X_FOF","LOCALS",1)
+		FollowObjectFormation(LastSeenBy(Myself),11,1)
+END
+
+IF
+	Global("X_FOF","LOCALS",1)
+	Global("X_LDR","LOCALS",2)
+	OR(3)
+		ActionListEmpty()
+		Range(Player2,4)
+		!Range(Player2, 20)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,100280)  // Done.
+		SetGlobal("X_FOF","LOCALS",0)
+END
+
