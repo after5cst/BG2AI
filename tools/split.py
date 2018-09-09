@@ -8,9 +8,9 @@ import re
 import shutil
 import sys
 
-from substituter import Substituter, app_name
+from substituter import Substituter
+from globals import tools_dir, project_name
 
-_this_dir = os.path.dirname(os.path.realpath(__file__))
 
 # This breaks a statement into an if and a then block
 _if_then_regex = r"(?P<statement>IF(?P<if>(.|\n)*?)^THEN$(?P<then>(.|\n)*?)END)"
@@ -22,7 +22,7 @@ def _load_templates(which: str):
     :param which: Which template set to load, "lf" or "then"
     """
     out = []
-    dir_name = os.path.join(_this_dir, "..", app_name, which)
+    dir_name = os.path.join(tools_dir, "..", project_name, which)
     for file_name in os.listdir(dir_name):
         prefix, suffix = os.path.splitext(file_name)
         if ".json" == suffix:
@@ -49,7 +49,7 @@ def promote_trigger(source: list, trigger: str) -> list:
 
 def split_file(source_file: str, target_dir: str) -> list:
     """Split a script file into component pieces"""
-    logging.info("Creating directory '{}'".format(target))
+    logging.info("Creating directory '{}'".format(target_dir))
     os.makedirs(target_dir)
 
     logging.debug("Loading file '{}'".format(source_file))
@@ -205,26 +205,45 @@ def split_if_then(source_file: str) -> dict:
     return result
 
 
-if __name__ == "__main__":
-    source = os.path.join(_this_dir, "..", "BDDEFAI.TXT")
-    source = os.path.realpath(source)
+def get_history_names(snips_dir: str) -> dict:
+    """
+    Build a dictionary of names to if-then pairs from a previous run.
+    This allows us to keep names from run-to-run, which helps build meaningful
+    file names.
+    :param snips_dir: Path to snips dir.
+    :return: A list { name : if_then dict }
+    """
+    result = []
+    sources = []
+    for file_name in os.listdir(snips_dir):
+        if file_name.lower().endswith('.json'):
+            sources.append(file_name)
+
+    required_keys = ('name', 'if', 'then')
+    for file_name in sources:
+        with open(os.path.join(snips_dir, file_name)) as fp:
+            data = json.load(fp)
+        if all(k in data for k in required_keys):
+            new_entry = {}
+            for key in required_keys:
+                new_entry[key] = data[key]
+            result.append(new_entry)
+    return result
+
+
+def split(source: str):
+    """
+    Split a source file into a subdirectory of similar name.
+    :param source: The source file, including path.
+    :return: None.
+    """
     target = os.path.splitext(source)[0]
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--auto_delete', action='store_true', default=True)
-    parser.add_argument('-v', '--verbose', action='count', default=0)
-
-    args = parser.parse_args()
-    if args.verbose == 0:
-        level = logging.WARNING
-    elif args.verbose == 1:
-        level = logging.INFO
-    else:
-        level = logging.DEBUG
-    logging.basicConfig(stream=sys.stdout, level=level)
-    logging.info("Verbosity = {}".format(logging.getLevelName(level)))
     logging.info("Source = '{}'".format(source))
     logging.info("Target = '{}'".format(target))
+
+    history = get_history_names(target)
+    # logging.debug("History = {}".format(pprint.pformat(history)))
 
     if args.auto_delete and os.path.isdir(target):
         logging.warning("Removing directory '{}'".format(target))
@@ -249,12 +268,16 @@ if __name__ == "__main__":
                         value, fields)
         data["fields"] = [fields]
 
+        # If this was in the history with a name, keep the name.
+        for item in history:
+            if data["if"] == item["if"] and data["then"] == item["then"]:
+                data["name"] = item["name"]
+                break
+
         if "name" in data:
             source = file
             prefix, postfix = os.path.splitext(file)
             dest = prefix + "-" + data["name"] + postfix
-            # print(source)
-            # print(dest)
             file = dest
             os.remove(source)
 
@@ -286,3 +309,27 @@ if __name__ == "__main__":
 
         prev_file = curr_file
         prev_data = curr_data
+
+
+if __name__ == "__main__":
+
+    search_dir = os.path.join(tools_dir, "..", project_name)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--auto_delete', action='store_true', default=True)
+    parser.add_argument('-v', '--verbose', action='count', default=2)
+    parser.add_argument('-d', '--search_dir', default=search_dir)
+
+    args = parser.parse_args()
+    if args.verbose == 0:
+        level = logging.WARNING
+    elif args.verbose == 1:
+        level = logging.INFO
+    else:
+        level = logging.DEBUG
+    logging.basicConfig(stream=sys.stdout, level=level)
+    logging.info("Verbosity = {}".format(logging.getLevelName(level)))
+
+    for file_name in os.listdir(args.search_dir):
+        if file_name.lower().endswith('.baf'):
+            file_path = os.path.realpath(os.path.join(args.search_dir, file_name))
+            split(file_path)

@@ -1,0 +1,9 @@
+[
+    "Global('X_FOF','LOCALS',1)",
+    "Global('X_LDR','LOCALS',<PLAYER>)",
+    [
+        "ActionListEmpty()",
+        "Range(Player<PLAYER>,4)",
+        "!Range(Player<PLAYER>, 20)"
+    ]
+]

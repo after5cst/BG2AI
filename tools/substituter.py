@@ -7,7 +7,7 @@ import pprint
 import re
 
 _this_dir = os.path.dirname(os.path.realpath(__file__))
-app_name = "bg2"
+app_name = "xseries"
 
 
 def combine_dicts(dict1, dict2):

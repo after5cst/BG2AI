@@ -11,8 +11,8 @@ import shutil
 import sys
 
 from substituter import Substituter
+from globals import tools_dir, project_name
 
-_this_dir = os.path.dirname(os.path.realpath(__file__))
 
 
 def replace_single_quotes_with_double_outside_comment(data: str) -> str:
@@ -203,12 +203,11 @@ def combine_file(source_dir: str, target_file: str):
 
 
 if __name__ == "__main__":
-    source = os.path.join(_this_dir, "..", "BDDEFAI")
-    source = os.path.realpath(source)
-    target = source + ".TXT"
-
+    search_dir = os.path.join(tools_dir, "..", project_name)
     parser = argparse.ArgumentParser()
+    parser.add_argument('--auto_delete', action='store_true', default=True)
     parser.add_argument('-v', '--verbose', action='count', default=2)
+    parser.add_argument('-d', '--search_dir', default=search_dir)
 
     args = parser.parse_args()
     if args.verbose == 0:
@@ -219,7 +218,16 @@ if __name__ == "__main__":
         level = logging.DEBUG
     logging.basicConfig(stream=sys.stdout, level=level)
     logging.info("Verbosity = {}".format(logging.getLevelName(level)))
-    logging.info("Source = '{}'".format(source))
-    logging.info("Target = '{}'".format(target))
+    logging.info("SearchDir = '{}'".format(search_dir))
 
-    combine_file(source, target)
+    targets = []
+    for file_name in os.listdir(args.search_dir):
+        if file_name.lower().endswith('.baf'):
+            file_path = os.path.realpath(os.path.join(args.search_dir, file_name))
+            targets.append(file_path)
+
+    for target in targets:
+        source = os.path.splitext(target)[0]
+        logging.info("Source = '{}'".format(source))
+        logging.info("Target = '{}'".format(target))
+        combine_file(source, target)

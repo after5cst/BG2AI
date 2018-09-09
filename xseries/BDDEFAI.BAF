@@ -64,6 +64,18 @@ END
 
 IF
 	ActionListEmpty()
+	Global("X_LDR","LOCALS",1)
+	See(Player1)
+	!Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,88034)  // Where are you trying to go?
+		SetGlobal("X_FOF","LOCALS",1)
+		FollowObjectFormation(LastSeenBy(Myself),11,1)
+END
+
+IF
+	ActionListEmpty()
 	Global("X_LDR","LOCALS",2)
 	See(Player2)
 	!Range(LastSeenBy(Myself),10)
@@ -75,12 +87,125 @@ THEN
 END
 
 IF
+	ActionListEmpty()
+	Global("X_LDR","LOCALS",3)
+	See(Player3)
+	!Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,88034)  // Where are you trying to go?
+		SetGlobal("X_FOF","LOCALS",1)
+		FollowObjectFormation(LastSeenBy(Myself),11,1)
+END
+
+IF
+	ActionListEmpty()
+	Global("X_LDR","LOCALS",4)
+	See(Player4)
+	!Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,88034)  // Where are you trying to go?
+		SetGlobal("X_FOF","LOCALS",1)
+		FollowObjectFormation(LastSeenBy(Myself),11,1)
+END
+
+IF
+	ActionListEmpty()
+	Global("X_LDR","LOCALS",5)
+	See(Player5)
+	!Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,88034)  // Where are you trying to go?
+		SetGlobal("X_FOF","LOCALS",1)
+		FollowObjectFormation(LastSeenBy(Myself),11,1)
+END
+
+IF
+	ActionListEmpty()
+	Global("X_LDR","LOCALS",6)
+	See(Player6)
+	!Range(LastSeenBy(Myself),10)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,88034)  // Where are you trying to go?
+		SetGlobal("X_FOF","LOCALS",1)
+		FollowObjectFormation(LastSeenBy(Myself),11,1)
+END
+
+IF
+	Global("X_FOF","LOCALS",1)
+	Global("X_LDR","LOCALS",1)
+	OR(3)
+		ActionListEmpty()
+		Range(Player1,4)
+		!Range(Player1, 20)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,100280)  // Done.
+		SetGlobal("X_FOF","LOCALS",0)
+END
+
+IF
 	Global("X_FOF","LOCALS",1)
 	Global("X_LDR","LOCALS",2)
 	OR(3)
 		ActionListEmpty()
 		Range(Player2,4)
 		!Range(Player2, 20)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,100280)  // Done.
+		SetGlobal("X_FOF","LOCALS",0)
+END
+
+IF
+	Global("X_FOF","LOCALS",1)
+	Global("X_LDR","LOCALS",3)
+	OR(3)
+		ActionListEmpty()
+		Range(Player3,4)
+		!Range(Player3, 20)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,100280)  // Done.
+		SetGlobal("X_FOF","LOCALS",0)
+END
+
+IF
+	Global("X_FOF","LOCALS",1)
+	Global("X_LDR","LOCALS",4)
+	OR(3)
+		ActionListEmpty()
+		Range(Player4,4)
+		!Range(Player4, 20)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,100280)  // Done.
+		SetGlobal("X_FOF","LOCALS",0)
+END
+
+IF
+	Global("X_FOF","LOCALS",1)
+	Global("X_LDR","LOCALS",5)
+	OR(3)
+		ActionListEmpty()
+		Range(Player5,4)
+		!Range(Player5, 20)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,100280)  // Done.
+		SetGlobal("X_FOF","LOCALS",0)
+END
+
+IF
+	Global("X_FOF","LOCALS",1)
+	Global("X_LDR","LOCALS",6)
+	OR(3)
+		ActionListEmpty()
+		Range(Player6,4)
+		!Range(Player6, 20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.

@@ -1,0 +1,6 @@
+[
+    "ActionListEmpty()",
+    "Global('X_LDR','LOCALS',<PLAYER>)",
+    "See(Player<PLAYER>)",
+    "!Range(LastSeenBy(Myself),10)"
+]
