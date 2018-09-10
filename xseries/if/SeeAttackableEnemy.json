@@ -1,0 +1,8 @@
+[
+        "See(<TARGET>)",
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)"
+]

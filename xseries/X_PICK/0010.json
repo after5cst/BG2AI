@@ -1,0 +1,17 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "CombatCounter(0)"
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayStringHead(Myself,16470)  // Off",
+                "ChangeAIScript('',RACE)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ]
+}

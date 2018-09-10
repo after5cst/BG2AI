@@ -1,0 +1,43 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        {
+            "WeakPlayerAttacked": null
+        },
+        "InWeaponRange(LastSeenBy(Myself))"
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackReevaluate(LastSeenBy(Myself),30)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "1",
+            "TARGET": "LastAttackerOf(Player1)"
+        },
+        {
+            "PLAYER": "2",
+            "TARGET": "LastAttackerOf(Player2)"
+        },
+        {
+            "PLAYER": "3",
+            "TARGET": "LastAttackerOf(Player3)"
+        },
+        {
+            "PLAYER": "4",
+            "TARGET": "LastAttackerOf(Player4)"
+        },
+        {
+            "PLAYER": "5",
+            "TARGET": "LastAttackerOf(Player5)"
+        },
+        {
+            "PLAYER": "6",
+            "TARGET": "LastAttackerOf(Player6)"
+        }
+    ],
+    "name": "Protect-weak-party-caster"
+}
