@@ -3,7 +3,7 @@ IF
 	CombatCounter(0)
 THEN
 	RESPONSE #100
-		DisplayStringHead(Myself,16470)  // Off
-		ChangeAIScript("",RACE)
+		DisplayStringHead(Myself,12839)  // Warrior
+		ChangeAIScript("X_FIGHT",RACE)
 END
 
