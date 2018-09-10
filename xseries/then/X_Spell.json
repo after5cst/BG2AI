@@ -1,0 +1,4 @@
+[
+  "DisplayStringHead(<TARGET>,<STRING_ID>)  // <STRING_DESC>",
+  "Spell(<TARGET>,<SPELL>)  // <DESC>"
+]

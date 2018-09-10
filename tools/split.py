@@ -215,9 +215,12 @@ def get_history_names(snips_dir: str) -> dict:
     """
     result = []
     sources = []
-    for file_name in os.listdir(snips_dir):
-        if file_name.lower().endswith('.json'):
-            sources.append(file_name)
+    try:
+        for file_name in os.listdir(snips_dir):
+            if file_name.lower().endswith('.json'):
+                sources.append(file_name)
+    except FileNotFoundError:
+        pass
 
     required_keys = ('name', 'if', 'then')
     for file_name in sources:
@@ -231,10 +234,11 @@ def get_history_names(snips_dir: str) -> dict:
     return result
 
 
-def split(source: str):
+def split(source: str, auto_delete: bool):
     """
     Split a source file into a subdirectory of similar name.
     :param source: The source file, including path.
+    :param auto_delete: If true, the snips directory will be removed.
     :return: None.
     """
     target = os.path.splitext(source)[0]
@@ -332,4 +336,4 @@ if __name__ == "__main__":
     for file_name in os.listdir(args.search_dir):
         if file_name.lower().endswith('.baf'):
             file_path = os.path.realpath(os.path.join(args.search_dir, file_name))
-            split(file_path)
+            split(file_path, args.auto_delete)

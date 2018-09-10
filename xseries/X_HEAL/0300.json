@@ -1,0 +1,139 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "CombatCounter(0)",
+        "!Global('X_HEAL','LOCALS',1)",
+        {
+            "SeeHurtPlayer": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('X_HEAL','LOCALS',1)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "1",
+            "HP_PCT": "10"
+        },
+        {
+            "PLAYER": "2",
+            "HP_PCT": "10"
+        },
+        {
+            "PLAYER": "3",
+            "HP_PCT": "10"
+        },
+        {
+            "PLAYER": "4",
+            "HP_PCT": "10"
+        },
+        {
+            "PLAYER": "5",
+            "HP_PCT": "10"
+        },
+        {
+            "PLAYER": "6",
+            "HP_PCT": "10"
+        },
+        {
+            "PLAYER": "1",
+            "HP_PCT": "30"
+        },
+        {
+            "PLAYER": "2",
+            "HP_PCT": "30"
+        },
+        {
+            "PLAYER": "3",
+            "HP_PCT": "30"
+        },
+        {
+            "PLAYER": "4",
+            "HP_PCT": "30"
+        },
+        {
+            "PLAYER": "5",
+            "HP_PCT": "30"
+        },
+        {
+            "PLAYER": "6",
+            "HP_PCT": "30"
+        },
+        {
+            "PLAYER": "1",
+            "HP_PCT": "50"
+        },
+        {
+            "PLAYER": "2",
+            "HP_PCT": "50"
+        },
+        {
+            "PLAYER": "3",
+            "HP_PCT": "50"
+        },
+        {
+            "PLAYER": "4",
+            "HP_PCT": "50"
+        },
+        {
+            "PLAYER": "5",
+            "HP_PCT": "50"
+        },
+        {
+            "PLAYER": "6",
+            "HP_PCT": "50"
+        },
+        {
+            "PLAYER": "1",
+            "HP_PCT": "70"
+        },
+        {
+            "PLAYER": "2",
+            "HP_PCT": "70"
+        },
+        {
+            "PLAYER": "3",
+            "HP_PCT": "70"
+        },
+        {
+            "PLAYER": "4",
+            "HP_PCT": "70"
+        },
+        {
+            "PLAYER": "5",
+            "HP_PCT": "70"
+        },
+        {
+            "PLAYER": "6",
+            "HP_PCT": "70"
+        },
+        {
+            "PLAYER": "1",
+            "HP_PCT": "90"
+        },
+        {
+            "PLAYER": "2",
+            "HP_PCT": "90"
+        },
+        {
+            "PLAYER": "3",
+            "HP_PCT": "90"
+        },
+        {
+            "PLAYER": "4",
+            "HP_PCT": "90"
+        },
+        {
+            "PLAYER": "5",
+            "HP_PCT": "90"
+        },
+        {
+            "PLAYER": "6",
+            "HP_PCT": "90"
+        }
+    ]
+}

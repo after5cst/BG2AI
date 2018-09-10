@@ -1,0 +1,484 @@
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player1,10)
+	See(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player2,10)
+	See(Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player3,10)
+	See(Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player4,10)
+	See(Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player5,10)
+	See(Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player6,10)
+	See(Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player1,30)
+	See(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player2,30)
+	See(Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player3,30)
+	See(Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player4,30)
+	See(Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player5,30)
+	See(Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player6,30)
+	See(Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player1,50)
+	See(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player2,50)
+	See(Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player3,50)
+	See(Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player4,50)
+	See(Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player5,50)
+	See(Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player6,50)
+	See(Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player1,70)
+	See(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player2,70)
+	See(Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player3,70)
+	See(Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player4,70)
+	See(Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player5,70)
+	See(Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player6,70)
+	See(Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player1,90)
+	See(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player2,90)
+	See(Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player3,90)
+	See(Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player4,90)
+	See(Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player5,90)
+	See(Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	!Global("X_HEAL","LOCALS",1)
+	HPPercentLT(Player6,90)
+	See(Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),90)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),270,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),70)
+	!CheckStatLT(LastSeenBy(Myself),90,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),12116)  // Cure Critical Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),50)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),54,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),30)
+	!CheckStatLT(LastSeenBy(Myself),38,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),12116)  // Cure Critical Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),90)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),170,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),70)
+	!CheckStatLT(LastSeenBy(Myself),57,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),12114)  // Cure Serious Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),50)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),34,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),30)
+	!CheckStatLT(LastSeenBy(Myself),24,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),12114)  // Cure Serious Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),90)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),140,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),70)
+	!CheckStatLT(LastSeenBy(Myself),47,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),3350)  // Cure Medium Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),50)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),28,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),30)
+	!CheckStatLT(LastSeenBy(Myself),20,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),3350)  // Cure Medium Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),90)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),80,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),70)
+	!CheckStatLT(LastSeenBy(Myself),27,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),6620)  // Cure Light Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+	InParty(LastSeenBy(Myself))
+	HPPercentLT(LastSeenBy(Myself),50)
+	OR(2)
+		!CheckStatLT(LastSeenBy(Myself),16,MAXHITPOINTS)
+		HPPercentLT(LastSeenBy(Myself),30)
+	!CheckStatLT(LastSeenBy(Myself),11,MAXHITPOINTS)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(LastSeenBy(Myself),6620)  // Cure Light Wounds
+		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+		DisplayStringHead(Myself,16470)  // Off
+		ChangeAIScript("X_PICK",RACE)
+END
+

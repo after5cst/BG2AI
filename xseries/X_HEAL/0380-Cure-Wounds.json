@@ -1,0 +1,113 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "CombatCounter(0)",
+        "Global('X_HEAL','LOCALS',1)",
+        {
+            "SeenTargetHurtEnough": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('X_HEAL','LOCALS',0)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Cure-Wounds",
+    "fields": [
+        {
+            "MAX_HP_PERCENT": "90",
+            "MAX_HP_VALUE": "270",
+            "MIN_HP_PERCENT": "70",
+            "MIN_HP_VALUE": "90",
+            "SPELL": "CLERIC_CURE_CRITICAL_WOUNDS",
+            "DESC": "SPPR502.SPL (Cure Critical Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "12116",
+            "STRING_DESC": "Cure Critical Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "50",
+            "MAX_HP_VALUE": "54",
+            "MIN_HP_PERCENT": "30",
+            "MIN_HP_VALUE": "38",
+            "SPELL": "CLERIC_CURE_CRITICAL_WOUNDS",
+            "DESC": "SPPR502.SPL (Cure Critical Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "12116",
+            "STRING_DESC": "Cure Critical Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "90",
+            "MAX_HP_VALUE": "170",
+            "MIN_HP_PERCENT": "70",
+            "MIN_HP_VALUE": "57",
+            "SPELL": "CLERIC_CURE_SERIOUS_WOUNDS",
+            "DESC": "SPPR401.SPL (Cure Serious Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "12114",
+            "STRING_DESC": "Cure Serious Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "50",
+            "MAX_HP_VALUE": "34",
+            "MIN_HP_PERCENT": "30",
+            "MIN_HP_VALUE": "24",
+            "SPELL": "CLERIC_CURE_SERIOUS_WOUNDS",
+            "DESC": "SPPR401.SPL (Cure Serious Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "12114",
+            "STRING_DESC": "Cure Serious Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "90",
+            "MAX_HP_VALUE": "140",
+            "MIN_HP_PERCENT": "70",
+            "MIN_HP_VALUE": "47",
+            "SPELL": "CLERIC_CURE_MEDIUM_WOUNDS",
+            "DESC": "SPPR315.SPL (Cure Medium Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "3350",
+            "STRING_DESC": "Cure Medium Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "50",
+            "MAX_HP_VALUE": "28",
+            "MIN_HP_PERCENT": "30",
+            "MIN_HP_VALUE": "20",
+            "SPELL": "CLERIC_CURE_MEDIUM_WOUNDS",
+            "DESC": "SPPR315.SPL (Cure Medium Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "3350",
+            "STRING_DESC": "Cure Medium Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "90",
+            "MAX_HP_VALUE": "80",
+            "MIN_HP_PERCENT": "70",
+            "MIN_HP_VALUE": "27",
+            "SPELL": "CLERIC_CURE_LIGHT_WOUNDS",
+            "DESC": "SPPR103.SPL (Cure Light Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "6620",
+            "STRING_DESC": "Cure Light Wounds"
+        },
+        {
+            "MAX_HP_PERCENT": "50",
+            "MAX_HP_VALUE": "16",
+            "MIN_HP_PERCENT": "30",
+            "MIN_HP_VALUE": "11",
+            "SPELL": "CLERIC_CURE_LIGHT_WOUNDS",
+            "DESC": "SPPR103.SPL (Cure Light Wounds)",
+            "TARGET": "LastSeenBy(Myself)",
+            "STRING_ID": "6620",
+            "STRING_DESC": "Cure Light Wounds"
+        }
+    ]
+}

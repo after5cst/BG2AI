@@ -64,6 +64,15 @@ END
 
 IF
 	ActionListEmpty()
+	HotKey(D)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,12138)  // Healing
+		ChangeAIScript("X_HEAL",RACE)
+END
+
+IF
+	ActionListEmpty()
 	Global("X_LDR","LOCALS",1)
 	See(Player1)
 	!Range(LastSeenBy(Myself),10)
@@ -140,7 +149,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player1,4)
-		!Range(Player1, 20)
+		!Range(Player1,20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -153,7 +162,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player2,4)
-		!Range(Player2, 20)
+		!Range(Player2,20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -166,7 +175,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player3,4)
-		!Range(Player3, 20)
+		!Range(Player3,20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -179,7 +188,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player4,4)
-		!Range(Player4, 20)
+		!Range(Player4,20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -192,7 +201,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player5,4)
-		!Range(Player5, 20)
+		!Range(Player5,20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -205,10 +214,22 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player6,4)
-		!Range(Player6, 20)
+		!Range(Player6,20)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
 		SetGlobal("X_FOF","LOCALS",0)
+END
+
+IF
+	ActionListEmpty()
+	OR(2)
+		PartyRested()
+		Global("BD_DEFAI","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("BD_DEFAI","GLOBAL",2)
+		DisplayString(Myself,2305)  // Hello.
+		ChangeAIScript("X_PICK",RACE)
 END
 

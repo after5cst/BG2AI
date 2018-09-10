@@ -28,9 +28,16 @@ it will provide a history of the changes.
   
 ## Behavior
 
-TODO : This is to describe what actually happens in plain text, more or less.
-Until I parse through the file well enough to document it this is a future 
-task.
+### Hotkeys
+
+* F - Enable follow mode on a character.  Pressing F will cycle through
+      visible targets looking for the next leader (person to follow).
+      Selecting yourself as leader effectively disables following.
+      
+* D - Enable healing mode.  While in healing mode, the character will
+      work to heal the most damaged character.  After the character 
+      no longer has a good match for the most damaged character, or D
+      is pressed again, the character will exit healing mode.
 
 ## Changes
 
@@ -69,4 +76,17 @@ initialized" timer.
 * 1 == Prefer Melee
 
 * 2 == Prefer Ranged
+
+### AI Script Slots
+
+Looks like CLASS is used for player-picked scripts, and RACE is
+available for use.  The others will (possibly) conflict with other
+things that can happen in-game.
+
+* CLASS -- Player1 set to BDDEFAI by area at start of game
+* DEFAULT -- Set by AI scripts.  Used on party members
+* GENERAL -- Set by AI scripts.  Used on party members
+* SPECIFICS -- Set by AI scripts.  Used on party members
+* OVERRIDE -- Set by AI scripts.  Used on party members
+* RACE -- Set by AI scripts.
 

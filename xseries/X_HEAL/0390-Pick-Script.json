@@ -1,0 +1,19 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "CombatCounter(0)"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('X_HEAL','LOCALS',0)",
+                "DisplayStringHead(Myself,16470)  // Off",
+                "ChangeAIScript('X_PICK',RACE)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Pick-Script"
+}
