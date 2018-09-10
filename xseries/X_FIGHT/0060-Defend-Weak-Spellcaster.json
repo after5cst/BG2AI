@@ -1,0 +1,57 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        {
+            "WeakPlayerAttacked": null
+        },
+        {
+            "X_See": null
+        },
+        {
+            "AllowedToAttackTarget": null
+        },
+        {
+            "EnemyNotDisabled": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackReevaluate(LastSeenBy(Myself),30)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "PLAYER": "1",
+            "LOOK_FOR": "LastAttackerOf(Player1)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "PLAYER": "2",
+            "LOOK_FOR": "LastAttackerOf(Player2)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "PLAYER": "3",
+            "LOOK_FOR": "LastAttackerOf(Player3)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "PLAYER": "4",
+            "LOOK_FOR": "LastAttackerOf(Player4)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "PLAYER": "5",
+            "LOOK_FOR": "LastAttackerOf(Player5)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "PLAYER": "6",
+            "LOOK_FOR": "LastAttackerOf(Player6)"
+        }
+    ],
+    "name": "Defend-Weak-Spellcaster"
+}

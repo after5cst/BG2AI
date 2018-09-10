@@ -1,0 +1,4 @@
+[
+    "!StateCheck(<TARGET>,STATE_DISABLED)",
+    "!StateCheck(<TARGET>,STATE_NOT_TARGETABLE)"
+]

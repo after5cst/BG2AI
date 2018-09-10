@@ -73,6 +73,7 @@ END
 
 IF
 	ActionListEmpty()
+	CombatCounter(0)
 	Global("X_LDR","LOCALS",1)
 	See(Player1)
 	!Range(LastSeenBy(Myself),10)
@@ -85,6 +86,7 @@ END
 
 IF
 	ActionListEmpty()
+	CombatCounter(0)
 	Global("X_LDR","LOCALS",2)
 	See(Player2)
 	!Range(LastSeenBy(Myself),10)
@@ -97,6 +99,7 @@ END
 
 IF
 	ActionListEmpty()
+	CombatCounter(0)
 	Global("X_LDR","LOCALS",3)
 	See(Player3)
 	!Range(LastSeenBy(Myself),10)
@@ -109,6 +112,7 @@ END
 
 IF
 	ActionListEmpty()
+	CombatCounter(0)
 	Global("X_LDR","LOCALS",4)
 	See(Player4)
 	!Range(LastSeenBy(Myself),10)
@@ -121,6 +125,7 @@ END
 
 IF
 	ActionListEmpty()
+	CombatCounter(0)
 	Global("X_LDR","LOCALS",5)
 	See(Player5)
 	!Range(LastSeenBy(Myself),10)
@@ -133,6 +138,7 @@ END
 
 IF
 	ActionListEmpty()
+	CombatCounter(0)
 	Global("X_LDR","LOCALS",6)
 	See(Player6)
 	!Range(LastSeenBy(Myself),10)
@@ -231,5 +237,32 @@ THEN
 		SetGlobal("BD_DEFAI","GLOBAL",2)
 		DisplayString(Myself,2305)  // Hello.
 		ChangeAIScript("X_PICK",RACE)
+END
+
+IF
+	ActionListEmpty()
+	IsWeaponRanged(Myself)
+	!Global("BDAI_ATTACK_MODE","LOCALS",0)
+	Range(NearestEnemyOf(Myself),12)
+	OR(2)
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+		Range(NearestEnemyOf(Myself),4)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+END
+
+IF
+	ActionListEmpty()
+	!IsWeaponRanged(Myself)
+	!Global("BDAI_ATTACK_MODE","LOCALS",0)
+	!Range(NearestEnemyOf(Myself),4)
+	OR(2)
+		Global("BDAI_ATTACK_MODE","LOCALS",2)
+		!Range(NearestEnemyOf(Myself),12)
+	CanEquipRanged()
+THEN
+	RESPONSE #100
+		EquipRanged()
 END
 

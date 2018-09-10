@@ -1,5 +1,6 @@
 [
     "ActionListEmpty()",
+    "CombatCounter(0)",
     "Global('X_LDR','LOCALS',<PLAYER>)",
     "See(Player<PLAYER>)",
     "!Range(LastSeenBy(Myself),10)"

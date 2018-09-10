@@ -5,12 +5,13 @@ IF
 		Class(Player1,DRUID)
 		Class(Player1,SHAMAN)
 	See(LastAttackerOf(Player1))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
-	InWeaponRange(LastSeenBy(Myself))
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -23,12 +24,13 @@ IF
 		Class(Player2,DRUID)
 		Class(Player2,SHAMAN)
 	See(LastAttackerOf(Player2))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
-	InWeaponRange(LastSeenBy(Myself))
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -41,12 +43,13 @@ IF
 		Class(Player3,DRUID)
 		Class(Player3,SHAMAN)
 	See(LastAttackerOf(Player3))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
-	InWeaponRange(LastSeenBy(Myself))
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -59,12 +62,13 @@ IF
 		Class(Player4,DRUID)
 		Class(Player4,SHAMAN)
 	See(LastAttackerOf(Player4))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
-	InWeaponRange(LastSeenBy(Myself))
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -77,12 +81,13 @@ IF
 		Class(Player5,DRUID)
 		Class(Player5,SHAMAN)
 	See(LastAttackerOf(Player5))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
-	InWeaponRange(LastSeenBy(Myself))
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -95,12 +100,13 @@ IF
 		Class(Player6,DRUID)
 		Class(Player6,SHAMAN)
 	See(LastAttackerOf(Player6))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
-	InWeaponRange(LastSeenBy(Myself))
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -116,9 +122,11 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_SILENCED)
 	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -127,11 +135,13 @@ END
 IF
 	ActionListEmpty()
 	See(NearestEnemyOf(Myself))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -140,11 +150,13 @@ END
 IF
 	ActionListEmpty()
 	See(SecondNearestEnemyOf(Myself))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -153,11 +165,13 @@ END
 IF
 	ActionListEmpty()
 	See(ThirdNearestEnemyOf(Myself))
-	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)
@@ -166,9 +180,11 @@ END
 IF
 	ActionListEmpty()
 	See([EVILCUTOFF])
+	InWeaponRange(LastSeenBy(Myself))
 	!InParty(LastSeenBy(Myself))
 	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
 	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
 THEN
 	RESPONSE #100
 		AttackReevaluate(LastSeenBy(Myself),30)

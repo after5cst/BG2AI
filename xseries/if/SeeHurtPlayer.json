@@ -1,4 +1,6 @@
 [
         "HPPercentLT(Player<PLAYER>,<HP_PCT>)",
-        "See(Player<PLAYER>)"
+        {
+                "X_See": null
+        }
 ]

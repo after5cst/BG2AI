@@ -8,11 +8,12 @@
         "CheckStatLT(LastSeenBy(Myself),50,SPELLFAILUREPRIEST)",
         "CheckStatLT(LastSeenBy(Myself),50,SPELLFAILUREMAGE)",
         "!StateCheck(LastSeenBy(Myself),STATE_SILENCED)",
-        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
-        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
-        "!InParty(LastSeenBy(Myself))",
-        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
-        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)"
+        {
+            "EnemyNotDisabled": null
+        },
+        {
+            "AllowedToAttackTarget": null
+        }
     ],
     "then": [
         {
@@ -22,6 +23,9 @@
         }
     ],
     "fields": [
-        {}
-    ]
+        {
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Attack-Enemy-Spellcaster"
 }

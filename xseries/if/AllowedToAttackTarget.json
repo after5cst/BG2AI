@@ -1,0 +1,7 @@
+[
+    "InWeaponRange(<TARGET>)",
+    "!InParty(LastSeenBy(Myself))",
+    "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+    "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+    "Global('BDAI_DISABLE_ATTACK','LOCALS',0)"
+]

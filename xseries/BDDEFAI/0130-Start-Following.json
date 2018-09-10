@@ -1,14 +1,15 @@
 {
     "if": [
         {
-            "TimeToStopFollowingLeader": null
+            "LeaderTooFar": null
         }
     ],
     "then": [
         {
             "100": [
-                "DisplayString(Myself,100280)  // Done.",
-                "SetGlobal('X_FOF','LOCALS',0)"
+                "DisplayString(Myself,88034)  // Where are you trying to go?",
+                "SetGlobal('X_FOF','LOCALS',1)",
+                "FollowObjectFormation(LastSeenBy(Myself),11,1)"
             ]
         }
     ],
@@ -32,5 +33,5 @@
             "PLAYER": "6"
         }
     ],
-    "name": "stop-following-leader"
+    "name": "Start-Following"
 }

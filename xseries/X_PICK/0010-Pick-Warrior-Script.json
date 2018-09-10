@@ -6,12 +6,13 @@
     "then": [
         {
             "100": [
-                "DisplayStringHead(Myself,12839)  // Off",
+                "DisplayStringHead(Myself,12839)  // Warrior",
                 "ChangeAIScript('X_FIGHT',RACE)"
             ]
         }
     ],
     "fields": [
         {}
-    ]
+    ],
+    "name": "Pick-Warrior-Script"
 }

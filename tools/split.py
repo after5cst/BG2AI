@@ -224,7 +224,9 @@ def get_history_names(snips_dir: str) -> dict:
 
     required_keys = ('name', 'if', 'then')
     for file_name in sources:
-        with open(os.path.join(snips_dir, file_name)) as fp:
+        path = os.path.join(snips_dir, file_name)
+        with open(path) as fp:
+            logging.debug("Loading history from {}".format(path))
             data = json.load(fp)
         if all(k in data for k in required_keys):
             new_entry = {}

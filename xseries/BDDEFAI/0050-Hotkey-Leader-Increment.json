@@ -15,20 +15,25 @@
     ],
     "fields": [
         {
-            "PLAYER": "2"
+            "PLAYER": "2",
+            "LOOK_FOR": "Player2"
         },
         {
-            "PLAYER": "3"
+            "PLAYER": "3",
+            "LOOK_FOR": "Player3"
         },
         {
-            "PLAYER": "4"
+            "PLAYER": "4",
+            "LOOK_FOR": "Player4"
         },
         {
-            "PLAYER": "5"
+            "PLAYER": "5",
+            "LOOK_FOR": "Player5"
         },
         {
-            "PLAYER": "6"
+            "PLAYER": "6",
+            "LOOK_FOR": "Player6"
         }
     ],
-    "name": "hotkey-leader-set-to-next"
+    "name": "Hotkey-Leader-Increment"
 }

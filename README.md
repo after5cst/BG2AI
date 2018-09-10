@@ -36,8 +36,8 @@ it will provide a history of the changes.
       
 * D - Enable healing mode.  While in healing mode, the character will
       work to heal the most damaged character.  After the character 
-      no longer has a good match for the most damaged character, or D
-      is pressed again, the character will exit healing mode.
+      no longer has a good match for the most damaged character,
+      the character will exit healing mode.
 
 ## Changes
 

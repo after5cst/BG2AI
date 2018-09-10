@@ -1,10 +1,7 @@
 [
-        [
-            "Class(Player<PLAYER>,MAGE_ALL)",
-            "Class(Player<PLAYER>,DRUID)",
-            "Class(Player<PLAYER>,SHAMAN)"
-        ],
-        {
-            "SeeAttackableEnemy": null
-        }
+  [
+    "Class(Player<PLAYER>,MAGE_ALL)",
+    "Class(Player<PLAYER>,DRUID)",
+    "Class(Player<PLAYER>,SHAMAN)"
+  ]
 ]

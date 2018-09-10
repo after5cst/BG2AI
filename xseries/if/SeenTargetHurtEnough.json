@@ -1,9 +1,9 @@
 [
-        "InParty(LastSeenBy(Myself))",
-        "HPPercentLT(LastSeenBy(Myself),<MAX_HP_PERCENT>)",
+        "InParty(<TARGET>)",
+        "HPPercentLT(<TARGET>,<MAX_HP_PERCENT>)",
         [
-            "!CheckStatLT(LastSeenBy(Myself),<MAX_HP_VALUE>,MAXHITPOINTS)",
-            "HPPercentLT(LastSeenBy(Myself),<MIN_HP_PERCENT>)"
+            "!CheckStatLT(<TARGET>,<MAX_HP_VALUE>,MAXHITPOINTS)",
+            "HPPercentLT(<TARGET>,<MIN_HP_PERCENT>)"
         ],
-        "!CheckStatLT(LastSeenBy(Myself),<MIN_HP_VALUE>,MAXHITPOINTS)"
+        "!CheckStatLT(<TARGET>,<MIN_HP_VALUE>,MAXHITPOINTS)"
 ]
