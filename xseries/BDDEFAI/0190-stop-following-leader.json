@@ -1,0 +1,36 @@
+{
+    "if": [
+        {
+            "TimeToStopFollowingLeader": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayString(Myself,100280)  // Done.",
+                "SetGlobal('X_FOF','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "1"
+        },
+        {
+            "PLAYER": "2"
+        },
+        {
+            "PLAYER": "3"
+        },
+        {
+            "PLAYER": "4"
+        },
+        {
+            "PLAYER": "5"
+        },
+        {
+            "PLAYER": "6"
+        }
+    ],
+    "name": "stop-following-leader"
+}

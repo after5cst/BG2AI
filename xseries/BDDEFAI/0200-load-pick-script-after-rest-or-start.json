@@ -17,5 +17,6 @@
     ],
     "fields": [
         {}
-    ]
+    ],
+    "name": "load-pick-script-after-rest-or-start"
 }
