@@ -5,8 +5,12 @@
             "X_See": null
         },
         {
-            "AllowedToAttackTarget": null
+            "EnemyInAttackRange": null
         },
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
         {
             "EnemyNotDisabled": null
         }
@@ -32,5 +36,5 @@
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)"
         }
     ],
-    "name": "Attack-Nearby-Enemy"
+    "name": "Attack-Nearby"
 }

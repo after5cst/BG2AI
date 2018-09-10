@@ -8,8 +8,12 @@
             "X_See": null
         },
         {
-            "AllowedToAttackTarget": null
+            "EnemyInAttackRange": null
         },
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
         {
             "EnemyNotDisabled": null
         }
@@ -23,35 +27,35 @@
     ],
     "fields": [
         {
-            "TARGET": "LastSeenBy(Myself)",
             "PLAYER": "1",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "LastAttackerOf(Player1)"
         },
         {
-            "TARGET": "LastSeenBy(Myself)",
             "PLAYER": "2",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "LastAttackerOf(Player2)"
         },
         {
-            "TARGET": "LastSeenBy(Myself)",
             "PLAYER": "3",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "LastAttackerOf(Player3)"
         },
         {
-            "TARGET": "LastSeenBy(Myself)",
             "PLAYER": "4",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "LastAttackerOf(Player4)"
         },
         {
-            "TARGET": "LastSeenBy(Myself)",
             "PLAYER": "5",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "LastAttackerOf(Player5)"
         },
         {
-            "TARGET": "LastSeenBy(Myself)",
             "PLAYER": "6",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "LastAttackerOf(Player6)"
         }
     ],
-    "name": "Defend-Weak-Spellcaster"
+    "name": "Defend-Spellcasters"
 }

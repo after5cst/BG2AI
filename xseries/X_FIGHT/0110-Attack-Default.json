@@ -5,8 +5,12 @@
             "X_See": null
         },
         {
-            "AllowedToAttackTarget": null
-        }
+            "EnemyInAttackRange": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)"
     ],
     "then": [
         {
@@ -17,9 +21,8 @@
     ],
     "fields": [
         {
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF]"
         }
     ],
-    "name": "Attack-Nearest"
+    "name": "Attack-Default"
 }

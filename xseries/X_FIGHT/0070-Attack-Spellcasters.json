@@ -12,8 +12,12 @@
             "EnemyNotDisabled": null
         },
         {
-            "AllowedToAttackTarget": null
-        }
+            "EnemyInAttackRange": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)"
     ],
     "then": [
         {
@@ -27,5 +31,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "name": "Attack-Enemy-Spellcaster"
+    "name": "Attack-Spellcasters"
 }

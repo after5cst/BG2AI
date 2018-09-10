@@ -266,3 +266,36 @@ THEN
 		EquipRanged()
 END
 
+IF
+	ActionListEmpty()
+	Delay(1)
+	Global("BDAI_SKILL_MODE","LOCALS",1)
+	!See([EVILCUTOFF])
+	!ModalState(DETECTTRAPS)
+	OR(3)
+		Class(Myself,THIEF_ALL)
+		Class(Myself,MONK)
+		Class(Myself,SHAMAN)
+THEN
+	RESPONSE #100
+	    DisplayStringHead(Myself,95140)  // Searching for traps
+		FindTraps()
+END
+
+IF
+	ActionListEmpty()
+	Global("BDAI_SKILL_MODE","LOCALS",2)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!StateCheck(Myself,STATE_BLIND)
+	!ModalState(STEALTH)
+	!Range(NearestEnemyOf(Myself),30)
+	!ButtonDisabled(BUTTON_STEALTH)
+	OR(3)
+		Class(Myself,THIEF_ALL)
+		Class(Myself,RANGER_ALL)
+		Class(Myself,MONK)
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,95157)  // Attempting to hide in shadows
+		Hide()
+END
