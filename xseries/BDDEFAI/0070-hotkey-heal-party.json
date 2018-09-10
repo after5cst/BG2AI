@@ -1,0 +1,18 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HotKey(D)"
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayString(Myself,12138)  // Healing",
+                "ChangeAIScript('X_HEAL',RACE)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "hotkey-heal-party"
+}

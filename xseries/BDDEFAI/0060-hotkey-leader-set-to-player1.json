@@ -1,0 +1,21 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HotKey(F)"
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "SelectLeader": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "1"
+        }
+    ],
+    "name": "hotkey-leader-set-to-player1"
+}

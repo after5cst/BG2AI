@@ -1,0 +1,22 @@
+{
+    "if": [
+        "Global('X_FOF','LOCALS',1)",
+        "Global('X_LDR','LOCALS',2)",
+        [
+            "ActionListEmpty()",
+            "Range(Player2,4)",
+            "!Range(Player2,20)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayString(Myself,100280)  // Done.",
+                "SetGlobal('X_FOF','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ]
+}

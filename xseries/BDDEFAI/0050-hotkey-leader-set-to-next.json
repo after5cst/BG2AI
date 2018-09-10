@@ -1,0 +1,34 @@
+{
+    "if": [
+        {
+            "SelectLeaderHotkey": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "SelectLeader": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "2"
+        },
+        {
+            "PLAYER": "3"
+        },
+        {
+            "PLAYER": "4"
+        },
+        {
+            "PLAYER": "5"
+        },
+        {
+            "PLAYER": "6"
+        }
+    ],
+    "name": "hotkey-leader-set-to-next"
+}

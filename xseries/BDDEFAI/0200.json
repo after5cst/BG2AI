@@ -1,0 +1,21 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        [
+            "PartyRested()",
+            "Global('BD_DEFAI','GLOBAL',1)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_DEFAI','GLOBAL',2)",
+                "DisplayString(Myself,2305)  // Hello.",
+                "ChangeAIScript('X_PICK',RACE)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ]
+}

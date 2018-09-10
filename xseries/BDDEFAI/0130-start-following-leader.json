@@ -1,0 +1,37 @@
+{
+    "if": [
+        {
+            "LeaderTooFar": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayString(Myself,88034)  // Where are you trying to go?",
+                "SetGlobal('X_FOF','LOCALS',1)",
+                "FollowObjectFormation(LastSeenBy(Myself),11,1)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "1"
+        },
+        {
+            "PLAYER": "2"
+        },
+        {
+            "PLAYER": "3"
+        },
+        {
+            "PLAYER": "4"
+        },
+        {
+            "PLAYER": "5"
+        },
+        {
+            "PLAYER": "6"
+        }
+    ],
+    "name": "start-following-leader"
+}
