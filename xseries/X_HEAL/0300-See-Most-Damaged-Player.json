@@ -135,5 +135,6 @@
             "PLAYER": "6",
             "HP_PCT": "90"
         }
-    ]
+    ],
+    "name": "See-Most-Damaged-Player"
 }
