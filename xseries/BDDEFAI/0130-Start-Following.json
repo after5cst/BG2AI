@@ -7,9 +7,9 @@
     "then": [
         {
             "100": [
-                "DisplayString(Myself,88034)  // Where are you trying to go?",
-                "SetGlobal('X_FOF','LOCALS',1)",
-                "FollowObjectFormation(LastSeenBy(Myself),11,1)"
+                {
+                    "FollowPlayer": null
+                }
             ]
         }
     ],

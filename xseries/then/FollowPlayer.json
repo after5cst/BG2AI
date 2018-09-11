@@ -1,0 +1,5 @@
+[
+    "DisplayString(Myself,88034)  // Where are you trying to go?",
+    "SetGlobal('X_FOF','LOCALS',1)",
+    "FollowObjectFormation(Player<PLAYER>,11,1)"
+]

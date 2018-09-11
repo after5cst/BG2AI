@@ -4,6 +4,6 @@
     [
         "ActionListEmpty()",
         "Range(Player<PLAYER>,4)",
-        "!Range(Player<PLAYER>,20)"
+        "!TargetUnreachable(Player<PLAYER>)"
     ]
 ]

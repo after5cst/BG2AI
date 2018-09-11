@@ -2,6 +2,8 @@
     "ActionListEmpty()",
     "CombatCounter(0)",
     "Global('X_LDR','LOCALS',<PLAYER>)",
-    "See(Player<PLAYER>)",
-    "!Range(LastSeenBy(Myself),10)"
+    "Exists(Player<PLAYER>)",
+	"!StateCheck(Player<PLAYER>,STATE_REALLY_DEAD)",
+    "!Range(Player<PLAYER>,10)",
+    "Range(Player<PLAYER>,30)"
 ]

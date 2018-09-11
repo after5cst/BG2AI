@@ -75,78 +75,90 @@ IF
 	ActionListEmpty()
 	CombatCounter(0)
 	Global("X_LDR","LOCALS",1)
-	See(Player1)
-	!Range(LastSeenBy(Myself),10)
+	Exists(Player1)
+	!StateCheck(Player1,STATE_REALLY_DEAD)
+	!Range(Player1,10)
+	Range(Player1,30)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
 		SetGlobal("X_FOF","LOCALS",1)
-		FollowObjectFormation(LastSeenBy(Myself),11,1)
+		FollowObjectFormation(Player1,11,1)
 END
 
 IF
 	ActionListEmpty()
 	CombatCounter(0)
 	Global("X_LDR","LOCALS",2)
-	See(Player2)
-	!Range(LastSeenBy(Myself),10)
+	Exists(Player2)
+	!StateCheck(Player2,STATE_REALLY_DEAD)
+	!Range(Player2,10)
+	Range(Player2,30)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
 		SetGlobal("X_FOF","LOCALS",1)
-		FollowObjectFormation(LastSeenBy(Myself),11,1)
+		FollowObjectFormation(Player2,11,1)
 END
 
 IF
 	ActionListEmpty()
 	CombatCounter(0)
 	Global("X_LDR","LOCALS",3)
-	See(Player3)
-	!Range(LastSeenBy(Myself),10)
+	Exists(Player3)
+	!StateCheck(Player3,STATE_REALLY_DEAD)
+	!Range(Player3,10)
+	Range(Player3,30)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
 		SetGlobal("X_FOF","LOCALS",1)
-		FollowObjectFormation(LastSeenBy(Myself),11,1)
+		FollowObjectFormation(Player3,11,1)
 END
 
 IF
 	ActionListEmpty()
 	CombatCounter(0)
 	Global("X_LDR","LOCALS",4)
-	See(Player4)
-	!Range(LastSeenBy(Myself),10)
+	Exists(Player4)
+	!StateCheck(Player4,STATE_REALLY_DEAD)
+	!Range(Player4,10)
+	Range(Player4,30)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
 		SetGlobal("X_FOF","LOCALS",1)
-		FollowObjectFormation(LastSeenBy(Myself),11,1)
+		FollowObjectFormation(Player4,11,1)
 END
 
 IF
 	ActionListEmpty()
 	CombatCounter(0)
 	Global("X_LDR","LOCALS",5)
-	See(Player5)
-	!Range(LastSeenBy(Myself),10)
+	Exists(Player5)
+	!StateCheck(Player5,STATE_REALLY_DEAD)
+	!Range(Player5,10)
+	Range(Player5,30)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
 		SetGlobal("X_FOF","LOCALS",1)
-		FollowObjectFormation(LastSeenBy(Myself),11,1)
+		FollowObjectFormation(Player5,11,1)
 END
 
 IF
 	ActionListEmpty()
 	CombatCounter(0)
 	Global("X_LDR","LOCALS",6)
-	See(Player6)
-	!Range(LastSeenBy(Myself),10)
+	Exists(Player6)
+	!StateCheck(Player6,STATE_REALLY_DEAD)
+	!Range(Player6,10)
+	Range(Player6,30)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
 		SetGlobal("X_FOF","LOCALS",1)
-		FollowObjectFormation(LastSeenBy(Myself),11,1)
+		FollowObjectFormation(Player6,11,1)
 END
 
 IF
@@ -155,7 +167,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player1,4)
-		!Range(Player1,20)
+		!TargetUnreachable(Player1)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -168,7 +180,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player2,4)
-		!Range(Player2,20)
+		!TargetUnreachable(Player2)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -181,7 +193,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player3,4)
-		!Range(Player3,20)
+		!TargetUnreachable(Player3)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -194,7 +206,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player4,4)
-		!Range(Player4,20)
+		!TargetUnreachable(Player4)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -207,7 +219,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player5,4)
-		!Range(Player5,20)
+		!TargetUnreachable(Player5)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -220,7 +232,7 @@ IF
 	OR(3)
 		ActionListEmpty()
 		Range(Player6,4)
-		!Range(Player6,20)
+		!TargetUnreachable(Player6)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,100280)  // Done.
@@ -278,7 +290,7 @@ IF
 		Class(Myself,SHAMAN)
 THEN
 	RESPONSE #100
-	    DisplayStringHead(Myself,95140)  // Searching for traps
+		DisplayStringHead(Myself,95140)  // Searching for traps
 		FindTraps()
 END
 
@@ -299,3 +311,4 @@ THEN
 		DisplayStringHead(Myself,95157)  // Attempting to hide in shadows
 		Hide()
 END
+
