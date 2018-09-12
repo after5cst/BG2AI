@@ -241,7 +241,7 @@ END
 
 IF
 	ActionListEmpty()
-    PartyRested()
+	PartyRested()
 THEN
 	RESPONSE #100
 		DisplayString(Myself,2305)  // Hello.
@@ -250,8 +250,17 @@ END
 
 IF
 	ActionListEmpty()
-	!GlobalTimerNotExpired("X_ARC","LOCALS")
+	!Global("X_ARC","LOCALS",1)
+	Global("BribedCowled","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_ARC","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
 	Global("BribedCowled","GLOBAL",0)
+	Global("X_ARC","LOCALS",1)
 	AreaType(OUTDOOR)
 	OR(7)
 		AreaCheck("AR0020")
@@ -263,7 +272,32 @@ IF
 		AreaCheck("AR1000")
 THEN
 	RESPONSE #100
-		SetGlobalTimer("X_ARC","LOCALS",ONE_ROUND)
+		DisplayStringHead(Myself,46517)  // Travel safely, then, and beware the Cowled Wizards.
+		SetGlobal("X_ARC","LOCALS",0)
+END
+
+IF
+	ActionListEmpty()
+	!AreaType(OUTDOOR)
+	!Global("X_ARC","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_ARC","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	!Global("X_ARC","LOCALS",1)
+	!AreaCheck("AR0020")
+	!AreaCheck("AR0300")
+	!AreaCheck("AR0400")
+	!AreaCheck("AR0500")
+	!AreaCheck("AR0700")
+	!AreaCheck("AR0900")
+	!AreaCheck("AR1000")
+THEN
+	RESPONSE #100
+		SetGlobal("X_ARC","LOCALS",1)
 END
 
 IF
@@ -295,7 +329,7 @@ END
 
 IF
 	ActionListEmpty()
-	Delay(1)
+	Delay(3)
 	Global("BDAI_SKILL_MODE","LOCALS",1)
 	!See([EVILCUTOFF])
 	!ModalState(DETECTTRAPS)

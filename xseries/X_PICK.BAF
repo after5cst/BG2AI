@@ -1,12 +1,34 @@
 IF
 	ActionListEmpty()
+	HaveSpell(WIZARD_ARMOR)  // SPWI102.SPL (Armor)
+	OR(2)
+		!GlobalTimerNotExpired("X_CAST","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CheckStatGT(Myself,2,ARMORCLASS)
+	OR(2)
+		CheckStatGT(Myself,6,ARMORCLASS)
+		CheckStatGT(Myself,17,DEX)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	Global("X_ARC","LOCALS",1)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12031)  // Armor
+		Spell(Myself,WIZARD_ARMOR)  // SPWI102.SPL (Armor)
+END
+
+IF
+	ActionListEmpty()
 	HaveSpell(WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 	OR(2)
 		!GlobalTimerNotExpired("X_CAST","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatLT(Myself,1,STONESKINS)
-    !GlobalTimerNotExpired("X_ARC","LOCALS")
+	Global("X_ARC","LOCALS",1)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
