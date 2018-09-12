@@ -1,0 +1,66 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        {
+            "SeeTarget": null
+        },
+        "CheckStat(LastSeenBy(Myself),0,PROTECTION_FROM_EVIL)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        [
+            "Alignment([EVILCUTOFF],MASK_EVIL)",
+            "Alignment(SecondNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(ThirdNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(FourthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(FifthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(SixthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12023)  // Protection From Evil",
+                "Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)"
+            ]
+        }
+    ],
+    "name": "Protection-From-Evil",
+    "fields": [
+        {
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[PC]"
+        },
+        {
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([PC])"
+        }
+    ]
+}

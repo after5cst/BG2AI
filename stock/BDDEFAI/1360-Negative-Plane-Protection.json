@@ -1,0 +1,69 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        [
+            "Range([EVILCUTOFF.0.0.WIGHT],30)",
+            "Range([EVILCUTOFF.0.0.WRAITH],30)",
+            "Range([EVILCUTOFF.0.0.SPECTRE],30)",
+            "Range([EVILCUTOFF.0.VAMPIRE],30)",
+            "Range([EVILCUTOFF.0.0.SHADOW_DRAGON],30)"
+        ],
+        {
+            "SeeTarget": null
+        },
+        "CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
+        "!CheckSpellState(LastSeenBy(Myself),LATHANDER_BOON)",
+        "CheckStat(LastSeenBy(Myself),0,LEVEL_DRAIN_IMMUNITY)",
+        "!HasItemEquiped('AMUL21',LastSeenBy(Myself))  // Amulet of Power",
+        "!HasItemEquipedReal('BLUN25',LastSeenBy(Myself))  // Mace of Disruption +2",
+        "!HasItemEquipedReal('HAMM10',LastSeenBy(Myself))  // Runehammer +4",
+        "!HasItemEquipedReal('HAMM11',LastSeenBy(Myself))  // Runehammer +5",
+        "!HasItemEquipedReal('SW1H69',LastSeenBy(Myself))  // Spectral Brand +5",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,55842)  // Negative Plane Protection",
+                "Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)"
+            ]
+        }
+    ],
+    "name": "Negative-Plane-Protection",
+    "fields": [
+        {
+            "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
+            "DESC": "SPPR413.SPL (Negative Plane Protection)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[PC]"
+        },
+        {
+            "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
+            "DESC": "SPPR413.SPL (Negative Plane Protection)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
+            "DESC": "SPPR413.SPL (Negative Plane Protection)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([PC])"
+        }
+    ]
+}

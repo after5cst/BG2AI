@@ -1,0 +1,40 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "CheckStatGT(Myself,0,LEVELDRAIN)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Greater-Restoration",
+    "fields": [
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "55844",
+            "STRING_DESC": "Lesser Restoration"
+        },
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "35603",
+            "STRING_DESC": "Greater Restoration"
+        }
+    ]
+}

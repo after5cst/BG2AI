@@ -1,0 +1,27 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
+        "CheckStat(Myself,0,SANCTUARY)",
+        "!ModalState(BATTLESONG)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(NearestEnemyOf(Myself),STATE_REALLY_DEAD)",
+        "!Allegiance(NearestEnemyOf(Myself),GOODCUTOFF)",
+        "!InParty(NearestEnemyOf(Myself))"
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackOneRound(NearestEnemyOf(Myself))"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "LOOK_FOR": "NearestEnemyOf(Myself)"
+        }
+    ],
+    "name": "Attack-Default"
+}

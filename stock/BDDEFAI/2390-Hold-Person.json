@@ -1,0 +1,48 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        "NumCreatureGT([EVILCUTOFF],2)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),-1,SAVEVSSPELL)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)",
+        "!HasItem('MORSWORD',LastSeenBy(Myself))  // Mordenkainen's Sword",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12049)  // Hold Person",
+                "Spell(ThirdNearest([EVILCUTOFF.HUMANOID]),WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)"
+            ]
+        }
+    ],
+    "name": "Hold-Person",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])"
+        }
+    ]
+}

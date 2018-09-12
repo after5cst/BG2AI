@@ -1,0 +1,34 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!CheckSpellState(Myself,CHAOS_SHIELD)",
+        "!CheckSpellState(Myself,IMPROVED_CHAOS_SHIELD)",
+        "Range([EVILCUTOFF],30)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Chaos-Shield",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_CHAOS_SHIELD",
+            "DESC": "SPWI222.SPL (Chaos Shield)",
+            "TARGET": "Myself",
+            "STRING_ID": "64319",
+            "STRING_DESC": "Chaos Shield"
+        }
+    ]
+}

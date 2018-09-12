@@ -1,0 +1,57 @@
+{
+    "if": [
+        {
+            "SpellRESReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Horror','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],2)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!General(LastSeenBy(Myself),UNDEAD)",
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "!Race(LastSeenBy(Myself),TROLL)",
+        "!Kit(LastSeenBy(Myself),CAVALIER)",
+        "!Kit(LastSeenBy(Myself),Blackguard)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "!CheckSpellState(LastSeenBy(Myself),RESIST_FEAR)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12069)  // Horror",
+                "SpellRES('SPIN105',LastSeenBy(Myself))  // Horror"
+            ]
+        }
+    ],
+    "name": "Horror",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "SPIN105",
+            "DESC": "Horror",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[EVILCUTOFF]"
+        }
+    ]
+}

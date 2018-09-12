@@ -1,0 +1,73 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeParalyzedAlly": null
+        },
+        "!GlobalTimerNotExpired('BD_RParal','LOCALS')",
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_RParal','LOCALS',TWO_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12088)  // Remove Paralysis",
+                "Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)"
+            ]
+        }
+    ],
+    "name": "Remove-Paralysis",
+    "fields": [
+        {
+            "LOOK_FOR": "[GOODCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_PARALYSIS",
+            "DESC": "SPPR308.SPL (Remove Paralysis)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_PARALYSIS",
+            "DESC": "SPPR308.SPL (Remove Paralysis)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_PARALYSIS",
+            "DESC": "SPPR308.SPL (Remove Paralysis)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_PARALYSIS",
+            "DESC": "SPPR308.SPL (Remove Paralysis)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_PARALYSIS",
+            "DESC": "SPPR308.SPL (Remove Paralysis)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_PARALYSIS",
+            "DESC": "SPPR308.SPL (Remove Paralysis)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        }
+    ]
+}

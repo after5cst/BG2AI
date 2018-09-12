@@ -1,0 +1,29 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!ModalState(BATTLESONG)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
+        "CheckStat(Myself,0,SANCTUARY)",
+        "WeaponEffectiveVs(SecondNearestEnemyOf(Myself),MAINHAND)",
+        "WeaponCanDamage(SecondNearestEnemyOf(Myself),MAINHAND)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(SecondNearestEnemyOf(Myself),STATE_REALLY_DEAD)",
+        "!Allegiance(SecondNearestEnemyOf(Myself),GOODCUTOFF)",
+        "!InParty(SecondNearestEnemyOf(Myself))"
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackOneRound(SecondNearestEnemyOf(Myself))"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)"
+        }
+    ],
+    "name": "Attack-2nd-Enemy"
+}

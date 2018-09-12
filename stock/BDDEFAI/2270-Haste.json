@@ -1,0 +1,56 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Haste','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HASTED)",
+        "CheckStat(LastSeenBy(Myself),0,IMPROVEDHASTE)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Haste','LOCALS',THREE_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12080)  // Haste",
+                "Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)"
+            ]
+        }
+    ],
+    "name": "Haste",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_HASTE",
+            "DESC": "SPWI305.SPL (Haste)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[GOODCUTOFF.0.0.FIGHTER_ALL]"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_HASTE",
+            "DESC": "SPWI305.SPL (Haste)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[GOODCUTOFF.0.0.RANGER_ALL]"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_HASTE",
+            "DESC": "SPWI305.SPL (Haste)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[GOODCUTOFF.0.0.PALADIN_ALL]"
+        }
+    ]
+}

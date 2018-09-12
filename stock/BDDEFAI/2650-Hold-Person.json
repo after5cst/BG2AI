@@ -1,0 +1,79 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)",
+        "!HasItem('MORSWORD',LastSeenBy(Myself))  // Mordenkainen's Sword",
+        "!HasItemEquiped('RING09',LastSeenBy(Myself))  // Edventar's Gift",
+        "!HasItemEquipedReal('SW2H06',LastSeenBy(Myself))  // Spider's Bane +2",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12049)  // Hold Person",
+                "Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)"
+            ]
+        }
+    ],
+    "name": "Hold-Person",
+    "fields": [
+        {
+            "SPELL": "CLERIC_HOLD_PERSON",
+            "DESC": "SPPR208.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]"
+        },
+        {
+            "SPELL": "CLERIC_HOLD_PERSON",
+            "DESC": "SPPR208.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "SPELL": "CLERIC_HOLD_PERSON",
+            "DESC": "SPPR208.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "SPELL": "CLERIC_HOLD_PERSON",
+            "DESC": "SPPR208.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FourthNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "SPELL": "CLERIC_HOLD_PERSON",
+            "DESC": "SPPR208.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FifthNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "SPELL": "CLERIC_HOLD_PERSON",
+            "DESC": "SPPR208.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SixthNearest([EVILCUTOFF.HUMANOID])"
+        }
+    ]
+}

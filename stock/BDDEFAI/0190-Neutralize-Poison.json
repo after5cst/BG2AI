@@ -1,0 +1,37 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        [
+            "StateCheck(Myself,STATE_BLIND)",
+            "StateCheck(Myself,STATE_POISONED)",
+            "CheckSpellState(Myself,DISEASED)",
+            "CheckSpellState(Myself,DEAFENED)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Neutralize-Poison",
+    "fields": [
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "12115",
+            "STRING_DESC": "Neutralize Poison"
+        }
+    ]
+}

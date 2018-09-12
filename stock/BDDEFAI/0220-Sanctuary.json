@@ -1,0 +1,40 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!StateCheck(Myself,STATE_INVISIBLE)",
+        "!CheckStat(Myself,1,SANCTUARY)",
+        "HPPercentLT(Myself,51)",
+        "!CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Sanctuary",
+    "fields": [
+        {
+            "SPELL": "CLERIC_SANCTUARY",
+            "DESC": "SPPR109.SPL (Sanctuary)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "12084",
+            "STRING_DESC": "Sanctuary"
+        }
+    ]
+}

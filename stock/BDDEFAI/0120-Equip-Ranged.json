@@ -1,0 +1,20 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!IsWeaponRanged(Myself)",
+        "CanEquipRanged()",
+        "!Range(NearestEnemyOf(Myself),8)",
+        "Global('BDAI_ATTACK_MODE','LOCALS',2)"
+    ],
+    "then": [
+        {
+            "100": [
+                "EquipRanged()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Equip-Ranged"
+}

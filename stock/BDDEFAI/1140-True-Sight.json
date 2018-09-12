@@ -1,0 +1,35 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "Global('BD_DInv','LOCALS',1)",
+        "ActuallyInCombat()",
+        "CheckStat(Myself,0,TRUE_SIGHT)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_DInv','LOCALS',0)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "True-Sight",
+    "fields": [
+        {
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "DESC": "SPCL232.SPL (True Sight)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "25633",
+            "STRING_DESC": "True Sight"
+        }
+    ]
+}

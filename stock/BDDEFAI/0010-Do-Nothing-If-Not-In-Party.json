@@ -1,0 +1,17 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!InParty(Myself)"
+    ],
+    "then": [
+        {
+            "100": [
+                "NoAction()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Do-Nothing-If-Not-In-Party"
+}

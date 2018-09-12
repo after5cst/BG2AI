@@ -1,0 +1,27 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_SKILL_MODE','LOCALS',3)",
+        "ModalState(BATTLESONG)",
+        "!See([EVILCUTOFF])",
+        "!ActuallyInCombat()",
+        [
+            "Class(Myself,BARD_ALL)",
+            "Class(Myself,SHAMAN)"
+        ],
+        "Delay(30)",
+        "Global('BD_BRDS','LOCALS',1)"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_BRDS','LOCALS',0)",
+                "ClearActions(Myself)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Stop-Bard-Song"
+}

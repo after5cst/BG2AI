@@ -1,0 +1,23 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!Global('BDAI_RESET_TIMERS','GLOBAL',0)",
+        "Global('BDAI_SKILL_MODE','LOCALS',0)",
+        [
+            "Class(Myself,THIEF_ALL)",
+            "Class(Myself,MONK)",
+            "Class(Myself,SHAMAN)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BDAI_SKILL_MODE','LOCALS',1)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Default-Skill-Mode-To-Find-Traps"
+}

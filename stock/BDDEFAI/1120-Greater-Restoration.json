@@ -1,0 +1,75 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,35603)  // Greater Restoration",
+                "Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)"
+            ]
+        }
+    ],
+    "name": "Greater-Restoration",
+    "fields": [
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[PC]"
+        },
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FourthNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FifthNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_RESTORATION",
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SixthNearest([PC])"
+        }
+    ]
+}

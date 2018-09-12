@@ -1,0 +1,65 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Slow','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],2)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Class(LastSeenBy(Myself),MONK)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "!StateCheck(LastSeenBy(Myself),STATE_SLOWED)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
+        "CheckStatGT(LastSeenBy(Myself),-4,SAVEVSSPELL)",
+        "!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Slow','LOCALS',THREE_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12081)  // Slow",
+                "Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)"
+            ]
+        }
+    ],
+    "name": "Slow",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SLOW",
+            "DESC": "SPWI312.SPL (Slow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "NearestEnemyOf(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SLOW",
+            "DESC": "SPWI312.SPL (Slow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SLOW",
+            "DESC": "SPWI312.SPL (Slow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)"
+        }
+    ]
+}

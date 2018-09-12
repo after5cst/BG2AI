@@ -1,0 +1,32 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_SKILL_MODE','LOCALS',4)",
+        "!ModalState(TURNUNDEAD)",
+        "Range([EVILCUTOFF.UNDEAD],12)",
+        [
+            "CanTurn([EVILCUTOFF.UNDEAD],5)",
+            "CanTurn(SecondNearest([EVILCUTOFF.UNDEAD]),5)"
+        ],
+        [
+            "CanTurn(ThirdNearest([EVILCUTOFF.UNDEAD]),5)",
+            "CanTurn(FourthNearest([EVILCUTOFF.UNDEAD]),5)"
+        ],
+        [
+            "CanTurn(FifthNearest([EVILCUTOFF.UNDEAD]),5)",
+            "CanTurn(SixthNearest([EVILCUTOFF.UNDEAD]),5)"
+        ],
+        "!ButtonDisabled(BUTTON_TURNUNDEAD)"
+    ],
+    "then": [
+        {
+            "100": [
+                "Turn()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Start-Turn-Undead"
+}

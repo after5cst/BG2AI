@@ -1,0 +1,74 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Class(LastSeenBy(Myself),MONK)",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),CAVALIER)",
+        "!Race(LastSeenBy(Myself),ELF)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),3,SAVEVSSPELL)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12099)  // Charm Person or Mammal",
+                "Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)"
+            ]
+        }
+    ],
+    "name": "Charm-Person-or-Mammal",
+    "fields": [
+        {
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID.0.FIGHTER]"
+        },
+        {
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER])"
+        },
+        {
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]"
+        },
+        {
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])"
+        }
+    ]
+}

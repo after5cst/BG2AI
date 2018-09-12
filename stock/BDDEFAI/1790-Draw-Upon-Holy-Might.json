@@ -1,0 +1,40 @@
+{
+    "if": [
+        {
+            "SpellRESReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        [
+            "CheckStatGT(LastSeenBy(Myself),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],3)"
+        ],
+        "!StateCheck(Myself,STATE_DRAWUPONHOLYMIGHT)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_SpellRES": null
+                }
+            ]
+        }
+    ],
+    "name": "Draw-Upon-Holy-Might",
+    "fields": [
+        {
+            "SPELL": "SPIN103",
+            "DESC": "Draw Upon Holy Might",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "Myself",
+            "STRING_ID": "12108",
+            "STRING_DESC": "Draw Upon Holy Might"
+        }
+    ]
+}

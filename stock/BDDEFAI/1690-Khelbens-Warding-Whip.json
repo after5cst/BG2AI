@@ -1,0 +1,53 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),7)",
+        [
+            "CheckStat(LastSeenBy(Myself),1,MINORGLOBE)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,25947)  // Khelben's Warding Whip",
+                "Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)"
+            ]
+        }
+    ],
+    "name": "Khelbens-Warding-Whip",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_WARDING_WHIP",
+            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "LOOK_FOR": "[EVILCUTOFF]"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_WARDING_WHIP",
+            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_WARDING_WHIP",
+            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])"
+        }
+    ]
+}

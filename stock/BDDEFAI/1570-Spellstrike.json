@@ -1,0 +1,54 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),9)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+            "CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,26314)  // Spellstrike",
+                "Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)"
+            ]
+        }
+    ],
+    "name": "Spellstrike",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SPELL_STRIKE",
+            "DESC": "SPWI903.SPL (Spellstrike)",
+            "LOOK_FOR": "[EVILCUTOFF]"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SPELL_STRIKE",
+            "DESC": "SPWI903.SPL (Spellstrike)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SPELL_STRIKE",
+            "DESC": "SPWI903.SPL (Spellstrike)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])"
+        }
+    ]
+}

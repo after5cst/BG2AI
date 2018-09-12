@@ -1,0 +1,33 @@
+{
+    "if": [
+        {
+            "SpellRESReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "StateCheck(Myself,STATE_POISONED)",
+        "!CheckSpellState(Myself,DEAD_MAGIC_AREA)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_SpellRES": null
+                }
+            ]
+        }
+    ],
+    "name": "Slow-Poison",
+    "fields": [
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "Myself",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
+        }
+    ]
+}

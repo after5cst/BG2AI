@@ -1,0 +1,25 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_SKILL_MODE','LOCALS',1)",
+        "!See([EVILCUTOFF])",
+        "!ModalState(DETECTTRAPS)",
+        "!ModalState(STEALTH)",
+        [
+            "Class(Myself,THIEF_ALL)",
+            "Class(Myself,MONK)",
+            "Class(Myself,SHAMAN)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "FindTraps()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Find-Traps"
+}

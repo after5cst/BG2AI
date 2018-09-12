@@ -1,0 +1,27 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_SKILL_MODE','LOCALS',3)",
+        "!ModalState(BATTLESONG)",
+        [
+            "Class(Myself,BARD_ALL)",
+            "Class(Myself,SHAMAN)"
+        ],
+        [
+            "Range([EVILCUTOFF],30)",
+            "ActuallyInCombat()"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_BRDS','LOCALS',1)",
+                "BattleSong()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Bard-Song"
+}

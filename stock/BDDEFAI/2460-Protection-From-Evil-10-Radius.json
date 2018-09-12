@@ -1,0 +1,52 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        "CheckStat(Myself,0,PROTECTION_FROM_EVIL)",
+        [
+            "Alignment([EVILCUTOFF],MASK_EVIL)",
+            "Alignment(SecondNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(ThirdNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(FourthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(FifthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(SixthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)"
+        ],
+        [
+            "CheckStat([GOODCUTOFF],0,PROTECTION_FROM_EVIL)",
+            "CheckStat(SecondNearest([GOODCUTOFF]),0,PROTECTION_FROM_EVIL)"
+        ],
+        [
+            "Range([GOODCUTOFF],12)",
+            "Range(SecondNearest([GOODCUTOFF]),12)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Protection-From-Evil-10-Radius",
+    "fields": [
+        {
+            "SPELL": "CLERIC_PROTECTION_FROM_EVIL_10_FOOT",
+            "DESC": "SPPR408.SPL (Protection From Evil, 10' Radius)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "12014",
+            "STRING_DESC": "Protection From Evil, 10' Radius"
+        }
+    ]
+}

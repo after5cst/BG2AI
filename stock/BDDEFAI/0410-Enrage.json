@@ -1,0 +1,50 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpell(BERSERKER_RAGE)  // SPCL321.SPL (Enrage)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!CheckSpellState(Myself,BERSERKER_RAGE)",
+        "!CheckSpellState(Myself,BERSERKER_RAGE_FATIGUE)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        [
+            "CheckStatGT(LastSeenBy(Myself),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],3)",
+            "Range([EVILCUTOFF.0.MIND_FLAYER],30)",
+            "Range([EVILCUTOFF.0.DRAGON],30)",
+            "Range([EVILCUTOFF.0.DEMONIC],30)",
+            "Range([EVILCUTOFF.0.BEHOLDER],30)",
+            "Range([EVILCUTOFF.0.UMBERHULK],30)",
+            "Range([EVILCUTOFF.0.MYCONID],30)",
+            "Range([EVILCUTOFF.0.VAMPIRE],30)",
+            "Range([EVILCUTOFF.0.LICH],30)",
+            "Range([EVILCUTOFF.0.DEMILICH],30)",
+            "Range([EVILCUTOFF.0.FAIRY],30)",
+            "Range([EVILCUTOFF.0.0.WRAITH],30)",
+            "Range([EVILCUTOFF.0.0.WIGHT],30)",
+            "Range([EVILCUTOFF.0.0.SPECTRE],30)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Enrage",
+    "fields": [
+        {
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "Myself",
+            "STRING_ID": "34654",
+            "STRING_DESC": "Enrage",
+            "SPELL": "BERSERKER_RAGE",
+            "DESC": "SPCL321.SPL (Enrage)"
+        }
+    ]
+}

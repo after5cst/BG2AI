@@ -1,0 +1,29 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!ModalState(BATTLESONG)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
+        "HasItem('MELFMET',Myself)  // Melf's Minute Meteor",
+        "!StateCheck(Myself,STATE_INVISIBLE)",
+        "CheckStat(SixthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(SixthNearest([EVILCUTOFF.0.TROLL]),STATE_REALLY_DEAD)",
+        "!Allegiance(SixthNearest([EVILCUTOFF.0.TROLL]),GOODCUTOFF)",
+        "!InParty(SixthNearest([EVILCUTOFF.0.TROLL]))"
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackOneRound(SixthNearest([EVILCUTOFF.0.TROLL]))"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])"
+        }
+    ],
+    "name": "Attack-6th-Troll-With-MMM"
+}

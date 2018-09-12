@@ -1,0 +1,32 @@
+{
+    "if": [
+        {
+            "CanBringBackTheDead": null
+        },
+        [
+            "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+            "CheckStatGT(Myself,0,AURACLEANSING)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12117)  // Raise Dead",
+                "Spell(Player6,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)"
+            ]
+        }
+    ],
+    "name": "Raise-Dead",
+    "fields": [
+        {
+            "SPELL": "CLERIC_RAISE_DEAD",
+            "DESC": "SPPR504.SPL (Raise Dead)",
+            "TARGET": "Player6",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        }
+    ]
+}

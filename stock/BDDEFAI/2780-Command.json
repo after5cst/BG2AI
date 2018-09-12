@@ -1,0 +1,52 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)",
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),ELF)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12097)  // Command",
+                "Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)"
+            ]
+        }
+    ],
+    "name": "Command",
+    "fields": [
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeFearfulAlly": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12083)  // Remove Fear",
+                "Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)"
+            ]
+        }
+    ],
+    "name": "Remove-Fear",
+    "fields": [
+        {
+            "LOOK_FOR": "[GOODCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        }
+    ]
+}

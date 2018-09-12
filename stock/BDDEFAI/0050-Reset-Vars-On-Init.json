@@ -1,0 +1,32 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!Global('BDAI_RESET_TIMERS','GLOBAL',0)"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_Blind','LOCALS',0)",
+                "SetGlobal('BD_Cast','LOCALS',0)",
+                "SetGlobal('BD_CLTM','LOCALS',0)",
+                "SetGlobal('BD_Dharm','LOCALS',0)",
+                "SetGlobal('BD_DInv','LOCALS',0)",
+                "SetGlobal('BD_Glitter','LOCALS',0)",
+                "SetGlobal('BD_Haste','LOCALS',0)",
+                "SetGlobal('BD_HIDE','LOCALS',0)",
+                "SetGlobal('BD_Horror','LOCALS',0)",
+                "SetGlobal('BD_RParal','LOCALS',0)",
+                "SetGlobal('BD_SCLAR','LOCALS',0)",
+                "SetGlobal('BD_Slow','LOCALS',0)",
+                "SetGlobal('BD_Spook','LOCALS',0)",
+                "SetGlobal('BD_Support','LOCALS',0)",
+                "SetGlobal('BD_Wand','LOCALS',0)",
+                "SetGlobal('BDAI_RESET_TIMERS','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Reset-Vars-On-Init"
+}

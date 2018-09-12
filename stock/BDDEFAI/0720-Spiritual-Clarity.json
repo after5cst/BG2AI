@@ -1,0 +1,70 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_SCLAR','LOCALS')",
+        {
+            "SeeClarityTarget": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_SCLAR','LOCALS',TWO_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,103069)  // Spiritual Clarity",
+                "Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)"
+            ]
+        }
+    ],
+    "name": "Spiritual-Clarity",
+    "fields": [
+        {
+            "LOOK_FOR": "Player1",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "Player2",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "Player3",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "Player4",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "Player5",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "Player6",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        }
+    ]
+}

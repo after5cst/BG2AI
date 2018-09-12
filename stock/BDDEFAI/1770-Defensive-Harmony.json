@@ -1,0 +1,40 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Dharm','LOCALS')",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        "CheckStat(Myself,0,CLERIC_DEFENSIVE_HARMONY)",
+        "Range([EVILCUTOFF],30)",
+        "Range([GOODCUTOFF],12)",
+        "Range(SecondNearest([GOODCUTOFF]),12)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Dharm','LOCALS',THREE_ROUNDS)",
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Defensive-Harmony",
+    "fields": [
+        {
+            "SPELL": "CLERIC_DEFENSIVE_HARMONY",
+            "DESC": "SPPR406.SPL (Defensive Harmony)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "22829",
+            "STRING_DESC": "Defensive Harmony"
+        }
+    ]
+}

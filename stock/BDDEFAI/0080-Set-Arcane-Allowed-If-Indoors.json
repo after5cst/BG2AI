@@ -1,0 +1,18 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_NO_ARCANE','LOCALS',1)",
+        "!AreaType(OUTDOOR)"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BDAI_NO_ARCANE','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Set-Arcane-Allowed-If-Indoors"
+}

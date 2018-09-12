@@ -1,0 +1,37 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpell(KENSAI_KIA)  // SPCL144.SPL (Kai)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!CheckSpellState(Myself,KENSAI_KIA)",
+        "Range(NearestEnemyOf(Myself),6)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        [
+            "CheckStatGT(LastSeenBy(Myself),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],3)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Kai",
+    "fields": [
+        {
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "Myself",
+            "STRING_ID": "51848",
+            "STRING_DESC": "Kai",
+            "SPELL": "KENSAI_KIA",
+            "DESC": "SPCL144.SPL (Kai)"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
+        "!InParty(LastSeenBy(Myself))",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatLT(LastSeenBy(Myself),55,RESISTACID)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12033)  // Melf's Acid Arrow",
+                "Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)"
+            ]
+        }
+    ],
+    "name": "Melfs-Acid-Arrow",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_ACID_ARROW",
+            "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[EVILCUTOFF.0.TROLL]"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_ACID_ARROW",
+            "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_ACID_ARROW",
+            "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_ACID_ARROW",
+            "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FourthNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_ACID_ARROW",
+            "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FifthNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_ACID_ARROW",
+            "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])"
+        }
+    ]
+}

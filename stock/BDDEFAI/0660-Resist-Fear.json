@@ -1,0 +1,71 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeFearfulAlly": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12025)  // Resist Fear",
+                "Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)"
+            ]
+        }
+    ],
+    "name": "Resist-Fear",
+    "fields": [
+        {
+            "LOOK_FOR": "[GOODCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RESIST_FEAR",
+            "DESC": "SPWI210.SPL (Resist Fear)"
+        },
+        {
+            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RESIST_FEAR",
+            "DESC": "SPWI210.SPL (Resist Fear)"
+        },
+        {
+            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RESIST_FEAR",
+            "DESC": "SPWI210.SPL (Resist Fear)"
+        },
+        {
+            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RESIST_FEAR",
+            "DESC": "SPWI210.SPL (Resist Fear)"
+        },
+        {
+            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RESIST_FEAR",
+            "DESC": "SPWI210.SPL (Resist Fear)"
+        },
+        {
+            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RESIST_FEAR",
+            "DESC": "SPWI210.SPL (Resist Fear)"
+        }
+    ]
+}

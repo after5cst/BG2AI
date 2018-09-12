@@ -1,0 +1,80 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        [
+            "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
+            "StateCheck(LastSeenBy(Myself),STATE_BLIND)",
+            "CheckSpellState(LastSeenBy(Myself),DISEASED)",
+            "CheckSpellState(LastSeenBy(Myself),DEAFENED)"
+        ],
+        {
+            "HighLevelSpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12115)  // Neutralize Poison",
+                "Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)"
+            ]
+        }
+    ],
+    "name": "Neutralize-Poison",
+    "fields": [
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[PC]"
+        },
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FourthNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FifthNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_NEUTRALIZE_POISON",
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SixthNearest([PC])"
+        }
+    ]
+}

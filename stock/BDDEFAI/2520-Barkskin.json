@@ -1,0 +1,37 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        {
+            "SeeTarget": null
+        },
+        "!CheckSpellState(LastSeenBy(Myself),BARKSKIN)",
+        "CheckStatGT(LastSeenBy(Myself),4,ARMORCLASS)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12121)  // Barkskin",
+                "Spell(LastSeenBy(Myself),CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)"
+            ]
+        }
+    ],
+    "name": "Barkskin",
+    "fields": [
+        {
+            "SPELL": "CLERIC_BARKSKIN",
+            "DESC": "SPPR202.SPL (Barkskin)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "WorstAC([PC])"
+        }
+    ]
+}

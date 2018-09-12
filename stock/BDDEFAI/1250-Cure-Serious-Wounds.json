@@ -1,0 +1,44 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "HPPercentLT(LastSeenBy(Myself),40)",
+        "InParty(LastSeenBy(Myself))",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)",
+        "!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12114)  // Cure Serious Wounds",
+                "Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)"
+            ]
+        }
+    ],
+    "name": "Cure-Serious-Wounds",
+    "fields": [
+        {
+            "SPELL": "CLERIC_CURE_SERIOUS_WOUNDS",
+            "DESC": "SPPR401.SPL (Cure Serious Wounds)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "MostDamagedOf([PC])"
+        }
+    ]
+}

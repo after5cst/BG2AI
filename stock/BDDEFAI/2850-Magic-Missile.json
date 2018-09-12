@@ -1,0 +1,46 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        "CheckStat(LastSeenBy(Myself),0,MINORGLOBE)",
+        "CheckStatLT(LastSeenBy(Myself),31,RESISTMAGIC)",
+        "CheckStatLT(LastSeenBy(Myself),31,MAGICDAMAGERESISTANCE)",
+        "!CheckStat(LastSeenBy(Myself),2,DEFENSIVE_MODIFIER)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12052)  // Magic Missile",
+                "Spell(ThirdNearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)"
+            ]
+        }
+    ],
+    "name": "Magic-Missile",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MAGIC_MISSILE",
+            "DESC": "SPWI112.SPL (Magic Missile)",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)"
+        }
+    ]
+}

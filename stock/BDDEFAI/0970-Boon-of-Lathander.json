@@ -1,0 +1,45 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!CheckSpellState(Myself,LATHANDER_BOON)",
+        "CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)",
+        "!HasItemEquiped('AMUL21',Myself)  // Amulet of Power",
+        "!HasItemEquipedReal('BLUN25',Myself)  // Mace of Disruption +2",
+        "!HasItemEquipedReal('HAMM10',Myself)  // Runehammer +4",
+        "!HasItemEquipedReal('HAMM11',Myself)  // Runehammer +5",
+        "!HasItemEquipedReal('SW1H69',Myself)  // Spectral Brand +5",
+        [
+            "Range([EVILCUTOFF.0.0.WIGHT],30)",
+            "Range([EVILCUTOFF.0.0.WRAITH],30)",
+            "Range([EVILCUTOFF.0.0.SPECTRE],30)",
+            "Range([EVILCUTOFF.0.VAMPIRE],30)",
+            "Range([EVILCUTOFF.0.0.SHADOW_DRAGON],30)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Boon-of-Lathander",
+    "fields": [
+        {
+            "SPELL": "LATHANDER_BOON",
+            "DESC": "SPCL741.SPL (Boon of Lathander)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "34800",
+            "STRING_DESC": "Boon of Lathander"
+        }
+    ]
+}

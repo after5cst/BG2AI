@@ -1,0 +1,32 @@
+{
+    "if": [
+        {
+            "CanBringBackTheDead": null
+        },
+        [
+            "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+            "CheckStatGT(Myself,0,AURACLEANSING)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,103073)  // Recall Spirit",
+                "Spell(Player2,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)"
+            ]
+        }
+    ],
+    "name": "Recall-Spirit",
+    "fields": [
+        {
+            "SPELL": "CLERIC_RECALL_SPIRIT",
+            "DESC": "SPPR550.SPL (Recall Spirit)",
+            "TARGET": "Player2",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        }
+    ]
+}

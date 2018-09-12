@@ -1,0 +1,75 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,55844)  // Lesser Restoration",
+                "Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)"
+            ]
+        }
+    ],
+    "name": "Lesser-Restoration",
+    "fields": [
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[PC]"
+        },
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FourthNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FifthNearest([PC])"
+        },
+        {
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SixthNearest([PC])"
+        }
+    ]
+}

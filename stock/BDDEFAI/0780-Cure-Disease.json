@@ -1,0 +1,68 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeCureDiseaseTarget": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,2445)  // Cure Disease",
+                "Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)"
+            ]
+        }
+    ],
+    "name": "Cure-Disease",
+    "fields": [
+        {
+            "LOOK_FOR": "[PC]",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "SecondNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "FourthNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "FifthNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        },
+        {
+            "LOOK_FOR": "SixthNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST"
+        }
+    ]
+}

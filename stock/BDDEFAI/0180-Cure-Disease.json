@@ -1,0 +1,36 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        [
+            "StateCheck(Myself,STATE_BLIND)",
+            "CheckSpellState(Myself,DISEASED)",
+            "CheckSpellState(Myself,DEAFENED)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Cure-Disease",
+    "fields": [
+        {
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        }
+    ]
+}

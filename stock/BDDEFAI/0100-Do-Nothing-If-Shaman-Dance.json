@@ -1,0 +1,17 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "ModalState(SHAMANDANCE)"
+    ],
+    "then": [
+        {
+            "100": [
+                "NoAction()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Do-Nothing-If-Shaman-Dance"
+}
