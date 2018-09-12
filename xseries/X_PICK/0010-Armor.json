@@ -9,25 +9,28 @@
             "CheckStatGT(Myself,17,DEX)"
         ],
         "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
-        "Global('BDAI_NO_ARCANE','LOCALS',0)",
-        "CheckStatLT(Myself,50,SPELLFAILUREMAGE)",
-        "!StateCheck(Myself,STATE_SILENCED)",
-        "!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)"
+        {
+            "ArcaneCastOK": null
+        }
     ],
     "then": [
         {
             "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,12031)  // Armor",
-                "Spell(Myself,WIZARD_ARMOR)  // SPWI102.SPL (Armor)"
+                {
+                    "X_Spell": null
+                }
             ]
         }
     ],
     "name": "Armor",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_ARMOR",
-            "DESC": "SPWI102.SPL (Armor)"
+            "DESC": "SPWI102.SPL (Armor)",
+            "TARGET": "Myself",
+            "STRING_ID": "12031",
+            "STRING_DESC": "Armor"
         }
     ]
 }

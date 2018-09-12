@@ -5,25 +5,28 @@
         },
         "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "CheckStatLT(Myself,1,STONESKINS)",
-        "Global('BDAI_NO_ARCANE','LOCALS',0)",
-        "CheckStatLT(Myself,50,SPELLFAILUREMAGE)",
-        "!StateCheck(Myself,STATE_SILENCED)",
-        "!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)"
+        {
+            "ArcaneCastOK": null
+        }
     ],
     "then": [
         {
             "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,25875)  // Stoneskin",
-                "Spell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)"
+                {
+                    "X_Spell": null
+                }
             ]
         }
     ],
     "name": "Stoneskin",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_STONE_SKIN",
-            "DESC": "SPWI408.SPL (Stoneskin)"
+            "DESC": "SPWI408.SPL (Stoneskin)",
+            "TARGET": "Myself",
+            "STRING_ID": "25875",
+            "STRING_DESC": "Stoneskin"
         }
     ]
 }
