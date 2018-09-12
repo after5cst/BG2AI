@@ -1,0 +1,9 @@
+[
+    "ActionListEmpty()",
+    "HaveSpell(<SPELL>)  // <DESC>",
+    "CombatCounter(0)",
+    "StateCheck(<TARGET>,STATE_REALLY_DEAD)",
+    "InPartyAllowDead(<TARGET>)",
+    "!Range([EVILCUTOFF],30)",
+    "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)"
+]

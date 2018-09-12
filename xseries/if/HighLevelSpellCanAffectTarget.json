@@ -1,0 +1,4 @@
+[
+    "!StateCheck(<TARGET>,STATE_NOT_TARGETABLE)",
+	"!CheckStatGT(<TARGET>,0,WIZARD_SPELL_DEFLECTION)"
+]

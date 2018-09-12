@@ -1,0 +1,13 @@
+[
+    {
+        "SeeTarget": null
+    },
+    [
+        "StateCheck(<TARGET>,STATE_STUNNED)",
+        "CheckStatGT(<TARGET>,0,HELD)"
+    ],
+    {
+        "SpellCanAffectTarget": null
+    },
+    "CheckStat(<TARGET>,0,WEB)"
+]

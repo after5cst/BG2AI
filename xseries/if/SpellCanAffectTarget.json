@@ -1,0 +1,6 @@
+[
+  {
+    "HighLevelSpellCanAffectTarget": null
+  },
+  "!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
+]

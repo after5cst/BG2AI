@@ -1,0 +1,5 @@
+[
+    "!CheckSpellState(LastSeenBy(Myself),BARBARIAN_RAGE)",
+    "!CheckSpellState(LastSeenBy(Myself),BERSERKER_RAGE)",
+    "!CheckSpellState(LastSeenBy(Myself),MINSC_BERSERK)"
+]

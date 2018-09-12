@@ -1,0 +1,23 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "IsWeaponRanged(Myself)",
+        "!Global('BDAI_ATTACK_MODE','LOCALS',0)",
+        "Range(NearestEnemyOf(Myself),12)",
+        [
+            "Global('BDAI_ATTACK_MODE','LOCALS',1)",
+            "Range(NearestEnemyOf(Myself),4)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "EquipMostDamagingMelee()"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Equip-Melee"
+}

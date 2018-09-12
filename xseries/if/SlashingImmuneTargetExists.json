@@ -1,0 +1,4 @@
+[
+    "Range(<TARGET>,30)",
+    "CheckStat(<TARGET>,100,RESISTSLASHING)"
+]

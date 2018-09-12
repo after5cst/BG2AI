@@ -1,0 +1,29 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BribedCowled','GLOBAL',0)",
+        "Global('BDAI_NO_ARCANE','LOCALS',0)",
+        "AreaType(OUTDOOR)",
+        [
+            "AreaCheck('AR0020')",
+            "AreaCheck('AR0300')",
+            "AreaCheck('AR0400')",
+            "AreaCheck('AR0500')",
+            "AreaCheck('AR0700')",
+            "AreaCheck('AR0900')",
+            "AreaCheck('AR1000')"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayStringHead(Myself,46517)  // Travel safely, then, and beware the Cowled Wizards.",
+                "SetGlobal('BDAI_NO_ARCANE','LOCALS',1)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Disable-Arcane-if-In-Athkatla"
+}

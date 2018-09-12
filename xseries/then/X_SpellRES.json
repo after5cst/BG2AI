@@ -1,5 +1,5 @@
 [
   "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
   "DisplayString(<TARGET>,<STRING_ID>)  // <STRING_DESC>",
-  "Spell(<TARGET>,<SPELL>)  // <DESC>"
+  "SpellRES('<SPELL>',<TARGET>)  // <DESC>"
 ]
