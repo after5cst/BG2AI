@@ -1,5 +1,24 @@
 IF
 	ActionListEmpty()
+	HaveSpell(WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
+	OR(2)
+		!GlobalTimerNotExpired("X_CAST","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,1,STONESKINS)
+    !GlobalTimerNotExpired("X_ARC","LOCALS")
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_CAST","LOCALS",ONE_ROUND)
+		DisplayString(Myself,25875)  // Stoneskin
+		Spell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
+END
+
+IF
+	ActionListEmpty()
 	CombatCounter(0)
 THEN
 	RESPONSE #100
