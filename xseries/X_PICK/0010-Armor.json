@@ -3,10 +3,6 @@
         {
             "SpellReady": null
         },
-        [
-            "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
-            "CheckStatGT(Myself,0,AURACLEANSING)"
-        ],
         "CheckStatGT(Myself,2,ARMORCLASS)",
         [
             "CheckStatGT(Myself,6,ARMORCLASS)",
