@@ -1,0 +1,33 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpellRES('SPDWD02')  // Defensive Stance",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!CheckSpellState(Myself,DEFENSIVE_STANCE)",
+        "Range(NearestEnemyOf(Myself),6)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],3)"
+        ],
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')"
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_SpellRES": null
+                }
+            ]
+        }
+    ],
+    "name": "Defensive-Stance",
+    "fields": [
+        {
+            "TARGET": "Myself",
+            "STRING_ID": "74311",
+            "STRING_DESC": "Defensive Stance",
+            "SPELL": "SPDWD02",
+            "DESC": "Defensive Stance"
+        }
+    ]
+}

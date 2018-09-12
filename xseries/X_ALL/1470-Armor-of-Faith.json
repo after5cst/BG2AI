@@ -1,0 +1,42 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        [
+            "CheckStatGT(LastSeenBy(Myself),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],3)"
+        ],
+        "!CheckSpellState(Myself,ARMOR_OF_FAITH)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Armor-of-Faith",
+    "fields": [
+        {
+            "SPELL": "CLERIC_ARMOR_OF_FAITH",
+            "DESC": "SPPR111.SPL (Armor of Faith)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "Myself",
+            "STRING_ID": "25601",
+            "STRING_DESC": "Armor of Faith"
+        }
+    ]
+}

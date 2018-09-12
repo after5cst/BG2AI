@@ -1,0 +1,19 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "Global('BD_Cloud','LOCALS',1)",
+        "GlobalTimerExpired('BD_CLTM','LOCALS')"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_Cloud','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Release-BD-Cloud-Flag"
+}

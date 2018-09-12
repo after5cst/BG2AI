@@ -1,0 +1,29 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "ActuallyInCombat()",
+        "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "HPPercentLT(Myself,85)",
+        "HasItem('POTN52',Myself)  // Potion of Extra Healing"
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_UseItem": null
+                }
+            ]
+        }
+    ],
+    "name": "Potion-of-Extra-Healing",
+    "fields": [
+        {
+            "ITEM": "POTN52",
+            "TARGET": "Myself",
+            "DESC": "Potion of Extra Healing",
+            "STRING_ID": "46150",
+            "STRING_DESC": "*quaffs a potion*"
+        }
+    ]
+}

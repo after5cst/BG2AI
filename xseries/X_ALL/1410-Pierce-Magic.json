@@ -1,0 +1,62 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),6)",
+        [
+            "CheckStat(LastSeenBy(Myself),1,MINORGLOBE)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Pierce-Magic",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "STRING_ID": "25934",
+            "STRING_DESC": "Pierce Magic",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "STRING_ID": "25934",
+            "STRING_DESC": "Pierce Magic",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "STRING_ID": "25934",
+            "STRING_DESC": "Pierce Magic",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ]
+}

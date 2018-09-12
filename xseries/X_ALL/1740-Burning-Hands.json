@@ -1,0 +1,97 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
+        "!InParty(LastSeenBy(Myself))",
+        "Range(LastSeenBy(Myself),8)",
+        {
+            "IsValidFireSpellTarget": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Burning-Hands",
+    "fields": [
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BURNING_HANDS",
+            "DESC": "SPWI103.SPL (Burning Hands)",
+            "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
+            "STRING_ID": "12074",
+            "STRING_DESC": "Burning Hands"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BURNING_HANDS",
+            "DESC": "SPWI103.SPL (Burning Hands)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
+            "STRING_ID": "12074",
+            "STRING_DESC": "Burning Hands"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BURNING_HANDS",
+            "DESC": "SPWI103.SPL (Burning Hands)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
+            "STRING_ID": "12074",
+            "STRING_DESC": "Burning Hands"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BURNING_HANDS",
+            "DESC": "SPWI103.SPL (Burning Hands)",
+            "LOOK_FOR": "FourthNearest([EVILCUTOFF.0.TROLL])",
+            "STRING_ID": "12074",
+            "STRING_DESC": "Burning Hands"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BURNING_HANDS",
+            "DESC": "SPWI103.SPL (Burning Hands)",
+            "LOOK_FOR": "FifthNearest([EVILCUTOFF.0.TROLL])",
+            "STRING_ID": "12074",
+            "STRING_DESC": "Burning Hands"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BURNING_HANDS",
+            "DESC": "SPWI103.SPL (Burning Hands)",
+            "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])",
+            "STRING_ID": "12074",
+            "STRING_DESC": "Burning Hands"
+        }
+    ]
+}

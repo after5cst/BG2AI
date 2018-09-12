@@ -1,0 +1,51 @@
+{
+    "if": [
+        {
+            "SpellRESReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "HPPercentLT(Myself,71)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!General(LastSeenBy(Myself),UNDEAD)",
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "!Race(LastSeenBy(Myself),ELEMENTAL)",
+        "!Race(LastSeenBy(Myself),SALAMANDER)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),SWORD)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
+        "CheckStatLT(LastSeenBy(Myself),75,MAGICDAMAGERESISTANCE)",
+        "!CheckSpellState(Myself,DEAD_MAGIC_AREA)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12068)  // Larloch's Minor Drain",
+                "SpellRES('SPIN104',LastSeenBy(Myself))  // Larloch's Minor Drain"
+            ]
+        }
+    ],
+    "name": "Larlochs-Minor-Drain",
+    "fields": [
+        {
+            "SPELL": "SPIN104",
+            "DESC": "Larloch's Minor Drain",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "NearestEnemyOf(Myself)"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        {
+            "IsValidFireSpellTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
+        "TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))",
+        "!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))",
+        "!Range([NEUTRAL],30)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Fireball",
+    "fields": [
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "75",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_FIREBALL",
+            "DESC": "SPWI304.SPL (Fireball)",
+            "LOOK_FOR": "FarthestEnemyOf(Myself)",
+            "STRING_ID": "6618",
+            "STRING_DESC": "Fireball"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "75",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_FIREBALL",
+            "DESC": "SPWI304.SPL (Fireball)",
+            "LOOK_FOR": "SecondFarthestEnemyOf(Myself)",
+            "STRING_ID": "6618",
+            "STRING_DESC": "Fireball"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "75",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_FIREBALL",
+            "DESC": "SPWI304.SPL (Fireball)",
+            "LOOK_FOR": "ThirdFarthestEnemyOf(Myself)",
+            "STRING_ID": "6618",
+            "STRING_DESC": "Fireball"
+        }
+    ]
+}

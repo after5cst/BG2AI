@@ -1,0 +1,32 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "CheckStatGT(Myself,6,ARMORCLASS)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Armor",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_ARMOR",
+            "DESC": "SPWI102.SPL (Armor)",
+            "TARGET": "Myself",
+            "STRING_ID": "12031",
+            "STRING_DESC": "Armor"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "Global('BD_DInv','LOCALS',1)",
+        "!GlobalTimerNotExpired('BD_DInv','LOCALS')",
+        "ActuallyInCombat()",
+        "CheckStat(Myself,0,TRUE_SIGHT)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_DInv','LOCALS',0)",
+                "SetGlobalTimer('BD_DInv','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Detect-Invisibility",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "TARGET": "Myself",
+            "STRING_ID": "12042",
+            "STRING_DESC": "Detect Invisibility"
+        }
+    ]
+}

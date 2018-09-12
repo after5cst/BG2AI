@@ -1,5 +1,320 @@
 IF
 	ActionListEmpty()
+	HaveSpell(CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player2,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player2)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,25765)  // Resurrection
+		Spell(Player2,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player3,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player3)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,25765)  // Resurrection
+		Spell(Player3,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player4,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player4)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,25765)  // Resurrection
+		Spell(Player4,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player5,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player5)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,25765)  // Resurrection
+		Spell(Player5,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player6,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player6)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,25765)  // Resurrection
+		Spell(Player6,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player2,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player2)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12117)  // Raise Dead
+		Spell(Player2,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player3,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player3)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12117)  // Raise Dead
+		Spell(Player3,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player4,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player4)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12117)  // Raise Dead
+		Spell(Player4,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player5,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player5)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12117)  // Raise Dead
+		Spell(Player5,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player6,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player6)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,12117)  // Raise Dead
+		Spell(Player6,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player2,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player2)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,103073)  // Recall Spirit
+		Spell(Player2,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player3,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player3)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,103073)  // Recall Spirit
+		Spell(Player3,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player4,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player4)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,103073)  // Recall Spirit
+		Spell(Player4,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player5,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player5)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,103073)  // Recall Spirit
+		Spell(Player5,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CombatCounter(0)
+	StateCheck(Player6,STATE_REALLY_DEAD)
+	InPartyAllowDead(Player6)
+	!Range([EVILCUTOFF],30)
+	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,103073)  // Recall Spirit
+		Spell(Player6,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
+END
+
+IF
+	ActionListEmpty()
 	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,10)

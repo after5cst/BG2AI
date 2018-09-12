@@ -1,0 +1,80 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        {
+            "SeeCureDiseaseTarget": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Cure-Disease",
+    "fields": [
+        {
+            "LOOK_FOR": "[PC]",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        },
+        {
+            "LOOK_FOR": "SecondNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        },
+        {
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        },
+        {
+            "LOOK_FOR": "FourthNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        },
+        {
+            "LOOK_FOR": "FifthNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        },
+        {
+            "LOOK_FOR": "SixthNearest([PC])",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_CURE_DISEASE",
+            "DESC": "SPPR317.SPL (Cure Disease)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "STRING_ID": "2445",
+            "STRING_DESC": "Cure Disease"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpell(ARCHER_CALL_SHOT)  // SPCL121.SPL (Called Shot)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "!CheckSpellState(Myself,ARCHER_CALL_SHOT)",
+        "IsWeaponRanged(Myself)",
+        "!Range([EVILCUTOFF],5)",
+        [
+            "CheckStatGT([EVILCUTOFF],12,LEVEL)",
+            "CheckStatGT(SecondNearest([EVILCUTOFF]),12,LEVEL)",
+            "CheckStatGT(ThirdNearest([EVILCUTOFF]),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],4)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Called-Shot",
+    "fields": [
+        {
+            "TARGET": "Myself",
+            "STRING_ID": "51964",
+            "STRING_DESC": "Called Shot",
+            "SPELL": "ARCHER_CALL_SHOT",
+            "DESC": "SPCL121.SPL (Called Shot)"
+        }
+    ]
+}

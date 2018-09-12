@@ -1,0 +1,49 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!StateCheck(Myself,STATE_MIRRORIMAGE)",
+        {
+            "SeeTarget": null
+        },
+        "!CheckStatGT(Myself,0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)",
+        "!CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(SeventhNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(EighthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(NinthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT(TenthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
+        "!CheckStatGT([EVILCUTOFF.0.PLANATAR],0,TRUE_SIGHT)",
+        "!CheckStatGT([EVILCUTOFF.0.DARKPLANATAR],0,TRUE_SIGHT)",
+        "!CheckStat(Myself,1,PUPPETTYPE)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Mirror-Image",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MIRROR_IMAGE",
+            "DESC": "SPWI212.SPL (Mirror Image)",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "TARGET": "Myself",
+            "STRING_ID": "12018",
+            "STRING_DESC": "Mirror Image"
+        }
+    ]
+}

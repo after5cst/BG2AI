@@ -1,0 +1,68 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        {
+            "IsValidFireSpellTarget": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Flame-Arrow",
+    "fields": [
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_FLAME_ARROW",
+            "DESC": "SPWI303.SPL (Flame Arrow)",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "STRING_ID": "12034",
+            "STRING_DESC": "Flame Arrow"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_FLAME_ARROW",
+            "DESC": "SPWI303.SPL (Flame Arrow)",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "STRING_ID": "12034",
+            "STRING_DESC": "Flame Arrow"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "55",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_FLAME_ARROW",
+            "DESC": "SPWI303.SPL (Flame Arrow)",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "STRING_ID": "12034",
+            "STRING_DESC": "Flame Arrow"
+        }
+    ]
+}

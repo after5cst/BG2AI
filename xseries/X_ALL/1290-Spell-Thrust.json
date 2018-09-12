@@ -1,0 +1,61 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),3)",
+        [
+            "CheckStat(LastSeenBy(Myself),1,MINORGLOBE)",
+            "CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)",
+            "CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Spell-Thrust",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SPELL_THRUST",
+            "DESC": "SPWI321.SPL (Spell Thrust)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "STRING_ID": "25873",
+            "STRING_DESC": "Spell Thrust",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SPELL_THRUST",
+            "DESC": "SPWI321.SPL (Spell Thrust)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "STRING_ID": "25873",
+            "STRING_DESC": "Spell Thrust",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SPELL_THRUST",
+            "DESC": "SPWI321.SPL (Spell Thrust)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "STRING_ID": "25873",
+            "STRING_DESC": "Spell Thrust",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ]
+}

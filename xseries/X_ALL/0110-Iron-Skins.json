@@ -1,0 +1,32 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "CheckStatLT(Myself,1,STONESKINS)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Iron-Skins",
+    "fields": [
+        {
+            "SPELL": "CLERIC_IRONSKIN",
+            "DESC": "SPPR506.SPL (Iron Skins)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "44941",
+            "STRING_DESC": "Iron Skins"
+        }
+    ]
+}

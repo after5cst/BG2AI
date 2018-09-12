@@ -1,0 +1,38 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        "Range([EVILCUTOFF],30)",
+        "Range([GOODCUTOFF],15)",
+        "Range(SecondNearest([GOODCUTOFF]),15)",
+        "!StateCheck(Myself,STATE_BLESS)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Bless",
+    "fields": [
+        {
+            "SPELL": "CLERIC_BLESS",
+            "DESC": "SPPR101.SPL (Bless)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "12089",
+            "STRING_DESC": "Bless"
+        }
+    ]
+}

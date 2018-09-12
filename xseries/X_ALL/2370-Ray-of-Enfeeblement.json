@@ -1,0 +1,45 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        "RandomNum(8,1)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "CheckStatGT(LastSeenBy(Myself),5,STR)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,7725)  // Ray of Enfeeblement",
+                "Spell([EVILCUTOFF.0.0.FIGHTER_ALL],WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)"
+            ]
+        }
+    ],
+    "name": "Ray-of-Enfeeblement",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RAY_OF_ENFEEBLEMENT",
+            "DESC": "SPWI221.SPL (Ray of Enfeeblement)",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[EVILCUTOFF.0.0.FIGHTER_ALL]"
+        }
+    ]
+}

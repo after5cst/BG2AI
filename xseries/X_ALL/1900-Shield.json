@@ -1,0 +1,35 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "Global('BD_Shield','LOCALS',1)",
+        "!CheckStat(Myself,2,DEFENSIVE_MODIFIER)",
+        "CheckStat(Myself,0,MINORGLOBE)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_Shield','LOCALS',0)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Shield",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_SHIELD",
+            "DESC": "SPWI114.SPL (Shield)",
+            "TARGET": "Myself",
+            "STRING_ID": "12053",
+            "STRING_DESC": "Shield"
+        }
+    ]
+}

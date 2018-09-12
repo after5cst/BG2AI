@@ -1,0 +1,32 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "StateCheck(Myself,STATE_POISONED)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Slow-Poison",
+    "fields": [
+        {
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
+        }
+    ]
+}

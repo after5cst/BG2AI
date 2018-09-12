@@ -1,6 +1,4 @@
 [
-    "ActionListEmpty()",
-    "HaveSpell(<SPELL>)  // <DESC>",
     "CombatCounter(0)",
     "StateCheck(<TARGET>,STATE_REALLY_DEAD)",
     "InPartyAllowDead(<TARGET>)",

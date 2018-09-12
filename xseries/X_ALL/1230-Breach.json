@@ -1,0 +1,62 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),5)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,STONESKINS)",
+            "CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)",
+            "CheckSpellState(LastSeenBy(Myself),MANTLE)",
+            "CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)",
+            "CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Breach",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BREACH",
+            "DESC": "SPWI513.SPL (Breach)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "STRING_ID": "25914",
+            "STRING_DESC": "Breach",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BREACH",
+            "DESC": "SPWI513.SPL (Breach)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "STRING_ID": "25914",
+            "STRING_DESC": "Breach",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_BREACH",
+            "DESC": "SPWI513.SPL (Breach)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "STRING_ID": "25914",
+            "STRING_DESC": "Breach",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ]
+}

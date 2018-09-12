@@ -1,0 +1,32 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "CheckStatLT(Myself,1,STONESKINS)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Stoneskin",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_STONE_SKIN",
+            "DESC": "SPWI408.SPL (Stoneskin)",
+            "TARGET": "Myself",
+            "STRING_ID": "25875",
+            "STRING_DESC": "Stoneskin"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        [
+            "CheckStatGT(LastSeenBy(Myself),12,LEVEL)",
+            "NumCreatureGT([EVILCUTOFF],3)"
+        ],
+        "!StateCheck(Myself,STATE_DRAWUPONHOLYMIGHT)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Draw-Upon-Holy-Might",
+    "fields": [
+        {
+            "SPELL": "CLERIC_DRAW_UPON_HOLY_MIGHT",
+            "DESC": "SPPR214.SPL (Draw Upon Holy Might)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "Myself",
+            "STRING_ID": "12108",
+            "STRING_DESC": "Draw Upon Holy Might"
+        }
+    ]
+}

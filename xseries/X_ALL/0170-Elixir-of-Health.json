@@ -1,0 +1,29 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "ActuallyInCombat()",
+        "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "HPPercentLT(Myself,85)",
+        "HasItem('POTN17',Myself)  // Elixir of Health"
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_UseItem": null
+                }
+            ]
+        }
+    ],
+    "name": "Elixir-of-Health",
+    "fields": [
+        {
+            "ITEM": "POTN17",
+            "TARGET": "Myself",
+            "DESC": "Elixir of Health",
+            "STRING_ID": "46150",
+            "STRING_DESC": "*quaffs a potion*"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "HPPercentLT(Myself,81)"
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Lay-On-Hands",
+    "fields": [
+        {
+            "SPELL": "PALADIN_LAY_ON_HANDS",
+            "DESC": "SPCL211.SPL (Lay On Hands)",
+            "TARGET": "Myself",
+            "STRING_ID": "12032",
+            "STRING_DESC": "Lay On Hands"
+        },
+        {
+            "SPELL": "MONK_LAY_ON_HANDS",
+            "DESC": "SPCL815.SPL (Lay On Hands)",
+            "TARGET": "Myself",
+            "STRING_ID": "12032",
+            "STRING_DESC": "Lay On Hands"
+        }
+    ]
+}

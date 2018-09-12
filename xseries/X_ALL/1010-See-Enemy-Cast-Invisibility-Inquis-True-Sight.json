@@ -1,0 +1,27 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpell(INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "Global('BD_DInv','LOCALS',0)",
+        [
+            "SpellCast([EVILCUTOFF],WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)",
+            "SpellCast(SecondNearest([EVILCUTOFF]),WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)",
+            "SpellCast(ThirdNearest([EVILCUTOFF]),WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)",
+            "SpellCast(FourthNearest([EVILCUTOFF]),WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)",
+            "SpellCast(FifthNearest([EVILCUTOFF]),WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)",
+            "SpellCast(SixthNearest([EVILCUTOFF]),WIZARD_INVISIBILITY)  // SPWI206.SPL (Invisibility)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_DInv','LOCALS',1)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "See-Enemy-Cast-Invisibility-Inquis-True-Sight"
+}

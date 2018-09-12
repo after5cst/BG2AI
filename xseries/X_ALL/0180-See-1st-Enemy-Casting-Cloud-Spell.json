@@ -1,0 +1,31 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)",
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        "Global('BD_Cloud','LOCALS',0)",
+        [
+            "SpellCast([EVILCUTOFF.0.0.MAGE_ALL],WIZARD_INCENDIARY_CLOUD)  // SPWI810.SPL (Incendiary Cloud)",
+            "SpellCast([EVILCUTOFF.0.0.MAGE_ALL],WIZARD_STINKING_CLOUD)  // SPWI213.SPL (Stinking Cloud)",
+            "SpellCast([EVILCUTOFF.0.0.MAGE_ALL],WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)",
+            "SpellCast([EVILCUTOFF.0.0.MAGE_ALL],WIZARD_DEATH_FOG)  // SPWI614.SPL (Death Fog)",
+            "SpellCast([EVILCUTOFF.0.0.BARD_ALL],WIZARD_INCENDIARY_CLOUD)  // SPWI810.SPL (Incendiary Cloud)",
+            "SpellCast([EVILCUTOFF.0.0.BARD_ALL],WIZARD_STINKING_CLOUD)  // SPWI213.SPL (Stinking Cloud)",
+            "SpellCast([EVILCUTOFF.0.0.BARD_ALL],WIZARD_CLOUDKILL)  // SPWI502.SPL (Cloudkill)",
+            "SpellCast([EVILCUTOFF.0.0.BARD_ALL],WIZARD_DEATH_FOG)  // SPWI614.SPL (Death Fog)",
+            "SpellCast([EVILCUTOFF.0.0.SHAMAN],CLERIC_WRITHING_FOG)  // SPPR250.SPL (Writhing Fog)"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('BD_Cloud','LOCALS',1)",
+                "SetGlobalTimer('BD_CLTM','LOCALS',TEN_ROUNDS)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "See-1st-Enemy-Casting-Cloud-Spell"
+}

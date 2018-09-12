@@ -1,0 +1,63 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),7)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+            "CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell_2": null
+                }
+            ]
+        }
+    ],
+    "name": "Ruby-Ray-of-Reversal",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "STRING_ID": "15465",
+            "STRING_DESC": "Ruby Ray of Reversal",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "STRING_ID": "15465",
+            "STRING_DESC": "Ruby Ray of Reversal",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "STRING_ID": "15465",
+            "STRING_DESC": "Ruby Ray of Reversal",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ]
+}

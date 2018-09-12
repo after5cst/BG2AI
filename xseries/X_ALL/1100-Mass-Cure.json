@@ -1,0 +1,47 @@
+{
+    "if": [
+        {
+            "SpellReady": null
+        },
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
+        [
+            "HPPercentLT(Myself,51)",
+            "HPPercentLT([PC],51)"
+        ],
+        [
+            "HPPercentLT(SecondNearest([PC]),51)",
+            "HPPercentLT(ThirdNearest([PC]),51)"
+        ],
+        [
+            "Range([PC],12)",
+            "Range(SecondNearest([PC]),12)"
+        ],
+        [
+            "Range(ThirdNearest([PC]),12)",
+            "HPPercentLT(Myself,51)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Mass-Cure",
+    "fields": [
+        {
+            "SPELL": "CLERIC_MASS_CURE",
+            "DESC": "SPPR514.SPL (Mass Cure)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "7468",
+            "STRING_DESC": "Mass Cure"
+        }
+    ]
+}
