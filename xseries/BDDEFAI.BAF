@@ -253,6 +253,24 @@ END
 
 IF
 	ActionListEmpty()
+	!GlobalTimerNotExpired("X_AO","LOCALS")
+	Global("BribedCowled","GLOBAL",0)
+	AreaType(OUTDOOR)
+	OR(7)
+		AreaCheck("AR0020")
+		AreaCheck("AR0300")
+		AreaCheck("AR0400")
+		AreaCheck("AR0500")
+		AreaCheck("AR0700")
+		AreaCheck("AR0900")
+		AreaCheck("AR1000")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_AO","LOCALS",ONE_ROUND)
+END
+
+IF
+	ActionListEmpty()
 	IsWeaponRanged(Myself)
 	!Global("BDAI_ATTACK_MODE","LOCALS",0)
 	Range(NearestEnemyOf(Myself),12)

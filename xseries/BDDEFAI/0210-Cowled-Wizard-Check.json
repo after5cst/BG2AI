@@ -1,0 +1,28 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "!GlobalTimerNotExpired('X_AO','LOCALS')",
+        "Global('BribedCowled','GLOBAL',0)",
+        "AreaType(OUTDOOR)",
+        [
+            "AreaCheck('AR0020')",
+            "AreaCheck('AR0300')",
+            "AreaCheck('AR0400')",
+            "AreaCheck('AR0500')",
+            "AreaCheck('AR0700')",
+            "AreaCheck('AR0900')",
+            "AreaCheck('AR1000')"
+        ]
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('X_AO','LOCALS',ONE_ROUND)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Cowled-Wizard-Check"
+}
