@@ -253,7 +253,7 @@ END
 
 IF
 	ActionListEmpty()
-	!GlobalTimerNotExpired("X_AO","LOCALS")
+	!GlobalTimerNotExpired("X_ARC","LOCALS")
 	Global("BribedCowled","GLOBAL",0)
 	AreaType(OUTDOOR)
 	OR(7)
@@ -266,7 +266,7 @@ IF
 		AreaCheck("AR1000")
 THEN
 	RESPONSE #100
-		SetGlobalTimer("X_AO","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_ARC","LOCALS",ONE_ROUND)
 END
 
 IF
