@@ -7,6 +7,11 @@
         {
             "SeeTarget": null
         },
+        [
+            "StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)",
+            "StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+            "Gender(LastSeenBy(Myself),ILLUSIONARY)"
+        ],
         "CheckStat(Myself,0,TRUE_SIGHT)",
         {
             "CastingConditionsOK": null
@@ -28,7 +33,52 @@
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "[EVILCUTOFF.0.0.0.0.ILLUSIONARY]",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "TARGET": "Myself",
+            "STRING_ID": "25633",
+            "STRING_DESC": "True Sight"
+        },
+        {
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "DESC": "SPCL232.SPL (True Sight)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "TARGET": "Myself",
+            "STRING_ID": "25633",
+            "STRING_DESC": "True Sight"
+        },
+        {
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "DESC": "SPCL232.SPL (True Sight)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "TARGET": "Myself",
+            "STRING_ID": "25633",
+            "STRING_DESC": "True Sight"
+        },
+        {
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "DESC": "SPCL232.SPL (True Sight)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FourthNearestEnemyOf(Myself)",
+            "TARGET": "Myself",
+            "STRING_ID": "25633",
+            "STRING_DESC": "True Sight"
+        },
+        {
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "DESC": "SPCL232.SPL (True Sight)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FifthNearestEnemyOf(Myself)",
+            "TARGET": "Myself",
+            "STRING_ID": "25633",
+            "STRING_DESC": "True Sight"
+        },
+        {
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "DESC": "SPCL232.SPL (True Sight)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SixthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"

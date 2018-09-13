@@ -1,24 +1,19 @@
 {
     "if": [
         {
-            "SpellRESReady": null
+            "SpellReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
         "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
-        [
-            "Range(LastSeenBy(Myself),6)",
-            "!Range(NearestEnemyOf(Myself),30)"
-        ],
         {
             "SpellCanAffectTarget": null
         },
         {
             "AllyTargetNotDangerous": null
         },
-        "!CheckSpellState(Myself,DEAD_MAGIC_AREA)",
         {
             "CastingConditionsOK": null
         }
@@ -26,55 +21,67 @@
     "then": [
         {
             "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,12112)  // Slow Poison",
-                "SpellRES('SPIN102',LastSeenBy(Myself))  // Slow Poison"
+                {
+                    "X_Spell_2": null
+                }
             ]
         }
     ],
     "name": "Slow-Poison",
     "fields": [
         {
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "FAIL_TYPE": "0",
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "[PC]"
+            "LOOK_FOR": "[PC]",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
         },
         {
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "FAIL_TYPE": "0",
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "SecondNearest([PC])"
+            "LOOK_FOR": "SecondNearest([PC])",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
         },
         {
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "FAIL_TYPE": "0",
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "ThirdNearest([PC])"
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
         },
         {
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "FAIL_TYPE": "0",
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "FourthNearest([PC])"
+            "LOOK_FOR": "FourthNearest([PC])",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
         },
         {
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "FAIL_TYPE": "0",
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "FifthNearest([PC])"
+            "LOOK_FOR": "FifthNearest([PC])",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
         },
         {
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "FAIL_TYPE": "0",
+            "SPELL": "CLERIC_SLOW_POISON",
+            "DESC": "SPPR212.SPL (Slow Poison)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "SixthNearest([PC])"
+            "LOOK_FOR": "SixthNearest([PC])",
+            "STRING_ID": "12112",
+            "STRING_DESC": "Slow Poison"
         }
     ]
 }

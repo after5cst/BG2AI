@@ -1,0 +1,80 @@
+{
+    "if": [
+        {
+            "SpellRESReady": null
+        },
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        {
+            "SeeTarget": null
+        },
+        "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
+        [
+            "Range(LastSeenBy(Myself),6)",
+            "!Range(NearestEnemyOf(Myself),30)"
+        ],
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        "!CheckSpellState(Myself,DEAD_MAGIC_AREA)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12112)  // Slow Poison",
+                "SpellRES('SPIN102',LastSeenBy(Myself))  // Slow Poison"
+            ]
+        }
+    ],
+    "name": "Slow-Poison",
+    "fields": [
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "[PC]"
+        },
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearest([PC])"
+        },
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearest([PC])"
+        },
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FourthNearest([PC])"
+        },
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "FifthNearest([PC])"
+        },
+        {
+            "SPELL": "SPIN102",
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SixthNearest([PC])"
+        }
+    ]
+}

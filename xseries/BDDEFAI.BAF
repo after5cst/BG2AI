@@ -361,3 +361,87 @@ THEN
 		Hide()
 END
 
+IF
+	ActionListEmpty()
+	HasItemEquiped("POTN20",Myself)  // Antidote
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	StateCheck(Myself,STATE_POISONED)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("POTN20",Myself)  // Antidote
+		DisplayString(Myself,46150)  // *quaffs a potion*
+END
+
+IF
+	ActionListEmpty()
+	HasItemEquiped("POTN17",Myself)  // Elixir of Health
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	OR(2)
+		StateCheck(Myself,STATE_POISONED)
+		CheckSpellState(Myself,DISEASED)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("POTN17",Myself)  // Elixir of Health
+		DisplayString(Myself,46150)  // *quaffs a potion*
+END
+
+IF
+	ActionListEmpty()
+	HasItemEquiped("POTN55",Myself)  // Potion of Superior Healing
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	ActuallyInCombat()
+	HPPercentLT(Myself,50)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("POTN55",Myself)  // Potion of Superior Healing
+		DisplayString(Myself,46150)  // *quaffs a potion*
+END
+
+IF
+	ActionListEmpty()
+	HasItemEquiped("POTN52",Myself)  // Potion of Extra Healing
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	ActuallyInCombat()
+	HPPercentLT(Myself,60)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("POTN52",Myself)  // Potion of Extra Healing
+		DisplayString(Myself,46150)  // *quaffs a potion*
+END
+
+IF
+	ActionListEmpty()
+	HasItemEquiped("POTN08",Myself)  // Potion of Healing
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	ActuallyInCombat()
+	HPPercentLT(Myself,70)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("POTN08",Myself)  // Potion of Healing
+		DisplayString(Myself,46150)  // *quaffs a potion*
+END
+
+IF
+	ActionListEmpty()
+	HasItemEquiped("POTN17",Myself)  // Elixir of Health
+	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	ActuallyInCombat()
+	HPPercentLT(Myself,40)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		UseItem("POTN17",Myself)  // Elixir of Health
+		DisplayString(Myself,46150)  // *quaffs a potion*
+END
+
