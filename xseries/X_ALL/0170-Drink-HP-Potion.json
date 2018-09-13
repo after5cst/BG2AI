@@ -1,0 +1,55 @@
+{
+    "if": [
+        {
+            "ItemReady": null
+        },
+        "ActuallyInCombat()",
+        {
+            "X_HPPercentLT": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                {
+                    "X_UseItem": null
+                }
+            ]
+        }
+    ],
+    "name": "Drink-HP-Potion",
+    "fields": [
+        {
+            "ITEM": "POTN55",
+            "DESC": "Potion of Superior Healing",
+            "TARGET": "Myself",
+            "HPP": "50",
+            "STRING_ID": "46150",
+            "STRING_DESC": "*quaffs a potion*"
+        },
+        {
+            "ITEM": "POTN52",
+            "DESC": "Potion of Extra Healing",
+            "TARGET": "Myself",
+            "HPP": "60",
+            "STRING_ID": "46150",
+            "STRING_DESC": "*quaffs a potion*"
+        },
+        {
+            "ITEM": "POTN08",
+            "DESC": "Potion of Healing",
+            "TARGET": "Myself",
+            "HPP": "70",
+            "STRING_ID": "46150",
+            "STRING_DESC": "*quaffs a potion*"
+        },
+        {
+            "ITEM": "POTN17",
+            "DESC": "Elixir of Health",
+            "TARGET": "Myself",
+            "HPP": "40",
+            "STRING_ID": "46150",
+            "STRING_DESC": "*quaffs a potion*"
+        }
+    ]
+}

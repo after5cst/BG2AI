@@ -7,7 +7,9 @@
         {
             "SeeTarget": null
         },
-        "HPPercentLT(LastSeenBy(Myself),40)",
+        {
+            "X_HPPercentLT": null
+        },
         "InParty(LastSeenBy(Myself))",
         [
             "Range(MostDamagedOf([PC]),6)",
@@ -42,7 +44,8 @@
             "DESC": "Cure Light Wounds",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "MostDamagedOf([PC])"
+            "LOOK_FOR": "MostDamagedOf([PC])",
+            "HPP": "40"
         }
     ]
 }

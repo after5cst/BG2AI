@@ -1,9 +1,9 @@
 IF
 	ActionListEmpty()
+	HasItemEquiped("POTN20",Myself)  // Antidote
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	StateCheck(Myself,STATE_POISONED)
-	HasItem("POTN20",Myself)  // Antidote
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -13,12 +13,12 @@ END
 
 IF
 	ActionListEmpty()
+	HasItemEquiped("POTN17",Myself)  // Elixir of Health
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 	OR(2)
 		StateCheck(Myself,STATE_POISONED)
 		CheckSpellState(Myself,DISEASED)
-	HasItem("POTN17",Myself)  // Elixir of Health
-	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -250,11 +250,11 @@ END
 
 IF
 	ActionListEmpty()
-	ActuallyInCombat()
+	HasItemEquiped("POTN55",Myself)  // Potion of Superior Healing
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
-	HPPercentLT(Myself,70)
-	HasItem("POTN55",Myself)  // Potion of Superior Healing
+	ActuallyInCombat()
+	HPPercentLT(Myself,50)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -264,11 +264,11 @@ END
 
 IF
 	ActionListEmpty()
-	ActuallyInCombat()
+	HasItemEquiped("POTN52",Myself)  // Potion of Extra Healing
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
-	HPPercentLT(Myself,85)
-	HasItem("POTN52",Myself)  // Potion of Extra Healing
+	ActuallyInCombat()
+	HPPercentLT(Myself,60)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -278,11 +278,11 @@ END
 
 IF
 	ActionListEmpty()
-	ActuallyInCombat()
+	HasItemEquiped("POTN08",Myself)  // Potion of Healing
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
-	HPPercentLT(Myself,85)
-	HasItem("POTN08",Myself)  // Potion of Healing
+	ActuallyInCombat()
+	HPPercentLT(Myself,70)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -292,11 +292,11 @@ END
 
 IF
 	ActionListEmpty()
-	ActuallyInCombat()
+	HasItemEquiped("POTN17",Myself)  // Elixir of Health
 	Global("BDAI_DISABLE_ITEMS","LOCALS",0)
 	!GlobalTimerNotExpired("BD_Cast","LOCALS")
-	HPPercentLT(Myself,85)
-	HasItem("POTN17",Myself)  // Elixir of Health
+	ActuallyInCombat()
+	HPPercentLT(Myself,40)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)

@@ -6,7 +6,9 @@
         "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!StateCheck(Myself,STATE_INVISIBLE)",
         "!CheckStat(Myself,1,SANCTUARY)",
-        "HPPercentLT(Myself,51)",
+        {
+            "X_HPPercentLT": null
+        },
         "!CheckStatGT(NearestEnemyOf(Myself),0,TRUE_SIGHT)",
         "!CheckStatGT(SecondNearestEnemyOf(Myself),0,TRUE_SIGHT)",
         "!CheckStatGT(ThirdNearestEnemyOf(Myself),0,TRUE_SIGHT)",
@@ -33,6 +35,7 @@
             "DESC": "SPPR109.SPL (Sanctuary)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
+            "HPP": "51",
             "STRING_ID": "12084",
             "STRING_DESC": "Sanctuary"
         }

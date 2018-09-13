@@ -1,0 +1,6 @@
+[
+    "ActionListEmpty()",
+    "HasItemEquiped('<ITEM>',Myself)  // <DESC>",
+    "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
+    "!GlobalTimerNotExpired('BD_Cast','LOCALS')"
+]

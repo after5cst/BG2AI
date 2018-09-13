@@ -206,7 +206,7 @@ if __name__ == "__main__":
     search_dir = os.path.join(tools_dir, "..", project_name)
     parser = argparse.ArgumentParser()
     parser.add_argument('--auto_delete', action='store_true', default=True)
-    parser.add_argument('-v', '--verbose', action='count', default=2)
+    parser.add_argument('-v', '--verbose', action='count', default=0)
     parser.add_argument('-d', '--search_dir', default=search_dir)
 
     args = parser.parse_args()

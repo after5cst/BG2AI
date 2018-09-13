@@ -1,10 +1,9 @@
 {
     "if": [
-        "ActionListEmpty()",
-        "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
-        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
-        "StateCheck(Myself,STATE_POISONED)",
-        "HasItem('POTN20',Myself)  // Antidote"
+        {
+            "ItemReady": null
+        },
+        "StateCheck(Myself,STATE_POISONED)"
     ],
     "then": [
         {
@@ -19,8 +18,8 @@
     "fields": [
         {
             "ITEM": "POTN20",
-            "TARGET": "Myself",
             "DESC": "Antidote",
+            "TARGET": "Myself",
             "STRING_ID": "46150",
             "STRING_DESC": "*quaffs a potion*"
         }

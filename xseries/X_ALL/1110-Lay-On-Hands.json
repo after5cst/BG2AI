@@ -7,7 +7,9 @@
         {
             "SeeTarget": null
         },
-        "HPPercentLT(LastSeenBy(Myself),40)",
+        {
+            "X_HPPercentLT": null
+        },
         "InParty(LastSeenBy(Myself))",
         [
             "Range(MostDamagedOf([PC]),6)",
@@ -43,6 +45,7 @@
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "MostDamagedOf([PC])",
+            "HPP": "40",
             "STRING_ID": "12032",
             "STRING_DESC": "Lay On Hands"
         }

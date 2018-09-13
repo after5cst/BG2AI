@@ -1,13 +1,12 @@
 {
     "if": [
-        "ActionListEmpty()",
-        "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
+        {
+            "ItemReady": null
+        },
         [
             "StateCheck(Myself,STATE_POISONED)",
             "CheckSpellState(Myself,DISEASED)"
-        ],
-        "HasItem('POTN17',Myself)  // Elixir of Health",
-        "!GlobalTimerNotExpired('BD_Cast','LOCALS')"
+        ]
     ],
     "then": [
         {
@@ -22,8 +21,8 @@
     "fields": [
         {
             "ITEM": "POTN17",
-            "TARGET": "Myself",
             "DESC": "Elixir of Health",
+            "TARGET": "Myself",
             "STRING_ID": "46150",
             "STRING_DESC": "*quaffs a potion*"
         }
