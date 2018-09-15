@@ -2,6 +2,7 @@
     "ActionListEmpty()",
     "CombatCounter(0)",
     "Global('X_LDR','LOCALS',<PLAYER>)",
+    "Global('X_FOL','LOCALS',1)",
     "Exists(Player<PLAYER>)",
 	"!StateCheck(Player<PLAYER>,STATE_REALLY_DEAD)",
     "!Range(Player<PLAYER>,10)",
