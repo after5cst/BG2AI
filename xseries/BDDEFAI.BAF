@@ -78,7 +78,7 @@ IF
 	Exists(Player1)
 	!StateCheck(Player1,STATE_REALLY_DEAD)
 	!Range(Player1,10)
-	Range(Player1,30)
+	!TargetUnreachable(Player1)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -93,7 +93,7 @@ IF
 	Exists(Player2)
 	!StateCheck(Player2,STATE_REALLY_DEAD)
 	!Range(Player2,10)
-	Range(Player2,30)
+	!TargetUnreachable(Player2)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -108,7 +108,7 @@ IF
 	Exists(Player3)
 	!StateCheck(Player3,STATE_REALLY_DEAD)
 	!Range(Player3,10)
-	Range(Player3,30)
+	!TargetUnreachable(Player3)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -123,7 +123,7 @@ IF
 	Exists(Player4)
 	!StateCheck(Player4,STATE_REALLY_DEAD)
 	!Range(Player4,10)
-	Range(Player4,30)
+	!TargetUnreachable(Player4)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -138,7 +138,7 @@ IF
 	Exists(Player5)
 	!StateCheck(Player5,STATE_REALLY_DEAD)
 	!Range(Player5,10)
-	Range(Player5,30)
+	!TargetUnreachable(Player5)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -153,7 +153,7 @@ IF
 	Exists(Player6)
 	!StateCheck(Player6,STATE_REALLY_DEAD)
 	!Range(Player6,10)
-	Range(Player6,30)
+	!TargetUnreachable(Player6)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
