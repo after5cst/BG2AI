@@ -1,5 +1,25 @@
 IF
 	ActionListEmpty()
+	HotKey(D)
+	Global("X_FOL","LOCALS",0)
+THEN
+	RESPONSE #100
+		DisplayString(Player2,16469)  // On
+		SetGlobal("X_FOL","LOCALS",1)
+END
+
+IF
+	ActionListEmpty()
+	HotKey(D)
+	!Global("X_FOL","LOCALS",0)
+THEN
+	RESPONSE #100
+		DisplayString(Player2,16470)  // Off
+		SetGlobal("X_FOL","LOCALS",0)
+END
+
+IF
+	ActionListEmpty()
 	HotKey(F)
 	GlobalLT("X_LDR","LOCALS",2)
 	See(Player2)
@@ -64,7 +84,7 @@ END
 
 IF
 	ActionListEmpty()
-	HotKey(D)
+	HotKey(V)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,12138)  // Healing

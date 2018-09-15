@@ -1,0 +1,19 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HotKey(D)",
+        "!Global('X_FOL','LOCALS',0)"
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayString(Player2,16470)  // Off",
+                "SetGlobal('X_FOL','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Hotkey-Disable-Follow"
+}

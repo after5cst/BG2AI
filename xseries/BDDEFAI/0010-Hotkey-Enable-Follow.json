@@ -1,0 +1,19 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "HotKey(D)",
+        "Global('X_FOL','LOCALS',0)"
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayString(Player2,16469)  // On",
+                "SetGlobal('X_FOL','LOCALS',1)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Hotkey-Enable-Follow"
+}
