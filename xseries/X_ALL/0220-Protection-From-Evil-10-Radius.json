@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         "Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)",
         [
@@ -31,9 +30,10 @@
     "name": "Protection-From-Evil-10-Radius",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_PROTECTION_FROM_EVIL_10_FOOT",
             "DESC": "SPPR408.SPL (Protection From Evil, 10' Radius)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12014",
             "STRING_DESC": "Protection From Evil, 10' Radius"

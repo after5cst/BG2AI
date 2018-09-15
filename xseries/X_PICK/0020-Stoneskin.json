@@ -1,7 +1,7 @@
 {
     "if": [
         {
-            "SpellReady": null
+            "SpellReadyNoDisableCheck": null
         },
         "CheckStatLT(Myself,1,STONESKINS)",
         {

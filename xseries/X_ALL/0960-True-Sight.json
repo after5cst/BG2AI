@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "Global('BD_DInv','LOCALS',1)",
         "ActuallyInCombat()",
         "CheckStat(Myself,0,TRUE_SIGHT)",
@@ -24,9 +23,10 @@
     "name": "True-Sight",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"

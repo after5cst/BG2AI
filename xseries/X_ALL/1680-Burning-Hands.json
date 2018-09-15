@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -39,6 +38,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -49,6 +49,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -59,6 +60,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -69,6 +71,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "FourthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -79,6 +82,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "FifthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -89,6 +93,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"

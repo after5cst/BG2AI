@@ -1,8 +1,6 @@
 [
-    "ActionListEmpty()",
-    "HaveSpell(<SPELL>)  // <DESC>",
-    [
-        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
-        "CheckStatGT(Myself,0,AURACLEANSING)"
-    ]
+    {
+        "SpellReadyNoDisableCheck": null
+    },
+    "Global('BDAI_DISABLE_<SPELL_TYPE>','LOCALS',0)"
 ]

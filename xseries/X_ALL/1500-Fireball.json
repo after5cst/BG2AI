@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -37,6 +36,7 @@
             "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
@@ -47,6 +47,7 @@
             "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
@@ -57,6 +58,7 @@
             "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"

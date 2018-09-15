@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Haste','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],3)",
         {
@@ -35,6 +34,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HASTE",
             "DESC": "SPWI305.SPL (Haste)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[GOODCUTOFF.0.0.FIGHTER_ALL]",
             "STRING_ID": "12080",
@@ -44,6 +44,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HASTE",
             "DESC": "SPWI305.SPL (Haste)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[GOODCUTOFF.0.0.RANGER_ALL]",
             "STRING_ID": "12080",
@@ -53,6 +54,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HASTE",
             "DESC": "SPWI305.SPL (Haste)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[GOODCUTOFF.0.0.PALADIN_ALL]",
             "STRING_ID": "12080",

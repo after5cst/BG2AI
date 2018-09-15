@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Glitter','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],2)",
         {
@@ -42,6 +41,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_GLITTERDUST",
             "DESC": "SPWI224.SPL (Glitterdust)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "38594",
@@ -51,6 +51,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_GLITTERDUST",
             "DESC": "SPWI224.SPL (Glitterdust)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "38594",
@@ -60,6 +61,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_GLITTERDUST",
             "DESC": "SPWI224.SPL (Glitterdust)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "38594",

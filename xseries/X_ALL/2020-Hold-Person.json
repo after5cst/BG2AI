@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         "NumCreatureGT([EVILCUTOFF],2)",
         {
             "SeeTarget": null
@@ -42,6 +41,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HOLD_PERSON",
             "DESC": "SPWI306.SPL (Hold Person)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
             "TARGET": "[EVILCUTOFF.HUMANOID]",
             "STRING_ID": "12049",
@@ -51,6 +51,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HOLD_PERSON",
             "DESC": "SPWI306.SPL (Hold Person)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "SecondNearest([EVILCUTOFF.HUMANOID])",
             "STRING_ID": "12049",
@@ -60,6 +61,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HOLD_PERSON",
             "DESC": "SPWI306.SPL (Hold Person)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "ThirdNearest([EVILCUTOFF.HUMANOID])",
             "STRING_ID": "12049",

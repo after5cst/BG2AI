@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "!CheckSpellState(Myself,LATHANDER_BOON)",
         "CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)",
         "!HasItemEquiped('AMUL21',Myself)  // Amulet of Power",
@@ -34,9 +33,10 @@
     "name": "Boon-of-Lathander",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "LATHANDER_BOON",
             "DESC": "SPCL741.SPL (Boon of Lathander)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "34800",
             "STRING_DESC": "Boon of Lathander"

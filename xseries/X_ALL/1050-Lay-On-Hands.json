@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -40,9 +39,10 @@
     "name": "Lay-On-Hands",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "PALADIN_LAY_ON_HANDS",
             "DESC": "SPCL211.SPL (Lay On Hands)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "MostDamagedOf([PC])",
             "HPP": "40",

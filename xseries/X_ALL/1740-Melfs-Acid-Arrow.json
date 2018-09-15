@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -38,6 +37,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_ACID_ARROW",
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
             "STRING_ID": "12033",
@@ -47,6 +47,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_ACID_ARROW",
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12033",
@@ -56,6 +57,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_ACID_ARROW",
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12033",
@@ -65,6 +67,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_ACID_ARROW",
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12033",
@@ -74,6 +77,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_ACID_ARROW",
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12033",
@@ -83,6 +87,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_ACID_ARROW",
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12033",

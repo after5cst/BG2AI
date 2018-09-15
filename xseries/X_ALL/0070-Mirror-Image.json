@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!StateCheck(Myself,STATE_MIRRORIMAGE)",
         {
             "SeeTarget": null
@@ -40,6 +39,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MIRROR_IMAGE",
             "DESC": "SPWI212.SPL (Mirror Image)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12018",

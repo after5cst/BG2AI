@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],3)",
         "CheckStat(Myself,0,PROTECTION_FROM_EVIL)",
@@ -33,9 +32,19 @@
     "name": "Protection-From-Evil",
     "fields": [
         {
+            "SPELL": "PALADIN_PROTECTION_FROM_EVIL",
+            "DESC": "SPCL213.SPL (Protection From Evil)",
+            "SPELL_TYPE": "SPECIAL",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "Myself",
+            "STRING_ID": "12023",
+            "STRING_DESC": "Protection From Evil"
+        },
+        {
             "SPELL": "CLERIC_PROTECT_FROM_EVIL",
             "DESC": "SPPR107.SPL (Protection From Evil)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12023",
             "STRING_DESC": "Protection From Evil"

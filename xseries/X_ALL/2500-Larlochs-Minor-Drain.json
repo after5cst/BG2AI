@@ -3,7 +3,6 @@
         {
             "SpellRESReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "HPPercentLT(Myself,71)",
         {
             "SeeTarget": null
@@ -40,9 +39,10 @@
     "name": "Larlochs-Minor-Drain",
     "fields": [
         {
-            "FAIL_TYPE": "0",
             "SPELL": "SPIN104",
             "DESC": "Larloch's Minor Drain",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "0",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)"
         }

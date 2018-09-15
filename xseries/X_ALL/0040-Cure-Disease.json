@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         [
             "StateCheck(Myself,STATE_BLIND)",
             "CheckSpellState(Myself,DISEASED)",
@@ -25,9 +24,10 @@
     "name": "Cure-Disease",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_CURE_DISEASE",
             "DESC": "SPPR317.SPL (Cure Disease)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "2445",
             "STRING_DESC": "Cure Disease"

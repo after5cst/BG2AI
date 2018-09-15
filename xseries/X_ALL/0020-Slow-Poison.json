@@ -3,7 +3,6 @@
         {
             "SpellRESReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "StateCheck(Myself,STATE_POISONED)",
         {
             "CastingConditionsOK": null
@@ -21,9 +20,10 @@
     "name": "Slow-Poison",
     "fields": [
         {
-            "FAIL_TYPE": "0",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "0",
             "TARGET": "Myself",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"

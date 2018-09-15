@@ -3,7 +3,6 @@
         {
             "SpellRESReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Horror','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],2)",
         {
@@ -50,6 +49,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "SPIN105",
             "DESC": "Horror",
+            "SPELL_TYPE": "SPECIAL",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF]"
         }

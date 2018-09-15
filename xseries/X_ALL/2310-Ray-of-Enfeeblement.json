@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         "RandomNum(8,1)",
         {
             "SeeTarget": null
@@ -38,6 +37,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RAY_OF_ENFEEBLEMENT",
             "DESC": "SPWI221.SPL (Ray of Enfeeblement)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.0.0.FIGHTER_ALL]"
         }

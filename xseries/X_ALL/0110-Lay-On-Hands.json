@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         {
             "X_HPPercentLT": null
         }
@@ -22,6 +21,7 @@
         {
             "SPELL": "PALADIN_LAY_ON_HANDS",
             "DESC": "SPCL211.SPL (Lay On Hands)",
+            "SPELL_TYPE": "SPECIAL",
             "TARGET": "Myself",
             "HPP": "81",
             "STRING_ID": "12032",
@@ -30,6 +30,7 @@
         {
             "SPELL": "MONK_LAY_ON_HANDS",
             "DESC": "SPCL815.SPL (Lay On Hands)",
+            "SPELL_TYPE": "SPECIAL",
             "TARGET": "Myself",
             "HPP": "81",
             "STRING_ID": "12032",

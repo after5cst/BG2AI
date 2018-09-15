@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         {
             "SeeTarget": null
@@ -30,9 +29,10 @@
     "name": "Armor-of-Faith",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_ARMOR_OF_FAITH",
             "DESC": "SPPR111.SPL (Armor of Faith)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF]",
             "TARGET": "Myself",
             "STRING_ID": "25601",

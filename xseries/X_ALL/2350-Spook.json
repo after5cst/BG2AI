@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Spook','LOCALS')",
         {
             "SeeTarget": null
@@ -49,6 +48,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SPOOK",
             "DESC": "SPWI125.SPL (Spook)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "STRING_ID": "38586",
@@ -58,6 +58,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SPOOK",
             "DESC": "SPWI125.SPL (Spook)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "STRING_ID": "38586",
@@ -67,6 +68,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SPOOK",
             "DESC": "SPWI125.SPL (Spook)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "STRING_ID": "38586",

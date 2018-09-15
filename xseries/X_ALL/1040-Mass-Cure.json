@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         [
             "HPPercentLT(Myself,51)",
             "HPPercentLT([PC],51)"
@@ -36,9 +35,10 @@
     "name": "Mass-Cure",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MASS_CURE",
             "DESC": "SPPR514.SPL (Mass Cure)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "7468",
             "STRING_DESC": "Mass Cure"

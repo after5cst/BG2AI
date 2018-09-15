@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -40,6 +39,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12034",
             "STRING_DESC": "Flame Arrow"
@@ -50,6 +50,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12034",
             "STRING_DESC": "Flame Arrow"
@@ -60,6 +61,7 @@
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12034",
             "STRING_DESC": "Flame Arrow"

@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "Global('BD_Cloud','LOCALS',1)",
         {
             "CastingConditionsOK": null
@@ -22,9 +21,10 @@
     "name": "Zone-of-Sweet-Air",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_ZONE_OF_SWEET_AIR",
             "DESC": "SPPR318.SPL (Zone of Sweet Air)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "38581",
             "STRING_DESC": "Zone of Sweet Air"

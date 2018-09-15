@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_DInv','LOCALS')",
         {
             "SeeTarget": null
@@ -32,6 +31,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_DETECT_INVISIBILITY",
             "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12042",
@@ -41,6 +41,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_DETECT_INVISIBILITY",
             "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12042",
@@ -50,6 +51,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_DETECT_INVISIBILITY",
             "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12042",
@@ -59,6 +61,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_DETECT_INVISIBILITY",
             "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "FourthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12042",
@@ -68,6 +71,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_DETECT_INVISIBILITY",
             "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "FifthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12042",
@@ -77,6 +81,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_DETECT_INVISIBILITY",
             "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "SPELL_TYPE": "DEFENSIVE",
             "LOOK_FOR": "SixthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "12042",

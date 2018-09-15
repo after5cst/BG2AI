@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         [
             "StateCheck(Myself,STATE_BLIND)",
             "StateCheck(Myself,STATE_POISONED)",
@@ -26,9 +25,10 @@
     "name": "Neutralize-Poison",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12115",
             "STRING_DESC": "Neutralize Poison"

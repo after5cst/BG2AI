@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         "NumCreatureGT([EVILCUTOFF],3)",
         {
             "SeeTarget": null
@@ -44,6 +43,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_CONFUSION",
             "DESC": "SPWI401.SPL (Confusion)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])"
         }

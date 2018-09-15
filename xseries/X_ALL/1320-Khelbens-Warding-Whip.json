@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -35,6 +34,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_WARDING_WHIP",
             "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "[EVILCUTOFF]",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25947",
@@ -44,6 +44,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_WARDING_WHIP",
             "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25947",
@@ -53,6 +54,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_WARDING_WHIP",
             "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25947",

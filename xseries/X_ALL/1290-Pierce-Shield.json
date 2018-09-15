@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -36,6 +35,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_SHIELD",
             "DESC": "SPWI805.SPL (Pierce Shield)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "[EVILCUTOFF]",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "26240",
@@ -45,6 +45,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_SHIELD",
             "DESC": "SPWI805.SPL (Pierce Shield)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "26240",
@@ -54,6 +55,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_SHIELD",
             "DESC": "SPWI805.SPL (Pierce Shield)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "26240",

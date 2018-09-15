@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Horror','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],2)",
         {
@@ -50,6 +49,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HORROR",
             "DESC": "SPWI205.SPL (Horror)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "STRING_ID": "12069",
@@ -59,6 +59,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HORROR",
             "DESC": "SPWI205.SPL (Horror)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "STRING_ID": "12069",
@@ -68,6 +69,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HORROR",
             "DESC": "SPWI205.SPL (Horror)",
+            "SPELL_TYPE": "OFFENSIVE",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "STRING_ID": "12069",

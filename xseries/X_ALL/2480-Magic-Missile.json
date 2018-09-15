@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -40,6 +39,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "TARGET": "NearestEnemyOf(Myself)",
             "STRING_ID": "12052",
@@ -49,6 +49,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "TARGET": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
@@ -58,6 +59,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "TARGET": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12052",

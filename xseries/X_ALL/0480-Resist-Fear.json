@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         {
             "SeeFearfulAlly": null
         },
@@ -31,6 +30,7 @@
             "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
+            "SPELL_TYPE": "DEFENSIVE",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
@@ -40,6 +40,7 @@
             "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
+            "SPELL_TYPE": "DEFENSIVE",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
@@ -49,6 +50,7 @@
             "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
+            "SPELL_TYPE": "DEFENSIVE",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
@@ -58,6 +60,7 @@
             "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
+            "SPELL_TYPE": "DEFENSIVE",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
@@ -67,6 +70,7 @@
             "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
+            "SPELL_TYPE": "DEFENSIVE",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
@@ -76,6 +80,7 @@
             "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
+            "SPELL_TYPE": "DEFENSIVE",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         }

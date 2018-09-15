@@ -1,7 +1,7 @@
 {
     "if": [
         {
-            "SpellReady": null
+            "SpellReadyNoDisableCheck": null
         },
         "CheckStatGT(Myself,2,ARMORCLASS)",
         [

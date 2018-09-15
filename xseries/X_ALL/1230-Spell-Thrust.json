@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -34,6 +33,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SPELL_THRUST",
             "DESC": "SPWI321.SPL (Spell Thrust)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "[EVILCUTOFF]",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25873",
@@ -43,6 +43,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SPELL_THRUST",
             "DESC": "SPWI321.SPL (Spell Thrust)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25873",
@@ -52,6 +53,7 @@
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SPELL_THRUST",
             "DESC": "SPWI321.SPL (Spell Thrust)",
+            "SPELL_TYPE": "OFFENSIVE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25873",

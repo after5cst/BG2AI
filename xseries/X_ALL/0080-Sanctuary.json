@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "!StateCheck(Myself,STATE_INVISIBLE)",
         "!CheckStat(Myself,1,SANCTUARY)",
         {
@@ -31,9 +30,10 @@
     "name": "Sanctuary",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SANCTUARY",
             "DESC": "SPPR109.SPL (Sanctuary)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "HPP": "51",
             "STRING_ID": "12084",

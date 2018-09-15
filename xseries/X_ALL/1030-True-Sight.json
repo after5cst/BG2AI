@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         {
             "SeeTarget": null
         },
@@ -30,54 +29,60 @@
     "name": "True-Sight",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "FourthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "FifthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
             "STRING_DESC": "True Sight"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
+            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "SixthNearestEnemyOf(Myself)",
             "TARGET": "Myself",
             "STRING_ID": "25633",
