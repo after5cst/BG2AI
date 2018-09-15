@@ -26,6 +26,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -44,6 +45,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -65,6 +67,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -87,6 +90,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -106,6 +110,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -139,6 +144,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -165,6 +171,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -183,6 +190,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -367,6 +375,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_Cloud","LOCALS",0)
@@ -387,6 +396,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -406,6 +416,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -431,6 +442,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -521,6 +533,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
@@ -550,6 +563,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
@@ -579,6 +593,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
@@ -608,6 +623,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
@@ -637,6 +653,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
@@ -666,6 +683,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
@@ -691,6 +709,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -715,6 +734,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -739,6 +759,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -763,6 +784,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -787,6 +809,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -811,6 +834,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -835,6 +859,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -859,6 +884,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -883,6 +909,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -907,6 +934,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -931,6 +959,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -955,6 +984,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -980,6 +1010,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1005,6 +1036,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1030,6 +1062,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1055,6 +1088,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1080,6 +1114,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1105,6 +1140,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1132,6 +1168,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
@@ -1160,6 +1197,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
@@ -1188,6 +1226,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
@@ -1216,6 +1255,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
@@ -1244,6 +1284,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
@@ -1272,6 +1313,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
@@ -1301,6 +1343,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1329,6 +1372,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1357,6 +1401,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1385,6 +1430,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1413,6 +1459,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1441,6 +1488,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1468,6 +1516,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1495,6 +1544,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1522,6 +1572,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1549,6 +1600,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1576,6 +1628,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1603,6 +1656,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1631,6 +1685,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1659,6 +1714,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1687,6 +1743,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1715,6 +1772,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1743,6 +1801,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1771,6 +1830,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1795,6 +1855,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1819,6 +1880,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1843,6 +1905,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1867,6 +1930,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1891,6 +1955,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1915,6 +1980,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1945,6 +2011,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1976,6 +2043,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -1994,6 +2062,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2012,6 +2081,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2036,6 +2106,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2060,6 +2131,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2084,6 +2156,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2108,6 +2181,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2132,6 +2206,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2156,6 +2231,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2180,6 +2256,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2204,6 +2281,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2228,6 +2306,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2252,6 +2331,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2276,6 +2356,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2300,6 +2381,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2337,6 +2419,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2357,6 +2440,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2381,6 +2465,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2405,6 +2490,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2429,6 +2515,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2453,6 +2540,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2477,6 +2565,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2501,6 +2590,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -2531,6 +2621,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2563,6 +2654,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2595,6 +2687,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2690,6 +2783,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2728,6 +2822,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2766,6 +2861,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2804,6 +2900,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2831,6 +2928,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2858,6 +2956,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2885,6 +2984,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2913,6 +3013,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2941,6 +3042,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2969,6 +3071,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2995,6 +3098,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3021,6 +3125,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3047,6 +3152,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3075,6 +3181,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3103,6 +3210,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3131,6 +3239,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3159,6 +3268,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3187,6 +3297,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3215,6 +3326,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3242,6 +3354,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3269,6 +3382,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3296,6 +3410,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3323,6 +3438,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3350,6 +3466,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3377,6 +3494,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3404,6 +3522,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3431,6 +3550,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3458,6 +3578,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3477,6 +3598,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3501,6 +3623,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Dharm","LOCALS",THREE_ROUNDS)
@@ -3526,6 +3649,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -3549,6 +3673,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3572,6 +3697,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -3609,6 +3735,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3645,6 +3772,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3681,6 +3809,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3717,6 +3846,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3747,6 +3877,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3777,6 +3908,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3807,6 +3939,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3840,6 +3973,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3873,6 +4007,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3906,6 +4041,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3937,6 +4073,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3968,6 +4105,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -3999,6 +4137,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4030,6 +4169,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4061,6 +4201,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4092,6 +4233,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4125,6 +4267,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4158,6 +4301,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4191,6 +4335,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4223,6 +4368,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4255,6 +4401,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4287,6 +4434,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4319,6 +4467,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4351,6 +4500,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4383,6 +4533,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4414,6 +4565,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4445,6 +4597,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4476,6 +4629,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4507,6 +4661,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4538,6 +4693,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4569,6 +4725,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4591,6 +4748,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4613,6 +4771,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4635,6 +4794,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4657,6 +4817,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4679,6 +4840,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4701,6 +4863,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4723,6 +4886,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4747,6 +4911,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -4792,6 +4957,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_Shield","LOCALS",0)
@@ -4824,6 +4990,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_Shield","LOCALS",0)
@@ -4864,6 +5031,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -4893,6 +5061,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
@@ -4921,6 +5090,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
@@ -4949,6 +5119,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
@@ -4973,6 +5144,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -4998,6 +5170,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -5023,6 +5196,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -5048,6 +5222,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -5073,6 +5248,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -5098,6 +5274,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
@@ -5136,6 +5313,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
@@ -5173,6 +5351,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
@@ -5210,6 +5389,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
@@ -5246,6 +5426,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5281,6 +5462,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5316,6 +5498,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5354,6 +5537,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5392,6 +5576,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5430,6 +5615,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5468,6 +5654,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -5491,6 +5678,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5515,6 +5703,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5550,6 +5739,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5579,6 +5769,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5608,6 +5799,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5643,6 +5835,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5678,6 +5871,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5713,6 +5907,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5736,6 +5931,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
@@ -5779,6 +5975,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
@@ -5822,6 +6019,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
@@ -5865,6 +6063,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
@@ -5908,6 +6107,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
@@ -5943,6 +6143,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
@@ -5978,6 +6179,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
@@ -6013,6 +6215,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
@@ -6049,6 +6252,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6084,6 +6288,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6119,6 +6324,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6154,6 +6360,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6189,6 +6396,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6224,6 +6432,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6245,6 +6454,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6294,6 +6504,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6325,6 +6536,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6366,6 +6578,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
@@ -6408,6 +6621,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
@@ -6450,6 +6664,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
@@ -6490,6 +6705,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
@@ -6530,6 +6746,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
@@ -6570,6 +6787,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
@@ -6699,6 +6917,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6737,6 +6956,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6775,6 +6995,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6813,6 +7034,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6846,6 +7068,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6879,6 +7102,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6912,6 +7136,7 @@ IF
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -6970,6 +7195,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -7006,6 +7232,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -7042,6 +7269,7 @@ IF
 	CheckStatLT(Myself,50,0)
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
