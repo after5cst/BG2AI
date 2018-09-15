@@ -1,0 +1,19 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "CombatCounter(0)",
+        "HaveAnySpells()"
+    ],
+    "then": [
+        {
+            "100": [
+                "DisplayStringHead(Myself,16464)  // Casts",
+                "ChangeAIScript('X_ALL',RACE)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Pick-Caster-Script"
+}

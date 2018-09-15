@@ -1,0 +1,61 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        {
+            "WeakPlayerAttacked": null
+        },
+        {
+            "SeeTarget": null
+        },
+        {
+            "EnemyInAttackRange": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
+        {
+            "EnemyNotDisabled": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackReevaluate(LastSeenBy(Myself),30)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "PLAYER": "1",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "LastAttackerOf(Player1)"
+        },
+        {
+            "PLAYER": "2",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "LastAttackerOf(Player2)"
+        },
+        {
+            "PLAYER": "3",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "LastAttackerOf(Player3)"
+        },
+        {
+            "PLAYER": "4",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "LastAttackerOf(Player4)"
+        },
+        {
+            "PLAYER": "5",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "LastAttackerOf(Player5)"
+        },
+        {
+            "PLAYER": "6",
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "LastAttackerOf(Player6)"
+        }
+    ],
+    "name": "Defend-Party-Spellcasters"
+}

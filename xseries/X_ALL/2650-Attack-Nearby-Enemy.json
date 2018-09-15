@@ -1,0 +1,40 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        {
+            "SeeTarget": null
+        },
+        {
+            "EnemyInAttackRange": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
+        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
+        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
+        {
+            "EnemyNotDisabled": null
+        }
+    ],
+    "then": [
+        {
+            "100": [
+                "AttackReevaluate(LastSeenBy(Myself),30)"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "NearestEnemyOf(Myself)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)"
+        },
+        {
+            "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)"
+        }
+    ],
+    "name": "Attack-Nearby-Enemy"
+}

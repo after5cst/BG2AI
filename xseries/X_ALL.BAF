@@ -7145,3 +7145,217 @@ THEN
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 
+IF
+	ActionListEmpty()
+	OR(3)
+		Class(Player1,MAGE_ALL)
+		Class(Player1,DRUID)
+		Class(Player1,SHAMAN)
+	See(LastAttackerOf(Player1))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	OR(3)
+		Class(Player2,MAGE_ALL)
+		Class(Player2,DRUID)
+		Class(Player2,SHAMAN)
+	See(LastAttackerOf(Player2))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	OR(3)
+		Class(Player3,MAGE_ALL)
+		Class(Player3,DRUID)
+		Class(Player3,SHAMAN)
+	See(LastAttackerOf(Player3))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	OR(3)
+		Class(Player4,MAGE_ALL)
+		Class(Player4,DRUID)
+		Class(Player4,SHAMAN)
+	See(LastAttackerOf(Player4))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	OR(3)
+		Class(Player5,MAGE_ALL)
+		Class(Player5,DRUID)
+		Class(Player5,SHAMAN)
+	See(LastAttackerOf(Player5))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	OR(3)
+		Class(Player6,MAGE_ALL)
+		Class(Player6,DRUID)
+		Class(Player6,SHAMAN)
+	See(LastAttackerOf(Player6))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	OR(2)
+		See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+		See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+	CheckStatLT(LastSeenBy(Myself),50,SPELLFAILUREPRIEST)
+	CheckStatLT(LastSeenBy(Myself),50,SPELLFAILUREMAGE)
+	!StateCheck(LastSeenBy(Myself),STATE_SILENCED)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	See(NearestEnemyOf(Myself))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	See(SecondNearestEnemyOf(Myself))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	See(ThirdNearestEnemyOf(Myself))
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+	ActionListEmpty()
+	See([EVILCUTOFF])
+	OR(2)
+		InWeaponRange(LastSeenBy(Myself))
+		Global("BDAI_ATTACK_MODE","LOCALS",1)
+	!InParty(LastSeenBy(Myself))
+	WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)
+	WeaponCanDamage(LastSeenBy(Myself),MAINHAND)
+	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
+THEN
+	RESPONSE #100
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
