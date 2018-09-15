@@ -6,5 +6,8 @@
     "Exists(Player<PLAYER>)",
 	"!StateCheck(Player<PLAYER>,STATE_REALLY_DEAD)",
     "!Range(Player<PLAYER>,10)",
-    "!TargetUnreachable(Player<PLAYER>)"
+    [
+        "!TargetUnreachable(Player<PLAYER>)",
+        "Range(Player<PLAYER>,100)"
+    ]
 ]

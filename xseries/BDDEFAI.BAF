@@ -4,7 +4,7 @@ IF
 	Global("X_FOL","LOCALS",0)
 THEN
 	RESPONSE #100
-		DisplayString(Player2,16469)  // On
+		DisplayString(Myself,16469)  // On
 		SetGlobal("X_FOL","LOCALS",1)
 END
 
@@ -14,7 +14,7 @@ IF
 	!Global("X_FOL","LOCALS",0)
 THEN
 	RESPONSE #100
-		DisplayString(Player2,16470)  // Off
+		DisplayString(Myself,16470)  // Off
 		SetGlobal("X_FOL","LOCALS",0)
 END
 
@@ -22,7 +22,9 @@ IF
 	ActionListEmpty()
 	HotKey(F)
 	GlobalLT("X_LDR","LOCALS",2)
-	See(Player2)
+	Exists(Player2)
+	!StateCheck(Player2,STATE_REALLY_DEAD)
+	!TargetUnreachable(Player2)
 THEN
 	RESPONSE #100
 		DisplayString(Player2,17571)  // Leader
@@ -33,7 +35,9 @@ IF
 	ActionListEmpty()
 	HotKey(F)
 	GlobalLT("X_LDR","LOCALS",3)
-	See(Player3)
+	Exists(Player3)
+	!StateCheck(Player3,STATE_REALLY_DEAD)
+	!TargetUnreachable(Player3)
 THEN
 	RESPONSE #100
 		DisplayString(Player3,17571)  // Leader
@@ -44,7 +48,9 @@ IF
 	ActionListEmpty()
 	HotKey(F)
 	GlobalLT("X_LDR","LOCALS",4)
-	See(Player4)
+	Exists(Player4)
+	!StateCheck(Player4,STATE_REALLY_DEAD)
+	!TargetUnreachable(Player4)
 THEN
 	RESPONSE #100
 		DisplayString(Player4,17571)  // Leader
@@ -55,7 +61,9 @@ IF
 	ActionListEmpty()
 	HotKey(F)
 	GlobalLT("X_LDR","LOCALS",5)
-	See(Player5)
+	Exists(Player5)
+	!StateCheck(Player5,STATE_REALLY_DEAD)
+	!TargetUnreachable(Player5)
 THEN
 	RESPONSE #100
 		DisplayString(Player5,17571)  // Leader
@@ -66,7 +74,9 @@ IF
 	ActionListEmpty()
 	HotKey(F)
 	GlobalLT("X_LDR","LOCALS",6)
-	See(Player6)
+	Exists(Player6)
+	!StateCheck(Player6,STATE_REALLY_DEAD)
+	!TargetUnreachable(Player6)
 THEN
 	RESPONSE #100
 		DisplayString(Player6,17571)  // Leader
@@ -99,7 +109,9 @@ IF
 	Exists(Player1)
 	!StateCheck(Player1,STATE_REALLY_DEAD)
 	!Range(Player1,10)
-	!TargetUnreachable(Player1)
+	OR(2)
+		!TargetUnreachable(Player1)
+		Range(Player1,100)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -115,7 +127,9 @@ IF
 	Exists(Player2)
 	!StateCheck(Player2,STATE_REALLY_DEAD)
 	!Range(Player2,10)
-	!TargetUnreachable(Player2)
+	OR(2)
+		!TargetUnreachable(Player2)
+		Range(Player2,100)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -131,7 +145,9 @@ IF
 	Exists(Player3)
 	!StateCheck(Player3,STATE_REALLY_DEAD)
 	!Range(Player3,10)
-	!TargetUnreachable(Player3)
+	OR(2)
+		!TargetUnreachable(Player3)
+		Range(Player3,100)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -147,7 +163,9 @@ IF
 	Exists(Player4)
 	!StateCheck(Player4,STATE_REALLY_DEAD)
 	!Range(Player4,10)
-	!TargetUnreachable(Player4)
+	OR(2)
+		!TargetUnreachable(Player4)
+		Range(Player4,100)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -163,7 +181,9 @@ IF
 	Exists(Player5)
 	!StateCheck(Player5,STATE_REALLY_DEAD)
 	!Range(Player5,10)
-	!TargetUnreachable(Player5)
+	OR(2)
+		!TargetUnreachable(Player5)
+		Range(Player5,100)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?
@@ -179,7 +199,9 @@ IF
 	Exists(Player6)
 	!StateCheck(Player6,STATE_REALLY_DEAD)
 	!Range(Player6,10)
-	!TargetUnreachable(Player6)
+	OR(2)
+		!TargetUnreachable(Player6)
+		Range(Player6,100)
 THEN
 	RESPONSE #100
 		DisplayString(Myself,88034)  // Where are you trying to go?

@@ -7,7 +7,7 @@
     "then": [
         {
             "100": [
-                "DisplayString(Player2,16470)  // Off",
+                "DisplayString(Myself,16470)  // Off",
                 "SetGlobal('X_FOL','LOCALS',0)"
             ]
         }

@@ -2,7 +2,7 @@
     "ActionListEmpty()",
     "HotKey(F)",
     "GlobalLT('X_LDR','LOCALS',<PLAYER>)",
-    {
-        "X_See": null
-    }
+    "Exists(Player<PLAYER>)",
+	"!StateCheck(Player<PLAYER>,STATE_REALLY_DEAD)",
+    "!TargetUnreachable(Player<PLAYER>)"
 ]
