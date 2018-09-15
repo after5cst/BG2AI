@@ -41,6 +41,24 @@ END
 
 IF
 	ActionListEmpty()
+	HaveSpell(CLERIC_IRONSKIN)  // SPPR506.SPL (Iron Skins)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	CheckStatLT(Myself,1,STONESKINS)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		DisplayString(Myself,44941)  // Iron Skins
+		Spell(Myself,CLERIC_IRONSKIN)  // SPPR506.SPL (Iron Skins)
+END
+
+IF
+	ActionListEmpty()
 	CombatCounter(0)
 	HaveAnySpells()
 THEN
