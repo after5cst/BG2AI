@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         "CheckStatLT(Myself,1,STONESKINS)",
         {
             "ArcaneCastOK": null

@@ -8,7 +8,6 @@ IF
 	OR(2)
 		CheckStatGT(Myself,6,ARMORCLASS)
 		CheckStatGT(Myself,17,DEX)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
 	!StateCheck(Myself,STATE_SILENCED)
@@ -26,7 +25,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatLT(Myself,1,STONESKINS)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
@@ -37,6 +35,16 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(Myself,25875)  // Stoneskin
 		Spell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
+END
+
+IF
+	ActionListEmpty()
+	CombatCounter(0)
+	HaveAnySpells()
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,16464)  // Casts
+		ChangeAIScript("X_ALL",RACE)
 END
 
 IF

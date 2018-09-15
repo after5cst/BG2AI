@@ -21,7 +21,7 @@ it will provide a history of the changes.
   hardly any time on weapon selection or usage... which is what I would
   rather not mess with.
 
-* And lastly, I'd rather modify what they have hear because the script
+* And lastly, I'd rather modify what they have here because the script
   does deal with one thing (which spell is used to counter which defense)
   that I'd rather not take the time to memorize and learn with all then
   weird combinations.
@@ -35,9 +35,20 @@ it will provide a history of the changes.
       Selecting yourself as leader effectively disables following.
       
 * D - Enable healing mode.  While in healing mode, the character will
-      work to heal the most damaged character.  After the character 
-      no longer has a good match for the most damaged character,
-      the character will exit healing mode.
+      bring back party members from the dead, look for the player with
+      the lowest HP percentage, and see if an appropriate spell can be
+      found for their wounds.  If so, they will cast the healing spell
+      on the target.  If not, they will exit healing mode.
+      Spells used in healing mode include the following:
+      
+  * SPPR712.SPL (Resurrection)
+  * SPPR504.SPL (Raise Dead)
+  * SPPR550.SPL (Recall Spirit)
+  * SPPR607.SPL (Heal)
+  * SPPR502.SPL (Cure Critical Wounds)
+  * SPPR401.SPL (Cure Serious Wounds)
+  * SPPR315.SPL (Cure Medium Wounds)
+  * SPPR103.SPL (Cure Light Wounds)
 
 ## Changes
 

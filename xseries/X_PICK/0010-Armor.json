@@ -8,7 +8,6 @@
             "CheckStatGT(Myself,6,ARMORCLASS)",
             "CheckStatGT(Myself,17,DEX)"
         ],
-        "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
         {
             "ArcaneCastOK": null
         }
