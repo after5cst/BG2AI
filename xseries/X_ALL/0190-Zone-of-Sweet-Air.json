@@ -22,9 +22,9 @@
     "name": "Zone-of-Sweet-Air",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_ZONE_OF_SWEET_AIR",
             "DESC": "SPPR318.SPL (Zone of Sweet Air)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "38581",
             "STRING_DESC": "Zone of Sweet Air"

@@ -34,7 +34,7 @@
             "100": [
                 "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -42,27 +42,27 @@
     "name": "Protection-From-Evil",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_PROTECT_FROM_EVIL",
             "DESC": "SPPR107.SPL (Protection From Evil)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "12023",
             "STRING_DESC": "Protection From Evil"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_PROTECT_FROM_EVIL",
             "DESC": "SPPR107.SPL (Protection From Evil)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "12023",
             "STRING_DESC": "Protection From Evil"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_PROTECT_FROM_EVIL",
             "DESC": "SPPR107.SPL (Protection From Evil)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "12023",

@@ -20,7 +20,7 @@
             "100": [
                 "SetGlobalTimer('BD_RParal','LOCALS',TWO_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -30,54 +30,54 @@
         {
             "LOOK_FOR": "[GOODCUTOFF]",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_REMOVE_PARALYSIS",
             "DESC": "SPPR308.SPL (Remove Paralysis)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "12088",
             "STRING_DESC": "Remove Paralysis"
         },
         {
             "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_REMOVE_PARALYSIS",
             "DESC": "SPPR308.SPL (Remove Paralysis)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "12088",
             "STRING_DESC": "Remove Paralysis"
         },
         {
             "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_REMOVE_PARALYSIS",
             "DESC": "SPPR308.SPL (Remove Paralysis)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "12088",
             "STRING_DESC": "Remove Paralysis"
         },
         {
             "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_REMOVE_PARALYSIS",
             "DESC": "SPPR308.SPL (Remove Paralysis)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "12088",
             "STRING_DESC": "Remove Paralysis"
         },
         {
             "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_REMOVE_PARALYSIS",
             "DESC": "SPPR308.SPL (Remove Paralysis)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "12088",
             "STRING_DESC": "Remove Paralysis"
         },
         {
             "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_REMOVE_PARALYSIS",
             "DESC": "SPPR308.SPL (Remove Paralysis)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "12088",
             "STRING_DESC": "Remove Paralysis"
         }

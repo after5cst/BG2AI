@@ -36,9 +36,9 @@
     "name": "Mass-Cure",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MASS_CURE",
             "DESC": "SPPR514.SPL (Mass Cure)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "7468",
             "STRING_DESC": "Mass Cure"

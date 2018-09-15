@@ -24,7 +24,7 @@
             "100": [
                 "SetGlobalTimer('BD_Haste','LOCALS',THREE_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }

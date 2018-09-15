@@ -25,7 +25,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -37,27 +37,27 @@
             "SPELL": "WIZARD_PIERCE_SHIELD",
             "DESC": "SPWI805.SPL (Pierce Shield)",
             "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "26240",
-            "STRING_DESC": "Pierce Shield",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Pierce Shield"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_SHIELD",
             "DESC": "SPWI805.SPL (Pierce Shield)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "26240",
-            "STRING_DESC": "Pierce Shield",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Pierce Shield"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_SHIELD",
             "DESC": "SPWI805.SPL (Pierce Shield)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "26240",
-            "STRING_DESC": "Pierce Shield",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Pierce Shield"
         }
     ]
 }

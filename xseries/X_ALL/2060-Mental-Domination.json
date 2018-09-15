@@ -35,7 +35,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -43,36 +43,36 @@
     "name": "Mental-Domination",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MENTAL_DOMINATION",
             "DESC": "SPPR405.SPL (Mental Domination)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID.0.FIGHTER]",
             "STRING_ID": "22618",
             "STRING_DESC": "Mental Domination"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MENTAL_DOMINATION",
             "DESC": "SPPR405.SPL (Mental Domination)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER])",
             "STRING_ID": "22618",
             "STRING_DESC": "Mental Domination"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MENTAL_DOMINATION",
             "DESC": "SPPR405.SPL (Mental Domination)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
             "STRING_ID": "22618",
             "STRING_DESC": "Mental Domination"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MENTAL_DOMINATION",
             "DESC": "SPPR405.SPL (Mental Domination)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
             "STRING_ID": "22618",

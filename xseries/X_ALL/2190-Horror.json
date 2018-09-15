@@ -39,7 +39,7 @@
             "100": [
                 "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }

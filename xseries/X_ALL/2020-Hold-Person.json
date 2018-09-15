@@ -31,7 +31,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -43,27 +43,27 @@
             "SPELL": "WIZARD_HOLD_PERSON",
             "DESC": "SPWI306.SPL (Hold Person)",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "TARGET": "[EVILCUTOFF.HUMANOID]",
             "STRING_ID": "12049",
-            "STRING_DESC": "Hold Person",
-            "TARGET": "[EVILCUTOFF.HUMANOID]"
+            "STRING_DESC": "Hold Person"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HOLD_PERSON",
             "DESC": "SPWI306.SPL (Hold Person)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
+            "TARGET": "SecondNearest([EVILCUTOFF.HUMANOID])",
             "STRING_ID": "12049",
-            "STRING_DESC": "Hold Person",
-            "TARGET": "SecondNearest([EVILCUTOFF.HUMANOID])"
+            "STRING_DESC": "Hold Person"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_HOLD_PERSON",
             "DESC": "SPWI306.SPL (Hold Person)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
+            "TARGET": "ThirdNearest([EVILCUTOFF.HUMANOID])",
             "STRING_ID": "12049",
-            "STRING_DESC": "Hold Person",
-            "TARGET": "ThirdNearest([EVILCUTOFF.HUMANOID])"
+            "STRING_DESC": "Hold Person"
         }
     ]
 }

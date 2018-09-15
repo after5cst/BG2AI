@@ -17,7 +17,7 @@
             "100": [
                 "SetGlobalTimer('BD_SCLAR','LOCALS',TWO_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -27,54 +27,54 @@
         {
             "LOOK_FOR": "Player1",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "103069",
             "STRING_DESC": "Spiritual Clarity"
         },
         {
             "LOOK_FOR": "Player2",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "103069",
             "STRING_DESC": "Spiritual Clarity"
         },
         {
             "LOOK_FOR": "Player3",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "103069",
             "STRING_DESC": "Spiritual Clarity"
         },
         {
             "LOOK_FOR": "Player4",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "103069",
             "STRING_DESC": "Spiritual Clarity"
         },
         {
             "LOOK_FOR": "Player5",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "103069",
             "STRING_DESC": "Spiritual Clarity"
         },
         {
             "LOOK_FOR": "Player6",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "STRING_ID": "103069",
             "STRING_DESC": "Spiritual Clarity"
         }

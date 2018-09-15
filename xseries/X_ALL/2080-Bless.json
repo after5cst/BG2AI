@@ -27,9 +27,9 @@
     "name": "Bless",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_BLESS",
             "DESC": "SPPR101.SPL (Bless)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12089",
             "STRING_DESC": "Bless"

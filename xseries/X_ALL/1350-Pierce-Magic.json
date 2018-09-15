@@ -24,7 +24,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -36,27 +36,27 @@
             "SPELL": "WIZARD_PIERCE_MAGIC",
             "DESC": "SPWI608.SPL (Pierce Magic)",
             "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25934",
-            "STRING_DESC": "Pierce Magic",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Pierce Magic"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_MAGIC",
             "DESC": "SPWI608.SPL (Pierce Magic)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25934",
-            "STRING_DESC": "Pierce Magic",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Pierce Magic"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_PIERCE_MAGIC",
             "DESC": "SPWI608.SPL (Pierce Magic)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25934",
-            "STRING_DESC": "Pierce Magic",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Pierce Magic"
         }
     ]
 }

@@ -24,7 +24,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -36,27 +36,27 @@
             "SPELL": "WIZARD_BREACH",
             "DESC": "SPWI513.SPL (Breach)",
             "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25914",
-            "STRING_DESC": "Breach",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Breach"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_BREACH",
             "DESC": "SPWI513.SPL (Breach)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25914",
-            "STRING_DESC": "Breach",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Breach"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_BREACH",
             "DESC": "SPWI513.SPL (Breach)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25914",
-            "STRING_DESC": "Breach",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Breach"
         }
     ]
 }

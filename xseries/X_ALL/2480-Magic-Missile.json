@@ -29,7 +29,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -41,27 +41,27 @@
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "TARGET": "NearestEnemyOf(Myself)",
             "STRING_ID": "12052",
-            "STRING_DESC": "Magic Missile",
-            "TARGET": "NearestEnemyOf(Myself)"
+            "STRING_DESC": "Magic Missile"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "TARGET": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
-            "STRING_DESC": "Magic Missile",
-            "TARGET": "SecondNearestEnemyOf(Myself)"
+            "STRING_DESC": "Magic Missile"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "TARGET": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
-            "STRING_DESC": "Magic Missile",
-            "TARGET": "ThirdNearestEnemyOf(Myself)"
+            "STRING_DESC": "Magic Missile"
         }
     ]
 }

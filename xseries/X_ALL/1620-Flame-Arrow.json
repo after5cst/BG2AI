@@ -27,7 +27,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -35,9 +35,9 @@
     "name": "Flame-Arrow",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
             "MAX_FIRE_RESIST": "55",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
@@ -45,9 +45,9 @@
             "STRING_DESC": "Flame Arrow"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
             "MAX_FIRE_RESIST": "55",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
@@ -55,9 +55,9 @@
             "STRING_DESC": "Flame Arrow"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
             "MAX_FIRE_RESIST": "55",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",

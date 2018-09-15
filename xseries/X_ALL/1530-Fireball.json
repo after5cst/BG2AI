@@ -27,7 +27,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -35,9 +35,9 @@
     "name": "Fireball",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
             "MAX_FIRE_RESIST": "75",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "LOOK_FOR": "FarthestEnemyOf(Myself)",
@@ -45,9 +45,9 @@
             "STRING_DESC": "Fireball"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
             "MAX_FIRE_RESIST": "75",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "LOOK_FOR": "SecondFarthestEnemyOf(Myself)",
@@ -55,9 +55,9 @@
             "STRING_DESC": "Fireball"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
             "MAX_FIRE_RESIST": "75",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "LOOK_FOR": "ThirdFarthestEnemyOf(Myself)",

@@ -31,9 +31,9 @@
     "name": "Sanctuary",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SANCTUARY",
             "DESC": "SPPR109.SPL (Sanctuary)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "HPP": "51",
             "STRING_ID": "12084",

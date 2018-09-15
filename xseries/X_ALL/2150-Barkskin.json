@@ -20,7 +20,7 @@
             "100": [
                 "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -28,13 +28,13 @@
     "name": "Barkskin",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_BARKSKIN",
             "DESC": "SPPR202.SPL (Barkskin)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "WorstAC([PC])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12121",
-            "STRING_DESC": "Barkskin",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Barkskin"
         }
     ]
 }

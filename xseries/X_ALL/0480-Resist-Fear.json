@@ -18,7 +18,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -26,54 +26,54 @@
     "name": "Resist-Fear",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "[GOODCUTOFF]",
             "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
             "STRING_ID": "12025",
             "STRING_DESC": "Resist Fear"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
             "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_RESIST_FEAR",
             "DESC": "SPWI210.SPL (Resist Fear)",
             "STRING_ID": "12025",

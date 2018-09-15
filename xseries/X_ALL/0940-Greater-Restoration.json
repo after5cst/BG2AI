@@ -22,7 +22,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -30,108 +30,108 @@
     "name": "Greater-Restoration",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([PC])",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([PC])",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SixthNearest([PC])",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "35603",
             "STRING_DESC": "Greater Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "35603",
             "STRING_DESC": "Greater Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "35603",
             "STRING_DESC": "Greater Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([PC])",
             "STRING_ID": "35603",
             "STRING_DESC": "Greater Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([PC])",
             "STRING_ID": "35603",
             "STRING_DESC": "Greater Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SixthNearest([PC])",
             "STRING_ID": "35603",

@@ -37,7 +37,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -45,27 +45,27 @@
     "name": "Negative-Plane-Protection",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "55842",
             "STRING_DESC": "Negative Plane Protection"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "55842",
             "STRING_DESC": "Negative Plane Protection"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "55842",

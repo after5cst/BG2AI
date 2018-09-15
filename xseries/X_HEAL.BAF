@@ -16,7 +16,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25765)  // Resurrection
+		DisplayString(Player2,25765)  // Resurrection
 		Spell(Player2,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
 
@@ -38,7 +38,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25765)  // Resurrection
+		DisplayString(Player3,25765)  // Resurrection
 		Spell(Player3,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
 
@@ -60,7 +60,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25765)  // Resurrection
+		DisplayString(Player4,25765)  // Resurrection
 		Spell(Player4,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
 
@@ -82,7 +82,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25765)  // Resurrection
+		DisplayString(Player5,25765)  // Resurrection
 		Spell(Player5,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
 
@@ -104,7 +104,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25765)  // Resurrection
+		DisplayString(Player6,25765)  // Resurrection
 		Spell(Player6,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
 
@@ -126,7 +126,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12117)  // Raise Dead
+		DisplayString(Player2,12117)  // Raise Dead
 		Spell(Player2,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
 
@@ -148,7 +148,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12117)  // Raise Dead
+		DisplayString(Player3,12117)  // Raise Dead
 		Spell(Player3,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
 
@@ -170,7 +170,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12117)  // Raise Dead
+		DisplayString(Player4,12117)  // Raise Dead
 		Spell(Player4,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
 
@@ -192,7 +192,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12117)  // Raise Dead
+		DisplayString(Player5,12117)  // Raise Dead
 		Spell(Player5,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
 
@@ -214,7 +214,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12117)  // Raise Dead
+		DisplayString(Player6,12117)  // Raise Dead
 		Spell(Player6,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
 
@@ -236,7 +236,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103073)  // Recall Spirit
+		DisplayString(Player2,103073)  // Recall Spirit
 		Spell(Player2,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
 
@@ -258,7 +258,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103073)  // Recall Spirit
+		DisplayString(Player3,103073)  // Recall Spirit
 		Spell(Player3,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
 
@@ -280,7 +280,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103073)  // Recall Spirit
+		DisplayString(Player4,103073)  // Recall Spirit
 		Spell(Player4,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
 
@@ -302,7 +302,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103073)  // Recall Spirit
+		DisplayString(Player5,103073)  // Recall Spirit
 		Spell(Player5,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
 
@@ -324,7 +324,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103073)  // Recall Spirit
+		DisplayString(Player6,103073)  // Recall Spirit
 		Spell(Player6,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
 

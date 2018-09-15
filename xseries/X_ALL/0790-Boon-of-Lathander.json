@@ -34,9 +34,9 @@
     "name": "Boon-of-Lathander",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "LATHANDER_BOON",
             "DESC": "SPCL741.SPL (Boon of Lathander)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "34800",
             "STRING_DESC": "Boon of Lathander"

@@ -27,7 +27,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -35,54 +35,54 @@
     "name": "Neutralize-Poison",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "12115",
             "STRING_DESC": "Neutralize Poison"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "12115",
             "STRING_DESC": "Neutralize Poison"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "12115",
             "STRING_DESC": "Neutralize Poison"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([PC])",
             "STRING_ID": "12115",
             "STRING_DESC": "Neutralize Poison"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([PC])",
             "STRING_ID": "12115",
             "STRING_DESC": "Neutralize Poison"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
             "DESC": "SPPR404.SPL (Neutralize Poison)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SixthNearest([PC])",
             "STRING_ID": "12115",

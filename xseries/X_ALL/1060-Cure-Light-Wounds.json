@@ -40,9 +40,9 @@
     "name": "Cure-Light-Wounds",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "SPIN101",
             "DESC": "Cure Light Wounds",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "MostDamagedOf([PC])",
             "HPP": "40"

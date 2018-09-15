@@ -28,9 +28,9 @@
     "name": "Draw-Upon-Holy-Might",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "SPIN103",
             "DESC": "Draw Upon Holy Might",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF]",
             "TARGET": "Myself",
             "STRING_ID": "12108",

@@ -32,7 +32,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -40,9 +40,9 @@
     "name": "Lay-On-Hands",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "PALADIN_LAY_ON_HANDS",
             "DESC": "SPCL211.SPL (Lay On Hands)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "MostDamagedOf([PC])",
             "HPP": "40",

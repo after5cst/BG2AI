@@ -24,7 +24,7 @@
         {
             "100": [
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
@@ -36,27 +36,27 @@
             "SPELL": "WIZARD_WARDING_WHIP",
             "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
             "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25947",
-            "STRING_DESC": "Khelben's Warding Whip",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Khelben's Warding Whip"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_WARDING_WHIP",
             "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25947",
-            "STRING_DESC": "Khelben's Warding Whip",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Khelben's Warding Whip"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_WARDING_WHIP",
             "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "25947",
-            "STRING_DESC": "Khelben's Warding Whip",
-            "TARGET": "LastSeenBy(Myself)"
+            "STRING_DESC": "Khelben's Warding Whip"
         }
     ]
 }

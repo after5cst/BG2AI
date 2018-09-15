@@ -538,7 +538,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12088)  // Remove Paralysis
+		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
 
@@ -568,7 +568,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12088)  // Remove Paralysis
+		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
 
@@ -598,7 +598,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12088)  // Remove Paralysis
+		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
 
@@ -628,7 +628,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12088)  // Remove Paralysis
+		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
 
@@ -658,7 +658,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12088)  // Remove Paralysis
+		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
 
@@ -688,7 +688,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12088)  // Remove Paralysis
+		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
 
@@ -713,7 +713,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
 
@@ -738,7 +738,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
 
@@ -763,7 +763,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
 
@@ -788,7 +788,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
 
@@ -813,7 +813,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
 
@@ -838,7 +838,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
 
@@ -863,7 +863,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
@@ -888,7 +888,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
@@ -913,7 +913,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
@@ -938,7 +938,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
@@ -963,7 +963,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
@@ -988,7 +988,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12083)  // Remove Fear
+		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
 
@@ -1014,7 +1014,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12025)  // Resist Fear
+		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
 
@@ -1040,7 +1040,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12025)  // Resist Fear
+		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
 
@@ -1066,7 +1066,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12025)  // Resist Fear
+		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
 
@@ -1092,7 +1092,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12025)  // Resist Fear
+		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
 
@@ -1118,7 +1118,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12025)  // Resist Fear
+		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
 
@@ -1144,7 +1144,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12025)  // Resist Fear
+		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
 
@@ -1173,7 +1173,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103069)  // Spiritual Clarity
+		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
 
@@ -1202,7 +1202,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103069)  // Spiritual Clarity
+		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
 
@@ -1231,7 +1231,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103069)  // Spiritual Clarity
+		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
 
@@ -1260,7 +1260,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103069)  // Spiritual Clarity
+		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
 
@@ -1289,7 +1289,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103069)  // Spiritual Clarity
+		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
 
@@ -1318,7 +1318,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,103069)  // Spiritual Clarity
+		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
 
@@ -1347,7 +1347,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,2445)  // Cure Disease
+		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
 
@@ -1376,7 +1376,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,2445)  // Cure Disease
+		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
 
@@ -1405,7 +1405,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,2445)  // Cure Disease
+		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
 
@@ -1434,7 +1434,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,2445)  // Cure Disease
+		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
 
@@ -1463,7 +1463,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,2445)  // Cure Disease
+		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
 
@@ -1492,7 +1492,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,2445)  // Cure Disease
+		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
 
@@ -1520,7 +1520,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12115)  // Neutralize Poison
+		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
 
@@ -1548,7 +1548,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12115)  // Neutralize Poison
+		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
 
@@ -1576,7 +1576,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12115)  // Neutralize Poison
+		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
 
@@ -1604,7 +1604,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12115)  // Neutralize Poison
+		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
 
@@ -1632,7 +1632,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12115)  // Neutralize Poison
+		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
 
@@ -1660,7 +1660,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12115)  // Neutralize Poison
+		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
 
@@ -1853,7 +1853,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12112)  // Slow Poison
+		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
 
@@ -1878,7 +1878,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12112)  // Slow Poison
+		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
 
@@ -1903,7 +1903,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12112)  // Slow Poison
+		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
 
@@ -1928,7 +1928,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12112)  // Slow Poison
+		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
 
@@ -1953,7 +1953,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12112)  // Slow Poison
+		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
 
@@ -1978,7 +1978,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12112)  // Slow Poison
+		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
 
@@ -2104,7 +2104,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55844)  // Lesser Restoration
+		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
 
@@ -2129,7 +2129,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55844)  // Lesser Restoration
+		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
 
@@ -2154,7 +2154,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55844)  // Lesser Restoration
+		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
 
@@ -2179,7 +2179,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55844)  // Lesser Restoration
+		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
 
@@ -2204,7 +2204,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55844)  // Lesser Restoration
+		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
 
@@ -2229,7 +2229,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55844)  // Lesser Restoration
+		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
 
@@ -2254,7 +2254,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,35603)  // Greater Restoration
+		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
 
@@ -2279,7 +2279,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,35603)  // Greater Restoration
+		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
 
@@ -2304,7 +2304,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,35603)  // Greater Restoration
+		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
 
@@ -2329,7 +2329,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,35603)  // Greater Restoration
+		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
 
@@ -2354,7 +2354,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,35603)  // Greater Restoration
+		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
 
@@ -2379,7 +2379,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,35603)  // Greater Restoration
+		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
 
@@ -2652,7 +2652,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12032)  // Lay On Hands
+		DisplayString(LastSeenBy(Myself),12032)  // Lay On Hands
 		Spell(LastSeenBy(Myself),PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
 END
 
@@ -2820,7 +2820,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55842)  // Negative Plane Protection
+		DisplayString(LastSeenBy(Myself),55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
 
@@ -2859,7 +2859,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55842)  // Negative Plane Protection
+		DisplayString(LastSeenBy(Myself),55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
 
@@ -2898,7 +2898,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,55842)  // Negative Plane Protection
+		DisplayString(LastSeenBy(Myself),55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
 
@@ -2926,7 +2926,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25914)  // Breach
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
 END
 
@@ -2954,7 +2954,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25914)  // Breach
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
 END
 
@@ -2982,7 +2982,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25914)  // Breach
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
 END
 
@@ -3011,7 +3011,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26314)  // Spellstrike
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
 END
 
@@ -3040,7 +3040,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26314)  // Spellstrike
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
 END
 
@@ -3069,7 +3069,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26314)  // Spellstrike
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
 END
 
@@ -3096,7 +3096,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25873)  // Spell Thrust
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
 END
 
@@ -3123,7 +3123,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25873)  // Spell Thrust
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
 END
 
@@ -3150,7 +3150,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25873)  // Spell Thrust
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
 END
 
@@ -3179,7 +3179,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,15465)  // Ruby Ray of Reversal
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
 END
 
@@ -3208,7 +3208,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,15465)  // Ruby Ray of Reversal
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
 END
 
@@ -3237,7 +3237,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,15465)  // Ruby Ray of Reversal
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
 END
 
@@ -3266,7 +3266,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26240)  // Pierce Shield
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
 END
 
@@ -3295,7 +3295,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26240)  // Pierce Shield
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
 END
 
@@ -3324,7 +3324,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,26240)  // Pierce Shield
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
 END
 
@@ -3352,7 +3352,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25947)  // Khelben's Warding Whip
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
 END
 
@@ -3380,7 +3380,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25947)  // Khelben's Warding Whip
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
 END
 
@@ -3408,7 +3408,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25947)  // Khelben's Warding Whip
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
 END
 
@@ -3436,7 +3436,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25934)  // Pierce Magic
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
 END
 
@@ -3464,7 +3464,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25934)  // Pierce Magic
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
 END
 
@@ -3492,7 +3492,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25934)  // Pierce Magic
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
 END
 
@@ -3520,7 +3520,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25884)  // Secret Word
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
 		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
 END
 
@@ -3548,7 +3548,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25884)  // Secret Word
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
 		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
 END
 
@@ -3576,7 +3576,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,25884)  // Secret Word
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
 		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
 END
 
@@ -3874,7 +3874,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6618)  // Fireball
+		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
@@ -3905,7 +3905,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6618)  // Fireball
+		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
@@ -3936,7 +3936,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6618)  // Fireball
+		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
@@ -3970,7 +3970,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6618)  // Fireball
+		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
@@ -4004,7 +4004,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6618)  // Fireball
+		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
@@ -4038,7 +4038,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,6618)  // Fireball
+		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
 
@@ -4070,7 +4070,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4102,7 +4102,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4134,7 +4134,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4166,7 +4166,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4198,7 +4198,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4230,7 +4230,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4264,7 +4264,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4298,7 +4298,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4332,7 +4332,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12034)  // Flame Arrow
+		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
 
@@ -4365,7 +4365,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12074)  // Burning Hands
+		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
@@ -4398,7 +4398,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12074)  // Burning Hands
+		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
@@ -4431,7 +4431,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12074)  // Burning Hands
+		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
@@ -4464,7 +4464,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12074)  // Burning Hands
+		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
@@ -4497,7 +4497,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12074)  // Burning Hands
+		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
@@ -4530,7 +4530,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12074)  // Burning Hands
+		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
 
@@ -4562,7 +4562,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12033)  // Melf's Acid Arrow
+		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
@@ -4594,7 +4594,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12033)  // Melf's Acid Arrow
+		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
@@ -4626,7 +4626,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12033)  // Melf's Acid Arrow
+		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
@@ -4658,7 +4658,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12033)  // Melf's Acid Arrow
+		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
@@ -4690,7 +4690,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12033)  // Melf's Acid Arrow
+		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
@@ -4722,7 +4722,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12033)  // Melf's Acid Arrow
+		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
 
@@ -5059,7 +5059,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12080)  // Haste
+		DisplayString(LastSeenBy(Myself),12080)  // Haste
 		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
 
@@ -5088,7 +5088,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12080)  // Haste
+		DisplayString(LastSeenBy(Myself),12080)  // Haste
 		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
 
@@ -5117,7 +5117,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12080)  // Haste
+		DisplayString(LastSeenBy(Myself),12080)  // Haste
 		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
 
@@ -5311,7 +5311,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12081)  // Slow
+		DisplayString(LastSeenBy(Myself),12081)  // Slow
 		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
 
@@ -5349,7 +5349,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12081)  // Slow
+		DisplayString(LastSeenBy(Myself),12081)  // Slow
 		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
 
@@ -5387,7 +5387,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12081)  // Slow
+		DisplayString(LastSeenBy(Myself),12081)  // Slow
 		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
 
@@ -5423,7 +5423,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString([EVILCUTOFF.HUMANOID],12049)  // Hold Person
 		Spell([EVILCUTOFF.HUMANOID],WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 END
 
@@ -5459,7 +5459,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(SecondNearest([EVILCUTOFF.HUMANOID]),12049)  // Hold Person
 		Spell(SecondNearest([EVILCUTOFF.HUMANOID]),WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 END
 
@@ -5495,7 +5495,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(ThirdNearest([EVILCUTOFF.HUMANOID]),12049)  // Hold Person
 		Spell(ThirdNearest([EVILCUTOFF.HUMANOID]),WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 END
 
@@ -5534,7 +5534,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,22618)  // Mental Domination
+		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
@@ -5573,7 +5573,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,22618)  // Mental Domination
+		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
@@ -5612,7 +5612,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,22618)  // Mental Domination
+		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
@@ -5651,7 +5651,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,22618)  // Mental Domination
+		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
 
@@ -5833,7 +5833,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12023)  // Protection From Evil
+		DisplayString(LastSeenBy(Myself),12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
 
@@ -5869,7 +5869,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12023)  // Protection From Evil
+		DisplayString(LastSeenBy(Myself),12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
 
@@ -5905,7 +5905,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12023)  // Protection From Evil
+		DisplayString(LastSeenBy(Myself),12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
 
@@ -5929,7 +5929,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12121)  // Barkskin
+		DisplayString(LastSeenBy(Myself),12121)  // Barkskin
 		Spell(LastSeenBy(Myself),CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
 END
 
@@ -6017,7 +6017,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12069)  // Horror
+		DisplayString(LastSeenBy(Myself),12069)  // Horror
 		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
 
@@ -6061,7 +6061,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12069)  // Horror
+		DisplayString(LastSeenBy(Myself),12069)  // Horror
 		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
 
@@ -6105,7 +6105,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12069)  // Horror
+		DisplayString(LastSeenBy(Myself),12069)  // Horror
 		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
 
@@ -6141,7 +6141,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38594)  // Glitterdust
+		DisplayString(LastSeenBy(Myself),38594)  // Glitterdust
 		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
@@ -6177,7 +6177,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38594)  // Glitterdust
+		DisplayString(LastSeenBy(Myself),38594)  // Glitterdust
 		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
@@ -6213,7 +6213,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38594)  // Glitterdust
+		DisplayString(LastSeenBy(Myself),38594)  // Glitterdust
 		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
 
@@ -6249,7 +6249,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
@@ -6285,7 +6285,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
@@ -6321,7 +6321,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
@@ -6357,7 +6357,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
@@ -6393,7 +6393,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
@@ -6429,7 +6429,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12049)  // Hold Person
+		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
 
@@ -6576,7 +6576,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38586)  // Spook
+		DisplayString(LastSeenBy(Myself),38586)  // Spook
 		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
 
@@ -6619,7 +6619,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38586)  // Spook
+		DisplayString(LastSeenBy(Myself),38586)  // Spook
 		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
 
@@ -6662,7 +6662,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38586)  // Spook
+		DisplayString(LastSeenBy(Myself),38586)  // Spook
 		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
 
@@ -6703,7 +6703,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12015)  // Blindness
+		DisplayString(LastSeenBy(Myself),12015)  // Blindness
 		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
@@ -6744,7 +6744,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12015)  // Blindness
+		DisplayString(LastSeenBy(Myself),12015)  // Blindness
 		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
@@ -6785,7 +6785,7 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12015)  // Blindness
+		DisplayString(LastSeenBy(Myself),12015)  // Blindness
 		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
 
@@ -6815,7 +6815,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12097)  // Command
+		DisplayString(LastSeenBy(Myself),12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
 END
 
@@ -6845,7 +6845,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12097)  // Command
+		DisplayString(LastSeenBy(Myself),12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
 END
 
@@ -6875,7 +6875,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12097)  // Command
+		DisplayString(LastSeenBy(Myself),12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
 END
 
@@ -6914,7 +6914,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12099)  // Charm Person or Mammal
+		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
@@ -6953,7 +6953,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12099)  // Charm Person or Mammal
+		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
@@ -6992,7 +6992,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12099)  // Charm Person or Mammal
+		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
@@ -7031,7 +7031,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12099)  // Charm Person or Mammal
+		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
 
@@ -7065,7 +7065,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12052)  // Magic Missile
+		DisplayString(NearestEnemyOf(Myself),12052)  // Magic Missile
 		Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
 
@@ -7099,7 +7099,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12052)  // Magic Missile
+		DisplayString(SecondNearestEnemyOf(Myself),12052)  // Magic Missile
 		Spell(SecondNearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
 
@@ -7133,7 +7133,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12052)  // Magic Missile
+		DisplayString(ThirdNearestEnemyOf(Myself),12052)  // Magic Missile
 		Spell(ThirdNearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
 
@@ -7227,7 +7227,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12068)  // Larloch's Minor Drain
+		DisplayString(LastSeenBy(Myself),12068)  // Larloch's Minor Drain
 		Spell(LastSeenBy(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
 
@@ -7263,7 +7263,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12068)  // Larloch's Minor Drain
+		DisplayString(LastSeenBy(Myself),12068)  // Larloch's Minor Drain
 		Spell(LastSeenBy(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
 
@@ -7295,7 +7295,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,20678)  // Charm Animal
+		DisplayString(LastSeenBy(Myself),20678)  // Charm Animal
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 
@@ -7327,7 +7327,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,20678)  // Charm Animal
+		DisplayString(LastSeenBy(Myself),20678)  // Charm Animal
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 
@@ -7359,7 +7359,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,20678)  // Charm Animal
+		DisplayString(LastSeenBy(Myself),20678)  // Charm Animal
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
 

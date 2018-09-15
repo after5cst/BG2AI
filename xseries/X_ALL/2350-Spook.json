@@ -38,7 +38,7 @@
             "100": [
                 "SetGlobalTimer('BD_Spook','LOCALS',TWO_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }

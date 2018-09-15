@@ -33,7 +33,7 @@
             "100": [
                 "SetGlobalTimer('BD_Slow','LOCALS',THREE_ROUNDS)",
                 {
-                    "X_Spell_2": null
+                    "X_Spell": null
                 }
             ]
         }
