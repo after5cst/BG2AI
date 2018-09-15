@@ -5,7 +5,6 @@
         },
         "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "StateCheck(Myself,STATE_POISONED)",
-        "!CheckSpellState(Myself,DEAD_MAGIC_AREA)",
         {
             "CastingConditionsOK": null
         }

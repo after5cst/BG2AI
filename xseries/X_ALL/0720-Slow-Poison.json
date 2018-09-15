@@ -18,7 +18,6 @@
         {
             "AllyTargetNotDangerous": null
         },
-        "!CheckSpellState(Myself,DEAD_MAGIC_AREA)",
         {
             "CastingConditionsOK": null
         }
