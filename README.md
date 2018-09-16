@@ -30,11 +30,13 @@ it will provide a history of the changes.
 
 ### Hotkeys
 
-* F - Enable follow mode on a character.  Pressing F will cycle through
-      visible targets looking for the next leader (person to follow).
+* F - Selects a leader for the selected character.  Pressing F will cycle 
+      through visible targets looking for the next leader (person to follow).
       Selecting yourself as leader effectively disables following.
+
+* D - Disable or Enable following for the selected character.
       
-* D - Enable healing mode.  While in healing mode, the character will
+* V - Enable healing mode.  While in healing mode, the character will
       bring back party members from the dead, look for the player with
       the lowest HP percentage, and see if an appropriate spell can be
       found for their wounds.  If so, they will cast the healing spell

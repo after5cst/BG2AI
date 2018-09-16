@@ -16,7 +16,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -37,7 +37,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -58,7 +58,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -79,7 +79,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -100,7 +100,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -121,7 +121,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -143,7 +143,7 @@ IF
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -160,7 +160,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -177,7 +177,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -194,7 +194,7 @@ IF
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
 IF
@@ -209,6 +209,6 @@ IF
 	Global("BDAI_DISABLE_ATTACK","LOCALS",0)
 THEN
 	RESPONSE #100
-		AttackReevaluate(LastSeenBy(Myself),30)
+		AttackOneRound(LastSeenBy(Myself))
 END
 
