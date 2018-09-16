@@ -98,6 +98,7 @@ IF
 THEN
 	RESPONSE #100
 		DisplayString(Myself,12138)  // Healing
+		SetGlobal("X_HEAL","LOCALS",0)
 		ChangeAIScript("X_HEAL",RACE)
 END
 

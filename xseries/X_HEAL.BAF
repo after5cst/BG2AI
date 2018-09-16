@@ -330,14 +330,6 @@ END
 
 IF
 	ActionListEmpty()
-	Global("X_HEAL","LOCALS",1)
-THEN
-	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
-END
-
-IF
-	ActionListEmpty()
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,10)
 	See(Player1)
@@ -653,6 +645,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),8786)  // Heal
 		Spell(LastSeenBy(Myself),CLERIC_HEAL)  // SPPR607.SPL (Heal)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -672,6 +665,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),8786)  // Heal
 		Spell(LastSeenBy(Myself),CLERIC_HEAL)  // SPPR607.SPL (Heal)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -691,6 +685,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -710,6 +705,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -729,6 +725,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -748,6 +745,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -767,6 +765,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -786,6 +785,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -805,6 +805,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
@@ -824,6 +825,7 @@ THEN
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
+		SetGlobal("X_HEAL","LOCALS",0)
 END
 
 IF
