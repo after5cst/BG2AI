@@ -1,7 +1,7 @@
 {
     "if": [
         "ActionListEmpty()",
-        "CombatCounter(0)"
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')"
     ],
     "then": [
         {

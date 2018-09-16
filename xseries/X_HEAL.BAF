@@ -330,7 +330,14 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
+	Global("X_HEAL","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("X_HEAL","LOCALS",0)
+END
+
+IF
+	ActionListEmpty()
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,10)
 	See(Player1)
@@ -341,7 +348,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player2,10)
 	See(Player2)
@@ -352,7 +358,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player3,10)
 	See(Player3)
@@ -363,7 +368,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player4,10)
 	See(Player4)
@@ -374,7 +378,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player5,10)
 	See(Player5)
@@ -385,7 +388,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player6,10)
 	See(Player6)
@@ -396,7 +398,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,30)
 	See(Player1)
@@ -407,7 +408,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player2,30)
 	See(Player2)
@@ -418,7 +418,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player3,30)
 	See(Player3)
@@ -429,7 +428,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player4,30)
 	See(Player4)
@@ -440,7 +438,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player5,30)
 	See(Player5)
@@ -451,7 +448,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player6,30)
 	See(Player6)
@@ -462,7 +458,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,50)
 	See(Player1)
@@ -473,7 +468,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player2,50)
 	See(Player2)
@@ -484,7 +478,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player3,50)
 	See(Player3)
@@ -495,7 +488,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player4,50)
 	See(Player4)
@@ -506,7 +498,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player5,50)
 	See(Player5)
@@ -517,7 +508,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player6,50)
 	See(Player6)
@@ -528,7 +518,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,70)
 	See(Player1)
@@ -539,7 +528,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player2,70)
 	See(Player2)
@@ -550,7 +538,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player3,70)
 	See(Player3)
@@ -561,7 +548,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player4,70)
 	See(Player4)
@@ -572,7 +558,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player5,70)
 	See(Player5)
@@ -583,7 +568,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player6,70)
 	See(Player6)
@@ -594,7 +578,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player1,90)
 	See(Player1)
@@ -605,7 +588,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player2,90)
 	See(Player2)
@@ -616,7 +598,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player3,90)
 	See(Player3)
@@ -627,7 +608,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player4,90)
 	See(Player4)
@@ -638,7 +618,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player5,90)
 	See(Player5)
@@ -649,7 +628,6 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
 	!Global("X_HEAL","LOCALS",1)
 	HPPercentLT(Player6,90)
 	See(Player6)
@@ -664,8 +642,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -674,7 +650,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),153,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),8786)  // Heal
 		Spell(LastSeenBy(Myself),CLERIC_HEAL)  // SPPR607.SPL (Heal)
@@ -686,8 +661,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),20)
 	OR(2)
@@ -696,7 +669,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),100,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),8786)  // Heal
 		Spell(LastSeenBy(Myself),CLERIC_HEAL)  // SPPR607.SPL (Heal)
@@ -708,8 +680,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -718,7 +688,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),90,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
@@ -730,8 +699,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -740,7 +707,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),38,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
@@ -752,8 +718,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -762,7 +726,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),57,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
@@ -774,8 +737,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -784,7 +745,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),24,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
@@ -796,8 +756,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -806,7 +764,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),47,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
@@ -818,8 +775,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -828,7 +783,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),20,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
@@ -840,8 +794,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -850,7 +802,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),27,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
@@ -862,8 +813,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	CombatCounter(0)
-	Global("X_HEAL","LOCALS",1)
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -872,7 +821,6 @@ IF
 	!CheckStatLT(LastSeenBy(Myself),11,MAXHITPOINTS)
 THEN
 	RESPONSE #100
-		SetGlobal("X_HEAL","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
 		DisplayString(LastSeenBy(Myself),6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
@@ -880,7 +828,7 @@ END
 
 IF
 	ActionListEmpty()
-	CombatCounter(0)
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
 THEN
 	RESPONSE #100
 		SetGlobal("X_HEAL","LOCALS",0)

@@ -3,8 +3,6 @@
         {
             "SpellReadyNoDisableCheck": null
         },
-        "CombatCounter(0)",
-        "Global('X_HEAL','LOCALS',1)",
         {
             "SeenTargetHurtEnough": null
         }
@@ -12,7 +10,6 @@
     "then": [
         {
             "100": [
-                "SetGlobal('X_HEAL','LOCALS',0)",
                 {
                     "X_Spell": null
                 }

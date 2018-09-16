@@ -1,7 +1,6 @@
 {
     "if": [
         "ActionListEmpty()",
-        "CombatCounter(0)",
         "!Global('X_HEAL','LOCALS',1)",
         {
             "SeeHurtPlayer": null

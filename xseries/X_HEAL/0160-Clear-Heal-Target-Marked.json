@@ -1,0 +1,17 @@
+{
+    "if": [
+        "ActionListEmpty()",
+        "Global('X_HEAL','LOCALS',1)"
+    ],
+    "then": [
+        {
+            "100": [
+                "SetGlobal('X_HEAL','LOCALS',0)"
+            ]
+        }
+    ],
+    "fields": [
+        {}
+    ],
+    "name": "Clear-Heal-Target-Marked"
+}
