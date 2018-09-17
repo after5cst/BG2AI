@@ -24,10 +24,10 @@
     "name": "True-Sight",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
             "SPELL_TYPE": "SPECIAL",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF.0.0.0.0.ILLUSIONARY]",
             "TARGET": "Myself",
             "STRING_ID": "25633",

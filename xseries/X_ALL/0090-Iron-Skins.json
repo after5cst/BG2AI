@@ -20,10 +20,10 @@
     "name": "Iron-Skins",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_IRONSKIN",
             "DESC": "SPPR506.SPL (Iron Skins)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "44941",
             "STRING_DESC": "Iron Skins"

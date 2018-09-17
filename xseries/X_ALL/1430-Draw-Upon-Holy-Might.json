@@ -29,10 +29,10 @@
     "name": "Draw-Upon-Holy-Might",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_DRAW_UPON_HOLY_MIGHT",
             "DESC": "SPPR214.SPL (Draw Upon Holy Might)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF]",
             "TARGET": "Myself",
             "STRING_ID": "12108",

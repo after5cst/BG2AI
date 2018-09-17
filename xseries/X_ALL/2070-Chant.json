@@ -26,10 +26,10 @@
     "name": "Chant",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_CHANT",
             "DESC": "SPPR203.SPL (Chant)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12090",
             "STRING_DESC": "Chant"

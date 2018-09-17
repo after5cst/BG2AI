@@ -39,10 +39,10 @@
     "name": "Vampiric-Touch",
     "fields": [
         {
+            "FAIL_TYPE": "0",
             "SPELL": "SPIN106",
             "DESC": "Vampiric Touch",
             "SPELL_TYPE": "SPECIAL",
-            "FAIL_TYPE": "0",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)"
         }

@@ -1,4 +1,10 @@
 [
+	[
+		"ModalState(NONE)",
+		"ModalState(DETECTTRAPS)"
+	],
+	"!StateCheck(Myself,STATE_INVISIBLE)",
+	"!CheckStat(Myself,1,SANCTUARY)",
     "CheckStatLT(Myself,50,<FAIL_TYPE>)",
     "!StateCheck(Myself,STATE_SILENCED)",
     "!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)",

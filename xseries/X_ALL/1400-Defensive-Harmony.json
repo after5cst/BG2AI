@@ -28,10 +28,10 @@
     "name": "Defensive-Harmony",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_DEFENSIVE_HARMONY",
             "DESC": "SPPR406.SPL (Defensive Harmony)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "22829",
             "STRING_DESC": "Defensive Harmony"

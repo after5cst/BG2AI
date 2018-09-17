@@ -34,10 +34,10 @@
     "name": "Negative-Plane-Protection",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "55842",
             "STRING_DESC": "Negative Plane Protection"

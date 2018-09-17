@@ -3,8 +3,9 @@
         {
             "SpellReady": null
         },
-        "!StateCheck(Myself,STATE_INVISIBLE)",
-        "!CheckStat(Myself,1,SANCTUARY)",
+        {
+            "CastingConditionsOK": null
+        },
         {
             "X_HPPercentLT": null
         },
@@ -14,9 +15,8 @@
         "!CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
         "!CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
         "!CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
-        {
-            "CastingConditionsOK": null
-        }
+        "!StateCheck(Myself,STATE_INVISIBLE)",
+        "!CheckStat(Myself,1,SANCTUARY)"
     ],
     "then": [
         {
@@ -30,10 +30,10 @@
     "name": "Sanctuary",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SANCTUARY",
             "DESC": "SPPR109.SPL (Sanctuary)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "HPP": "51",
             "STRING_ID": "12084",

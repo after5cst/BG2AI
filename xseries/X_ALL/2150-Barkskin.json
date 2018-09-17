@@ -27,10 +27,10 @@
     "name": "Barkskin",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_BARKSKIN",
             "DESC": "SPPR202.SPL (Barkskin)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "WorstAC([PC])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12121",

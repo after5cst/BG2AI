@@ -39,10 +39,10 @@
     "name": "Larlochs-Minor-Drain",
     "fields": [
         {
+            "FAIL_TYPE": "0",
             "SPELL": "SPIN104",
             "DESC": "Larloch's Minor Drain",
             "SPELL_TYPE": "SPECIAL",
-            "FAIL_TYPE": "0",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)"
         }

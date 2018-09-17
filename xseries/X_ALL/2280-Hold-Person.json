@@ -39,60 +39,60 @@
     "name": "Hold-Person",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "FourthNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "FifthNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "SixthNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",

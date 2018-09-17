@@ -20,19 +20,19 @@
     "name": "Greater-Restoration",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_LESSER_RESTORATION",
             "DESC": "SPPR417.SPL (Lesser Restoration)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "55844",
             "STRING_DESC": "Lesser Restoration"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESTORATION",
             "DESC": "SPPR713.SPL (Greater Restoration)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "35603",
             "STRING_DESC": "Greater Restoration"

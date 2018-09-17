@@ -39,20 +39,20 @@
     "name": "Larlochs-Minor-Drain",
     "fields": [
         {
+            "FAIL_TYPE": "0",
             "SPELL": "WIZARD_LARLOCH_MINOR_DRAIN",
             "DESC": "SPWI119.SPL (Larloch's Minor Drain)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "0",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12068",
             "STRING_DESC": "Larloch's Minor Drain"
         },
         {
+            "FAIL_TYPE": "0",
             "SPELL": "WIZARD_LARLOCH_MINOR_DRAIN",
             "DESC": "SPWI119.SPL (Larloch's Minor Drain)",
             "SPELL_TYPE": "OFFENSIVE",
-            "FAIL_TYPE": "0",
             "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12068",

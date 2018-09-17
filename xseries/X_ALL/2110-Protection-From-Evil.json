@@ -32,19 +32,19 @@
     "name": "Protection-From-Evil",
     "fields": [
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "PALADIN_PROTECTION_FROM_EVIL",
             "DESC": "SPCL213.SPL (Protection From Evil)",
             "SPELL_TYPE": "SPECIAL",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12023",
             "STRING_DESC": "Protection From Evil"
         },
         {
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_PROTECT_FROM_EVIL",
             "DESC": "SPPR107.SPL (Protection From Evil)",
             "SPELL_TYPE": "DEFENSIVE",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "TARGET": "Myself",
             "STRING_ID": "12023",
             "STRING_DESC": "Protection From Evil"
