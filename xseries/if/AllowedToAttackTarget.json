@@ -1,5 +1,10 @@
 [
-    "InWeaponRange(<TARGET>)",
+    [
+        "ModalState(NONE)",
+        "ModalState(DETECTTRAPS)"
+    ],
+    "!StateCheck(Myself,STATE_INVISIBLE)",
+    "!CheckStat(Myself,1,SANCTUARY)",
     "!InParty(LastSeenBy(Myself))",
     "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
     "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",

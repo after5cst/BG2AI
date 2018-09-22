@@ -7,16 +7,9 @@
         {
             "EnemyInAttackRange": null
         },
-        "!InParty(LastSeenBy(Myself))",
-        [
-            "ModalState(NONE)",
-            "ModalState(DETECTTRAPS)"
-        ],
-        "!StateCheck(Myself,STATE_INVISIBLE)",
-        "!CheckStat(Myself,1,SANCTUARY)",
-        "WeaponEffectiveVs(LastSeenBy(Myself),MAINHAND)",
-        "WeaponCanDamage(LastSeenBy(Myself),MAINHAND)",
-        "Global('BDAI_DISABLE_ATTACK','LOCALS',0)"
+        {
+            "AllowedToAttackTarget": null
+        }
     ],
     "then": [
         {
