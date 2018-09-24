@@ -9,7 +9,9 @@
         "!InParty(LastSeenBy(Myself))",
         "!Kit(LastSeenBy(Myself),INQUISITOR)",
         "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
-        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        {
+            "SpellCanAffectTarget": null
+        },
         "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
         "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
@@ -43,8 +45,8 @@
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
-            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
@@ -53,8 +55,8 @@
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
-            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
@@ -63,8 +65,8 @@
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
-            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
@@ -73,8 +75,8 @@
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([EVILCUTOFF.HUMANOID])",
-            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
@@ -83,8 +85,8 @@
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([EVILCUTOFF.HUMANOID])",
-            "TARGET": "LastSeenBy(Myself)",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         },
@@ -93,8 +95,8 @@
             "SPELL": "CLERIC_HOLD_PERSON",
             "DESC": "SPPR208.SPL (Hold Person)",
             "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SixthNearest([EVILCUTOFF.HUMANOID])",
             "TARGET": "LastSeenBy(Myself)",
+            "LOOK_FOR": "SixthNearest([EVILCUTOFF.HUMANOID])",
             "STRING_ID": "12049",
             "STRING_DESC": "Hold Person"
         }
