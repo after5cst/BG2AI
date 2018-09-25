@@ -398,7 +398,6 @@ END
 
 IF
 	ActionListEmpty()
-	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BD_Cloud","LOCALS",1)
 	GlobalTimerExpired("BD_CLTM","LOCALS")
 THEN
