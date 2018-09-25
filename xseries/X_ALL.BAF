@@ -209,8 +209,6 @@ IF
 	!CheckStatGT(FourthNearestEnemyOf(Myself),0,TRUE_SIGHT)
 	!CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)
 	!CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
