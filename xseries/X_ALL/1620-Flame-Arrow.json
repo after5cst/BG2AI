@@ -12,11 +12,11 @@
         "!Race(LastSeenBy(Myself),DEMILICH)",
         "!Race(LastSeenBy(Myself),RAKSHASA)",
         {
+            "SpellCanAffectTarget": null
+        },
+        {
             "IsValidFireSpellTarget": null
         },
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
         {
             "ArcaneCastOK": null
@@ -36,10 +36,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12034",
             "STRING_DESC": "Flame Arrow"
@@ -47,10 +47,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12034",
             "STRING_DESC": "Flame Arrow"
@@ -58,10 +58,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12034",
             "STRING_DESC": "Flame Arrow"

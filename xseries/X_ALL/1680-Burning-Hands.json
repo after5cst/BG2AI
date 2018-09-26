@@ -10,6 +10,9 @@
         "!InParty(LastSeenBy(Myself))",
         "Range(LastSeenBy(Myself),8)",
         {
+            "SpellCanAffectTarget": null
+        },
+        {
             "IsValidFireSpellTarget": null
         },
         "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
@@ -31,10 +34,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -42,10 +45,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -53,10 +56,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -64,10 +67,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "FourthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -75,10 +78,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "FifthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"
@@ -86,10 +89,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_BURNING_HANDS",
             "DESC": "SPWI103.SPL (Burning Hands)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "55",
             "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "12074",
             "STRING_DESC": "Burning Hands"

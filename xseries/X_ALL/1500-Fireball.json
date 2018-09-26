@@ -9,6 +9,9 @@
         "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
         "!InParty(LastSeenBy(Myself))",
         {
+            "SpellCanAffectTarget": null
+        },
+        {
             "IsValidFireSpellTarget": null
         },
         "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
@@ -33,10 +36,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "75",
             "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
@@ -44,10 +47,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "75",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
@@ -55,10 +58,10 @@
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "SPELL_TYPE": "OFFENSIVE",
+            "MAX_FIRE_RESIST": "75",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
