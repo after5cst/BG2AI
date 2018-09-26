@@ -2342,6 +2342,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
+	!Kit(Myself,UNDEADHUNTER)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
@@ -2358,7 +2359,6 @@ IF
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	!CheckSpellState(Myself,LATHANDER_BOON)
 	CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)
-	!Kit(Myself,UNDEADHUNTER)
 	!HasItemEquiped("AMUL21",Myself)  // Amulet of Power
 	!HasItemEquipedReal("BLUN25",Myself)  // Mace of Disruption +2
 	!HasItemEquipedReal("HAMM10",Myself)  // Runehammer +4
@@ -2379,6 +2379,7 @@ IF
 	!StateCheck(Myself,STATE_SILENCED)
 	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
+	!Kit(Myself,UNDEADHUNTER)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)

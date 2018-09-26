@@ -35,33 +35,33 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "75",
             "LOOK_FOR": "FarthestEnemyOf(Myself)",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "75",
             "LOOK_FOR": "SecondFarthestEnemyOf(Myself)",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "DESC": "SPWI304.SPL (Fireball)",
             "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "LastSeenBy(Myself)",
+            "MAX_FIRE_RESIST": "75",
             "LOOK_FOR": "ThirdFarthestEnemyOf(Myself)",
             "STRING_ID": "6618",
             "STRING_DESC": "Fireball"

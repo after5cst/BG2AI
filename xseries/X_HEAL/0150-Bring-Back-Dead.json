@@ -1,7 +1,7 @@
 {
     "if": [
         {
-            "SpellReadyNoDisableCheck": null
+            "SpellReady": null
         },
         {
             "CanBringBackTheDead": null
@@ -23,121 +23,136 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RESURRECTION",
+            "DESC": "SPPR712.SPL (Resurrection)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player2",
-            "SPELL": "CLERIC_RESURRECTION",
-            "DESC": "SPPR712.SPL (Resurrection)",
             "STRING_ID": "25765",
             "STRING_DESC": "Resurrection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RESURRECTION",
+            "DESC": "SPPR712.SPL (Resurrection)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player3",
-            "SPELL": "CLERIC_RESURRECTION",
-            "DESC": "SPPR712.SPL (Resurrection)",
             "STRING_ID": "25765",
             "STRING_DESC": "Resurrection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RESURRECTION",
+            "DESC": "SPPR712.SPL (Resurrection)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player4",
-            "SPELL": "CLERIC_RESURRECTION",
-            "DESC": "SPPR712.SPL (Resurrection)",
             "STRING_ID": "25765",
             "STRING_DESC": "Resurrection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RESURRECTION",
+            "DESC": "SPPR712.SPL (Resurrection)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player5",
-            "SPELL": "CLERIC_RESURRECTION",
-            "DESC": "SPPR712.SPL (Resurrection)",
             "STRING_ID": "25765",
             "STRING_DESC": "Resurrection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RESURRECTION",
+            "DESC": "SPPR712.SPL (Resurrection)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player6",
-            "SPELL": "CLERIC_RESURRECTION",
-            "DESC": "SPPR712.SPL (Resurrection)",
             "STRING_ID": "25765",
             "STRING_DESC": "Resurrection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RAISE_DEAD",
+            "DESC": "SPPR504.SPL (Raise Dead)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player2",
-            "SPELL": "CLERIC_RAISE_DEAD",
-            "DESC": "SPPR504.SPL (Raise Dead)",
             "STRING_ID": "12117",
             "STRING_DESC": "Raise Dead"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RAISE_DEAD",
+            "DESC": "SPPR504.SPL (Raise Dead)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player3",
-            "SPELL": "CLERIC_RAISE_DEAD",
-            "DESC": "SPPR504.SPL (Raise Dead)",
             "STRING_ID": "12117",
             "STRING_DESC": "Raise Dead"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RAISE_DEAD",
+            "DESC": "SPPR504.SPL (Raise Dead)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player4",
-            "SPELL": "CLERIC_RAISE_DEAD",
-            "DESC": "SPPR504.SPL (Raise Dead)",
             "STRING_ID": "12117",
             "STRING_DESC": "Raise Dead"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RAISE_DEAD",
+            "DESC": "SPPR504.SPL (Raise Dead)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player5",
-            "SPELL": "CLERIC_RAISE_DEAD",
-            "DESC": "SPPR504.SPL (Raise Dead)",
             "STRING_ID": "12117",
             "STRING_DESC": "Raise Dead"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RAISE_DEAD",
+            "DESC": "SPPR504.SPL (Raise Dead)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player6",
-            "SPELL": "CLERIC_RAISE_DEAD",
-            "DESC": "SPPR504.SPL (Raise Dead)",
             "STRING_ID": "12117",
             "STRING_DESC": "Raise Dead"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RECALL_SPIRIT",
+            "DESC": "SPPR550.SPL (Recall Spirit)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player2",
-            "SPELL": "CLERIC_RECALL_SPIRIT",
-            "DESC": "SPPR550.SPL (Recall Spirit)",
             "STRING_ID": "103073",
             "STRING_DESC": "Recall Spirit"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RECALL_SPIRIT",
+            "DESC": "SPPR550.SPL (Recall Spirit)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player3",
-            "SPELL": "CLERIC_RECALL_SPIRIT",
-            "DESC": "SPPR550.SPL (Recall Spirit)",
             "STRING_ID": "103073",
             "STRING_DESC": "Recall Spirit"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RECALL_SPIRIT",
+            "DESC": "SPPR550.SPL (Recall Spirit)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player4",
-            "SPELL": "CLERIC_RECALL_SPIRIT",
-            "DESC": "SPPR550.SPL (Recall Spirit)",
             "STRING_ID": "103073",
             "STRING_DESC": "Recall Spirit"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RECALL_SPIRIT",
+            "DESC": "SPPR550.SPL (Recall Spirit)",
+            "SPELL_TYPE": "DEFENSIVE",
             "TARGET": "Player5",
-            "SPELL": "CLERIC_RECALL_SPIRIT",
-            "DESC": "SPPR550.SPL (Recall Spirit)",
             "STRING_ID": "103073",
             "STRING_DESC": "Recall Spirit"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "Player6",
             "SPELL": "CLERIC_RECALL_SPIRIT",
             "DESC": "SPPR550.SPL (Recall Spirit)",
+            "SPELL_TYPE": "DEFENSIVE",
+            "TARGET": "Player6",
             "STRING_ID": "103073",
             "STRING_DESC": "Recall Spirit"
         }
