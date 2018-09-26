@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_NO_ARCANE','LOCALS',1)",
         "!AreaCheck('AR0020')",
@@ -10,7 +10,7 @@
         "!AreaCheck('AR0900')",
         "!AreaCheck('AR1000')"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BDAI_NO_ARCANE','LOCALS',0)"

@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HaveSpell(BLADE_OFFENSIVE_SPIN)  // SPCL521.SPL (Offensive Spin)",
         "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
@@ -15,7 +15,7 @@
             "NumCreatureGT([EVILCUTOFF],3)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

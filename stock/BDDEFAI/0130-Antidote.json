@@ -1,12 +1,12 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
         "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
         "StateCheck(Myself,STATE_POISONED)",
         "HasItem('POTN20',Myself)  // Antidote"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

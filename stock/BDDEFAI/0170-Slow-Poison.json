@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
@@ -9,7 +9,7 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

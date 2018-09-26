@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "ActuallyInCombat()",
         "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
@@ -7,7 +7,7 @@
         "HPPercentLT(Myself,85)",
         "HasItem('POTN08',Myself)  // Potion of Healing"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

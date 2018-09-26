@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellRESReady": null
         },
@@ -31,7 +31,7 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",

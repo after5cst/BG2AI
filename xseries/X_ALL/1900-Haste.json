@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI305.SPL (Haste)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[GOODCUTOFF.0.0.FIGHTER_ALL]",
+            "SPELL": "WIZARD_HASTE",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Haste",
+            "STRING_ID": "12080",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI305.SPL (Haste)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[GOODCUTOFF.0.0.RANGER_ALL]",
+            "SPELL": "WIZARD_HASTE",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Haste",
+            "STRING_ID": "12080",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI305.SPL (Haste)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[GOODCUTOFF.0.0.PALADIN_ALL]",
+            "SPELL": "WIZARD_HASTE",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Haste",
+            "STRING_ID": "12080",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -18,7 +50,8 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Haste",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Haste','LOCALS',THREE_ROUNDS)",
@@ -26,39 +59,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Haste",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_HASTE",
-            "DESC": "SPWI305.SPL (Haste)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "[GOODCUTOFF.0.0.FIGHTER_ALL]",
-            "STRING_ID": "12080",
-            "STRING_DESC": "Haste"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_HASTE",
-            "DESC": "SPWI305.SPL (Haste)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "[GOODCUTOFF.0.0.RANGER_ALL]",
-            "STRING_ID": "12080",
-            "STRING_DESC": "Haste"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_HASTE",
-            "DESC": "SPWI305.SPL (Haste)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "[GOODCUTOFF.0.0.PALADIN_ALL]",
-            "STRING_ID": "12080",
-            "STRING_DESC": "Haste"
         }
     ]
 }

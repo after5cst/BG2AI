@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Delay(3)",
         "Global('BDAI_SKILL_MODE','LOCALS',1)",
@@ -11,7 +11,7 @@
             "Class(Myself,SHAMAN)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayStringHead(Myself,95140)  // Searching for traps",

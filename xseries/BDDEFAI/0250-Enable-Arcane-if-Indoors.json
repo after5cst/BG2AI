@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!AreaType(OUTDOOR)",
         "!Global('BDAI_NO_ARCANE','LOCALS',0)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BDAI_NO_ARCANE','LOCALS',0)"

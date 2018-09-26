@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI205.SPL (Horror)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_HORROR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI205.SPL (Horror)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_HORROR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI205.SPL (Horror)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_HORROR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -31,7 +63,8 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Horror",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",
@@ -39,39 +72,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Horror",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_HORROR",
-            "DESC": "SPWI205.SPL (Horror)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "STRING_ID": "12069",
-            "STRING_DESC": "Horror"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_HORROR",
-            "DESC": "SPWI205.SPL (Horror)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "STRING_ID": "12069",
-            "STRING_DESC": "Horror"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_HORROR",
-            "DESC": "SPWI205.SPL (Horror)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "STRING_ID": "12069",
-            "STRING_DESC": "Horror"
         }
     ]
 }

@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "PartyRested()"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayString(Myself,2305)  // Hello.",

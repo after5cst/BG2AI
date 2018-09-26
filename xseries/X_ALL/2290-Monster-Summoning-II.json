@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
@@ -11,7 +11,7 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

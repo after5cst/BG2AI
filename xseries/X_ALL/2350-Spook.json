@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI125.SPL (Spook)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_SPOOK",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Spook",
+            "STRING_ID": "38586",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI125.SPL (Spook)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_SPOOK",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Spook",
+            "STRING_ID": "38586",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI125.SPL (Spook)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_SPOOK",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Spook",
+            "STRING_ID": "38586",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -30,7 +62,8 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Spook",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Spook','LOCALS',TWO_ROUNDS)",
@@ -38,39 +71,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Spook",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_SPOOK",
-            "DESC": "SPWI125.SPL (Spook)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "STRING_ID": "38586",
-            "STRING_DESC": "Spook"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_SPOOK",
-            "DESC": "SPWI125.SPL (Spook)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "STRING_ID": "38586",
-            "STRING_DESC": "Spook"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_SPOOK",
-            "DESC": "SPWI125.SPL (Spook)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "STRING_ID": "38586",
-            "STRING_DESC": "Spook"
         }
     ]
 }

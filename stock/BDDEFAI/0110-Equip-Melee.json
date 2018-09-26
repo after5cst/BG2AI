@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "IsWeaponRanged(Myself)",
         [
@@ -7,7 +7,7 @@
             "Range(NearestEnemyOf(Myself),8)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "EquipMostDamagingMelee()"

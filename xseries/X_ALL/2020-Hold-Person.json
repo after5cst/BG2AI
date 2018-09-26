@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Hold Person",
+            "STRING_ID": "12049",
+            "TARGET": "[EVILCUTOFF.HUMANOID]"
+        },
+        {
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Hold Person",
+            "STRING_ID": "12049",
+            "TARGET": "SecondNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Hold Person",
+            "STRING_ID": "12049",
+            "TARGET": "ThirdNearest([EVILCUTOFF.HUMANOID])"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -26,46 +58,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Hold-Person",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Hold-Person",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_HOLD_PERSON",
-            "DESC": "SPWI306.SPL (Hold Person)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
-            "TARGET": "[EVILCUTOFF.HUMANOID]",
-            "STRING_ID": "12049",
-            "STRING_DESC": "Hold Person"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_HOLD_PERSON",
-            "DESC": "SPWI306.SPL (Hold Person)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
-            "TARGET": "SecondNearest([EVILCUTOFF.HUMANOID])",
-            "STRING_ID": "12049",
-            "STRING_DESC": "Hold Person"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_HOLD_PERSON",
-            "DESC": "SPWI306.SPL (Hold Person)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
-            "TARGET": "ThirdNearest([EVILCUTOFF.HUMANOID])",
-            "STRING_ID": "12049",
-            "STRING_DESC": "Hold Person"
         }
     ]
 }

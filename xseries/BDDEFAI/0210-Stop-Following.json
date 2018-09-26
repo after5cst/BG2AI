@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         {
             "TimeToStopFollowingLeader": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayString(Myself,100280)  // Done.",

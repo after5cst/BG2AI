@@ -1,12 +1,12 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
         "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
         "HPPercentLT(Myself,81)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

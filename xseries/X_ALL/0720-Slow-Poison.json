@@ -1,5 +1,55 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "[PC]",
+            "SPELL": "SPIN102",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "SecondNearest([PC])",
+            "SPELL": "SPIN102",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "SPELL": "SPIN102",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "FourthNearest([PC])",
+            "SPELL": "SPIN102",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "FifthNearest([PC])",
+            "SPELL": "SPIN102",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "Slow Poison",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "SixthNearest([PC])",
+            "SPELL": "SPIN102",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellRESReady": null
         },
@@ -21,64 +71,14 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Slow-Poison",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
                 "DisplayString(Myself,12112)  // Slow Poison",
                 "SpellRES('SPIN102',LastSeenBy(Myself))  // Slow Poison"
             ]
-        }
-    ],
-    "name": "Slow-Poison",
-    "fields": [
-        {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "[PC]"
-        },
-        {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "SecondNearest([PC])"
-        },
-        {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "ThirdNearest([PC])"
-        },
-        {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "FourthNearest([PC])"
-        },
-        {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "FifthNearest([PC])"
-        },
-        {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN102",
-            "DESC": "Slow Poison",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "SixthNearest([PC])"
         }
     ]
 }

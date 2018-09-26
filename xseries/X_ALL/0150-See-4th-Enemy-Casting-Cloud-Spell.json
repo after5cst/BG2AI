@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HaveSpell(CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)",
         "Global('BDAI_DISABLE_DEFENSIVE','LOCALS',0)",
@@ -16,7 +16,7 @@
             "SpellCast(FourthNearest([EVILCUTOFF.0.0.SHAMAN]),CLERIC_WRITHING_FOG)  // SPPR250.SPL (Writhing Fog)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BD_Cloud','LOCALS',1)",

@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_SKILL_MODE','LOCALS',2)",
         "!StateCheck(Myself,STATE_INVISIBLE)",
@@ -13,7 +13,7 @@
             "Class(Myself,MONK)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayStringHead(Myself,95157)  // Attempting to hide in shadows",

@@ -1,5 +1,49 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_METEOR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "[EVILCUTOFF.0.TROLL]"
+        },
+        {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_METEOR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "SecondNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_METEOR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "ThirdNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_METEOR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "FourthNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_METEOR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "FifthNearest([EVILCUTOFF.0.TROLL])"
+        },
+        {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MELF_METEOR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "SixthNearest([EVILCUTOFF.0.TROLL])"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -12,58 +56,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Melfs-Minute-Meteors",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
                 "DisplayString(Myself,38588)  // Melf's Minute Meteors",
                 "Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)"
             ]
-        }
-    ],
-    "name": "Melfs-Minute-Meteors",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "[EVILCUTOFF.0.TROLL]"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "SecondNearest([EVILCUTOFF.0.TROLL])"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "ThirdNearest([EVILCUTOFF.0.TROLL])"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "FourthNearest([EVILCUTOFF.0.TROLL])"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "FifthNearest([EVILCUTOFF.0.TROLL])"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "SixthNearest([EVILCUTOFF.0.TROLL])"
         }
     ]
 }

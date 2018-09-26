@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!GlobalTimerNotExpired('BD_Cast','LOCALS')"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('X_HEAL','LOCALS',0)",

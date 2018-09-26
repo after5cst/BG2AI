@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!InParty(Myself)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "NoAction()"

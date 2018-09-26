@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_WARDING_WHIP",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Khelben's Warding Whip",
+            "STRING_ID": "25947",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_WARDING_WHIP",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Khelben's Warding Whip",
+            "STRING_ID": "25947",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_WARDING_WHIP",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Khelben's Warding Whip",
+            "STRING_ID": "25947",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -19,46 +51,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Khelbens-Warding-Whip",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Khelbens-Warding-Whip",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_WARDING_WHIP",
-            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25947",
-            "STRING_DESC": "Khelben's Warding Whip"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_WARDING_WHIP",
-            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25947",
-            "STRING_DESC": "Khelben's Warding Whip"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_WARDING_WHIP",
-            "DESC": "SPWI705.SPL (Khelben's Warding Whip)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25947",
-            "STRING_DESC": "Khelben's Warding Whip"
         }
     ]
 }

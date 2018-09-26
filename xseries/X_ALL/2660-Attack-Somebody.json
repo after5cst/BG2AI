@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         {
             "SeeTarget": null
@@ -11,7 +11,7 @@
             "AllowedToAttackTarget": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "AttackOneRound(LastSeenBy(Myself))"

@@ -1,5 +1,67 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "Player1",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Spiritual Clarity",
+            "STRING_ID": "103069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "Player2",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Spiritual Clarity",
+            "STRING_ID": "103069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "Player3",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Spiritual Clarity",
+            "STRING_ID": "103069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "Player4",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Spiritual Clarity",
+            "STRING_ID": "103069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "Player5",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Spiritual Clarity",
+            "STRING_ID": "103069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR350.SPL (Spiritual Clarity)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "Player6",
+            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Spiritual Clarity",
+            "STRING_ID": "103069",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -11,7 +73,8 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Spiritual-Clarity",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_SCLAR','LOCALS',TWO_ROUNDS)",
@@ -19,69 +82,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Spiritual-Clarity",
-    "fields": [
-        {
-            "LOOK_FOR": "Player1",
-            "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
-            "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "103069",
-            "STRING_DESC": "Spiritual Clarity"
-        },
-        {
-            "LOOK_FOR": "Player2",
-            "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
-            "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "103069",
-            "STRING_DESC": "Spiritual Clarity"
-        },
-        {
-            "LOOK_FOR": "Player3",
-            "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
-            "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "103069",
-            "STRING_DESC": "Spiritual Clarity"
-        },
-        {
-            "LOOK_FOR": "Player4",
-            "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
-            "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "103069",
-            "STRING_DESC": "Spiritual Clarity"
-        },
-        {
-            "LOOK_FOR": "Player5",
-            "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
-            "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "103069",
-            "STRING_DESC": "Spiritual Clarity"
-        },
-        {
-            "LOOK_FOR": "Player6",
-            "TARGET": "LastSeenBy(Myself)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_SPIRITUAL_CLARITY",
-            "DESC": "SPPR350.SPL (Spiritual Clarity)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "103069",
-            "STRING_DESC": "Spiritual Clarity"
         }
     ]
 }

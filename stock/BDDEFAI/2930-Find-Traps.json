@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_SKILL_MODE','LOCALS',1)",
         "!See([EVILCUTOFF])",
@@ -11,7 +11,7 @@
             "Class(Myself,SHAMAN)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "FindTraps()"

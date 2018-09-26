@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_SKILL_MODE','LOCALS',4)",
         "!ModalState(TURNUNDEAD)",
@@ -18,7 +18,7 @@
         ],
         "!ButtonDisabled(BUTTON_TURNUNDEAD)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "Turn()"

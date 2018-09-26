@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
@@ -20,7 +20,7 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",

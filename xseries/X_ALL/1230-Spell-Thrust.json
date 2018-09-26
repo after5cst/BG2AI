@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI321.SPL (Spell Thrust)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_SPELL_THRUST",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Spell Thrust",
+            "STRING_ID": "25873",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI321.SPL (Spell Thrust)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_SPELL_THRUST",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Spell Thrust",
+            "STRING_ID": "25873",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI321.SPL (Spell Thrust)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_SPELL_THRUST",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Spell Thrust",
+            "STRING_ID": "25873",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -18,46 +50,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Spell-Thrust",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Spell-Thrust",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_SPELL_THRUST",
-            "DESC": "SPWI321.SPL (Spell Thrust)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25873",
-            "STRING_DESC": "Spell Thrust"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_SPELL_THRUST",
-            "DESC": "SPWI321.SPL (Spell Thrust)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25873",
-            "STRING_DESC": "Spell Thrust"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_SPELL_THRUST",
-            "DESC": "SPWI321.SPL (Spell Thrust)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25873",
-            "STRING_DESC": "Spell Thrust"
         }
     ]
 }

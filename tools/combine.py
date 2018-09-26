@@ -159,11 +159,11 @@ def convert_json_to_baf(source: dict) ->str:
         fields = deepcopy(fields)
         logging.debug("Handling fields {}".format(pformat(fields)))
         out = ["IF"] + convert_triggers_to_text(
-            deepcopy(source["if"]), fields)
+            deepcopy(source["IF"]), fields)
 
         out.append("THEN")
 
-        for item in source["then"]:
+        for item in source["THEN"]:
             item = deepcopy(item)
             assert 1 == len(item), "Detected dict with multiple action keys"
             key, value = item.popitem()

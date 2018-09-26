@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
@@ -15,7 +15,7 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BD_DInv','LOCALS',0)",

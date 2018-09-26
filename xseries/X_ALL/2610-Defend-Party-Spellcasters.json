@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "LOOK_FOR": "LastAttackerOf(Player1)",
+            "PLAYER": "1",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player2)",
+            "PLAYER": "2",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player3)",
+            "PLAYER": "3",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player4)",
+            "PLAYER": "4",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player5)",
+            "PLAYER": "5",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player6)",
+            "PLAYER": "6",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         "ActionListEmpty()",
         {
             "WeakPlayerAttacked": null
@@ -17,44 +49,12 @@
             "EnemyNotDisabled": null
         }
     ],
-    "then": [
+    "name": "Defend-Party-Spellcasters",
+    "THEN": [
         {
             "100": [
                 "AttackOneRound(LastSeenBy(Myself))"
             ]
         }
-    ],
-    "fields": [
-        {
-            "PLAYER": "1",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "LastAttackerOf(Player1)"
-        },
-        {
-            "PLAYER": "2",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "LastAttackerOf(Player2)"
-        },
-        {
-            "PLAYER": "3",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "LastAttackerOf(Player3)"
-        },
-        {
-            "PLAYER": "4",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "LastAttackerOf(Player4)"
-        },
-        {
-            "PLAYER": "5",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "LastAttackerOf(Player5)"
-        },
-        {
-            "PLAYER": "6",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "LastAttackerOf(Player6)"
-        }
-    ],
-    "name": "Defend-Party-Spellcasters"
+    ]
 }

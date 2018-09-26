@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!Global('BDAI_RESET_TIMERS','GLOBAL',0)",
         "Global('BDAI_SKILL_MODE','LOCALS',0)",
@@ -9,7 +9,7 @@
             "Class(Myself,SHAMAN)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BDAI_SKILL_MODE','LOCALS',1)"

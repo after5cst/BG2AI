@@ -1,5 +1,19 @@
 {
-    "if": [
+    "fields": [
+        {
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         "ActionListEmpty()",
         {
             "SeeTarget": null
@@ -14,26 +28,12 @@
             "EnemyNotDisabled": null
         }
     ],
-    "then": [
+    "name": "Attack-Nearby-Enemy",
+    "THEN": [
         {
             "100": [
                 "AttackOneRound(LastSeenBy(Myself))"
             ]
         }
-    ],
-    "fields": [
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "NearestEnemyOf(Myself)"
-        },
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)"
-        },
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)"
-        }
-    ],
-    "name": "Attack-Nearby-Enemy"
+    ]
 }

@@ -1,5 +1,25 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "Myself"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -8,34 +28,14 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Greater-Restoration",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Greater-Restoration",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
         }
     ]
 }

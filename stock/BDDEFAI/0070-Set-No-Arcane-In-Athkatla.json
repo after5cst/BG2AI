@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_NO_ARCANE','LOCALS',0)",
         "Global('BribedCowled','GLOBAL',0)",
@@ -14,7 +14,7 @@
             "AreaCheck('AR1000')"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayStringHead(Myself,46517)  // Travel safely, then, and beware the Cowled Wizards.",

@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
@@ -33,7 +33,7 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Spook','LOCALS',TWO_ROUNDS)",

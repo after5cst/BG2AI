@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "CombatCounter(0)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayStringHead(Myself,12839)  // Warrior",

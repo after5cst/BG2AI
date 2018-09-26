@@ -1,5 +1,25 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPCL211.SPL (Lay On Hands)",
+            "HPP": "81",
+            "SPELL": "PALADIN_LAY_ON_HANDS",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "Lay On Hands",
+            "STRING_ID": "12032",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPCL815.SPL (Lay On Hands)",
+            "HPP": "81",
+            "SPELL": "MONK_LAY_ON_HANDS",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "Lay On Hands",
+            "STRING_ID": "12032",
+            "TARGET": "Myself"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -7,34 +27,14 @@
             "X_HPPercentLT": null
         }
     ],
-    "then": [
+    "name": "Lay-On-Hands",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Lay-On-Hands",
-    "fields": [
-        {
-            "SPELL": "PALADIN_LAY_ON_HANDS",
-            "DESC": "SPCL211.SPL (Lay On Hands)",
-            "SPELL_TYPE": "SPECIAL",
-            "TARGET": "Myself",
-            "HPP": "81",
-            "STRING_ID": "12032",
-            "STRING_DESC": "Lay On Hands"
-        },
-        {
-            "SPELL": "MONK_LAY_ON_HANDS",
-            "DESC": "SPCL815.SPL (Lay On Hands)",
-            "SPELL_TYPE": "SPECIAL",
-            "TARGET": "Myself",
-            "HPP": "81",
-            "STRING_ID": "12032",
-            "STRING_DESC": "Lay On Hands"
         }
     ]
 }

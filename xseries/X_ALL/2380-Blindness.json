@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI106.SPL (Blindness)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_BLINDNESS",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Blindness",
+            "STRING_ID": "12015",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI106.SPL (Blindness)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_BLINDNESS",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Blindness",
+            "STRING_ID": "12015",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI106.SPL (Blindness)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_BLINDNESS",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Blindness",
+            "STRING_ID": "12015",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -27,7 +59,8 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Blindness",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Blind','LOCALS',THREE_ROUNDS)",
@@ -35,39 +68,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Blindness",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_BLINDNESS",
-            "DESC": "SPWI106.SPL (Blindness)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "NearestEnemyOf(Myself)",
-            "STRING_ID": "12015",
-            "STRING_DESC": "Blindness"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_BLINDNESS",
-            "DESC": "SPWI106.SPL (Blindness)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "STRING_ID": "12015",
-            "STRING_DESC": "Blindness"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_BLINDNESS",
-            "DESC": "SPWI106.SPL (Blindness)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "STRING_ID": "12015",
-            "STRING_DESC": "Blindness"
         }
     ]
 }

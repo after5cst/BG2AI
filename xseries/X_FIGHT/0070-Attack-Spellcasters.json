@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         [
             "See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))",
@@ -18,7 +18,7 @@
             "AllowedToAttackTarget": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "AttackOneRound(LastSeenBy(Myself))"

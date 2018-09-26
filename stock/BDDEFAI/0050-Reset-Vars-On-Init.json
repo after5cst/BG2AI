@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!Global('BDAI_RESET_TIMERS','GLOBAL',0)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BD_Blind','LOCALS',0)",

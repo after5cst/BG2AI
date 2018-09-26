@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI805.SPL (Pierce Shield)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_PIERCE_SHIELD",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Pierce Shield",
+            "STRING_ID": "26240",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI805.SPL (Pierce Shield)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_SHIELD",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Pierce Shield",
+            "STRING_ID": "26240",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI805.SPL (Pierce Shield)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_SHIELD",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Pierce Shield",
+            "STRING_ID": "26240",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -20,46 +52,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Pierce-Shield",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Pierce-Shield",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_PIERCE_SHIELD",
-            "DESC": "SPWI805.SPL (Pierce Shield)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "26240",
-            "STRING_DESC": "Pierce Shield"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_PIERCE_SHIELD",
-            "DESC": "SPWI805.SPL (Pierce Shield)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "26240",
-            "STRING_DESC": "Pierce Shield"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_PIERCE_SHIELD",
-            "DESC": "SPWI805.SPL (Pierce Shield)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "26240",
-            "STRING_DESC": "Pierce Shield"
         }
     ]
 }

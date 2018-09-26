@@ -19,7 +19,7 @@ _if_then_regex = r"(?P<statement>IF(?P<if>(.|\n)*?)^THEN$(?P<then>(.|\n)*?)END)"
 def _load_templates(which: str):
     """
     Return a list of applicable templates
-    :param which: Which template set to load, "lf" or "then"
+    :param which: Which template set to load, "if" or "then"
     """
     out = []
     dir_name = os.path.join(tools_dir, "..", project_name, which)
@@ -157,7 +157,7 @@ def split_if_then(source_file: str) -> dict:
 
         or_count = 0
         # Break if conditions into separate lines.
-        for line in m.group('if').split('\n'):
+        for line in m.group("IF").split('\n'):
             line = line.strip()
             or_check = r_or.match(line)
 
@@ -177,7 +177,7 @@ def split_if_then(source_file: str) -> dict:
         # Break then conditions into separate lines.
         action_list = []
         response_value = None
-        for line in m.group("then").split('\n'):
+        for line in m.group("THEN").split('\n'):
             line = line.strip()
             response_check = r_resp.match(line)
             if 0 == len(line):
@@ -198,7 +198,7 @@ def split_if_then(source_file: str) -> dict:
 
     # triggers = promote_trigger(triggers, "^HaveSpell")
     # triggers = promote_trigger(triggers, "^ActionListEmpty")
-    result = {"if": triggers, "then": actions}
+    result = {"IF": triggers, "THEN": actions}
     name = get_name(actions)
     if name:
         result["name"] = name
@@ -222,7 +222,7 @@ def get_history_names(snips_dir: str) -> dict:
     except FileNotFoundError:
         pass
 
-    required_keys = ('name', 'if', 'then')
+    required_keys = ("name", "IF", "THEN")
     for file_name in sources:
         path = os.path.join(snips_dir, file_name)
         with open(path) as fp:
@@ -265,9 +265,9 @@ def split(source: str, auto_delete: bool):
         data = split_if_then(file)
         fields = {}
         for template in trigger_templates:
-            data["if"], fields = template.collapse(data["if"], fields)
+            data["IF"], fields = template.collapse(data["IF"], fields)
         for template in action_templates:
-            for response in data["then"]:
+            for response in data["THEN"]:
                 assert 1 == len(response)
                 for key, value in response.items():
                     response[key], fields = template.collapse(
@@ -276,7 +276,7 @@ def split(source: str, auto_delete: bool):
 
         # If this was in the history with a name, keep the name.
         for item in history:
-            if data["if"] == item["if"] and data["then"] == item["then"]:
+            if data["IF"] == item["IF"] and data["THEN"] == item["THEN"]:
                 data["name"] = item["name"]
                 break
 
@@ -297,8 +297,8 @@ def split(source: str, auto_delete: bool):
         with open(curr_file) as fp:
             curr_data = json.load(fp)
 
-        if prev_data and prev_data["if"] == curr_data["if"] and \
-                prev_data["then"] == curr_data["then"]:
+        if prev_data and prev_data["IF"] == curr_data["IF"] and \
+                prev_data["THEN"] == curr_data["THEN"]:
             logging.debug("left: {}".format(pprint.pformat(
                 curr_data["fields"]
             )))
@@ -310,7 +310,7 @@ def split(source: str, auto_delete: bool):
                 curr_data["fields"]
             )))
             with open(curr_file, "w") as fp:
-                json.dump(curr_data, fp, indent=4)
+                json.dump(curr_data, fp, indent=4, sort_keys=True)
             os.remove(prev_file)
 
         prev_file = curr_file
@@ -322,7 +322,7 @@ if __name__ == "__main__":
     search_dir = os.path.join(tools_dir, "..", project_name)
     parser = argparse.ArgumentParser()
     parser.add_argument('--auto_delete', action='store_true', default=True)
-    parser.add_argument('-v', '--verbose', action='count', default=0)
+    parser.add_argument('-v', '--verbose', action='count', default=2)
     parser.add_argument('-d', '--search_dir', default=search_dir)
 
     args = parser.parse_args()

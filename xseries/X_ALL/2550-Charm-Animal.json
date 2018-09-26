@@ -1,5 +1,31 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPCL311.SPL (Charm Animal)",
+            "LOOK_FOR": "[EVILCUTOFF.ANIMAL]",
+            "SPELL": "RANGER_CHARM_ANIMAL",
+            "STRING_DESC": "Charm Animal",
+            "STRING_ID": "20678",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL311.SPL (Charm Animal)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.ANIMAL])",
+            "SPELL": "RANGER_CHARM_ANIMAL",
+            "STRING_DESC": "Charm Animal",
+            "STRING_ID": "20678",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL311.SPL (Charm Animal)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.ANIMAL])",
+            "SPELL": "RANGER_CHARM_ANIMAL",
+            "STRING_DESC": "Charm Animal",
+            "STRING_ID": "20678",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         "ActionListEmpty()",
         "HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)",
         "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
@@ -24,40 +50,14 @@
         "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
         "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)"
     ],
-    "then": [
+    "name": "Charm-Animal",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Charm-Animal",
-    "fields": [
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "[EVILCUTOFF.ANIMAL]",
-            "STRING_ID": "20678",
-            "STRING_DESC": "Charm Animal",
-            "SPELL": "RANGER_CHARM_ANIMAL",
-            "DESC": "SPCL311.SPL (Charm Animal)"
-        },
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.ANIMAL])",
-            "STRING_ID": "20678",
-            "STRING_DESC": "Charm Animal",
-            "SPELL": "RANGER_CHARM_ANIMAL",
-            "DESC": "SPCL311.SPL (Charm Animal)"
-        },
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.ANIMAL])",
-            "STRING_ID": "20678",
-            "STRING_DESC": "Charm Animal",
-            "SPELL": "RANGER_CHARM_ANIMAL",
-            "DESC": "SPCL311.SPL (Charm Animal)"
         }
     ]
 }

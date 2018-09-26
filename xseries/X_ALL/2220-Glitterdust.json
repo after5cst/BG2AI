@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI224.SPL (Glitterdust)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_GLITTERDUST",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Glitterdust",
+            "STRING_ID": "38594",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI224.SPL (Glitterdust)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_GLITTERDUST",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Glitterdust",
+            "STRING_ID": "38594",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI224.SPL (Glitterdust)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_GLITTERDUST",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Glitterdust",
+            "STRING_ID": "38594",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -25,7 +57,8 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Glitterdust",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Glitter','LOCALS',TWO_ROUNDS)",
@@ -33,39 +66,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Glitterdust",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_GLITTERDUST",
-            "DESC": "SPWI224.SPL (Glitterdust)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "NearestEnemyOf(Myself)",
-            "STRING_ID": "38594",
-            "STRING_DESC": "Glitterdust"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_GLITTERDUST",
-            "DESC": "SPWI224.SPL (Glitterdust)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "STRING_ID": "38594",
-            "STRING_DESC": "Glitterdust"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_GLITTERDUST",
-            "DESC": "SPWI224.SPL (Glitterdust)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
-            "STRING_ID": "38594",
-            "STRING_DESC": "Glitterdust"
         }
     ]
 }

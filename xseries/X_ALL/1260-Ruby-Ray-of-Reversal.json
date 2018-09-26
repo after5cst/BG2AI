@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Ruby Ray of Reversal",
+            "STRING_ID": "15465",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Ruby Ray of Reversal",
+            "STRING_ID": "15465",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Ruby Ray of Reversal",
+            "STRING_ID": "15465",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -20,46 +52,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Ruby-Ray-of-Reversal",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Ruby-Ray-of-Reversal",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
-            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "15465",
-            "STRING_DESC": "Ruby Ray of Reversal"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
-            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "15465",
-            "STRING_DESC": "Ruby Ray of Reversal"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
-            "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "15465",
-            "STRING_DESC": "Ruby Ray of Reversal"
         }
     ]
 }

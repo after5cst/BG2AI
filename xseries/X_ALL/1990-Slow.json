@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI312.SPL (Slow)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_SLOW",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Slow",
+            "STRING_ID": "12081",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI312.SPL (Slow)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_SLOW",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Slow",
+            "STRING_ID": "12081",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI312.SPL (Slow)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_SLOW",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Slow",
+            "STRING_ID": "12081",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -27,7 +59,8 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Slow",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Slow','LOCALS',THREE_ROUNDS)",
@@ -35,39 +68,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Slow",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_SLOW",
-            "DESC": "SPWI312.SPL (Slow)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "NearestEnemyOf(Myself)",
-            "STRING_ID": "12081",
-            "STRING_DESC": "Slow"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_SLOW",
-            "DESC": "SPWI312.SPL (Slow)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "STRING_ID": "12081",
-            "STRING_DESC": "Slow"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_SLOW",
-            "DESC": "SPWI312.SPL (Slow)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
-            "STRING_ID": "12081",
-            "STRING_DESC": "Slow"
         }
     ]
 }

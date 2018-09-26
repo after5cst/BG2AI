@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI112.SPL (Magic Missile)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_MAGIC_MISSILE",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Magic Missile",
+            "STRING_ID": "12052",
+            "TARGET": "NearestEnemyOf(Myself)"
+        },
+        {
+            "DESC": "SPWI112.SPL (Magic Missile)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_MAGIC_MISSILE",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Magic Missile",
+            "STRING_ID": "12052",
+            "TARGET": "SecondNearestEnemyOf(Myself)"
+        },
+        {
+            "DESC": "SPWI112.SPL (Magic Missile)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_MAGIC_MISSILE",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Magic Missile",
+            "STRING_ID": "12052",
+            "TARGET": "ThirdNearestEnemyOf(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -22,46 +54,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Magic-Missile",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Magic-Missile",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "NearestEnemyOf(Myself)",
-            "SPELL": "WIZARD_MAGIC_MISSILE",
-            "DESC": "SPWI112.SPL (Magic Missile)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "NearestEnemyOf(Myself)",
-            "STRING_ID": "12052",
-            "STRING_DESC": "Magic Missile"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "SecondNearestEnemyOf(Myself)",
-            "SPELL": "WIZARD_MAGIC_MISSILE",
-            "DESC": "SPWI112.SPL (Magic Missile)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "STRING_ID": "12052",
-            "STRING_DESC": "Magic Missile"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "ThirdNearestEnemyOf(Myself)",
-            "SPELL": "WIZARD_MAGIC_MISSILE",
-            "DESC": "SPWI112.SPL (Magic Missile)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
-            "STRING_ID": "12052",
-            "STRING_DESC": "Magic Missile"
         }
     ]
 }

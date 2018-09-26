@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "SpellReady": null
         },
@@ -16,7 +16,7 @@
         "!CheckStatGT(FifthNearestEnemyOf(Myself),0,TRUE_SIGHT)",
         "!CheckStatGT(SixthNearestEnemyOf(Myself),0,TRUE_SIGHT)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "ModalState(SHAMANDANCE)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "NoAction()"

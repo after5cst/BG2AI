@@ -1,5 +1,127 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPCL222.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[GOODCUTOFF]",
+            "SPELL": "CAVALIER_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL222.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
+            "SPELL": "CAVALIER_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL222.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
+            "SPELL": "CAVALIER_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL222.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
+            "SPELL": "CAVALIER_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL222.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
+            "SPELL": "CAVALIER_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL222.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
+            "SPELL": "CAVALIER_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[GOODCUTOFF]",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR108.SPL (Remove Fear)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
+            "SPELL": "CLERIC_REMOVE_FEAR",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Remove Fear",
+            "STRING_ID": "12083",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -13,136 +135,14 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Remove-Fear",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Remove-Fear",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "[GOODCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CAVALIER_REMOVE_FEAR",
-            "DESC": "SPCL222.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CAVALIER_REMOVE_FEAR",
-            "DESC": "SPCL222.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CAVALIER_REMOVE_FEAR",
-            "DESC": "SPCL222.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CAVALIER_REMOVE_FEAR",
-            "DESC": "SPCL222.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CAVALIER_REMOVE_FEAR",
-            "DESC": "SPCL222.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CAVALIER_REMOVE_FEAR",
-            "DESC": "SPCL222.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "[GOODCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_REMOVE_FEAR",
-            "DESC": "SPPR108.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "SecondNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_REMOVE_FEAR",
-            "DESC": "SPPR108.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "ThirdNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_REMOVE_FEAR",
-            "DESC": "SPPR108.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "FourthNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_REMOVE_FEAR",
-            "DESC": "SPPR108.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "FifthNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_REMOVE_FEAR",
-            "DESC": "SPPR108.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "LOOK_FOR": "SixthNearest([GOODCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_REMOVE_FEAR",
-            "DESC": "SPPR108.SPL (Remove Fear)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_ID": "12083",
-            "STRING_DESC": "Remove Fear"
         }
     ]
 }

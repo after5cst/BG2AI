@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!ModalState(BATTLESONG)",
         "Global('BDAI_DISABLE_ATTACK','LOCALS',0)",
@@ -13,7 +13,7 @@
         "!Allegiance(ThirdNearestEnemyOf(Myself),GOODCUTOFF)",
         "!InParty(ThirdNearestEnemyOf(Myself))"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "AttackOneRound(ThirdNearestEnemyOf(Myself))"

@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         {
             "ItemReady": null
         },
@@ -8,7 +8,7 @@
             "X_HPPercentLT": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

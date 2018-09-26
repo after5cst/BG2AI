@@ -1,11 +1,11 @@
 {
-    "if": [
+    "IF": [
         {
             "ItemReady": null
         },
         "StateCheck(Myself,STATE_POISONED)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

@@ -1,5 +1,31 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPPR102.SPL (Command)",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "SPELL": "CLERIC_COMMAND",
+            "STRING_DESC": "Command",
+            "STRING_ID": "12097",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR102.SPL (Command)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "CLERIC_COMMAND",
+            "STRING_DESC": "Command",
+            "STRING_ID": "12097",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR102.SPL (Command)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "CLERIC_COMMAND",
+            "STRING_DESC": "Command",
+            "STRING_ID": "12097",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         "ActionListEmpty()",
         "HaveSpell(CLERIC_COMMAND)  // SPPR102.SPL (Command)",
         "Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
@@ -22,40 +48,14 @@
         "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
         "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)"
     ],
-    "then": [
+    "name": "Command",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Command",
-    "fields": [
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
-            "STRING_ID": "12097",
-            "STRING_DESC": "Command",
-            "SPELL": "CLERIC_COMMAND",
-            "DESC": "SPPR102.SPL (Command)"
-        },
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
-            "STRING_ID": "12097",
-            "STRING_DESC": "Command",
-            "SPELL": "CLERIC_COMMAND",
-            "DESC": "SPPR102.SPL (Command)"
-        },
-        {
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
-            "STRING_ID": "12097",
-            "STRING_DESC": "Command",
-            "SPELL": "CLERIC_COMMAND",
-            "DESC": "SPPR102.SPL (Command)"
         }
     ]
 }

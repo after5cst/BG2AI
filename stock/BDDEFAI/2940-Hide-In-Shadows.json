@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_SKILL_MODE','LOCALS',2)",
         "!GlobalTimerNotExpired('BD_HIDE','LOCALS')",
@@ -14,7 +14,7 @@
             "Class(Myself,MONK)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_HIDE','LOCALS',ONE_ROUND)",

@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HotKey(F)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

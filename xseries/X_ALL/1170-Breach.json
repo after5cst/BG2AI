@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI513.SPL (Breach)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_BREACH",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Breach",
+            "STRING_ID": "25914",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI513.SPL (Breach)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_BREACH",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Breach",
+            "STRING_ID": "25914",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI513.SPL (Breach)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_BREACH",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Breach",
+            "STRING_ID": "25914",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -19,46 +51,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Breach",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Breach",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_BREACH",
-            "DESC": "SPWI513.SPL (Breach)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25914",
-            "STRING_DESC": "Breach"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_BREACH",
-            "DESC": "SPWI513.SPL (Breach)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25914",
-            "STRING_DESC": "Breach"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_BREACH",
-            "DESC": "SPWI513.SPL (Breach)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25914",
-            "STRING_DESC": "Breach"
         }
     ]
 }

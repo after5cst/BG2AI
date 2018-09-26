@@ -1,169 +1,169 @@
 {
-    "if": [
+    "fields": [
+        {
+            "HP_PCT": "10",
+            "LOOK_FOR": "Player1",
+            "PLAYER": "1"
+        },
+        {
+            "HP_PCT": "10",
+            "LOOK_FOR": "Player2",
+            "PLAYER": "2"
+        },
+        {
+            "HP_PCT": "10",
+            "LOOK_FOR": "Player3",
+            "PLAYER": "3"
+        },
+        {
+            "HP_PCT": "10",
+            "LOOK_FOR": "Player4",
+            "PLAYER": "4"
+        },
+        {
+            "HP_PCT": "10",
+            "LOOK_FOR": "Player5",
+            "PLAYER": "5"
+        },
+        {
+            "HP_PCT": "10",
+            "LOOK_FOR": "Player6",
+            "PLAYER": "6"
+        },
+        {
+            "HP_PCT": "30",
+            "LOOK_FOR": "Player1",
+            "PLAYER": "1"
+        },
+        {
+            "HP_PCT": "30",
+            "LOOK_FOR": "Player2",
+            "PLAYER": "2"
+        },
+        {
+            "HP_PCT": "30",
+            "LOOK_FOR": "Player3",
+            "PLAYER": "3"
+        },
+        {
+            "HP_PCT": "30",
+            "LOOK_FOR": "Player4",
+            "PLAYER": "4"
+        },
+        {
+            "HP_PCT": "30",
+            "LOOK_FOR": "Player5",
+            "PLAYER": "5"
+        },
+        {
+            "HP_PCT": "30",
+            "LOOK_FOR": "Player6",
+            "PLAYER": "6"
+        },
+        {
+            "HP_PCT": "50",
+            "LOOK_FOR": "Player1",
+            "PLAYER": "1"
+        },
+        {
+            "HP_PCT": "50",
+            "LOOK_FOR": "Player2",
+            "PLAYER": "2"
+        },
+        {
+            "HP_PCT": "50",
+            "LOOK_FOR": "Player3",
+            "PLAYER": "3"
+        },
+        {
+            "HP_PCT": "50",
+            "LOOK_FOR": "Player4",
+            "PLAYER": "4"
+        },
+        {
+            "HP_PCT": "50",
+            "LOOK_FOR": "Player5",
+            "PLAYER": "5"
+        },
+        {
+            "HP_PCT": "50",
+            "LOOK_FOR": "Player6",
+            "PLAYER": "6"
+        },
+        {
+            "HP_PCT": "70",
+            "LOOK_FOR": "Player1",
+            "PLAYER": "1"
+        },
+        {
+            "HP_PCT": "70",
+            "LOOK_FOR": "Player2",
+            "PLAYER": "2"
+        },
+        {
+            "HP_PCT": "70",
+            "LOOK_FOR": "Player3",
+            "PLAYER": "3"
+        },
+        {
+            "HP_PCT": "70",
+            "LOOK_FOR": "Player4",
+            "PLAYER": "4"
+        },
+        {
+            "HP_PCT": "70",
+            "LOOK_FOR": "Player5",
+            "PLAYER": "5"
+        },
+        {
+            "HP_PCT": "70",
+            "LOOK_FOR": "Player6",
+            "PLAYER": "6"
+        },
+        {
+            "HP_PCT": "90",
+            "LOOK_FOR": "Player1",
+            "PLAYER": "1"
+        },
+        {
+            "HP_PCT": "90",
+            "LOOK_FOR": "Player2",
+            "PLAYER": "2"
+        },
+        {
+            "HP_PCT": "90",
+            "LOOK_FOR": "Player3",
+            "PLAYER": "3"
+        },
+        {
+            "HP_PCT": "90",
+            "LOOK_FOR": "Player4",
+            "PLAYER": "4"
+        },
+        {
+            "HP_PCT": "90",
+            "LOOK_FOR": "Player5",
+            "PLAYER": "5"
+        },
+        {
+            "HP_PCT": "90",
+            "LOOK_FOR": "Player6",
+            "PLAYER": "6"
+        }
+    ],
+    "IF": [
         "ActionListEmpty()",
         "!Global('X_HEAL','LOCALS',1)",
         {
             "SeeHurtPlayer": null
         }
     ],
-    "then": [
+    "name": "See-Most-Wounded",
+    "THEN": [
         {
             "100": [
                 "SetGlobal('X_HEAL','LOCALS',1)"
             ]
         }
-    ],
-    "fields": [
-        {
-            "PLAYER": "1",
-            "HP_PCT": "10",
-            "LOOK_FOR": "Player1"
-        },
-        {
-            "PLAYER": "2",
-            "HP_PCT": "10",
-            "LOOK_FOR": "Player2"
-        },
-        {
-            "PLAYER": "3",
-            "HP_PCT": "10",
-            "LOOK_FOR": "Player3"
-        },
-        {
-            "PLAYER": "4",
-            "HP_PCT": "10",
-            "LOOK_FOR": "Player4"
-        },
-        {
-            "PLAYER": "5",
-            "HP_PCT": "10",
-            "LOOK_FOR": "Player5"
-        },
-        {
-            "PLAYER": "6",
-            "HP_PCT": "10",
-            "LOOK_FOR": "Player6"
-        },
-        {
-            "PLAYER": "1",
-            "HP_PCT": "30",
-            "LOOK_FOR": "Player1"
-        },
-        {
-            "PLAYER": "2",
-            "HP_PCT": "30",
-            "LOOK_FOR": "Player2"
-        },
-        {
-            "PLAYER": "3",
-            "HP_PCT": "30",
-            "LOOK_FOR": "Player3"
-        },
-        {
-            "PLAYER": "4",
-            "HP_PCT": "30",
-            "LOOK_FOR": "Player4"
-        },
-        {
-            "PLAYER": "5",
-            "HP_PCT": "30",
-            "LOOK_FOR": "Player5"
-        },
-        {
-            "PLAYER": "6",
-            "HP_PCT": "30",
-            "LOOK_FOR": "Player6"
-        },
-        {
-            "PLAYER": "1",
-            "HP_PCT": "50",
-            "LOOK_FOR": "Player1"
-        },
-        {
-            "PLAYER": "2",
-            "HP_PCT": "50",
-            "LOOK_FOR": "Player2"
-        },
-        {
-            "PLAYER": "3",
-            "HP_PCT": "50",
-            "LOOK_FOR": "Player3"
-        },
-        {
-            "PLAYER": "4",
-            "HP_PCT": "50",
-            "LOOK_FOR": "Player4"
-        },
-        {
-            "PLAYER": "5",
-            "HP_PCT": "50",
-            "LOOK_FOR": "Player5"
-        },
-        {
-            "PLAYER": "6",
-            "HP_PCT": "50",
-            "LOOK_FOR": "Player6"
-        },
-        {
-            "PLAYER": "1",
-            "HP_PCT": "70",
-            "LOOK_FOR": "Player1"
-        },
-        {
-            "PLAYER": "2",
-            "HP_PCT": "70",
-            "LOOK_FOR": "Player2"
-        },
-        {
-            "PLAYER": "3",
-            "HP_PCT": "70",
-            "LOOK_FOR": "Player3"
-        },
-        {
-            "PLAYER": "4",
-            "HP_PCT": "70",
-            "LOOK_FOR": "Player4"
-        },
-        {
-            "PLAYER": "5",
-            "HP_PCT": "70",
-            "LOOK_FOR": "Player5"
-        },
-        {
-            "PLAYER": "6",
-            "HP_PCT": "70",
-            "LOOK_FOR": "Player6"
-        },
-        {
-            "PLAYER": "1",
-            "HP_PCT": "90",
-            "LOOK_FOR": "Player1"
-        },
-        {
-            "PLAYER": "2",
-            "HP_PCT": "90",
-            "LOOK_FOR": "Player2"
-        },
-        {
-            "PLAYER": "3",
-            "HP_PCT": "90",
-            "LOOK_FOR": "Player3"
-        },
-        {
-            "PLAYER": "4",
-            "HP_PCT": "90",
-            "LOOK_FOR": "Player4"
-        },
-        {
-            "PLAYER": "5",
-            "HP_PCT": "90",
-            "LOOK_FOR": "Player5"
-        },
-        {
-            "PLAYER": "6",
-            "HP_PCT": "90",
-            "LOOK_FOR": "Player6"
-        }
-    ],
-    "name": "See-Most-Wounded"
+    ]
 }

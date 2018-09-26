@@ -1,5 +1,40 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI304.SPL (Fireball)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
+            "MAX_FIRE_RESIST": "75",
+            "SPELL": "WIZARD_FIREBALL",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Fireball",
+            "STRING_ID": "6618",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI304.SPL (Fireball)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
+            "MAX_FIRE_RESIST": "75",
+            "SPELL": "WIZARD_FIREBALL",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Fireball",
+            "STRING_ID": "6618",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI304.SPL (Fireball)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
+            "MAX_FIRE_RESIST": "75",
+            "SPELL": "WIZARD_FIREBALL",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Fireball",
+            "STRING_ID": "6618",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -22,49 +57,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Fireball",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Fireball",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_FIREBALL",
-            "DESC": "SPWI304.SPL (Fireball)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "MAX_FIRE_RESIST": "75",
-            "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
-            "STRING_ID": "6618",
-            "STRING_DESC": "Fireball"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_FIREBALL",
-            "DESC": "SPWI304.SPL (Fireball)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "MAX_FIRE_RESIST": "75",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
-            "STRING_ID": "6618",
-            "STRING_DESC": "Fireball"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_FIREBALL",
-            "DESC": "SPWI304.SPL (Fireball)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "MAX_FIRE_RESIST": "75",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
-            "STRING_ID": "6618",
-            "STRING_DESC": "Fireball"
         }
     ]
 }

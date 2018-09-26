@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HotKey(D)",
         "!Global('X_FOL','LOCALS',0)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayString(Myself,16470)  // Off",

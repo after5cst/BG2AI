@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!Global('BDAI_RESET_TIMERS','GLOBAL',0)",
         "Global('BDAI_DISABLE_ITEMS','LOCALS',0)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BDAI_DISABLE_ITEMS','LOCALS',1)"

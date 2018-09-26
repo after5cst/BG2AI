@@ -1,9 +1,9 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HotKey(V)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayString(Myself,12138)  // Healing",

@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "CombatCounter(0)",
         [
@@ -78,7 +78,7 @@
             "HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "DisplayStringHead(Myself,16464)  // Casts",

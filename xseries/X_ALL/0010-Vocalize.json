@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "StateCheck(Myself,STATE_SILENCED)",
         "HaveSpell(WIZARD_VOCALIZE)  // SPWI219.SPL (Vocalize)",
@@ -10,7 +10,7 @@
         "!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)",
         "!CheckSpellState(Myself,DEAD_MAGIC_AREA)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

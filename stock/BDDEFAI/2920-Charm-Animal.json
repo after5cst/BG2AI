@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)",
         "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
@@ -27,7 +27,7 @@
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
         "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",

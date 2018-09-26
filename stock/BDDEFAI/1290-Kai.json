@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "HaveSpell(KENSAI_KIA)  // SPCL144.SPL (Kai)",
         "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
@@ -14,7 +14,7 @@
             "NumCreatureGT([EVILCUTOFF],3)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

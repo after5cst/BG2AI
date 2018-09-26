@@ -1,5 +1,25 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPCL741.SPL (Boon of Lathander)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "LATHANDER_BOON",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "Boon of Lathander",
+            "STRING_ID": "34800",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPPR413.SPL (Negative Plane Protection)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Negative Plane Protection",
+            "STRING_ID": "55842",
+            "TARGET": "Myself"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -22,34 +42,14 @@
         },
         "!Kit(Myself,UNDEADHUNTER)"
     ],
-    "then": [
+    "name": "Negative-Plane-Protection",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Negative-Plane-Protection",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "LATHANDER_BOON",
-            "DESC": "SPCL741.SPL (Boon of Lathander)",
-            "SPELL_TYPE": "SPECIAL",
-            "TARGET": "Myself",
-            "STRING_ID": "34800",
-            "STRING_DESC": "Boon of Lathander"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
-            "DESC": "SPPR413.SPL (Negative Plane Protection)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
-            "STRING_ID": "55842",
-            "STRING_DESC": "Negative Plane Protection"
         }
     ]
 }

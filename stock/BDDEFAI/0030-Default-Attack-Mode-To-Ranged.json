@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "!Global('BDAI_RESET_TIMERS','GLOBAL',0)",
         "Global('BDAI_ATTACK_MODE','LOCALS',0)",
@@ -12,7 +12,7 @@
             "CheckStatGT(Myself,2,PROFICIENCYSLING)"
         ]
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BDAI_ATTACK_MODE','LOCALS',2)"

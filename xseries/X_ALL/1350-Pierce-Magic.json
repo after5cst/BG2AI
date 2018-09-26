@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Pierce Magic",
+            "STRING_ID": "25934",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Pierce Magic",
+            "STRING_ID": "25934",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Pierce Magic",
+            "STRING_ID": "25934",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -19,46 +51,14 @@
             "ArcaneCastOK": null
         }
     ],
-    "then": [
+    "name": "Pierce-Magic",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Pierce-Magic",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_PIERCE_MAGIC",
-            "DESC": "SPWI608.SPL (Pierce Magic)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25934",
-            "STRING_DESC": "Pierce Magic"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_PIERCE_MAGIC",
-            "DESC": "SPWI608.SPL (Pierce Magic)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25934",
-            "STRING_DESC": "Pierce Magic"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_PIERCE_MAGIC",
-            "DESC": "SPWI608.SPL (Pierce Magic)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "TARGET": "LastSeenBy(Myself)",
-            "STRING_ID": "25934",
-            "STRING_DESC": "Pierce Magic"
         }
     ]
 }

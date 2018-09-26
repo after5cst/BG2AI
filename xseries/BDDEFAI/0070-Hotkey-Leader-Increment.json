@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         {
             "SelectLeaderHotkey": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

@@ -1,5 +1,37 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[PC]",
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([PC])",
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -28,7 +60,8 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Protection-From-Evil",
+    "THEN": [
         {
             "100": [
                 "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
@@ -36,39 +69,6 @@
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Protection-From-Evil",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
-            "DESC": "SPPR107.SPL (Protection From Evil)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "[PC]",
-            "STRING_ID": "12023",
-            "STRING_DESC": "Protection From Evil"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
-            "DESC": "SPPR107.SPL (Protection From Evil)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "SecondNearest([PC])",
-            "STRING_ID": "12023",
-            "STRING_DESC": "Protection From Evil"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
-            "DESC": "SPPR107.SPL (Protection From Evil)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "ThirdNearest([PC])",
-            "STRING_ID": "12023",
-            "STRING_DESC": "Protection From Evil"
         }
     ]
 }

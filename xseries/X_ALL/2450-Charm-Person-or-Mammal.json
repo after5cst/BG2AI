@@ -1,5 +1,47 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID.0.FIGHTER]",
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Charm Person or Mammal",
+            "STRING_ID": "12099",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER])",
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Charm Person or Mammal",
+            "STRING_ID": "12099",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Charm Person or Mammal",
+            "STRING_ID": "12099",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "CLERIC_CHARM_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Charm Person or Mammal",
+            "STRING_ID": "12099",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -27,56 +69,14 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Charm-Person-or-Mammal",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Charm-Person-or-Mammal",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_CHARM_PERSON",
-            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF.HUMANOID.0.FIGHTER]",
-            "STRING_ID": "12099",
-            "STRING_DESC": "Charm Person or Mammal"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_CHARM_PERSON",
-            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER])",
-            "STRING_ID": "12099",
-            "STRING_DESC": "Charm Person or Mammal"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_CHARM_PERSON",
-            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
-            "STRING_ID": "12099",
-            "STRING_DESC": "Charm Person or Mammal"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_CHARM_PERSON",
-            "DESC": "SPPR204.SPL (Charm Person or Mammal)",
-            "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
-            "STRING_ID": "12099",
-            "STRING_DESC": "Charm Person or Mammal"
         }
     ]
 }

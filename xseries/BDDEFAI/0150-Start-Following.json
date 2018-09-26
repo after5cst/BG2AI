@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         {
             "LeaderTooFar": null
         }
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {

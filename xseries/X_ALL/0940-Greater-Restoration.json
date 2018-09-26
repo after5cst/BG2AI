@@ -1,5 +1,127 @@
 {
-    "if": [
+    "fields": [
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[PC]",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([PC])",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FourthNearest([PC])",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FifthNearest([PC])",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR417.SPL (Lesser Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SixthNearest([PC])",
+            "SPELL": "CLERIC_LESSER_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Lesser Restoration",
+            "STRING_ID": "55844",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[PC]",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([PC])",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "ThirdNearest([PC])",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FourthNearest([PC])",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "FifthNearest([PC])",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR713.SPL (Greater Restoration)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SixthNearest([PC])",
+            "SPELL": "CLERIC_RESTORATION",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Greater Restoration",
+            "STRING_ID": "35603",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "IF": [
         {
             "SpellReady": null
         },
@@ -17,136 +139,14 @@
             "CastingConditionsOK": null
         }
     ],
-    "then": [
+    "name": "Greater-Restoration",
+    "THEN": [
         {
             "100": [
                 {
                     "X_Spell": null
                 }
             ]
-        }
-    ],
-    "name": "Greater-Restoration",
-    "fields": [
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "[PC]",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "SecondNearest([PC])",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "ThirdNearest([PC])",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "FourthNearest([PC])",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "FifthNearest([PC])",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_LESSER_RESTORATION",
-            "DESC": "SPPR417.SPL (Lesser Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "SixthNearest([PC])",
-            "STRING_ID": "55844",
-            "STRING_DESC": "Lesser Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "[PC]",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "SecondNearest([PC])",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "ThirdNearest([PC])",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "FourthNearest([PC])",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "FifthNearest([PC])",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
-        },
-        {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "CLERIC_RESTORATION",
-            "DESC": "SPPR713.SPL (Greater Restoration)",
-            "SPELL_TYPE": "DEFENSIVE",
-            "LOOK_FOR": "SixthNearest([PC])",
-            "STRING_ID": "35603",
-            "STRING_DESC": "Greater Restoration"
         }
     ]
 }

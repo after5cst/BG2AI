@@ -1,10 +1,10 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_NO_ARCANE','LOCALS',1)",
         "Global('BribedCowled','GLOBAL',1)"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 "SetGlobal('BDAI_NO_ARCANE','LOCALS',0)"

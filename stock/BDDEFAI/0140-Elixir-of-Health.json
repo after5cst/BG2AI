@@ -1,5 +1,5 @@
 {
-    "if": [
+    "IF": [
         "ActionListEmpty()",
         "Global('BDAI_DISABLE_ITEMS','LOCALS',0)",
         [
@@ -9,7 +9,7 @@
         "HasItem('POTN17',Myself)  // Elixir of Health",
         "!GlobalTimerNotExpired('BD_Cast','LOCALS')"
     ],
-    "then": [
+    "THEN": [
         {
             "100": [
                 {
