@@ -1,7 +1,7 @@
 {
     "IF": [
         {
-            "SpellRESReady": null
+            "SpellReady": null
         },
         "!GlobalTimerNotExpired('BD_Horror','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],2)",
@@ -35,21 +35,43 @@
         {
             "100": [
                 "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,12069)  // Horror",
-                "SpellRES('SPIN105',LastSeenBy(Myself))  // Horror"
+                {
+                    "X_Spell": null
+                }
             ]
         }
     ],
-    "name": "Horror",
     "fields": [
         {
+            "DESC": "SPWI205.SPL (Horror)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN105",
-            "DESC": "Horror",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "[EVILCUTOFF]"
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_HORROR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI205.SPL (Horror)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_HORROR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI205.SPL (Horror)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_HORROR",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Horror"
 }

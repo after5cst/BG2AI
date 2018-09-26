@@ -6,8 +6,11 @@
         {
             "SeeTarget": null
         },
-        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
         "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
         {
             "SpellCanAffectTarget": null
         },
@@ -32,7 +35,7 @@
         {
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "SPELL_TYPE": "OFFENSIVE",
@@ -43,7 +46,7 @@
         {
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "SPELL_TYPE": "OFFENSIVE",
@@ -54,40 +57,7 @@
         {
             "DESC": "SPWI303.SPL (Flame Arrow)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
-            "MAX_FIRE_RESIST": "55",
-            "SPELL": "WIZARD_FLAME_ARROW",
-            "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Flame Arrow",
-            "STRING_ID": "12034",
-            "TARGET": "LastSeenBy(Myself)"
-        },
-        {
-            "DESC": "SPWI303.SPL (Flame Arrow)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "FourthNearest([EVILCUTOFF.0.TROLL])",
-            "MAX_FIRE_RESIST": "55",
-            "SPELL": "WIZARD_FLAME_ARROW",
-            "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Flame Arrow",
-            "STRING_ID": "12034",
-            "TARGET": "LastSeenBy(Myself)"
-        },
-        {
-            "DESC": "SPWI303.SPL (Flame Arrow)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "FifthNearest([EVILCUTOFF.0.TROLL])",
-            "MAX_FIRE_RESIST": "55",
-            "SPELL": "WIZARD_FLAME_ARROW",
-            "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Flame Arrow",
-            "STRING_ID": "12034",
-            "TARGET": "LastSeenBy(Myself)"
-        },
-        {
-            "DESC": "SPWI303.SPL (Flame Arrow)",
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "SixthNearest([EVILCUTOFF.0.TROLL])",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "MAX_FIRE_RESIST": "55",
             "SPELL": "WIZARD_FLAME_ARROW",
             "SPELL_TYPE": "OFFENSIVE",

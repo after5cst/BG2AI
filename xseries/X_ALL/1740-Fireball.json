@@ -6,8 +6,11 @@
         {
             "SeeTarget": null
         },
-        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
         "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
         {
             "SpellCanAffectTarget": null
         },
@@ -35,7 +38,7 @@
         {
             "DESC": "SPWI304.SPL (Fireball)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "[EVILCUTOFF.0.TROLL]",
+            "LOOK_FOR": "FarthestEnemyOf(Myself)",
             "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "SPELL_TYPE": "OFFENSIVE",
@@ -46,7 +49,7 @@
         {
             "DESC": "SPWI304.SPL (Fireball)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "SecondNearest([EVILCUTOFF.0.TROLL])",
+            "LOOK_FOR": "SecondFarthestEnemyOf(Myself)",
             "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "SPELL_TYPE": "OFFENSIVE",
@@ -57,7 +60,7 @@
         {
             "DESC": "SPWI304.SPL (Fireball)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.0.TROLL])",
+            "LOOK_FOR": "ThirdFarthestEnemyOf(Myself)",
             "MAX_FIRE_RESIST": "75",
             "SPELL": "WIZARD_FIREBALL",
             "SPELL_TYPE": "OFFENSIVE",
