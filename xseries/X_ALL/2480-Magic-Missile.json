@@ -11,13 +11,11 @@
         "!Race(LastSeenBy(Myself),LICH)",
         "!Race(LastSeenBy(Myself),DEMILICH)",
         "!Race(LastSeenBy(Myself),RAKSHASA)",
-        "CheckStat(LastSeenBy(Myself),0,MINORGLOBE)",
         "CheckStatLT(LastSeenBy(Myself),31,RESISTMAGIC)",
         "CheckStatLT(LastSeenBy(Myself),31,MAGICDAMAGERESISTANCE)",
         "!CheckStat(LastSeenBy(Myself),2,DEFENSIVE_MODIFIER)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
         {
-            "HighLevelSpellCanAffectTarget": null
+            "SpellCanAffectTarget": null
         },
         "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
         {
@@ -37,30 +35,30 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "NearestEnemyOf(Myself)",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "NearestEnemyOf(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12052",
             "STRING_DESC": "Magic Missile"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "SecondNearestEnemyOf(Myself)",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "SecondNearestEnemyOf(Myself)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
             "STRING_DESC": "Magic Missile"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "ThirdNearestEnemyOf(Myself)",
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "ThirdNearestEnemyOf(Myself)",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
             "STRING_DESC": "Magic Missile"
