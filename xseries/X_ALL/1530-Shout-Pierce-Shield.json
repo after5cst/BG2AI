@@ -1,0 +1,56 @@
+{
+    "IF": [
+        {
+            "ShoutSpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),8)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+            "CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
+        ]
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_ShoutSpell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPWI805.SPL (Pierce Shield)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_PIERCE_SHIELD",
+            "STRING_DESC": "Pierce Shield",
+            "STRING_ID": "26240",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI805.SPL (Pierce Shield)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_SHIELD",
+            "STRING_DESC": "Pierce Shield",
+            "STRING_ID": "26240",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI805.SPL (Pierce Shield)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_SHIELD",
+            "STRING_DESC": "Pierce Shield",
+            "STRING_ID": "26240",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Shout-Pierce-Shield"
+}

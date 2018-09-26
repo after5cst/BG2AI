@@ -1,0 +1,55 @@
+{
+    "IF": [
+        {
+            "ShoutSpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),6)",
+        [
+            "CheckStat(LastSeenBy(Myself),1,MINORGLOBE)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)"
+        ]
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_ShoutSpell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "STRING_DESC": "Pierce Magic",
+            "STRING_ID": "25934",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "STRING_DESC": "Pierce Magic",
+            "STRING_ID": "25934",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI608.SPL (Pierce Magic)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_PIERCE_MAGIC",
+            "STRING_DESC": "Pierce Magic",
+            "STRING_ID": "25934",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Shout-Pierce-Magic"
+}

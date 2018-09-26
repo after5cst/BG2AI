@@ -1,0 +1,4 @@
+[
+  "SetGlobalTimer('X_<STRING_ID>','LOCALS',THREE_ROUNDS)",
+  "DisplayString(<TARGET>,<STRING_ID>)  // <STRING_DESC>"
+]

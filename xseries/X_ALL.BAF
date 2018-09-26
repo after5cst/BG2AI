@@ -4396,6 +4396,564 @@ END
 
 IF
 	ActionListEmpty()
+	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
+	OR(5)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
+		CheckSpellState(LastSeenBy(Myself),MANTLE)
+		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
+		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
+	OR(5)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
+		CheckSpellState(LastSeenBy(Myself),MANTLE)
+		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
+		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
+	OR(5)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
+		CheckSpellState(LastSeenBy(Myself),MANTLE)
+		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
+		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
+	OR(4)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
+	OR(4)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
+	OR(4)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25884","LOCALS")
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25884","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25884","LOCALS")
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25884","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	!GlobalTimerNotExpired("X_25884","LOCALS")
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25884","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
+END
+
+IF
+	ActionListEmpty()
 	HaveSpell(WIZARD_ARMOR)  // SPWI102.SPL (Armor)
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")

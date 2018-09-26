@@ -1,0 +1,56 @@
+{
+    "IF": [
+        {
+            "ShoutSpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),9)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+            "CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
+        ]
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_ShoutSpell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPWI903.SPL (Spellstrike)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_SPELL_STRIKE",
+            "STRING_DESC": "Spellstrike",
+            "STRING_ID": "26314",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI903.SPL (Spellstrike)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_SPELL_STRIKE",
+            "STRING_DESC": "Spellstrike",
+            "STRING_ID": "26314",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI903.SPL (Spellstrike)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_SPELL_STRIKE",
+            "STRING_DESC": "Spellstrike",
+            "STRING_ID": "26314",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Shout-Spellstrike"
+}

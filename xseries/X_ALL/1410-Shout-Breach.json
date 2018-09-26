@@ -1,0 +1,55 @@
+{
+    "IF": [
+        {
+            "ShoutSpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),5)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,STONESKINS)",
+            "CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)",
+            "CheckSpellState(LastSeenBy(Myself),MANTLE)",
+            "CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)",
+            "CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)"
+        ]
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_ShoutSpell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPWI513.SPL (Breach)",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_BREACH",
+            "STRING_DESC": "Breach",
+            "STRING_ID": "25914",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI513.SPL (Breach)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_BREACH",
+            "STRING_DESC": "Breach",
+            "STRING_ID": "25914",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI513.SPL (Breach)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_BREACH",
+            "STRING_DESC": "Breach",
+            "STRING_ID": "25914",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Shout-Breach"
+}
