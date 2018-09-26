@@ -13,7 +13,9 @@
         },
         "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         "CheckStatLT(LastSeenBy(Myself),55,RESISTACID)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        {
+            "HighLevelSpellCanAffectTarget": null
+        },
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
         "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",

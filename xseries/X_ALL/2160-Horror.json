@@ -17,7 +17,9 @@
         {
             "SpellCanAffectTarget": null
         },
-        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        {
+            "EnemyNotDisabled": null
+        },
         "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
         "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         "!CheckSpellState(LastSeenBy(Myself),RESIST_FEAR)",

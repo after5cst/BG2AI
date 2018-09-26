@@ -16,7 +16,9 @@
         "CheckStatLT(LastSeenBy(Myself),31,MAGICDAMAGERESISTANCE)",
         "!CheckStat(LastSeenBy(Myself),2,DEFENSIVE_MODIFIER)",
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        {
+            "HighLevelSpellCanAffectTarget": null
+        },
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
         "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
@@ -40,8 +42,8 @@
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "NearestEnemyOf(Myself)",
             "TARGET": "NearestEnemyOf(Myself)",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12052",
             "STRING_DESC": "Magic Missile"
         },
@@ -50,8 +52,8 @@
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "TARGET": "SecondNearestEnemyOf(Myself)",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
             "STRING_DESC": "Magic Missile"
         },
@@ -60,8 +62,8 @@
             "SPELL": "WIZARD_MAGIC_MISSILE",
             "DESC": "SPWI112.SPL (Magic Missile)",
             "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "TARGET": "ThirdNearestEnemyOf(Myself)",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12052",
             "STRING_DESC": "Magic Missile"
         }

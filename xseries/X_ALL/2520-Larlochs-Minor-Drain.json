@@ -15,9 +15,11 @@
         "!Race(LastSeenBy(Myself),GOLEM)",
         "!Race(LastSeenBy(Myself),SWORD)",
         {
+            "HighLevelSpellCanAffectTarget": null
+        },
+        {
             "SpellCanAffectTarget": null
         },
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
         "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",

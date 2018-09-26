@@ -22,7 +22,9 @@
         },
         "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
         "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+        {
+            "HighLevelSpellCanAffectTarget": null
+        },
         "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
         "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
