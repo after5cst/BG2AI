@@ -10,9 +10,6 @@
         "!InParty(LastSeenBy(Myself))",
         "Range(LastSeenBy(Myself),8)",
         {
-            "HighLevelSpellCanAffectTarget": null
-        },
-        {
             "IsValidFireSpellTarget": null
         },
         "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
