@@ -1,0 +1,35 @@
+{
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        [
+            "NumCreatureGT([EVILCUTOFF],4)",
+            "CheckStatGT([EVILCUTOFF],12,LEVEL)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Monster-Summoning-II",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "SPELL": "WIZARD_MONSTER_SUMMONING_2",
+            "DESC": "SPWI407.SPL (Monster Summoning II)",
+            "SPELL_TYPE": "OFFENSIVE",
+            "TARGET": "Myself",
+            "STRING_ID": "12037",
+            "STRING_DESC": "Monster Summoning II"
+        }
+    ]
+}

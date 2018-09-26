@@ -1,0 +1,43 @@
+{
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "RandomNum(8,1)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "CheckStatGT(LastSeenBy(Myself),5,STR)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,7725)  // Ray of Enfeeblement",
+                "Spell([EVILCUTOFF.0.0.FIGHTER_ALL],WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)"
+            ]
+        }
+    ],
+    "name": "Ray-of-Enfeeblement",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "WIZARD_RAY_OF_ENFEEBLEMENT",
+            "DESC": "SPWI221.SPL (Ray of Enfeeblement)",
+            "SPELL_TYPE": "OFFENSIVE",
+            "LOOK_FOR": "[EVILCUTOFF.0.0.FIGHTER_ALL]"
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Class(LastSeenBy(Myself),MONK)",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),CAVALIER)",
+        "!Race(LastSeenBy(Myself),ELF)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),-2,SAVEVSSPELL)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPPR405.SPL (Mental Domination)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID.0.FIGHTER]",
+            "SPELL": "CLERIC_MENTAL_DOMINATION",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Mental Domination",
+            "STRING_ID": "22618",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR405.SPL (Mental Domination)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER])",
+            "SPELL": "CLERIC_MENTAL_DOMINATION",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Mental Domination",
+            "STRING_ID": "22618",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR405.SPL (Mental Domination)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "SPELL": "CLERIC_MENTAL_DOMINATION",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Mental Domination",
+            "STRING_ID": "22618",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPPR405.SPL (Mental Domination)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "CLERIC_MENTAL_DOMINATION",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Mental Domination",
+            "STRING_ID": "22618",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Mental-Domination"
+}

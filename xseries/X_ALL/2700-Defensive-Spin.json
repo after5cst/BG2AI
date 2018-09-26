@@ -1,0 +1,40 @@
+{
+    "IF": [
+        "ActionListEmpty()",
+        "HaveSpell(BLADE_DEFENSIVE_SPIN)  // SPCL522.SPL (Defensive Spin)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!CheckSpellState(Myself,DEFENSIVE_SPIN)",
+        "!CheckSpellState(Myself,OFFENSIVE_SPIN)",
+        "Range(NearestEnemyOf(Myself),6)",
+        "Range(SecondNearestEnemyOf(Myself),6)",
+        "Range(ThirdNearestEnemyOf(Myself),6)",
+        "Range(FourthNearestEnemyOf(Myself),6)",
+        "Range(FifthNearestEnemyOf(Myself),6)",
+        "Range(SixthNearestEnemyOf(Myself),6)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        "NumCreatureGT([EVILCUTOFF],5)"
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "name": "Defensive-Spin",
+    "fields": [
+        {
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "TARGET": "Myself",
+            "STRING_ID": "34656",
+            "STRING_DESC": "Defensive Spin",
+            "SPELL": "BLADE_DEFENSIVE_SPIN",
+            "DESC": "SPCL522.SPL (Defensive Spin)"
+        }
+    ]
+}

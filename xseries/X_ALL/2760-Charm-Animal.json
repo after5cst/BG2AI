@@ -1,0 +1,63 @@
+{
+    "IF": [
+        "ActionListEmpty()",
+        "HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "!Range([NEUTRAL.0.0.INNOCENT],30)",
+        "!Range([GOODBUTBLUE],30)",
+        {
+            "SeeTarget": null
+        },
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "Range(LastSeenBy(Myself),6)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)"
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPCL311.SPL (Charm Animal)",
+            "LOOK_FOR": "[EVILCUTOFF.ANIMAL]",
+            "SPELL": "RANGER_CHARM_ANIMAL",
+            "STRING_DESC": "Charm Animal",
+            "STRING_ID": "20678",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL311.SPL (Charm Animal)",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.ANIMAL])",
+            "SPELL": "RANGER_CHARM_ANIMAL",
+            "STRING_DESC": "Charm Animal",
+            "STRING_ID": "20678",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPCL311.SPL (Charm Animal)",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.ANIMAL])",
+            "SPELL": "RANGER_CHARM_ANIMAL",
+            "STRING_DESC": "Charm Animal",
+            "STRING_ID": "20678",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Charm-Animal"
+}

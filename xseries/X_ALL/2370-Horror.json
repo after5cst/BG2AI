@@ -1,0 +1,55 @@
+{
+    "IF": [
+        {
+            "SpellRESReady": null
+        },
+        "!GlobalTimerNotExpired('BD_Horror','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],2)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!General(LastSeenBy(Myself),UNDEAD)",
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "!Race(LastSeenBy(Myself),TROLL)",
+        "!Kit(LastSeenBy(Myself),CAVALIER)",
+        "!Kit(LastSeenBy(Myself),Blackguard)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "EnemyNotDisabled": null
+        },
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "!CheckSpellState(LastSeenBy(Myself),RESIST_FEAR)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12069)  // Horror",
+                "SpellRES('SPIN105',LastSeenBy(Myself))  // Horror"
+            ]
+        }
+    ],
+    "name": "Horror",
+    "fields": [
+        {
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "SPIN105",
+            "DESC": "Horror",
+            "SPELL_TYPE": "SPECIAL",
+            "LOOK_FOR": "[EVILCUTOFF]"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_DInv','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        "StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)",
+        "CheckStat(Myself,0,TRUE_SIGHT)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobal('BD_DInv','LOCALS',0)",
+                "SetGlobalTimer('BD_DInv','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Detect Invisibility",
+            "STRING_ID": "12042",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Detect Invisibility",
+            "STRING_ID": "12042",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Detect Invisibility",
+            "STRING_ID": "12042",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "FourthNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Detect Invisibility",
+            "STRING_ID": "12042",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "FifthNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Detect Invisibility",
+            "STRING_ID": "12042",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPWI203.SPL (Detect Invisibility)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SixthNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_DETECT_INVISIBILITY",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Detect Invisibility",
+            "STRING_ID": "12042",
+            "TARGET": "Myself"
+        }
+    ],
+    "name": "Detect-Invisibility"
+}

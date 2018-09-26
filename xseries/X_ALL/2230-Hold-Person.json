@@ -1,0 +1,71 @@
+{
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "NumCreatureGT([EVILCUTOFF],2)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),-1,SAVEVSSPELL)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)",
+        "!HasItem('MORSWORD',LastSeenBy(Myself))  // Mordenkainen's Sword",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Hold Person",
+            "STRING_ID": "12049",
+            "TARGET": "[EVILCUTOFF.HUMANOID]"
+        },
+        {
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Hold Person",
+            "STRING_ID": "12049",
+            "TARGET": "SecondNearest([EVILCUTOFF.HUMANOID])"
+        },
+        {
+            "DESC": "SPWI306.SPL (Hold Person)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF.HUMANOID])",
+            "SPELL": "WIZARD_HOLD_PERSON",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Hold Person",
+            "STRING_ID": "12049",
+            "TARGET": "ThirdNearest([EVILCUTOFF.HUMANOID])"
+        }
+    ],
+    "name": "Hold-Person"
+}

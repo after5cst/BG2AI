@@ -1,0 +1,53 @@
+{
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        "CheckStat(Myself,0,PROTECTION_FROM_EVIL)",
+        [
+            "Alignment([EVILCUTOFF],MASK_EVIL)",
+            "Alignment(SecondNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(ThirdNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(FourthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(FifthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Alignment(SixthNearest([EVILCUTOFF]),MASK_EVIL)",
+            "Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)"
+        ],
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "DESC": "SPCL213.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "PALADIN_PROTECTION_FROM_EVIL",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "Myself"
+        }
+    ],
+    "name": "Protection-From-Evil"
+}

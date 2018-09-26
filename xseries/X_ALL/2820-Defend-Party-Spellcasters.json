@@ -1,0 +1,60 @@
+{
+    "IF": [
+        "ActionListEmpty()",
+        {
+            "WeakPlayerAttacked": null
+        },
+        {
+            "SeeTarget": null
+        },
+        {
+            "EnemyInAttackRange": null
+        },
+        {
+            "AllowedToAttackTarget": null
+        },
+        {
+            "EnemyNotDisabled": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "AttackOneRound(LastSeenBy(Myself))"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "LOOK_FOR": "LastAttackerOf(Player1)",
+            "PLAYER": "1",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player2)",
+            "PLAYER": "2",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player3)",
+            "PLAYER": "3",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player4)",
+            "PLAYER": "4",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player5)",
+            "PLAYER": "5",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "LOOK_FOR": "LastAttackerOf(Player6)",
+            "PLAYER": "6",
+            "TARGET": "LastSeenBy(Myself)"
+        }
+    ],
+    "name": "Defend-Party-Spellcasters"
+}
