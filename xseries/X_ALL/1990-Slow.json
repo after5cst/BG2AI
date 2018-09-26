@@ -41,30 +41,30 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_SLOW",
             "DESC": "SPWI312.SPL (Slow)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12081",
             "STRING_DESC": "Slow"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_SLOW",
             "DESC": "SPWI312.SPL (Slow)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12081",
             "STRING_DESC": "Slow"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_SLOW",
             "DESC": "SPWI312.SPL (Slow)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
             "STRING_ID": "12081",
             "STRING_DESC": "Slow"

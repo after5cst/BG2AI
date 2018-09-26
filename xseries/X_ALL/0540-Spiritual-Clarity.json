@@ -24,9 +24,9 @@
     "name": "Spiritual-Clarity",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "Player1",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
             "SPELL_TYPE": "DEFENSIVE",
@@ -34,9 +34,9 @@
             "STRING_DESC": "Spiritual Clarity"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "Player2",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
             "SPELL_TYPE": "DEFENSIVE",
@@ -44,9 +44,9 @@
             "STRING_DESC": "Spiritual Clarity"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "Player3",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
             "SPELL_TYPE": "DEFENSIVE",
@@ -54,9 +54,9 @@
             "STRING_DESC": "Spiritual Clarity"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "Player4",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
             "SPELL_TYPE": "DEFENSIVE",
@@ -64,9 +64,9 @@
             "STRING_DESC": "Spiritual Clarity"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "Player5",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
             "SPELL_TYPE": "DEFENSIVE",
@@ -74,9 +74,9 @@
             "STRING_DESC": "Spiritual Clarity"
         },
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "Player6",
             "TARGET": "LastSeenBy(Myself)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SPIRITUAL_CLARITY",
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
             "SPELL_TYPE": "DEFENSIVE",

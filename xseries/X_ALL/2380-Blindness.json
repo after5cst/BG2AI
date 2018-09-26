@@ -22,11 +22,6 @@
         },
         "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
         "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
-        {
-            "HighLevelSpellCanAffectTarget": null
-        },
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
         "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
         {
             "ArcaneCastOK": null
@@ -46,30 +41,30 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_BLINDNESS",
             "DESC": "SPWI106.SPL (Blindness)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
             "STRING_ID": "12015",
             "STRING_DESC": "Blindness"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_BLINDNESS",
             "DESC": "SPWI106.SPL (Blindness)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12015",
             "STRING_DESC": "Blindness"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_BLINDNESS",
             "DESC": "SPWI106.SPL (Blindness)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
             "STRING_ID": "12015",
             "STRING_DESC": "Blindness"

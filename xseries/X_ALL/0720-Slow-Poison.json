@@ -34,50 +34,50 @@
     "fields": [
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]"
         },
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])"
         },
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])"
         },
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([PC])"
         },
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([PC])"
         },
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN102",
             "DESC": "Slow Poison",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SixthNearest([PC])"
         }
     ]

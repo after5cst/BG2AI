@@ -26,10 +26,6 @@
         {
             "TargetNotRaging": null
         },
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
         {
             "ArcaneCastOK": null
@@ -49,30 +45,30 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_HORROR",
             "DESC": "SPWI205.SPL (Horror)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "STRING_ID": "12069",
             "STRING_DESC": "Horror"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_HORROR",
             "DESC": "SPWI205.SPL (Horror)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "STRING_ID": "12069",
             "STRING_DESC": "Horror"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_HORROR",
             "DESC": "SPWI205.SPL (Horror)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "STRING_ID": "12069",
             "STRING_DESC": "Horror"

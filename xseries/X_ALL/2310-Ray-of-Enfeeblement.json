@@ -14,8 +14,6 @@
             "SpellCanAffectTarget": null
         },
         "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
         "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         {
@@ -35,10 +33,10 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_RAY_OF_ENFEEBLEMENT",
             "DESC": "SPWI221.SPL (Ray of Enfeeblement)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.0.0.FIGHTER_ALL]"
         }
     ]

@@ -15,14 +15,8 @@
         "!Race(LastSeenBy(Myself),GOLEM)",
         "!Race(LastSeenBy(Myself),SWORD)",
         {
-            "HighLevelSpellCanAffectTarget": null
-        },
-        {
             "SpellCanAffectTarget": null
         },
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
         "CheckStatLT(LastSeenBy(Myself),75,MAGICDAMAGERESISTANCE)",
         {
@@ -42,10 +36,10 @@
     "fields": [
         {
             "FAIL_TYPE": "0",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN104",
             "DESC": "Larloch's Minor Drain",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "NearestEnemyOf(Myself)"
         }
     ]

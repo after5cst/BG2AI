@@ -19,9 +19,6 @@
         },
         "!StateCheck(LastSeenBy(Myself),STATE_NOT_APPROACHABLE)",
         "!StateCheck(LastSeenBy(Myself),STATE_REALLY_DEAD)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_TRAP)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
         {
             "CastingConditionsOK": null
@@ -40,10 +37,10 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN101",
             "DESC": "Cure Light Wounds",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "MostDamagedOf([PC])",
             "HPP": "40"
         }

@@ -26,10 +26,6 @@
         {
             "TargetNotRaging": null
         },
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
         {
             "ArcaneCastOK": null
@@ -49,10 +45,10 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "SPIN105",
             "DESC": "Horror",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF]"
         }
     ]

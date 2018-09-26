@@ -45,30 +45,30 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "55842",
             "STRING_DESC": "Negative Plane Protection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "55842",
             "STRING_DESC": "Negative Plane Protection"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_NEGATIVE_PLANE_PROTECTION",
             "DESC": "SPPR413.SPL (Negative Plane Protection)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "55842",
             "STRING_DESC": "Negative Plane Protection"

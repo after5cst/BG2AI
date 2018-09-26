@@ -22,10 +22,7 @@
         },
         "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
         "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
-        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)"
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)"
     ],
     "then": [
         {

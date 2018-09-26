@@ -30,60 +30,60 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_SLOW_POISON",
             "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[PC]",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_SLOW_POISON",
             "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SecondNearest([PC])",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_SLOW_POISON",
             "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "ThirdNearest([PC])",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_SLOW_POISON",
             "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FourthNearest([PC])",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_SLOW_POISON",
             "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "FifthNearest([PC])",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"
         },
         {
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "CLERIC_SLOW_POISON",
             "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "SixthNearest([PC])",
             "STRING_ID": "12112",
             "STRING_DESC": "Slow Poison"

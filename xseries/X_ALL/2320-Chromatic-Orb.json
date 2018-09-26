@@ -14,9 +14,6 @@
         "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
         "CheckStatGT(LastSeenBy(Myself),6,SAVEVSSPELL)",
         "CheckStatLT(LastSeenBy(Myself),31,RESISTMAGIC)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-        "!CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-        "!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)",
         "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
         {
             "ArcaneCastOK": null
@@ -35,10 +32,10 @@
     "fields": [
         {
             "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "TARGET": "LastSeenBy(Myself)",
             "SPELL": "WIZARD_CHROMATIC_ORB",
             "DESC": "SPWI118.SPL (Chromatic Orb)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
             "LOOK_FOR": "[EVILCUTOFF.HUMANOID]"
         }
     ]
