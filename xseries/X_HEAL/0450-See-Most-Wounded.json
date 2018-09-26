@@ -1,4 +1,18 @@
 {
+    "IF": [
+        "ActionListEmpty()",
+        "!Global('X_HEAL','LOCALS',1)",
+        {
+            "SeeHurtPlayer": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobal('X_HEAL','LOCALS',1)"
+            ]
+        }
+    ],
     "fields": [
         {
             "HP_PCT": "10",
@@ -151,19 +165,5 @@
             "PLAYER": "6"
         }
     ],
-    "IF": [
-        "ActionListEmpty()",
-        "!Global('X_HEAL','LOCALS',1)",
-        {
-            "SeeHurtPlayer": null
-        }
-    ],
-    "name": "See-Most-Wounded",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobal('X_HEAL','LOCALS',1)"
-            ]
-        }
-    ]
+    "name": "See-Most-Wounded"
 }

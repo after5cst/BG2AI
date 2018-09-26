@@ -1,4 +1,42 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_Blind','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!General(LastSeenBy(Myself),UNDEAD)",
+        "!Race(LastSeenBy(Myself),SLIME)",
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
+        "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Blind','LOCALS',THREE_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI106.SPL (Blindness)",
@@ -31,43 +69,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!GlobalTimerNotExpired('BD_Blind','LOCALS')",
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!General(LastSeenBy(Myself),UNDEAD)",
-        "!Race(LastSeenBy(Myself),SLIME)",
-        "!Race(LastSeenBy(Myself),DEMONIC)",
-        "!Race(LastSeenBy(Myself),LICH)",
-        "!Race(LastSeenBy(Myself),GOLEM)",
-        "!Race(LastSeenBy(Myself),DEMILICH)",
-        "!Race(LastSeenBy(Myself),RAKSHASA)",
-        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
-        "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
-        "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Blindness",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_Blind','LOCALS',THREE_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Blindness"
 }

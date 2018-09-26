@@ -1,4 +1,40 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_Glitter','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],2)",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
+        "!CheckSpellState(LastSeenBy(Myself),GLITTERDUST)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Glitter','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI224.SPL (Glitterdust)",
@@ -31,41 +67,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!GlobalTimerNotExpired('BD_Glitter','LOCALS')",
-        "NumCreatureGT([EVILCUTOFF],2)",
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!Race(LastSeenBy(Myself),LICH)",
-        "!Race(LastSeenBy(Myself),GOLEM)",
-        "!Race(LastSeenBy(Myself),DEMILICH)",
-        "!Race(LastSeenBy(Myself),RAKSHASA)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
-        "!CheckSpellState(LastSeenBy(Myself),GLITTERDUST)",
-        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Glitterdust",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_Glitter','LOCALS',TWO_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Glitterdust"
 }

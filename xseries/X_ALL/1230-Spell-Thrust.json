@@ -1,4 +1,32 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),3)",
+        [
+            "CheckStat(LastSeenBy(Myself),1,MINORGLOBE)",
+            "CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)",
+            "CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI321.SPL (Spell Thrust)",
@@ -31,33 +59,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
-        "!ImmuneToSpellLevel(LastSeenBy(Myself),3)",
-        [
-            "CheckStat(LastSeenBy(Myself),1,MINORGLOBE)",
-            "CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)",
-            "CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)",
-            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)"
-        ],
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Spell-Thrust",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Spell-Thrust"
 }

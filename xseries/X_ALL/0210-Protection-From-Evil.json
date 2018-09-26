@@ -1,4 +1,23 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "CheckStat(Myself,0,PROTECTION_FROM_EVIL)",
+        "Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPCL213.SPL (Protection From Evil)",
@@ -19,24 +38,5 @@
             "TARGET": "Myself"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "CheckStat(Myself,0,PROTECTION_FROM_EVIL)",
-        "Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)",
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Protection-From-Evil",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Protection-From-Evil"
 }

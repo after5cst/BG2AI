@@ -1,4 +1,36 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "IsValidFireSpellTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI303.SPL (Flame Arrow)",
@@ -34,37 +66,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!Race(LastSeenBy(Myself),LICH)",
-        "!Race(LastSeenBy(Myself),GOLEM)",
-        "!Race(LastSeenBy(Myself),DEMILICH)",
-        "!Race(LastSeenBy(Myself),RAKSHASA)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "IsValidFireSpellTarget": null
-        },
-        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Flame-Arrow",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Flame-Arrow"
 }

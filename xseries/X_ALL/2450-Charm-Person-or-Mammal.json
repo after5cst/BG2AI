@@ -1,4 +1,41 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Class(LastSeenBy(Myself),MONK)",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),CAVALIER)",
+        "!Race(LastSeenBy(Myself),ELF)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),3,SAVEVSSPELL)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR204.SPL (Charm Person or Mammal)",
@@ -41,42 +78,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!Class(LastSeenBy(Myself),MONK)",
-        "!Kit(LastSeenBy(Myself),INQUISITOR)",
-        "!Kit(LastSeenBy(Myself),CAVALIER)",
-        "!Race(LastSeenBy(Myself),ELF)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        "CheckStatGT(LastSeenBy(Myself),3,SAVEVSSPELL)",
-        {
-            "TargetNotRaging": null
-        },
-        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
-        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
-        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Charm-Person-or-Mammal",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Charm-Person-or-Mammal"
 }

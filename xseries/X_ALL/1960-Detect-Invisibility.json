@@ -1,4 +1,30 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_DInv','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        "StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)",
+        "CheckStat(Myself,0,TRUE_SIGHT)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobal('BD_DInv','LOCALS',0)",
+                "SetGlobalTimer('BD_DInv','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI203.SPL (Detect Invisibility)",
@@ -61,31 +87,5 @@
             "TARGET": "Myself"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!GlobalTimerNotExpired('BD_DInv','LOCALS')",
-        {
-            "SeeTarget": null
-        },
-        "StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
-        "!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)",
-        "CheckStat(Myself,0,TRUE_SIGHT)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Detect-Invisibility",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobal('BD_DInv','LOCALS',0)",
-                "SetGlobalTimer('BD_DInv','LOCALS',TWO_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Detect-Invisibility"
 }

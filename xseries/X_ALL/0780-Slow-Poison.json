@@ -1,4 +1,31 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR212.SPL (Slow Poison)",
@@ -61,32 +88,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Slow-Poison",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Slow-Poison"
 }

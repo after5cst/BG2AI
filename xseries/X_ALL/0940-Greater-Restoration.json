@@ -1,4 +1,31 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR417.SPL (Lesser Restoration)",
@@ -121,32 +148,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Greater-Restoration",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Greater-Restoration"
 }

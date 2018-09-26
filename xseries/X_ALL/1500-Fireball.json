@@ -1,4 +1,36 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
+        "!InParty(LastSeenBy(Myself))",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "IsValidFireSpellTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
+        "TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))",
+        "!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))",
+        "!Range([NEUTRAL],30)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI304.SPL (Fireball)",
@@ -34,37 +66,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
-        "!InParty(LastSeenBy(Myself))",
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "IsValidFireSpellTarget": null
-        },
-        "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
-        "TriggerOverride(LastSeenBy(Myself),Range(NearestAllyOf(Myself),15))",
-        "!TriggerOverride(LastSeenBy(Myself),Range(NearestEnemyOf(Myself),20))",
-        "!Range([NEUTRAL],30)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Fireball",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Fireball"
 }

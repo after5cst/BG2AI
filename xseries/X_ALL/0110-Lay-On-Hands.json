@@ -1,4 +1,21 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "X_HPPercentLT": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPCL211.SPL (Lay On Hands)",
@@ -19,22 +36,5 @@
             "TARGET": "Myself"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "X_HPPercentLT": null
-        }
-    ],
-    "name": "Lay-On-Hands",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Lay-On-Hands"
 }

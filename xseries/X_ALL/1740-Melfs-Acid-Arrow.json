@@ -1,4 +1,32 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
+        "!InParty(LastSeenBy(Myself))",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatLT(LastSeenBy(Myself),55,RESISTACID)",
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI211.SPL (Melf's Acid Arrow)",
@@ -61,33 +89,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
-        "!InParty(LastSeenBy(Myself))",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        "CheckStatLT(LastSeenBy(Myself),55,RESISTACID)",
-        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Melfs-Acid-Arrow",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Melfs-Acid-Arrow"
 }

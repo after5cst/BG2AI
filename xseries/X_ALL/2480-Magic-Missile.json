@@ -1,4 +1,36 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),LICH)",
+        "!Race(LastSeenBy(Myself),DEMILICH)",
+        "!Race(LastSeenBy(Myself),RAKSHASA)",
+        "CheckStatLT(LastSeenBy(Myself),31,RESISTMAGIC)",
+        "CheckStatLT(LastSeenBy(Myself),31,MAGICDAMAGERESISTANCE)",
+        "!CheckStat(LastSeenBy(Myself),2,DEFENSIVE_MODIFIER)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI112.SPL (Magic Missile)",
@@ -31,37 +63,5 @@
             "TARGET": "ThirdNearestEnemyOf(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!Race(LastSeenBy(Myself),GOLEM)",
-        "!Race(LastSeenBy(Myself),LICH)",
-        "!Race(LastSeenBy(Myself),DEMILICH)",
-        "!Race(LastSeenBy(Myself),RAKSHASA)",
-        "CheckStatLT(LastSeenBy(Myself),31,RESISTMAGIC)",
-        "CheckStatLT(LastSeenBy(Myself),31,MAGICDAMAGERESISTANCE)",
-        "!CheckStat(LastSeenBy(Myself),2,DEFENSIVE_MODIFIER)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!CheckStat(LastSeenBy(Myself),6,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Magic-Missile",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Magic-Missile"
 }

@@ -1,4 +1,35 @@
 {
+    "IF": [
+        {
+            "SpellRESReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
+        [
+            "Range(LastSeenBy(Myself),6)",
+            "!Range(NearestEnemyOf(Myself),30)"
+        ],
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,12112)  // Slow Poison",
+                "SpellRES('SPIN102',LastSeenBy(Myself))  // Slow Poison"
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "Slow Poison",
@@ -49,36 +80,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellRESReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
-        [
-            "Range(LastSeenBy(Myself),6)",
-            "!Range(NearestEnemyOf(Myself),30)"
-        ],
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Slow-Poison",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,12112)  // Slow Poison",
-                "SpellRES('SPIN102',LastSeenBy(Myself))  // Slow Poison"
-            ]
-        }
-    ]
+    "name": "Slow-Poison"
 }

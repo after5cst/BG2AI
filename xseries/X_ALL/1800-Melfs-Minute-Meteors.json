@@ -1,4 +1,26 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!HasItem('MELFMET',Myself)  // Melf's Minute Meteor",
+        {
+            "SlashingImmuneTargetExists": null
+        },
+        "!Range([EVILCUTOFF],8)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "DisplayString(Myself,38588)  // Melf's Minute Meteors",
+                "Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)"
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
@@ -43,27 +65,5 @@
             "TARGET": "SixthNearest([EVILCUTOFF.0.TROLL])"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!HasItem('MELFMET',Myself)  // Melf's Minute Meteor",
-        {
-            "SlashingImmuneTargetExists": null
-        },
-        "!Range([EVILCUTOFF],8)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Melfs-Minute-Meteors",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,38588)  // Melf's Minute Meteors",
-                "Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)"
-            ]
-        }
-    ]
+    "name": "Melfs-Minute-Meteors"
 }

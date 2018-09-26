@@ -17,39 +17,39 @@
             ]
         }
     ],
-    "name": "Drink-HP-Potion",
     "fields": [
         {
-            "ITEM": "POTN55",
             "DESC": "Potion of Superior Healing",
-            "TARGET": "Myself",
             "HPP": "50",
+            "ITEM": "POTN55",
+            "STRING_DESC": "*quaffs a potion*",
             "STRING_ID": "46150",
-            "STRING_DESC": "*quaffs a potion*"
+            "TARGET": "Myself"
         },
         {
-            "ITEM": "POTN52",
             "DESC": "Potion of Extra Healing",
-            "TARGET": "Myself",
             "HPP": "60",
+            "ITEM": "POTN52",
+            "STRING_DESC": "*quaffs a potion*",
             "STRING_ID": "46150",
-            "STRING_DESC": "*quaffs a potion*"
+            "TARGET": "Myself"
         },
         {
-            "ITEM": "POTN08",
             "DESC": "Potion of Healing",
-            "TARGET": "Myself",
             "HPP": "70",
+            "ITEM": "POTN08",
+            "STRING_DESC": "*quaffs a potion*",
             "STRING_ID": "46150",
-            "STRING_DESC": "*quaffs a potion*"
+            "TARGET": "Myself"
         },
         {
-            "ITEM": "POTN17",
             "DESC": "Elixir of Health",
-            "TARGET": "Myself",
             "HPP": "40",
+            "ITEM": "POTN17",
+            "STRING_DESC": "*quaffs a potion*",
             "STRING_ID": "46150",
-            "STRING_DESC": "*quaffs a potion*"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Drink-HP-Potion"
 }

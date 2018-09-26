@@ -1,4 +1,29 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeParalyzedAlly": null
+        },
+        "!GlobalTimerNotExpired('BD_RParal','LOCALS')",
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_RParal','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR308.SPL (Remove Paralysis)",
@@ -61,30 +86,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeParalyzedAlly": null
-        },
-        "!GlobalTimerNotExpired('BD_RParal','LOCALS')",
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Remove-Paralysis",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_RParal','LOCALS',TWO_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Remove-Paralysis"
 }

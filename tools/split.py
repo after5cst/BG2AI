@@ -13,7 +13,7 @@ from globals import tools_dir, project_name
 
 
 # This breaks a statement into an if and a then block
-_if_then_regex = r"(?P<statement>IF(?P<if>(.|\n)*?)^THEN$(?P<then>(.|\n)*?)END)"
+_if_then_regex = r"(?P<statement>IF(?P<IF>(.|\n)*?)^THEN$(?P<THEN>(.|\n)*?)END)"
 
 
 def _load_templates(which: str):
@@ -322,7 +322,7 @@ if __name__ == "__main__":
     search_dir = os.path.join(tools_dir, "..", project_name)
     parser = argparse.ArgumentParser()
     parser.add_argument('--auto_delete', action='store_true', default=True)
-    parser.add_argument('-v', '--verbose', action='count', default=2)
+    parser.add_argument('-v', '--verbose', action='count', default=0)
     parser.add_argument('-d', '--search_dir', default=search_dir)
 
     args = parser.parse_args()

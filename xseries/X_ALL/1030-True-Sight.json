@@ -1,4 +1,31 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        [
+            "StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)",
+            "StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+            "Gender(LastSeenBy(Myself),ILLUSIONARY)"
+        ],
+        "CheckStat(Myself,0,TRUE_SIGHT)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobal('BD_DInv','LOCALS',0)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPCL232.SPL (True Sight)",
@@ -61,32 +88,5 @@
             "TARGET": "Myself"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        [
-            "StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)",
-            "StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
-            "Gender(LastSeenBy(Myself),ILLUSIONARY)"
-        ],
-        "CheckStat(Myself,0,TRUE_SIGHT)",
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "True-Sight",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobal('BD_DInv','LOCALS',0)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "True-Sight"
 }

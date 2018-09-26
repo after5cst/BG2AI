@@ -1,4 +1,22 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "CheckStatGT(Myself,0,LEVELDRAIN)",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR417.SPL (Lesser Restoration)",
@@ -19,23 +37,5 @@
             "TARGET": "Myself"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "CheckStatGT(Myself,0,LEVELDRAIN)",
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Greater-Restoration",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Greater-Restoration"
 }

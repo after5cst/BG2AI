@@ -1,4 +1,24 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeCureDiseaseTarget": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR317.SPL (Cure Disease)",
@@ -61,25 +81,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeCureDiseaseTarget": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Cure-Disease",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Cure-Disease"
 }

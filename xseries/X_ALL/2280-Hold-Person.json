@@ -1,4 +1,43 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!Kit(LastSeenBy(Myself),INQUISITOR)",
+        "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)",
+        "!HasItem('MORSWORD',LastSeenBy(Myself))  // Mordenkainen's Sword",
+        "!HasItemEquiped('RING09',LastSeenBy(Myself))  // Edventar's Gift",
+        "!HasItemEquipedReal('SW2H06',LastSeenBy(Myself))  // Spider's Bane +2",
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR208.SPL (Hold Person)",
@@ -61,44 +100,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!Kit(LastSeenBy(Myself),INQUISITOR)",
-        "!Kit(LastSeenBy(Myself),UNDEADHUNTER)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
-        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
-        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
-        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)",
-        {
-            "TargetNotRaging": null
-        },
-        "!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)",
-        "!HasItem('MORSWORD',LastSeenBy(Myself))  // Mordenkainen's Sword",
-        "!HasItemEquiped('RING09',LastSeenBy(Myself))  // Edventar's Gift",
-        "!HasItemEquipedReal('SW2H06',LastSeenBy(Myself))  // Spider's Bane +2",
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Hold-Person",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Hold-Person"
 }

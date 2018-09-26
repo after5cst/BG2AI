@@ -1,4 +1,22 @@
 {
+    "IF": [
+        {
+            "SpellReadyNoDisableCheck": null
+        },
+        {
+            "SeenTargetHurtEnough": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                },
+                "SetGlobal('X_HEAL','LOCALS',0)"
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR607.SPL (Heal)",
@@ -111,23 +129,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReadyNoDisableCheck": null
-        },
-        {
-            "SeenTargetHurtEnough": null
-        }
-    ],
-    "name": "Heal-Wounds",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                },
-                "SetGlobal('X_HEAL','LOCALS',0)"
-            ]
-        }
-    ]
+    "name": "Heal-Wounds"
 }

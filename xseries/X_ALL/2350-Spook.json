@@ -1,4 +1,45 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_Spook','LOCALS')",
+        {
+            "SeeTarget": null
+        },
+        "!InParty(LastSeenBy(Myself))",
+        "!General(LastSeenBy(Myself),UNDEAD)",
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "!Race(LastSeenBy(Myself),TROLL)",
+        "!Kit(LastSeenBy(Myself),CAVALIER)",
+        "!Kit(LastSeenBy(Myself),Blackguard)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "EnemyNotDisabled": null
+        },
+        "CheckStatGT(LastSeenBy(Myself),-3,SAVEVSSPELL)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "!CheckSpellState(LastSeenBy(Myself),RESIST_FEAR)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Spook','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI125.SPL (Spook)",
@@ -31,46 +72,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!GlobalTimerNotExpired('BD_Spook','LOCALS')",
-        {
-            "SeeTarget": null
-        },
-        "!InParty(LastSeenBy(Myself))",
-        "!General(LastSeenBy(Myself),UNDEAD)",
-        "!Race(LastSeenBy(Myself),DEMONIC)",
-        "!Race(LastSeenBy(Myself),TROLL)",
-        "!Kit(LastSeenBy(Myself),CAVALIER)",
-        "!Kit(LastSeenBy(Myself),Blackguard)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "EnemyNotDisabled": null
-        },
-        "CheckStatGT(LastSeenBy(Myself),-3,SAVEVSSPELL)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        "!CheckSpellState(LastSeenBy(Myself),RESIST_FEAR)",
-        {
-            "TargetNotRaging": null
-        },
-        "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Spook",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_Spook','LOCALS',TWO_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Spook"
 }

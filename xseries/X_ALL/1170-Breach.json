@@ -1,4 +1,33 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),5)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,STONESKINS)",
+            "CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)",
+            "CheckSpellState(LastSeenBy(Myself),MANTLE)",
+            "CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)",
+            "CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI513.SPL (Breach)",
@@ -31,34 +60,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
-        "!ImmuneToSpellLevel(LastSeenBy(Myself),5)",
-        [
-            "CheckStatGT(LastSeenBy(Myself),0,STONESKINS)",
-            "CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)",
-            "CheckSpellState(LastSeenBy(Myself),MANTLE)",
-            "CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)",
-            "CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)"
-        ],
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Breach",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Breach"
 }

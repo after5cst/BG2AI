@@ -1,4 +1,26 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_SCLAR','LOCALS')",
+        {
+            "SeeClarityTarget": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_SCLAR','LOCALS',TWO_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR350.SPL (Spiritual Clarity)",
@@ -61,27 +83,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!GlobalTimerNotExpired('BD_SCLAR','LOCALS')",
-        {
-            "SeeClarityTarget": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Spiritual-Clarity",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_SCLAR','LOCALS',TWO_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Spiritual-Clarity"
 }

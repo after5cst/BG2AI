@@ -1,4 +1,24 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "CanBringBackTheDead": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR712.SPL (Resurrection)",
@@ -136,25 +156,5 @@
             "TARGET": "Player6"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "CanBringBackTheDead": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Bring-Back-Dead",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Bring-Back-Dead"
 }

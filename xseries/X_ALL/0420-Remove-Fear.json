@@ -1,4 +1,27 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeFearfulAlly": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPCL222.SPL (Remove Fear)",
@@ -121,28 +144,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeFearfulAlly": null
-        },
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Remove-Fear",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Remove-Fear"
 }

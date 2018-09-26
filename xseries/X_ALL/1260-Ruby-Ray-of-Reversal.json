@@ -1,4 +1,34 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
+        "!ImmuneToSpellLevel(LastSeenBy(Myself),7)",
+        [
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
+            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)",
+            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
+            "CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
+        ],
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
@@ -31,35 +61,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)",
-        "!ImmuneToSpellLevel(LastSeenBy(Myself),7)",
-        [
-            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)",
-            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)",
-            "CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)",
-            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)",
-            "CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)",
-            "CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)"
-        ],
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Ruby-Ray-of-Reversal",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Ruby-Ray-of-Reversal"
 }

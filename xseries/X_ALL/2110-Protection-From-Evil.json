@@ -1,24 +1,4 @@
 {
-    "fields": [
-        {
-            "DESC": "SPCL213.SPL (Protection From Evil)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "PALADIN_PROTECTION_FROM_EVIL",
-            "SPELL_TYPE": "SPECIAL",
-            "STRING_DESC": "Protection From Evil",
-            "STRING_ID": "12023",
-            "TARGET": "Myself"
-        },
-        {
-            "DESC": "SPPR107.SPL (Protection From Evil)",
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
-            "SPELL_TYPE": "DEFENSIVE",
-            "STRING_DESC": "Protection From Evil",
-            "STRING_ID": "12023",
-            "TARGET": "Myself"
-        }
-    ],
     "IF": [
         {
             "SpellReady": null
@@ -39,7 +19,6 @@
             "CastingConditionsOK": null
         }
     ],
-    "name": "Protection-From-Evil",
     "THEN": [
         {
             "100": [
@@ -49,5 +28,26 @@
                 }
             ]
         }
-    ]
+    ],
+    "fields": [
+        {
+            "DESC": "SPCL213.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "PALADIN_PROTECTION_FROM_EVIL",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "Myself"
+        },
+        {
+            "DESC": "SPPR107.SPL (Protection From Evil)",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "SPELL": "CLERIC_PROTECT_FROM_EVIL",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Protection From Evil",
+            "STRING_ID": "12023",
+            "TARGET": "Myself"
+        }
+    ],
+    "name": "Protection-From-Evil"
 }

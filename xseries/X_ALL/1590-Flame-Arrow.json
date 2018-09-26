@@ -1,4 +1,33 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
+        "!InParty(LastSeenBy(Myself))",
+        {
+            "SpellCanAffectTarget": null
+        },
+        {
+            "IsValidFireSpellTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI303.SPL (Flame Arrow)",
@@ -67,34 +96,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        "CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)",
-        "!InParty(LastSeenBy(Myself))",
-        {
-            "SpellCanAffectTarget": null
-        },
-        {
-            "IsValidFireSpellTarget": null
-        },
-        "!CheckStat(LastSeenBy(Myself),2,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Flame-Arrow",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Flame-Arrow"
 }

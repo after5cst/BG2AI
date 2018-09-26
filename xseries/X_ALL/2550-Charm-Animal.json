@@ -1,4 +1,38 @@
 {
+    "IF": [
+        "ActionListEmpty()",
+        "HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)",
+        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
+        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
+        "!Range([NEUTRAL.0.0.INNOCENT],30)",
+        "!Range([GOODBUTBLUE],30)",
+        {
+            "SeeTarget": null
+        },
+        "!Race(LastSeenBy(Myself),DEMONIC)",
+        "Range(LastSeenBy(Myself),6)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
+        {
+            "TargetNotRaging": null
+        },
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
+        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
+        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)"
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPCL311.SPL (Charm Animal)",
@@ -25,39 +59,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        "ActionListEmpty()",
-        "HaveSpell(RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)",
-        "Global('BDAI_DISABLE_SPECIAL','LOCALS',0)",
-        "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
-        "!Range([NEUTRAL.0.0.INNOCENT],30)",
-        "!Range([GOODBUTBLUE],30)",
-        {
-            "SeeTarget": null
-        },
-        "!Race(LastSeenBy(Myself),DEMONIC)",
-        "Range(LastSeenBy(Myself),6)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_DISABLED)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
-        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
-        {
-            "TargetNotRaging": null
-        },
-        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_CHAOTIC_COMMANDS)",
-        "!CheckSpellState(LastSeenBy(Myself),POTION_OF_CLARITY)",
-        "!CheckStat(LastSeenBy(Myself),4,WIZARD_SPELL_IMMUNITY)"
-    ],
-    "name": "Charm-Animal",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Charm-Animal"
 }

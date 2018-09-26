@@ -1,4 +1,33 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        "!GlobalTimerNotExpired('BD_Haste','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],3)",
+        {
+            "SeeTarget": null
+        },
+        "!StateCheck(LastSeenBy(Myself),STATE_HASTED)",
+        "CheckStat(LastSeenBy(Myself),0,IMPROVEDHASTE)",
+        {
+            "SpellCanAffectTarget": null
+        },
+        "!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)",
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                "SetGlobalTimer('BD_Haste','LOCALS',THREE_ROUNDS)",
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI305.SPL (Haste)",
@@ -31,34 +60,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        "!GlobalTimerNotExpired('BD_Haste','LOCALS')",
-        "NumCreatureGT([EVILCUTOFF],3)",
-        {
-            "SeeTarget": null
-        },
-        "!StateCheck(LastSeenBy(Myself),STATE_HASTED)",
-        "CheckStat(LastSeenBy(Myself),0,IMPROVEDHASTE)",
-        {
-            "SpellCanAffectTarget": null
-        },
-        "!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)",
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Haste",
-    "THEN": [
-        {
-            "100": [
-                "SetGlobalTimer('BD_Haste','LOCALS',THREE_ROUNDS)",
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Haste"
 }

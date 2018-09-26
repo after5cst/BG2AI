@@ -1,4 +1,36 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeTarget": null
+        },
+        [
+            "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
+            "StateCheck(LastSeenBy(Myself),STATE_BLIND)",
+            "CheckSpellState(LastSeenBy(Myself),DISEASED)",
+            "CheckSpellState(LastSeenBy(Myself),DEAFENED)"
+        ],
+        {
+            "HighLevelSpellCanAffectTarget": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "CastingConditionsOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPPR404.SPL (Neutralize Poison)",
@@ -61,37 +93,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeTarget": null
-        },
-        [
-            "StateCheck(LastSeenBy(Myself),STATE_POISONED)",
-            "StateCheck(LastSeenBy(Myself),STATE_BLIND)",
-            "CheckSpellState(LastSeenBy(Myself),DISEASED)",
-            "CheckSpellState(LastSeenBy(Myself),DEAFENED)"
-        ],
-        {
-            "HighLevelSpellCanAffectTarget": null
-        },
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "CastingConditionsOK": null
-        }
-    ],
-    "name": "Neutralize-Poison",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Neutralize-Poison"
 }

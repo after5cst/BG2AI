@@ -1,4 +1,27 @@
 {
+    "IF": [
+        {
+            "SpellReady": null
+        },
+        {
+            "SeeFearfulAlly": null
+        },
+        {
+            "AllyTargetNotDangerous": null
+        },
+        {
+            "ArcaneCastOK": null
+        }
+    ],
+    "THEN": [
+        {
+            "100": [
+                {
+                    "X_Spell": null
+                }
+            ]
+        }
+    ],
     "fields": [
         {
             "DESC": "SPWI210.SPL (Resist Fear)",
@@ -61,28 +84,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "IF": [
-        {
-            "SpellReady": null
-        },
-        {
-            "SeeFearfulAlly": null
-        },
-        {
-            "AllyTargetNotDangerous": null
-        },
-        {
-            "ArcaneCastOK": null
-        }
-    ],
-    "name": "Resist-Fear",
-    "THEN": [
-        {
-            "100": [
-                {
-                    "X_Spell": null
-                }
-            ]
-        }
-    ]
+    "name": "Resist-Fear"
 }
