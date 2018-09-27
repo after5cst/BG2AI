@@ -11,7 +11,7 @@
         {
             "100": [
                 {
-                    "X_Spell": null
+                    "X_SpellNoTimers": null
                 },
                 "SetGlobal('X_HEAL','LOCALS',0)"
             ]

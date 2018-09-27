@@ -4,7 +4,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	!GlobalTimerNotExpired("X_12031","LOCALS")
 	CheckStatGT(Myself,2,ARMORCLASS)
 	OR(2)
 		CheckStatGT(Myself,6,ARMORCLASS)
@@ -21,8 +20,6 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		SetGlobalTimer("X_12031","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12031)  // Armor
 		Spell(Myself,WIZARD_ARMOR)  // SPWI102.SPL (Armor)
 END
@@ -33,7 +30,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	!GlobalTimerNotExpired("X_25875","LOCALS")
 	CheckStatLT(Myself,1,STONESKINS)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
 	OR(2)
@@ -47,8 +43,6 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		SetGlobalTimer("X_25875","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25875)  // Stoneskin
 		Spell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 END
@@ -59,7 +53,6 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	!GlobalTimerNotExpired("X_44941","LOCALS")
 	CheckStatLT(Myself,1,STONESKINS)
 	OR(2)
 		ModalState(NONE)
@@ -72,8 +65,6 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		SetGlobalTimer("X_44941","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,44941)  // Iron Skins
 		Spell(Myself,CLERIC_IRONSKIN)  // SPPR506.SPL (Iron Skins)
 END

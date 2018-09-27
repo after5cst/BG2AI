@@ -1,7 +1,7 @@
 {
     "IF": [
         {
-            "SpellReady": null
+            "SpellReadyNoDisableCheck": null
         },
         {
             "CanBringBackTheDead": null
@@ -14,7 +14,7 @@
         {
             "100": [
                 {
-                    "X_Spell": null
+                    "X_SpellNoTimers": null
                 }
             ]
         }
@@ -24,7 +24,6 @@
             "DESC": "SPPR712.SPL (Resurrection)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESURRECTION",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Resurrection",
             "STRING_ID": "25765",
             "TARGET": "Player2"
@@ -33,7 +32,6 @@
             "DESC": "SPPR712.SPL (Resurrection)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESURRECTION",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Resurrection",
             "STRING_ID": "25765",
             "TARGET": "Player3"
@@ -42,7 +40,6 @@
             "DESC": "SPPR712.SPL (Resurrection)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESURRECTION",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Resurrection",
             "STRING_ID": "25765",
             "TARGET": "Player4"
@@ -51,7 +48,6 @@
             "DESC": "SPPR712.SPL (Resurrection)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESURRECTION",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Resurrection",
             "STRING_ID": "25765",
             "TARGET": "Player5"
@@ -60,7 +56,6 @@
             "DESC": "SPPR712.SPL (Resurrection)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RESURRECTION",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Resurrection",
             "STRING_ID": "25765",
             "TARGET": "Player6"
@@ -69,7 +64,6 @@
             "DESC": "SPPR504.SPL (Raise Dead)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RAISE_DEAD",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Raise Dead",
             "STRING_ID": "12117",
             "TARGET": "Player2"
@@ -78,7 +72,6 @@
             "DESC": "SPPR504.SPL (Raise Dead)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RAISE_DEAD",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Raise Dead",
             "STRING_ID": "12117",
             "TARGET": "Player3"
@@ -87,7 +80,6 @@
             "DESC": "SPPR504.SPL (Raise Dead)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RAISE_DEAD",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Raise Dead",
             "STRING_ID": "12117",
             "TARGET": "Player4"
@@ -96,7 +88,6 @@
             "DESC": "SPPR504.SPL (Raise Dead)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RAISE_DEAD",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Raise Dead",
             "STRING_ID": "12117",
             "TARGET": "Player5"
@@ -105,7 +96,6 @@
             "DESC": "SPPR504.SPL (Raise Dead)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RAISE_DEAD",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Raise Dead",
             "STRING_ID": "12117",
             "TARGET": "Player6"
@@ -114,7 +104,6 @@
             "DESC": "SPPR550.SPL (Recall Spirit)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RECALL_SPIRIT",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Recall Spirit",
             "STRING_ID": "103073",
             "TARGET": "Player2"
@@ -123,7 +112,6 @@
             "DESC": "SPPR550.SPL (Recall Spirit)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RECALL_SPIRIT",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Recall Spirit",
             "STRING_ID": "103073",
             "TARGET": "Player3"
@@ -132,7 +120,6 @@
             "DESC": "SPPR550.SPL (Recall Spirit)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RECALL_SPIRIT",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Recall Spirit",
             "STRING_ID": "103073",
             "TARGET": "Player4"
@@ -141,7 +128,6 @@
             "DESC": "SPPR550.SPL (Recall Spirit)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RECALL_SPIRIT",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Recall Spirit",
             "STRING_ID": "103073",
             "TARGET": "Player5"
@@ -150,7 +136,6 @@
             "DESC": "SPPR550.SPL (Recall Spirit)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_RECALL_SPIRIT",
-            "SPELL_TYPE": "DEFENSIVE",
             "STRING_DESC": "Recall Spirit",
             "STRING_ID": "103073",
             "TARGET": "Player6"

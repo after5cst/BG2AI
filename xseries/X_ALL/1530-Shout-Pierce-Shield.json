@@ -31,6 +31,7 @@
             "DESC": "SPWI805.SPL (Pierce Shield)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "SPELL": "WIZARD_PIERCE_SHIELD",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Pierce Shield",
             "STRING_ID": "26240",
             "TARGET": "LastSeenBy(Myself)"
@@ -39,6 +40,7 @@
             "DESC": "SPWI805.SPL (Pierce Shield)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_PIERCE_SHIELD",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Pierce Shield",
             "STRING_ID": "26240",
             "TARGET": "LastSeenBy(Myself)"
@@ -47,6 +49,7 @@
             "DESC": "SPWI805.SPL (Pierce Shield)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_PIERCE_SHIELD",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Pierce Shield",
             "STRING_ID": "26240",
             "TARGET": "LastSeenBy(Myself)"

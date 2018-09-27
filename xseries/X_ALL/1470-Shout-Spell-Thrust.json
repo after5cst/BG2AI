@@ -29,6 +29,7 @@
             "DESC": "SPWI321.SPL (Spell Thrust)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "SPELL": "WIZARD_SPELL_THRUST",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Spell Thrust",
             "STRING_ID": "25873",
             "TARGET": "LastSeenBy(Myself)"
@@ -37,6 +38,7 @@
             "DESC": "SPWI321.SPL (Spell Thrust)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_SPELL_THRUST",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Spell Thrust",
             "STRING_ID": "25873",
             "TARGET": "LastSeenBy(Myself)"
@@ -45,6 +47,7 @@
             "DESC": "SPWI321.SPL (Spell Thrust)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_SPELL_THRUST",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Spell Thrust",
             "STRING_ID": "25873",
             "TARGET": "LastSeenBy(Myself)"

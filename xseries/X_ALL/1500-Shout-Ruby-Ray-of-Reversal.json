@@ -31,6 +31,7 @@
             "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Ruby Ray of Reversal",
             "STRING_ID": "15465",
             "TARGET": "LastSeenBy(Myself)"
@@ -39,6 +40,7 @@
             "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Ruby Ray of Reversal",
             "STRING_ID": "15465",
             "TARGET": "LastSeenBy(Myself)"
@@ -47,6 +49,7 @@
             "DESC": "SPWI704.SPL (Ruby Ray of Reversal)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_RUBY_RAY_OF_REVERSAL",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Ruby Ray of Reversal",
             "STRING_ID": "15465",
             "TARGET": "LastSeenBy(Myself)"

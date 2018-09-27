@@ -30,6 +30,7 @@
             "DESC": "SPWI513.SPL (Breach)",
             "LOOK_FOR": "[EVILCUTOFF]",
             "SPELL": "WIZARD_BREACH",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Breach",
             "STRING_ID": "25914",
             "TARGET": "LastSeenBy(Myself)"
@@ -38,6 +39,7 @@
             "DESC": "SPWI513.SPL (Breach)",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_BREACH",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Breach",
             "STRING_ID": "25914",
             "TARGET": "LastSeenBy(Myself)"
@@ -46,6 +48,7 @@
             "DESC": "SPWI513.SPL (Breach)",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
             "SPELL": "WIZARD_BREACH",
+            "SPELL_TYPE": "OFFENSIVE",
             "STRING_DESC": "Breach",
             "STRING_ID": "25914",
             "TARGET": "LastSeenBy(Myself)"
