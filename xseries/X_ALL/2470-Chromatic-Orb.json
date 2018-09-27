@@ -22,21 +22,23 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,12054)  // Chromatic Orb",
-                "Spell([EVILCUTOFF.HUMANOID],WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)"
+                {
+                    "X_Spell": null
+                }
             ]
         }
     ],
-    "name": "Chromatic-Orb",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_CHROMATIC_ORB",
             "DESC": "SPWI118.SPL (Chromatic Orb)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]",
+            "SPELL": "WIZARD_CHROMATIC_ORB",
             "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF.HUMANOID]"
+            "STRING_DESC": "Chromatic Orb",
+            "STRING_ID": "12054",
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Chromatic-Orb"
 }

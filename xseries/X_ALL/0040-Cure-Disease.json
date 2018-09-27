@@ -21,16 +21,16 @@
             ]
         }
     ],
-    "name": "Cure-Disease",
     "fields": [
         {
+            "DESC": "SPPR317.SPL (Cure Disease)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_CURE_DISEASE",
-            "DESC": "SPPR317.SPL (Cure Disease)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Cure Disease",
             "STRING_ID": "2445",
-            "STRING_DESC": "Cure Disease"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Cure-Disease"
 }

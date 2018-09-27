@@ -1,5 +1,6 @@
 [
   "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+  "SetGlobalTimer('X_<STRING_ID>','LOCALS',THREE_ROUNDS)",
   "DisplayString(<TARGET>,<STRING_ID>)  // <STRING_DESC>",
   "Spell(<TARGET>,<SPELL>)  // <DESC>"
 ]

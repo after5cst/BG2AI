@@ -21,17 +21,17 @@
             ]
         }
     ],
-    "name": "True-Sight",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "INQUIS_TRUE_SIGHT",
             "DESC": "SPCL232.SPL (True Sight)",
-            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF.0.0.0.0.ILLUSIONARY]",
-            "TARGET": "Myself",
+            "SPELL": "INQUIS_TRUE_SIGHT",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "True Sight",
             "STRING_ID": "25633",
-            "STRING_DESC": "True Sight"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "True-Sight"
 }

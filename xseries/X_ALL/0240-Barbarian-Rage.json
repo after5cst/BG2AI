@@ -35,15 +35,15 @@
             ]
         }
     ],
-    "name": "Barbarian-Rage",
     "fields": [
         {
+            "DESC": "SPCL152.SPL (Barbarian Rage)",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
-            "STRING_ID": "42870",
-            "STRING_DESC": "Barbarian Rage",
             "SPELL": "BARBARIAN_RAGE",
-            "DESC": "SPCL152.SPL (Barbarian Rage)"
+            "STRING_DESC": "Barbarian Rage",
+            "STRING_ID": "42870",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Barbarian-Rage"
 }

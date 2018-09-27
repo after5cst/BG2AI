@@ -36,15 +36,15 @@
             ]
         }
     ],
-    "name": "Enrage",
     "fields": [
         {
+            "DESC": "SPCL321.SPL (Enrage)",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
-            "STRING_ID": "34654",
-            "STRING_DESC": "Enrage",
             "SPELL": "BERSERKER_RAGE",
-            "DESC": "SPCL321.SPL (Enrage)"
+            "STRING_DESC": "Enrage",
+            "STRING_ID": "34654",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Enrage"
 }

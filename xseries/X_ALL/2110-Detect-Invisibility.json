@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_DInv','LOCALS')",
         {
             "SeeTarget": null
         },
@@ -18,7 +17,6 @@
         {
             "100": [
                 "SetGlobal('BD_DInv','LOCALS',0)",
-                "SetGlobalTimer('BD_DInv','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }

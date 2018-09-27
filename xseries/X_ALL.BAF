@@ -11,6 +11,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12079","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12079)  // Vocalize
 		Spell(Myself,WIZARD_VOCALIZE)  // SPWI219.SPL (Vocalize)
 END
@@ -45,6 +46,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(Myself,STATE_POISONED)
 	OR(2)
@@ -59,6 +61,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12112)  // Slow Poison
 		Spell(Myself,CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -69,6 +72,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(3)
 		StateCheck(Myself,STATE_BLIND)
@@ -86,6 +90,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,2445)  // Cure Disease
 		Spell(Myself,CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -96,6 +101,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(4)
 		StateCheck(Myself,STATE_BLIND)
@@ -114,6 +120,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12115)  // Neutralize Poison
 		Spell(Myself,CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -124,6 +131,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25875","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatLT(Myself,1,STONESKINS)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
@@ -139,6 +147,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25875","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25875)  // Stoneskin
 		Spell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
 END
@@ -149,6 +158,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12018","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	!StateCheck(Myself,STATE_MIRRORIMAGE)
 	OR(3)
@@ -182,6 +192,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12018","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12018)  // Mirror Image
 		Spell(Myself,WIZARD_MIRROR_IMAGE)  // SPWI212.SPL (Mirror Image)
 END
@@ -192,6 +203,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12084","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(2)
 		ModalState(NONE)
@@ -212,6 +224,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12084","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12084)  // Sanctuary
 		Spell(Myself,CLERIC_SANCTUARY)  // SPPR109.SPL (Sanctuary)
 END
@@ -222,6 +235,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_44941","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatLT(Myself,1,STONESKINS)
 	OR(2)
@@ -236,6 +250,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_44941","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,44941)  // Iron Skins
 		Spell(Myself,CLERIC_IRONSKIN)  // SPPR506.SPL (Iron Skins)
 END
@@ -246,11 +261,13 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12032","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	HPPercentLT(Myself,81)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12032","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12032)  // Lay On Hands
 		Spell(Myself,PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
 END
@@ -261,11 +278,13 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12032","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	HPPercentLT(Myself,81)
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12032","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12032)  // Lay On Hands
 		Spell(Myself,MONK_LAY_ON_HANDS)  // SPCL815.SPL (Lay On Hands)
 END
@@ -411,6 +430,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38581","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BD_Cloud","LOCALS",1)
 	OR(2)
@@ -426,6 +446,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_Cloud","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38581","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,38581)  // Zone of Sweet Air
 		Spell(Myself,CLERIC_ZONE_OF_SWEET_AIR)  // SPPR318.SPL (Zone of Sweet Air)
 END
@@ -436,6 +457,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStat(Myself,0,PROTECTION_FROM_EVIL)
 	Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)
@@ -451,6 +473,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(Myself,PALADIN_PROTECTION_FROM_EVIL)  // SPCL213.SPL (Protection From Evil)
 END
@@ -461,6 +484,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStat(Myself,0,PROTECTION_FROM_EVIL)
 	Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)
@@ -476,6 +500,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(Myself,CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
@@ -486,8 +511,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12014","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	Range([0.0.DEMONIC.0.0.SUMMONED_DEMON],30)
 	OR(2)
 		CheckStat([GOODCUTOFF],0,PROTECTION_FROM_EVIL)
@@ -506,8 +531,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12014","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12014)  // Protection From Evil, 10' Radius
 		Spell(Myself,CLERIC_PROTECTION_FROM_EVIL_10_FOOT)  // SPPR408.SPL (Protection From Evil, 10' Radius)
 END
@@ -539,6 +564,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_34654","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,34654)  // Enrage
 		Spell(Myself,BERSERKER_RAGE)  // SPCL321.SPL (Enrage)
 END
@@ -569,6 +595,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_42870","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,42870)  // Barbarian Rage
 		Spell(Myself,BARBARIAN_RAGE)  // SPCL152.SPL (Barbarian Rage)
 END
@@ -579,6 +606,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12088","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See([GOODCUTOFF])
 	OR(2)
@@ -591,7 +619,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStat(LastSeenBy(Myself),0,WEB)
-	!GlobalTimerNotExpired("BD_RParal","LOCALS")
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	OR(2)
@@ -605,8 +632,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12088","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
@@ -617,6 +644,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12088","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SecondNearest([GOODCUTOFF]))
 	OR(2)
@@ -629,7 +657,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStat(LastSeenBy(Myself),0,WEB)
-	!GlobalTimerNotExpired("BD_RParal","LOCALS")
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	OR(2)
@@ -643,8 +670,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12088","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
@@ -655,6 +682,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12088","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(ThirdNearest([GOODCUTOFF]))
 	OR(2)
@@ -667,7 +695,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStat(LastSeenBy(Myself),0,WEB)
-	!GlobalTimerNotExpired("BD_RParal","LOCALS")
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	OR(2)
@@ -681,8 +708,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12088","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
@@ -693,6 +720,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12088","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FourthNearest([GOODCUTOFF]))
 	OR(2)
@@ -705,7 +733,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStat(LastSeenBy(Myself),0,WEB)
-	!GlobalTimerNotExpired("BD_RParal","LOCALS")
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	OR(2)
@@ -719,8 +746,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12088","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
@@ -731,6 +758,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12088","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FifthNearest([GOODCUTOFF]))
 	OR(2)
@@ -743,7 +771,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStat(LastSeenBy(Myself),0,WEB)
-	!GlobalTimerNotExpired("BD_RParal","LOCALS")
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	OR(2)
@@ -757,8 +784,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12088","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
@@ -769,6 +796,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12088","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SixthNearest([GOODCUTOFF]))
 	OR(2)
@@ -781,7 +809,6 @@ IF
 	!CheckStat(LastSeenBy(Myself),1,CLERIC_SHIELD_OF_THE_ARCHONS)
 	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
 	CheckStat(LastSeenBy(Myself),0,WEB)
-	!GlobalTimerNotExpired("BD_RParal","LOCALS")
 	!StateCheck(LastSeenBy(Myself),STATE_CONFUSED)
 	!StateCheck(LastSeenBy(Myself),STATE_CHARMED)
 	OR(2)
@@ -795,8 +822,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_RParal","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12088","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12088)  // Remove Paralysis
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_PARALYSIS)  // SPPR308.SPL (Remove Paralysis)
 END
@@ -807,6 +834,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck([GOODCUTOFF],STATE_PANIC)
 	See([GOODCUTOFF])
@@ -830,6 +858,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
@@ -840,6 +869,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
 	See(SecondNearest([GOODCUTOFF]))
@@ -863,6 +893,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
@@ -873,6 +904,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
 	See(ThirdNearest([GOODCUTOFF]))
@@ -896,6 +928,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
@@ -906,6 +939,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(FourthNearest([GOODCUTOFF]))
@@ -929,6 +963,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
@@ -939,6 +974,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(FifthNearest([GOODCUTOFF]))
@@ -962,6 +998,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
@@ -972,6 +1009,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(SixthNearest([GOODCUTOFF]))
@@ -995,6 +1033,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CAVALIER_REMOVE_FEAR)  // SPCL222.SPL (Remove Fear)
 END
@@ -1005,6 +1044,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck([GOODCUTOFF],STATE_PANIC)
 	See([GOODCUTOFF])
@@ -1028,6 +1068,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
@@ -1038,6 +1079,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
 	See(SecondNearest([GOODCUTOFF]))
@@ -1061,6 +1103,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
@@ -1071,6 +1114,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
 	See(ThirdNearest([GOODCUTOFF]))
@@ -1094,6 +1138,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
@@ -1104,6 +1149,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(FourthNearest([GOODCUTOFF]))
@@ -1127,6 +1173,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
@@ -1137,6 +1184,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(FifthNearest([GOODCUTOFF]))
@@ -1160,6 +1208,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
@@ -1170,6 +1219,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12083","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(SixthNearest([GOODCUTOFF]))
@@ -1193,6 +1243,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12083","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12083)  // Remove Fear
 		Spell(LastSeenBy(Myself),CLERIC_REMOVE_FEAR)  // SPPR108.SPL (Remove Fear)
 END
@@ -1203,6 +1254,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12025","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck([GOODCUTOFF],STATE_PANIC)
 	See([GOODCUTOFF])
@@ -1227,6 +1279,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12025","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
@@ -1237,6 +1290,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12025","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(SecondNearest([GOODCUTOFF]),STATE_PANIC)
 	See(SecondNearest([GOODCUTOFF]))
@@ -1261,6 +1315,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12025","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
@@ -1271,6 +1326,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12025","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(ThirdNearest([GOODCUTOFF]),STATE_PANIC)
 	See(ThirdNearest([GOODCUTOFF]))
@@ -1295,6 +1351,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12025","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
@@ -1305,6 +1362,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12025","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(FourthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(FourthNearest([GOODCUTOFF]))
@@ -1329,6 +1387,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12025","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
@@ -1339,6 +1398,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12025","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(FifthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(FifthNearest([GOODCUTOFF]))
@@ -1363,6 +1423,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12025","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
@@ -1373,6 +1434,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12025","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	StateCheck(SixthNearest([GOODCUTOFF]),STATE_PANIC)
 	See(SixthNearest([GOODCUTOFF]))
@@ -1397,6 +1459,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12025","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12025)  // Resist Fear
 		Spell(LastSeenBy(Myself),WIZARD_RESIST_FEAR)  // SPWI210.SPL (Resist Fear)
 END
@@ -1407,8 +1470,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103069","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
 	See(Player1)
 	OR(4)
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
@@ -1432,8 +1495,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
@@ -1444,8 +1507,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103069","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
 	See(Player2)
 	OR(4)
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
@@ -1469,8 +1532,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
@@ -1481,8 +1544,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103069","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
 	See(Player3)
 	OR(4)
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
@@ -1506,8 +1569,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
@@ -1518,8 +1581,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103069","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
 	See(Player4)
 	OR(4)
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
@@ -1543,8 +1606,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
@@ -1555,8 +1618,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103069","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
 	See(Player5)
 	OR(4)
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
@@ -1580,8 +1643,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
@@ -1592,8 +1655,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103069","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_SCLAR","LOCALS")
 	See(Player6)
 	OR(4)
 		StateCheck(LastSeenBy(Myself),STATE_PANIC)
@@ -1617,8 +1680,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_SCLAR","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),103069)  // Spiritual Clarity
 		Spell(LastSeenBy(Myself),CLERIC_SPIRITUAL_CLARITY)  // SPPR350.SPL (Spiritual Clarity)
 END
@@ -1629,6 +1692,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See([PC])
 	OR(4)
@@ -1656,6 +1720,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -1666,6 +1731,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SecondNearest([PC]))
 	OR(4)
@@ -1693,6 +1759,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -1703,6 +1770,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(ThirdNearest([PC]))
 	OR(4)
@@ -1730,6 +1798,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -1740,6 +1809,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FourthNearest([PC]))
 	OR(4)
@@ -1767,6 +1837,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -1777,6 +1848,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FifthNearest([PC]))
 	OR(4)
@@ -1804,6 +1876,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -1814,6 +1887,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_2445","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SixthNearest([PC]))
 	OR(4)
@@ -1841,6 +1915,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_2445","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),2445)  // Cure Disease
 		Spell(LastSeenBy(Myself),CLERIC_CURE_DISEASE)  // SPPR317.SPL (Cure Disease)
 END
@@ -1851,6 +1926,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See([PC])
 	OR(4)
@@ -1877,6 +1953,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -1887,6 +1964,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SecondNearest([PC]))
 	OR(4)
@@ -1913,6 +1991,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -1923,6 +2002,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(ThirdNearest([PC]))
 	OR(4)
@@ -1949,6 +2029,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -1959,6 +2040,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FourthNearest([PC]))
 	OR(4)
@@ -1985,6 +2067,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -1995,6 +2078,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FifthNearest([PC]))
 	OR(4)
@@ -2021,6 +2105,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -2031,6 +2116,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12115","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SixthNearest([PC]))
 	OR(4)
@@ -2057,6 +2143,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12115","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12115)  // Neutralize Poison
 		Spell(LastSeenBy(Myself),CLERIC_NEUTRALIZE_POISON)  // SPPR404.SPL (Neutralize Poison)
 END
@@ -2283,6 +2370,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See([PC])
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2306,6 +2394,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -2316,6 +2405,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SecondNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2339,6 +2429,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -2349,6 +2440,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(ThirdNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2372,6 +2464,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -2382,6 +2475,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FourthNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2405,6 +2499,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -2415,6 +2510,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FifthNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2438,6 +2534,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -2448,6 +2545,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12112","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SixthNearest([PC]))
 	StateCheck(LastSeenBy(Myself),STATE_POISONED)
@@ -2471,6 +2569,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12112","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12112)  // Slow Poison
 		Spell(LastSeenBy(Myself),CLERIC_SLOW_POISON)  // SPPR212.SPL (Slow Poison)
 END
@@ -2481,6 +2580,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_34800","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	!CheckSpellState(Myself,LATHANDER_BOON)
 	CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)
@@ -2508,6 +2608,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_34800","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,34800)  // Boon of Lathander
 		Spell(Myself,LATHANDER_BOON)  // SPCL741.SPL (Boon of Lathander)
 END
@@ -2518,6 +2619,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55842","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	!CheckSpellState(Myself,LATHANDER_BOON)
 	CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)
@@ -2545,6 +2647,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55842","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,55842)  // Negative Plane Protection
 		Spell(Myself,CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
@@ -2555,6 +2658,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatGT(Myself,0,LEVELDRAIN)
 	OR(2)
@@ -2569,6 +2673,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,55844)  // Lesser Restoration
 		Spell(Myself,CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2579,6 +2684,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatGT(Myself,0,LEVELDRAIN)
 	OR(2)
@@ -2593,6 +2699,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,35603)  // Greater Restoration
 		Spell(Myself,CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -2603,6 +2710,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See([PC])
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2626,6 +2734,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2636,6 +2745,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SecondNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2659,6 +2769,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2669,6 +2780,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(ThirdNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2692,6 +2804,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2702,6 +2815,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FourthNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2725,6 +2839,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2735,6 +2850,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FifthNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2758,6 +2874,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2768,6 +2885,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55844","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SixthNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2791,6 +2909,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55844","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55844)  // Lesser Restoration
 		Spell(LastSeenBy(Myself),CLERIC_LESSER_RESTORATION)  // SPPR417.SPL (Lesser Restoration)
 END
@@ -2801,6 +2920,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See([PC])
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2824,6 +2944,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -2834,6 +2955,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SecondNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2857,6 +2979,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -2867,6 +2990,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(ThirdNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2890,6 +3014,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -2900,6 +3025,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FourthNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2923,6 +3049,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -2933,6 +3060,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(FifthNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2956,6 +3084,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -2966,6 +3095,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_35603","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	See(SixthNearest([PC]))
 	CheckStatGT(LastSeenBy(Myself),0,LEVELDRAIN)
@@ -2989,6 +3119,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_35603","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),35603)  // Greater Restoration
 		Spell(LastSeenBy(Myself),CLERIC_RESTORATION)  // SPPR713.SPL (Greater Restoration)
 END
@@ -3016,6 +3147,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	Global("BD_DInv","LOCALS",1)
 	ActuallyInCombat()
@@ -3033,6 +3165,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3043,6 +3176,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See([EVILCUTOFF.0.0.0.0.ILLUSIONARY])
 	CheckStat(Myself,0,TRUE_SIGHT)
@@ -3059,6 +3193,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3069,6 +3204,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(NearestEnemyOf(Myself))
 	OR(3)
@@ -3089,6 +3225,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3099,6 +3236,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(SecondNearestEnemyOf(Myself))
 	OR(3)
@@ -3119,6 +3257,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3129,6 +3268,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(ThirdNearestEnemyOf(Myself))
 	OR(3)
@@ -3149,6 +3289,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3159,6 +3300,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(FourthNearestEnemyOf(Myself))
 	OR(3)
@@ -3179,6 +3321,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3189,6 +3332,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(FifthNearestEnemyOf(Myself))
 	OR(3)
@@ -3209,6 +3353,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3219,6 +3364,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25633","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(SixthNearestEnemyOf(Myself))
 	OR(3)
@@ -3239,6 +3385,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25633","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25633)  // True Sight
 		Spell(Myself,INQUIS_TRUE_SIGHT)  // SPCL232.SPL (True Sight)
 END
@@ -3249,6 +3396,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_7468","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(2)
 		HPPercentLT(Myself,51)
@@ -3274,6 +3422,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_7468","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,7468)  // Mass Cure
 		Spell(Myself,CLERIC_MASS_CURE)  // SPPR514.SPL (Mass Cure)
 END
@@ -3284,6 +3433,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12032","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
 	See(MostDamagedOf([PC]))
 	HPPercentLT(LastSeenBy(Myself),40)
@@ -3312,6 +3462,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12032","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12032)  // Lay On Hands
 		Spell(LastSeenBy(Myself),PALADIN_LAY_ON_HANDS)  // SPCL211.SPL (Lay On Hands)
 END
@@ -3368,6 +3519,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_51848","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,51848)  // Kai
 		Spell(Myself,KENSAI_KIA)  // SPCL144.SPL (Kai)
 END
@@ -3404,6 +3556,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_34655","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,34655)  // Offensive Spin
 		Spell(Myself,BLADE_OFFENSIVE_SPIN)  // SPCL521.SPL (Offensive Spin)
 END
@@ -3424,6 +3577,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_51964","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,51964)  // Called Shot
 		Spell(Myself,ARCHER_CALL_SHOT)  // SPCL121.SPL (Called Shot)
 END
@@ -3434,6 +3588,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_64319","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	!CheckSpellState(Myself,CHAOS_SHIELD)
 	!CheckSpellState(Myself,IMPROVED_CHAOS_SHIELD)
@@ -3451,6 +3606,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_64319","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,64319)  // Chaos Shield
 		Spell(Myself,WIZARD_CHAOS_SHIELD)  // SPWI222.SPL (Chaos Shield)
 END
@@ -3461,6 +3617,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55842","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(5)
 		Range([EVILCUTOFF.0.0.WIGHT],30)
@@ -3498,6 +3655,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55842","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
@@ -3508,6 +3666,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55842","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(5)
 		Range([EVILCUTOFF.0.0.WIGHT],30)
@@ -3545,6 +3704,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55842","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
@@ -3555,6 +3715,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_55842","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(5)
 		Range([EVILCUTOFF.0.0.WIGHT],30)
@@ -3592,6 +3753,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_55842","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),55842)  // Negative Plane Protection
 		Spell(LastSeenBy(Myself),CLERIC_NEGATIVE_PLANE_PROTECTION)  // SPPR413.SPL (Negative Plane Protection)
 END
@@ -3602,6 +3764,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3625,6 +3788,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
 END
@@ -3635,6 +3799,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3658,6 +3823,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
 END
@@ -3668,6 +3834,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3691,6 +3858,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25914)  // Breach
 		Spell(LastSeenBy(Myself),WIZARD_BREACH)  // SPWI513.SPL (Breach)
 END
@@ -3701,6 +3869,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3725,6 +3894,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
 END
@@ -3735,6 +3905,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3759,6 +3930,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
 END
@@ -3769,6 +3941,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3793,6 +3966,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
 END
@@ -3803,6 +3977,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3825,6 +4000,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
 END
@@ -3835,6 +4011,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3857,6 +4034,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
 END
@@ -3867,6 +4045,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3889,6 +4068,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
 		Spell(LastSeenBy(Myself),WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
 END
@@ -3899,6 +4079,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3923,6 +4104,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
 END
@@ -3933,6 +4115,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3957,6 +4140,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
 END
@@ -3967,6 +4151,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -3991,6 +4176,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
 		Spell(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
 END
@@ -4001,6 +4187,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4025,6 +4212,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
 END
@@ -4035,6 +4223,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4059,6 +4248,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
 END
@@ -4069,6 +4259,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4093,6 +4284,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
 END
@@ -4103,6 +4295,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4126,6 +4319,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
 END
@@ -4136,6 +4330,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4159,6 +4354,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
 END
@@ -4169,6 +4365,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4192,6 +4389,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
 		Spell(LastSeenBy(Myself),WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
 END
@@ -4202,6 +4400,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4225,6 +4424,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
 END
@@ -4235,6 +4435,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4258,6 +4459,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
 END
@@ -4268,6 +4470,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
@@ -4291,6 +4494,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
 		Spell(LastSeenBy(Myself),WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
 END
@@ -4301,596 +4505,602 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
-		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
-		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
-		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25914","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
-	OR(5)
-		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
-		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
-		CheckSpellState(LastSeenBy(Myself),MANTLE)
-		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
-		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25914)  // Breach
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25914","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
-	OR(5)
-		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
-		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
-		CheckSpellState(LastSeenBy(Myself),MANTLE)
-		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
-		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25914)  // Breach
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25914","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
-	OR(5)
-		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
-		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
-		CheckSpellState(LastSeenBy(Myself),MANTLE)
-		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
-		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25914)  // Breach
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_26314","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_26314","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_26314","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25873","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
-	OR(4)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
-		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25873","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
-	OR(4)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
-		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25873","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
-	OR(4)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
-		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_15465","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_15465","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_15465","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_26240","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_26240","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_26240","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
-	OR(6)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
-		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25947","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25947","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25947","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25934","LOCALS")
-	See([EVILCUTOFF])
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25934","LOCALS")
-	See(SecondNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("X_25934","LOCALS")
-	See(ThirdNearest([EVILCUTOFF]))
-	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
-	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
-	OR(5)
-		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
-		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
-		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
-		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	!GlobalTimerNotExpired("X_25884","LOCALS")
+	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+	Global("BDAI_NO_ARCANE","LOCALS",0)
+	OR(2)
+		ModalState(NONE)
+		ModalState(DETECTTRAPS)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!CheckStat(Myself,1,SANCTUARY)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25884","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
+		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25884","LOCALS")
+	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+	Global("BDAI_NO_ARCANE","LOCALS",0)
+	OR(2)
+		ModalState(NONE)
+		ModalState(DETECTTRAPS)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!CheckStat(Myself,1,SANCTUARY)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25884","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
+		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25884","LOCALS")
+	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+	Global("BDAI_NO_ARCANE","LOCALS",0)
+	OR(2)
+		ModalState(NONE)
+		ModalState(DETECTTRAPS)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!CheckStat(Myself,1,SANCTUARY)
+	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
+	!StateCheck(Myself,STATE_SILENCED)
+	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
+	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25884","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25884)  // Secret Word
+		Spell(LastSeenBy(Myself),WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
+	OR(5)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
+		CheckSpellState(LastSeenBy(Myself),MANTLE)
+		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
+		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
+	OR(5)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
+		CheckSpellState(LastSeenBy(Myself),MANTLE)
+		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
+		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_BREACH)  // SPWI513.SPL (Breach)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25914","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),5)
+	OR(5)
+		CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+		CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_MAGICAL_WEAPONS)
+		CheckSpellState(LastSeenBy(Myself),MANTLE)
+		CheckSpellState(LastSeenBy(Myself),IMPROVED_MANTLE)
+		CheckSpellState(LastSeenBy(Myself),ABSOLUTE_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25914","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25914)  // Breach
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_STRIKE)  // SPWI903.SPL (Spellstrike)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26314","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),9)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26314","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26314)  // Spellstrike
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
+	OR(4)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
+	OR(4)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SPELL_THRUST)  // SPWI321.SPL (Spell Thrust)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25873","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),3)
+	OR(4)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_DEFLECTION)
+		CheckStat(LastSeenBy(Myself),1,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25873","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25873)  // Spell Thrust
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_RUBY_RAY_OF_REVERSAL)  // SPWI704.SPL (Ruby Ray of Reversal)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_15465","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_15465","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),15465)  // Ruby Ray of Reversal
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_SHIELD)  // SPWI805.SPL (Pierce Shield)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_26240","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),8)
+	OR(6)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TRAP)
+		CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_26240","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),26240)  // Pierce Shield
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_WARDING_WHIP)  // SPWI705.SPL (Khelben's Warding Whip)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25947","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),7)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25947","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25947)  // Khelben's Warding Whip
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See([EVILCUTOFF])
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(SecondNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_PIERCE_MAGIC)  // SPWI608.SPL (Pierce Magic)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25934","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
+	See(ThirdNearest([EVILCUTOFF]))
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
+	!ImmuneToSpellLevel(LastSeenBy(Myself),6)
+	OR(5)
+		CheckStat(LastSeenBy(Myself),1,MINORGLOBE)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_DEFLECTION)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_TURNING)
+		CheckStatGT(LastSeenBy(Myself),0,CLERIC_SHIELD_OF_THE_ARCHONS)
+		CheckStatGT(LastSeenBy(Myself),0,WIZARD_SPELL_IMMUNITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("X_25934","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),25934)  // Pierce Magic
+END
+
+IF
+	ActionListEmpty()
+	HaveSpell(WIZARD_SECRET_WORD)  // SPWI419.SPL (Secret Word)
+	OR(2)
+		!GlobalTimerNotExpired("BD_Cast","LOCALS")
+		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25884","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF])
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
@@ -4912,8 +5122,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	!GlobalTimerNotExpired("X_25884","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
@@ -4935,8 +5145,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
-	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	!GlobalTimerNotExpired("X_25884","LOCALS")
+	!Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF]))
 	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!ImmuneToSpellLevel(LastSeenBy(Myself),4)
@@ -4958,6 +5168,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12031","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CheckStatGT(Myself,6,ARMORCLASS)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
@@ -4973,6 +5184,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12031","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12031)  // Armor
 		Spell(Myself,WIZARD_ARMOR)  // SPWI102.SPL (Armor)
 END
@@ -4983,9 +5195,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_22829","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Dharm","LOCALS")
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	CheckStat(Myself,0,CLERIC_DEFENSIVE_HARMONY)
 	Range([EVILCUTOFF],30)
@@ -5002,9 +5213,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Dharm","LOCALS",THREE_ROUNDS)
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_22829","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,22829)  // Defensive Harmony
 		Spell(Myself,CLERIC_DEFENSIVE_HARMONY)  // SPPR406.SPL (Defensive Harmony)
 END
@@ -5015,8 +5225,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25601","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	See([EVILCUTOFF])
 	OR(2)
 		CheckStatGT(LastSeenBy(Myself),12,LEVEL)
@@ -5033,8 +5243,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25601","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,25601)  // Armor of Faith
 		Spell(Myself,CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
 END
@@ -5073,8 +5283,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12108","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	See([EVILCUTOFF])
 	OR(2)
 		CheckStatGT(LastSeenBy(Myself),12,LEVEL)
@@ -5091,8 +5301,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12108","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12108)  // Draw Upon Holy Might
 		Spell(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT)  // SPPR214.SPL (Draw Upon Holy Might)
 END
@@ -5144,6 +5354,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12051","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	NumCreatureGT([EVILCUTOFF],3)
 	See([EVILCUTOFF])
@@ -5176,8 +5387,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12051)  // Confusion
-		Spell([EVILCUTOFF],WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
+		SetGlobalTimer("X_12051","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),12051)  // Confusion
+		Spell(LastSeenBy(Myself),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
 END
 
 IF
@@ -5186,6 +5398,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12051","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	NumCreatureGT([EVILCUTOFF],3)
 	See(SecondNearest([EVILCUTOFF]))
@@ -5218,8 +5431,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12051)  // Confusion
-		Spell(SecondNearest([EVILCUTOFF]),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
+		SetGlobalTimer("X_12051","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),12051)  // Confusion
+		Spell(LastSeenBy(Myself),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
 END
 
 IF
@@ -5228,6 +5442,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12051","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	NumCreatureGT([EVILCUTOFF],3)
 	See(ThirdNearest([EVILCUTOFF]))
@@ -5260,8 +5475,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12051)  // Confusion
-		Spell(ThirdNearest([EVILCUTOFF]),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
+		SetGlobalTimer("X_12051","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),12051)  // Confusion
+		Spell(LastSeenBy(Myself),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)
 END
 
 IF
@@ -5270,6 +5486,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_6618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FarthestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -5302,6 +5519,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_6618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
@@ -5312,6 +5530,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_6618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondFarthestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -5344,6 +5563,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_6618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
@@ -5354,6 +5574,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_6618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdFarthestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -5386,6 +5607,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_6618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),6618)  // Fireball
 		Spell(LastSeenBy(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Fireball)
 END
@@ -5396,6 +5618,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.0.TROLL])
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5422,6 +5645,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5432,6 +5656,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5458,6 +5683,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5468,6 +5694,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5494,6 +5721,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5504,6 +5732,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FourthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5530,6 +5759,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5540,6 +5770,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FifthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5566,6 +5797,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5576,6 +5808,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SixthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5602,6 +5835,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5612,6 +5846,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(NearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -5641,6 +5876,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5651,6 +5887,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -5680,6 +5917,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5690,6 +5928,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12034","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -5719,6 +5958,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12034","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12034)  // Flame Arrow
 		Spell(LastSeenBy(Myself),WIZARD_FLAME_ARROW)  // SPWI303.SPL (Flame Arrow)
 END
@@ -5729,6 +5969,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12074","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.0.TROLL])
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5756,6 +5997,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12074","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
@@ -5766,6 +6008,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12074","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5793,6 +6036,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12074","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
@@ -5803,6 +6047,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12074","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5830,6 +6075,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12074","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
@@ -5840,6 +6086,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12074","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FourthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5867,6 +6114,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12074","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
@@ -5877,6 +6125,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12074","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FifthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5904,6 +6153,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12074","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
@@ -5914,6 +6164,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12074","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SixthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5941,6 +6192,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12074","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12074)  // Burning Hands
 		Spell(LastSeenBy(Myself),WIZARD_BURNING_HANDS)  // SPWI103.SPL (Burning Hands)
 END
@@ -5951,6 +6203,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12033","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.0.TROLL])
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -5977,6 +6230,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12033","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
@@ -5987,6 +6241,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12033","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -6013,6 +6268,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12033","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
@@ -6023,6 +6279,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12033","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -6049,6 +6306,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12033","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
@@ -6059,6 +6317,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12033","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FourthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -6085,6 +6344,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12033","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
@@ -6095,6 +6355,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12033","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FifthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -6121,6 +6382,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12033","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
@@ -6131,6 +6393,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12033","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SixthNearest([EVILCUTOFF.0.TROLL]))
 	CheckStat(LastSeenBy(Myself),100,RESISTSLASHING)
@@ -6157,6 +6420,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12033","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12033)  // Melf's Acid Arrow
 		Spell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Melf's Acid Arrow)
 END
@@ -6167,177 +6431,12 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38588","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	Range([EVILCUTOFF.0.TROLL],30)
-	CheckStat([EVILCUTOFF.0.TROLL],100,RESISTSLASHING)
-	!Range([EVILCUTOFF],8)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
 	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38588)  // Melf's Minute Meteors
-		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	Range(SecondNearest([EVILCUTOFF.0.TROLL]),30)
-	CheckStat(SecondNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
-	!Range([EVILCUTOFF],8)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38588)  // Melf's Minute Meteors
-		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	Range(ThirdNearest([EVILCUTOFF.0.TROLL]),30)
-	CheckStat(ThirdNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
-	!Range([EVILCUTOFF],8)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38588)  // Melf's Minute Meteors
-		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	Range(FourthNearest([EVILCUTOFF.0.TROLL]),30)
-	CheckStat(FourthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
-	!Range([EVILCUTOFF],8)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38588)  // Melf's Minute Meteors
-		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	Range(FifthNearest([EVILCUTOFF.0.TROLL]),30)
-	CheckStat(FifthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
-	!Range([EVILCUTOFF],8)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38588)  // Melf's Minute Meteors
-		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	Range(SixthNearest([EVILCUTOFF.0.TROLL]),30)
-	CheckStat(SixthNearest([EVILCUTOFF.0.TROLL]),100,RESISTSLASHING)
-	!Range([EVILCUTOFF],8)
-	Global("BDAI_NO_ARCANE","LOCALS",0)
-	OR(2)
-		ModalState(NONE)
-		ModalState(DETECTTRAPS)
-	!StateCheck(Myself,STATE_INVISIBLE)
-	!CheckStat(Myself,1,SANCTUARY)
-	CheckStatLT(Myself,50,SPELLFAILUREMAGE)
-	!StateCheck(Myself,STATE_SILENCED)
-	!CheckStatGT(Myself,0,CLERIC_INSECT_PLAGUE)
-	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
-THEN
-	RESPONSE #100
-		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,38588)  // Melf's Minute Meteors
-		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-END
-
-IF
-	ActionListEmpty()
-	HaveSpell(WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
-	OR(2)
-		!GlobalTimerNotExpired("BD_Cast","LOCALS")
-		CheckStatGT(Myself,0,AURACLEANSING)
-	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!HasItem("MELFMET",Myself)  // Melf's Minute Meteor
-	NumCreatureGT([EVILCUTOFF],3)
+		NumCreatureGT([EVILCUTOFF],3)
+		See([EVILCUTOFF.0.TROLL])
 	!Range([EVILCUTOFF],8)
 	CheckStatLT([EVILCUTOFF],76,RESISTFIRE)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
@@ -6353,6 +6452,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38588","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,38588)  // Melf's Minute Meteors
 		Spell(Myself,WIZARD_MELF_METEOR)  // SPWI325.SPL (Melf's Minute Meteors)
 END
@@ -6363,6 +6463,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12029","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(4)
 		See([EVILCUTOFF.0.0.MAGE_ALL])
@@ -6383,6 +6484,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12029","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12029)  // Minor Globe of Invulnerability
 		Spell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  // SPWI406.SPL (Minor Globe of Invulnerability)
 END
@@ -6417,6 +6519,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12053","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BD_Shield","LOCALS",1)
 	!CheckStat(Myself,2,DEFENSIVE_MODIFIER)
@@ -6435,6 +6538,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_Shield","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12053","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12053)  // Shield
 		Spell(Myself,WIZARD_SHIELD)  // SPWI114.SPL (Shield)
 END
@@ -6445,6 +6549,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12053","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	OR(11)
 		HitBy([ANYONE],MISSILE)
@@ -6473,6 +6578,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("BD_Shield","LOCALS",0)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12053","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12053)  // Shield
 		Spell(Myself,WIZARD_SHIELD)  // SPWI114.SPL (Shield)
 END
@@ -6500,9 +6606,9 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	Global("BD_DInv","LOCALS",1)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	ActuallyInCombat()
 	CheckStat(Myself,0,TRUE_SIGHT)
 	Global("BDAI_NO_ARCANE","LOCALS",0)
@@ -6518,8 +6624,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6530,8 +6636,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12080","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Haste","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See([GOODCUTOFF.0.0.FIGHTER_ALL])
 	!StateCheck(LastSeenBy(Myself),STATE_HASTED)
@@ -6555,8 +6661,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12080","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12080)  // Haste
 		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
@@ -6567,8 +6673,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12080","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Haste","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See([GOODCUTOFF.0.0.RANGER_ALL])
 	!StateCheck(LastSeenBy(Myself),STATE_HASTED)
@@ -6592,8 +6698,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12080","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12080)  // Haste
 		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
@@ -6604,8 +6710,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12080","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Haste","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See([GOODCUTOFF.0.0.PALADIN_ALL])
 	!StateCheck(LastSeenBy(Myself),STATE_HASTED)
@@ -6629,8 +6735,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Haste","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12080","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12080)  // Haste
 		Spell(LastSeenBy(Myself),WIZARD_HASTE)  // SPWI305.SPL (Haste)
 END
@@ -6641,8 +6747,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(NearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -6660,8 +6766,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6672,8 +6778,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(SecondNearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -6691,8 +6797,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6703,8 +6809,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(ThirdNearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -6722,8 +6828,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6734,8 +6840,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(FourthNearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -6753,8 +6859,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6765,8 +6871,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(FifthNearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -6784,8 +6890,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6796,8 +6902,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12042","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_DInv","LOCALS")
 	See(SixthNearestEnemyOf(Myself))
 	StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE)
 	!StateCheck(LastSeenBy(Myself),STATE_NONDETECTION)
@@ -6815,8 +6921,8 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("BD_DInv","LOCALS",0)
-		SetGlobalTimer("BD_DInv","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12042","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12042)  // Detect Invisibility
 		Spell(Myself,WIZARD_DETECT_INVISIBILITY)  // SPWI203.SPL (Detect Invisibility)
 END
@@ -6827,8 +6933,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12081","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Slow","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(NearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -6861,8 +6967,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12081","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12081)  // Slow
 		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
@@ -6873,8 +6979,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12081","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Slow","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(SecondNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -6907,8 +7013,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12081","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12081)  // Slow
 		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
@@ -6919,8 +7025,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12081","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Slow","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(ThirdNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -6953,8 +7059,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Slow","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12081","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12081)  // Slow
 		Spell(LastSeenBy(Myself),WIZARD_SLOW)  // SPWI312.SPL (Slow)
 END
@@ -6965,6 +7071,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	NumCreatureGT([EVILCUTOFF],2)
 	See([EVILCUTOFF.HUMANOID])
@@ -6996,6 +7103,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString([EVILCUTOFF.HUMANOID],12049)  // Hold Person
 		Spell([EVILCUTOFF.HUMANOID],WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 END
@@ -7006,6 +7114,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	NumCreatureGT([EVILCUTOFF],2)
 	See(SecondNearest([EVILCUTOFF.HUMANOID]))
@@ -7037,6 +7146,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(SecondNearest([EVILCUTOFF.HUMANOID]),12049)  // Hold Person
 		Spell(SecondNearest([EVILCUTOFF.HUMANOID]),WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 END
@@ -7047,6 +7157,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	NumCreatureGT([EVILCUTOFF],2)
 	See(ThirdNearest([EVILCUTOFF.HUMANOID]))
@@ -7078,6 +7189,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(ThirdNearest([EVILCUTOFF.HUMANOID]),12049)  // Hold Person
 		Spell(ThirdNearest([EVILCUTOFF.HUMANOID]),WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
 END
@@ -7088,6 +7200,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_22618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.HUMANOID.0.FIGHTER])
 	!InParty(LastSeenBy(Myself))
@@ -7122,6 +7235,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_22618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
@@ -7132,6 +7246,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_22618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER]))
 	!InParty(LastSeenBy(Myself))
@@ -7166,6 +7281,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_22618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
@@ -7176,6 +7292,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_22618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.HUMANOID])
 	!InParty(LastSeenBy(Myself))
@@ -7210,6 +7327,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_22618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
@@ -7220,6 +7338,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_22618","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -7254,6 +7373,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_22618","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),22618)  // Mental Domination
 		Spell(LastSeenBy(Myself),CLERIC_MENTAL_DOMINATION)  // SPPR405.SPL (Mental Domination)
 END
@@ -7264,8 +7384,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12090","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	!StateCheck(Myself,STATE_CHANT)
 	NumCreatureGT([EVILCUTOFF],3)
 	Range([EVILCUTOFF],30)
@@ -7282,8 +7402,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12090","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12090)  // Chant
 		Spell(Myself,CLERIC_CHANT)  // SPPR203.SPL (Chant)
 END
@@ -7294,8 +7414,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12089","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	Range([EVILCUTOFF],30)
 	Range([GOODCUTOFF],15)
@@ -7312,8 +7432,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12089","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12089)  // Bless
 		Spell(Myself,CLERIC_BLESS)  // SPPR101.SPL (Bless)
 END
@@ -7324,8 +7444,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12014","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	CheckStat(Myself,0,PROTECTION_FROM_EVIL)
 	OR(7)
@@ -7353,8 +7473,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12014","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12014)  // Protection From Evil, 10' Radius
 		Spell(Myself,CLERIC_PROTECTION_FROM_EVIL_10_FOOT)  // SPPR408.SPL (Protection From Evil, 10' Radius)
 END
@@ -7365,8 +7485,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	CheckStat(Myself,0,PROTECTION_FROM_EVIL)
 	OR(7)
@@ -7388,8 +7508,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(Myself,PALADIN_PROTECTION_FROM_EVIL)  // SPCL213.SPL (Protection From Evil)
 END
@@ -7400,8 +7520,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	CheckStat(Myself,0,PROTECTION_FROM_EVIL)
 	OR(7)
@@ -7423,8 +7543,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12023)  // Protection From Evil
 		Spell(Myself,CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
@@ -7435,8 +7555,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See([PC])
 	CheckStat(LastSeenBy(Myself),0,PROTECTION_FROM_EVIL)
@@ -7467,8 +7587,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
@@ -7479,8 +7599,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See(SecondNearest([PC]))
 	CheckStat(LastSeenBy(Myself),0,PROTECTION_FROM_EVIL)
@@ -7511,8 +7631,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
@@ -7523,8 +7643,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12023","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See(ThirdNearest([PC]))
 	CheckStat(LastSeenBy(Myself),0,PROTECTION_FROM_EVIL)
@@ -7555,8 +7675,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12023","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12023)  // Protection From Evil
 		Spell(LastSeenBy(Myself),CLERIC_PROTECT_FROM_EVIL)  // SPPR107.SPL (Protection From Evil)
 END
@@ -7567,8 +7687,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12121","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Support","LOCALS")
 	NumCreatureGT([EVILCUTOFF],3)
 	See(WorstAC([PC]))
 	!CheckSpellState(LastSeenBy(Myself),BARKSKIN)
@@ -7584,8 +7704,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Support","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12121","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12121)  // Barkskin
 		Spell(LastSeenBy(Myself),CLERIC_BARKSKIN)  // SPPR202.SPL (Barkskin)
 END
@@ -7597,7 +7717,7 @@ IF
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
 	Global("BDAI_DISABLE_SPECIAL","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Horror","LOCALS")
+	!GlobalTimerNotExpired("X_12069","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See([EVILCUTOFF])
 	!InParty(LastSeenBy(Myself))
@@ -7633,8 +7753,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12069","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12069)  // Horror
 		SpellRES("SPIN105",LastSeenBy(Myself))  // Horror
 END
@@ -7645,8 +7765,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12069","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Horror","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See([EVILCUTOFF])
 	!InParty(LastSeenBy(Myself))
@@ -7682,8 +7802,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12069)  // Horror
 		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
@@ -7694,8 +7814,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12069","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Horror","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(SecondNearest([EVILCUTOFF]))
 	!InParty(LastSeenBy(Myself))
@@ -7731,8 +7851,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12069)  // Horror
 		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
@@ -7743,8 +7863,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12069","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Horror","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(ThirdNearest([EVILCUTOFF]))
 	!InParty(LastSeenBy(Myself))
@@ -7780,8 +7900,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Horror","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12069","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12069)  // Horror
 		Spell(LastSeenBy(Myself),WIZARD_HORROR)  // SPWI205.SPL (Horror)
 END
@@ -7792,8 +7912,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38594","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Glitter","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(NearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -7824,8 +7944,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38594","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),38594)  // Glitterdust
 		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
@@ -7836,8 +7956,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38594","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Glitter","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(SecondNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -7868,8 +7988,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38594","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),38594)  // Glitterdust
 		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
@@ -7880,8 +8000,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38594","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Glitter","LOCALS")
 	NumCreatureGT([EVILCUTOFF],2)
 	See(ThirdNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -7912,8 +8032,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Glitter","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38594","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),38594)  // Glitterdust
 		Spell(LastSeenBy(Myself),WIZARD_GLITTERDUST)  // SPWI224.SPL (Glitterdust)
 END
@@ -7924,6 +8044,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.HUMANOID])
 	!InParty(LastSeenBy(Myself))
@@ -7960,6 +8081,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
@@ -7970,6 +8092,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -8006,6 +8129,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
@@ -8016,6 +8140,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -8052,6 +8177,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
@@ -8062,6 +8188,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FourthNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -8098,6 +8225,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
@@ -8108,6 +8236,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(FifthNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -8144,6 +8273,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
@@ -8154,6 +8284,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12049","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SixthNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -8190,6 +8321,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12049","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12049)  // Hold Person
 		Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)  // SPPR208.SPL (Hold Person)
 END
@@ -8200,6 +8332,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12037","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	OR(2)
 		NumCreatureGT([EVILCUTOFF],4)
@@ -8217,6 +8350,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12037","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,12037)  // Monster Summoning II
 		Spell(Myself,WIZARD_MONSTER_SUMMONING_2)  // SPWI407.SPL (Monster Summoning II)
 END
@@ -8245,6 +8379,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_7725","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	RandomNum(8,1)
 	See([EVILCUTOFF.0.0.FIGHTER_ALL])
@@ -8273,8 +8408,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,7725)  // Ray of Enfeeblement
-		Spell([EVILCUTOFF.0.0.FIGHTER_ALL],WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
+		SetGlobalTimer("X_7725","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),7725)  // Ray of Enfeeblement
+		Spell(LastSeenBy(Myself),WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)
 END
 
 IF
@@ -8283,6 +8419,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12054","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	RandomNum(8,1)
 	See([EVILCUTOFF.HUMANOID])
@@ -8310,8 +8447,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
-		DisplayString(Myself,12054)  // Chromatic Orb
-		Spell([EVILCUTOFF.HUMANOID],WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
+		SetGlobalTimer("X_12054","LOCALS",THREE_ROUNDS)
+		DisplayString(LastSeenBy(Myself),12054)  // Chromatic Orb
+		Spell(LastSeenBy(Myself),WIZARD_CHROMATIC_ORB)  // SPWI118.SPL (Chromatic Orb)
 END
 
 IF
@@ -8320,8 +8458,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38586","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Spook","LOCALS")
 	See([EVILCUTOFF])
 	!InParty(LastSeenBy(Myself))
 	!General(LastSeenBy(Myself),UNDEAD)
@@ -8356,8 +8494,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38586","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),38586)  // Spook
 		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
@@ -8368,8 +8506,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38586","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Spook","LOCALS")
 	See(SecondNearest([EVILCUTOFF]))
 	!InParty(LastSeenBy(Myself))
 	!General(LastSeenBy(Myself),UNDEAD)
@@ -8404,8 +8542,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38586","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),38586)  // Spook
 		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
@@ -8416,8 +8554,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_38586","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Spook","LOCALS")
 	See(ThirdNearest([EVILCUTOFF]))
 	!InParty(LastSeenBy(Myself))
 	!General(LastSeenBy(Myself),UNDEAD)
@@ -8452,8 +8590,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Spook","LOCALS",TWO_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_38586","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),38586)  // Spook
 		Spell(LastSeenBy(Myself),WIZARD_SPOOK)  // SPWI125.SPL (Spook)
 END
@@ -8464,8 +8602,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12015","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Blind","LOCALS")
 	See(NearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
 	!General(LastSeenBy(Myself),UNDEAD)
@@ -8498,8 +8636,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12015","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12015)  // Blindness
 		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
@@ -8510,8 +8648,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12015","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Blind","LOCALS")
 	See(SecondNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
 	!General(LastSeenBy(Myself),UNDEAD)
@@ -8544,8 +8682,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12015","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12015)  // Blindness
 		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
@@ -8556,8 +8694,8 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12015","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
-	!GlobalTimerNotExpired("BD_Blind","LOCALS")
 	See(SecondNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
 	!General(LastSeenBy(Myself),UNDEAD)
@@ -8590,8 +8728,8 @@ IF
 	!CheckSpellState(Myself,DEAD_MAGIC_AREA)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("BD_Blind","LOCALS",THREE_ROUNDS)
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12015","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12015)  // Blindness
 		Spell(LastSeenBy(Myself),WIZARD_BLINDNESS)  // SPWI106.SPL (Blindness)
 END
@@ -8622,6 +8760,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12097","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
 END
@@ -8652,6 +8791,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12097","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
 END
@@ -8682,6 +8822,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12097","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12097)  // Command
 		Spell(LastSeenBy(Myself),CLERIC_COMMAND)  // SPPR102.SPL (Command)
 END
@@ -8692,6 +8833,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12099","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.HUMANOID.0.FIGHTER])
 	!InParty(LastSeenBy(Myself))
@@ -8726,6 +8868,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12099","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
@@ -8736,6 +8879,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12099","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.HUMANOID.0.FIGHTER]))
 	!InParty(LastSeenBy(Myself))
@@ -8770,6 +8914,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12099","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
@@ -8780,6 +8925,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12099","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See([EVILCUTOFF.HUMANOID])
 	!InParty(LastSeenBy(Myself))
@@ -8814,6 +8960,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12099","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
@@ -8824,6 +8971,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12099","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearest([EVILCUTOFF.HUMANOID]))
 	!InParty(LastSeenBy(Myself))
@@ -8858,6 +9006,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12099","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12099)  // Charm Person or Mammal
 		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
 END
@@ -8868,6 +9017,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12052","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(NearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -8898,6 +9048,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12052","LOCALS",THREE_ROUNDS)
 		DisplayString(NearestEnemyOf(Myself),12052)  // Magic Missile
 		Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
@@ -8908,6 +9059,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12052","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(SecondNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -8938,6 +9090,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12052","LOCALS",THREE_ROUNDS)
 		DisplayString(SecondNearestEnemyOf(Myself),12052)  // Magic Missile
 		Spell(SecondNearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
@@ -8948,6 +9101,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12052","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	See(ThirdNearestEnemyOf(Myself))
 	!InParty(LastSeenBy(Myself))
@@ -8978,6 +9132,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12052","LOCALS",THREE_ROUNDS)
 		DisplayString(ThirdNearestEnemyOf(Myself),12052)  // Magic Missile
 		Spell(ThirdNearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)  // SPWI112.SPL (Magic Missile)
 END
@@ -9000,6 +9155,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_34656","LOCALS",THREE_ROUNDS)
 		DisplayString(Myself,34656)  // Defensive Spin
 		Spell(Myself,BLADE_DEFENSIVE_SPIN)  // SPCL522.SPL (Defensive Spin)
 END
@@ -9050,6 +9206,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12068","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	HPPercentLT(Myself,71)
 	See(NearestEnemyOf(Myself))
@@ -9080,6 +9237,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12068","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12068)  // Larloch's Minor Drain
 		Spell(LastSeenBy(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
@@ -9090,6 +9248,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12068","LOCALS")
 	Global("BDAI_DISABLE_OFFENSIVE","LOCALS",0)
 	HPPercentLT(Myself,71)
 	See(SecondNearestEnemyOf(Myself))
@@ -9120,6 +9279,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12068","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12068)  // Larloch's Minor Drain
 		Spell(LastSeenBy(Myself),WIZARD_LARLOCH_MINOR_DRAIN)  // SPWI119.SPL (Larloch's Minor Drain)
 END
@@ -9152,6 +9312,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_20678","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),20678)  // Charm Animal
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
@@ -9184,6 +9345,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_20678","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),20678)  // Charm Animal
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END
@@ -9216,6 +9378,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_20678","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),20678)  // Charm Animal
 		Spell(LastSeenBy(Myself),RANGER_CHARM_ANIMAL)  // SPCL311.SPL (Charm Animal)
 END

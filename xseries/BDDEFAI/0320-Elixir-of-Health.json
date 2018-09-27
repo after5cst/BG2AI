@@ -17,14 +17,14 @@
             ]
         }
     ],
-    "name": "Elixir-of-Health",
     "fields": [
         {
-            "ITEM": "POTN17",
             "DESC": "Elixir of Health",
-            "TARGET": "Myself",
+            "ITEM": "POTN17",
+            "STRING_DESC": "*quaffs a potion*",
             "STRING_ID": "46150",
-            "STRING_DESC": "*quaffs a potion*"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Elixir-of-Health"
 }

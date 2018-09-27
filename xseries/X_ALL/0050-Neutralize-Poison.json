@@ -22,16 +22,16 @@
             ]
         }
     ],
-    "name": "Neutralize-Poison",
     "fields": [
         {
+            "DESC": "SPPR404.SPL (Neutralize Poison)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_NEUTRALIZE_POISON",
-            "DESC": "SPPR404.SPL (Neutralize Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Neutralize Poison",
             "STRING_ID": "12115",
-            "STRING_DESC": "Neutralize Poison"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Neutralize-Poison"
 }

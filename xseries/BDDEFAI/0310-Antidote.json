@@ -14,14 +14,14 @@
             ]
         }
     ],
-    "name": "Antidote",
     "fields": [
         {
-            "ITEM": "POTN20",
             "DESC": "Antidote",
-            "TARGET": "Myself",
+            "ITEM": "POTN20",
+            "STRING_DESC": "*quaffs a potion*",
             "STRING_ID": "46150",
-            "STRING_DESC": "*quaffs a potion*"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Antidote"
 }

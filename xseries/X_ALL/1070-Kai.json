@@ -23,15 +23,15 @@
             ]
         }
     ],
-    "name": "Kai",
     "fields": [
         {
+            "DESC": "SPCL144.SPL (Kai)",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
-            "STRING_ID": "51848",
-            "STRING_DESC": "Kai",
             "SPELL": "KENSAI_KIA",
-            "DESC": "SPCL144.SPL (Kai)"
+            "STRING_DESC": "Kai",
+            "STRING_ID": "51848",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Kai"
 }

@@ -38,17 +38,17 @@
             ]
         }
     ],
-    "name": "Mirror-Image",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_MIRROR_IMAGE",
             "DESC": "SPWI212.SPL (Mirror Image)",
-            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
-            "TARGET": "Myself",
+            "SPELL": "WIZARD_MIRROR_IMAGE",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Mirror Image",
             "STRING_ID": "12018",
-            "STRING_DESC": "Mirror Image"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Mirror-Image"
 }

@@ -4,6 +4,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25765","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player2,STATE_REALLY_DEAD)
@@ -21,6 +22,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25765","LOCALS",THREE_ROUNDS)
 		DisplayString(Player2,25765)  // Resurrection
 		Spell(Player2,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
@@ -31,6 +33,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25765","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player3,STATE_REALLY_DEAD)
@@ -48,6 +51,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25765","LOCALS",THREE_ROUNDS)
 		DisplayString(Player3,25765)  // Resurrection
 		Spell(Player3,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
@@ -58,6 +62,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25765","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player4,STATE_REALLY_DEAD)
@@ -75,6 +80,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25765","LOCALS",THREE_ROUNDS)
 		DisplayString(Player4,25765)  // Resurrection
 		Spell(Player4,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
@@ -85,6 +91,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25765","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player5,STATE_REALLY_DEAD)
@@ -102,6 +109,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25765","LOCALS",THREE_ROUNDS)
 		DisplayString(Player5,25765)  // Resurrection
 		Spell(Player5,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
@@ -112,6 +120,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_25765","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player6,STATE_REALLY_DEAD)
@@ -129,6 +138,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_25765","LOCALS",THREE_ROUNDS)
 		DisplayString(Player6,25765)  // Resurrection
 		Spell(Player6,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
 END
@@ -139,6 +149,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12117","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player2,STATE_REALLY_DEAD)
@@ -156,6 +167,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12117","LOCALS",THREE_ROUNDS)
 		DisplayString(Player2,12117)  // Raise Dead
 		Spell(Player2,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
@@ -166,6 +178,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12117","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player3,STATE_REALLY_DEAD)
@@ -183,6 +196,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12117","LOCALS",THREE_ROUNDS)
 		DisplayString(Player3,12117)  // Raise Dead
 		Spell(Player3,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
@@ -193,6 +207,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12117","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player4,STATE_REALLY_DEAD)
@@ -210,6 +225,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12117","LOCALS",THREE_ROUNDS)
 		DisplayString(Player4,12117)  // Raise Dead
 		Spell(Player4,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
@@ -220,6 +236,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12117","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player5,STATE_REALLY_DEAD)
@@ -237,6 +254,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12117","LOCALS",THREE_ROUNDS)
 		DisplayString(Player5,12117)  // Raise Dead
 		Spell(Player5,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
@@ -247,6 +265,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12117","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player6,STATE_REALLY_DEAD)
@@ -264,6 +283,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12117","LOCALS",THREE_ROUNDS)
 		DisplayString(Player6,12117)  // Raise Dead
 		Spell(Player6,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
 END
@@ -274,6 +294,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103073","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player2,STATE_REALLY_DEAD)
@@ -291,6 +312,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103073","LOCALS",THREE_ROUNDS)
 		DisplayString(Player2,103073)  // Recall Spirit
 		Spell(Player2,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
@@ -301,6 +323,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103073","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player3,STATE_REALLY_DEAD)
@@ -318,6 +341,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103073","LOCALS",THREE_ROUNDS)
 		DisplayString(Player3,103073)  // Recall Spirit
 		Spell(Player3,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
@@ -328,6 +352,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103073","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player4,STATE_REALLY_DEAD)
@@ -345,6 +370,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103073","LOCALS",THREE_ROUNDS)
 		DisplayString(Player4,103073)  // Recall Spirit
 		Spell(Player4,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
@@ -355,6 +381,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103073","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player5,STATE_REALLY_DEAD)
@@ -372,6 +399,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103073","LOCALS",THREE_ROUNDS)
 		DisplayString(Player5,103073)  // Recall Spirit
 		Spell(Player5,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
@@ -382,6 +410,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_103073","LOCALS")
 	Global("BDAI_DISABLE_DEFENSIVE","LOCALS",0)
 	CombatCounter(0)
 	StateCheck(Player6,STATE_REALLY_DEAD)
@@ -399,6 +428,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_103073","LOCALS",THREE_ROUNDS)
 		DisplayString(Player6,103073)  // Recall Spirit
 		Spell(Player6,CLERIC_RECALL_SPIRIT)  // SPPR550.SPL (Recall Spirit)
 END
@@ -709,6 +739,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_8786","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -718,6 +749,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_8786","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),8786)  // Heal
 		Spell(LastSeenBy(Myself),CLERIC_HEAL)  // SPPR607.SPL (Heal)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -729,6 +761,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_8786","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),20)
 	OR(2)
@@ -738,6 +771,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_8786","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),8786)  // Heal
 		Spell(LastSeenBy(Myself),CLERIC_HEAL)  // SPPR607.SPL (Heal)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -749,6 +783,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12116","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -758,6 +793,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12116","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -769,6 +805,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12116","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -778,6 +815,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12116","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12116)  // Cure Critical Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_CRITICAL_WOUNDS)  // SPPR502.SPL (Cure Critical Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -789,6 +827,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12114","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -798,6 +837,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12114","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -809,6 +849,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_12114","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -818,6 +859,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_12114","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),12114)  // Cure Serious Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)  // SPPR401.SPL (Cure Serious Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -829,6 +871,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_3350","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -838,6 +881,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_3350","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -849,6 +893,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_3350","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -858,6 +903,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_3350","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),3350)  // Cure Medium Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_MEDIUM_WOUNDS)  // SPPR315.SPL (Cure Medium Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -869,6 +915,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_6620","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),90)
 	OR(2)
@@ -878,6 +925,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_6620","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)
@@ -889,6 +937,7 @@ IF
 	OR(2)
 		!GlobalTimerNotExpired("BD_Cast","LOCALS")
 		CheckStatGT(Myself,0,AURACLEANSING)
+	!GlobalTimerNotExpired("X_6620","LOCALS")
 	InParty(LastSeenBy(Myself))
 	HPPercentLT(LastSeenBy(Myself),50)
 	OR(2)
@@ -898,6 +947,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		SetGlobalTimer("X_6620","LOCALS",THREE_ROUNDS)
 		DisplayString(LastSeenBy(Myself),6620)  // Cure Light Wounds
 		Spell(LastSeenBy(Myself),CLERIC_CURE_LIGHT_WOUNDS)  // SPPR103.SPL (Cure Light Wounds)
 		SetGlobal("X_HEAL","LOCALS",0)

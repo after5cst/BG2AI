@@ -3,12 +3,11 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
-        "!StateCheck(Myself,STATE_CHANT)",
         "NumCreatureGT([EVILCUTOFF],3)",
         "Range([EVILCUTOFF],30)",
-        "Range([GOODCUTOFF],12)",
-        "Range(SecondNearest([GOODCUTOFF]),12)",
+        "Range([GOODCUTOFF],15)",
+        "Range(SecondNearest([GOODCUTOFF]),15)",
+        "!StateCheck(Myself,STATE_BLESS)",
         {
             "CastingConditionsOK": null
         }
@@ -16,23 +15,22 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
             ]
         }
     ],
-    "name": "Chant",
     "fields": [
         {
+            "DESC": "SPPR101.SPL (Bless)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_CHANT",
-            "DESC": "SPPR203.SPL (Chant)",
+            "SPELL": "CLERIC_BLESS",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
-            "STRING_ID": "12090",
-            "STRING_DESC": "Chant"
+            "STRING_DESC": "Bless",
+            "STRING_ID": "12089",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Bless"
 }

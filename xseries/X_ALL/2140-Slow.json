@@ -3,26 +3,25 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Blind','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],2)",
         {
             "SeeTarget": null
         },
         "!InParty(LastSeenBy(Myself))",
-        "!General(LastSeenBy(Myself),UNDEAD)",
-        "!Race(LastSeenBy(Myself),SLIME)",
-        "!Race(LastSeenBy(Myself),DEMONIC)",
-        "!Race(LastSeenBy(Myself),LICH)",
+        "!Class(LastSeenBy(Myself),MONK)",
         "!Race(LastSeenBy(Myself),GOLEM)",
+        "!Race(LastSeenBy(Myself),LICH)",
         "!Race(LastSeenBy(Myself),DEMILICH)",
         "!Race(LastSeenBy(Myself),RAKSHASA)",
-        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
-        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         {
             "SpellCanAffectTarget": null
         },
         "!StateCheck(LastSeenBy(Myself),STATE_HARMLESS)",
-        "!StateCheck(LastSeenBy(Myself),STATE_BLIND)",
-        "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
+        "!StateCheck(LastSeenBy(Myself),STATE_SLOWED)",
+        "!CheckStatGT(LastSeenBy(Myself),0,CLERIC_FREE_ACTION)",
+        "CheckStatGT(LastSeenBy(Myself),-4,SAVEVSSPELL)",
+        "!CheckStat(LastSeenBy(Myself),8,WIZARD_SPELL_IMMUNITY)",
+        "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         {
             "ArcaneCastOK": null
         }
@@ -30,7 +29,6 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Blind','LOCALS',THREE_ROUNDS)",
                 {
                     "X_Spell": null
                 }
@@ -39,35 +37,35 @@
     ],
     "fields": [
         {
-            "DESC": "SPWI106.SPL (Blindness)",
+            "DESC": "SPWI312.SPL (Slow)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "NearestEnemyOf(Myself)",
-            "SPELL": "WIZARD_BLINDNESS",
+            "SPELL": "WIZARD_SLOW",
             "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Blindness",
-            "STRING_ID": "12015",
+            "STRING_DESC": "Slow",
+            "STRING_ID": "12081",
             "TARGET": "LastSeenBy(Myself)"
         },
         {
-            "DESC": "SPWI106.SPL (Blindness)",
+            "DESC": "SPWI312.SPL (Slow)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "SPELL": "WIZARD_BLINDNESS",
+            "SPELL": "WIZARD_SLOW",
             "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Blindness",
-            "STRING_ID": "12015",
+            "STRING_DESC": "Slow",
+            "STRING_ID": "12081",
             "TARGET": "LastSeenBy(Myself)"
         },
         {
-            "DESC": "SPWI106.SPL (Blindness)",
+            "DESC": "SPWI312.SPL (Slow)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "LOOK_FOR": "SecondNearestEnemyOf(Myself)",
-            "SPELL": "WIZARD_BLINDNESS",
+            "LOOK_FOR": "ThirdNearestEnemyOf(Myself)",
+            "SPELL": "WIZARD_SLOW",
             "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Blindness",
-            "STRING_ID": "12015",
+            "STRING_DESC": "Slow",
+            "STRING_ID": "12081",
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "name": "Blindness"
+    "name": "Slow"
 }

@@ -3,7 +3,7 @@
         {
             "SpellRESReady": null
         },
-        "!GlobalTimerNotExpired('BD_Horror','LOCALS')",
+        "!GlobalTimerNotExpired('X_12069','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],2)",
         {
             "SeeTarget": null
@@ -34,22 +34,22 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Horror','LOCALS',TWO_ROUNDS)",
                 "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
+                "SetGlobalTimer('X_12069','LOCALS',THREE_ROUNDS)",
                 "DisplayString(Myself,12069)  // Horror",
                 "SpellRES('SPIN105',LastSeenBy(Myself))  // Horror"
             ]
         }
     ],
-    "name": "Horror",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN105",
             "DESC": "Horror",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "SPIN105",
             "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "[EVILCUTOFF]"
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Horror"
 }

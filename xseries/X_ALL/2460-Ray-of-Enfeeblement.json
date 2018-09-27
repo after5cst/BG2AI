@@ -23,21 +23,23 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,7725)  // Ray of Enfeeblement",
-                "Spell([EVILCUTOFF.0.0.FIGHTER_ALL],WIZARD_RAY_OF_ENFEEBLEMENT)  // SPWI221.SPL (Ray of Enfeeblement)"
+                {
+                    "X_Spell": null
+                }
             ]
         }
     ],
-    "name": "Ray-of-Enfeeblement",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "WIZARD_RAY_OF_ENFEEBLEMENT",
             "DESC": "SPWI221.SPL (Ray of Enfeeblement)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF.0.0.FIGHTER_ALL]",
+            "SPELL": "WIZARD_RAY_OF_ENFEEBLEMENT",
             "SPELL_TYPE": "OFFENSIVE",
-            "LOOK_FOR": "[EVILCUTOFF.0.0.FIGHTER_ALL]"
+            "STRING_DESC": "Ray of Enfeeblement",
+            "STRING_ID": "7725",
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Ray-of-Enfeeblement"
 }

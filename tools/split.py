@@ -288,7 +288,7 @@ def split(source: str, auto_delete: bool):
             os.remove(source)
 
         with open(file, "w") as fp:
-            json.dump(data, fp, indent=4)
+            json.dump(data, fp, indent=4, sort_keys=True)
             files_to_merge.append(file)
 
     prev_file = None

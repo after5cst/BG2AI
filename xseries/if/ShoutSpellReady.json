@@ -2,6 +2,5 @@
     {
         "SpellReadyNoDisableCheck": null
     },
-    "!Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)",
-    "!GlobalTimerNotExpired('X_<STRING_ID>','LOCALS')"
+    "!Global('BDAI_DISABLE_OFFENSIVE','LOCALS',0)"
 ]

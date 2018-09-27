@@ -32,15 +32,15 @@
             ]
         }
     ],
-    "name": "Larlochs-Minor-Drain",
     "fields": [
         {
-            "FAIL_TYPE": "0",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN104",
             "DESC": "Larloch's Minor Drain",
+            "FAIL_TYPE": "0",
+            "LOOK_FOR": "NearestEnemyOf(Myself)",
+            "SPELL": "SPIN104",
             "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "NearestEnemyOf(Myself)"
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Larlochs-Minor-Drain"
 }

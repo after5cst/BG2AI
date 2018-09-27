@@ -26,15 +26,15 @@
             ]
         }
     ],
-    "name": "Defensive-Spin",
     "fields": [
         {
+            "DESC": "SPCL522.SPL (Defensive Spin)",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
-            "STRING_ID": "34656",
-            "STRING_DESC": "Defensive Spin",
             "SPELL": "BLADE_DEFENSIVE_SPIN",
-            "DESC": "SPCL522.SPL (Defensive Spin)"
+            "STRING_DESC": "Defensive Spin",
+            "STRING_ID": "34656",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Defensive-Spin"
 }

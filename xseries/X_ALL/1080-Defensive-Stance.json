@@ -20,14 +20,14 @@
             ]
         }
     ],
-    "name": "Defensive-Stance",
     "fields": [
         {
-            "TARGET": "Myself",
-            "STRING_ID": "74311",
-            "STRING_DESC": "Defensive Stance",
+            "DESC": "Defensive Stance",
             "SPELL": "SPDWD02",
-            "DESC": "Defensive Stance"
+            "STRING_DESC": "Defensive Stance",
+            "STRING_ID": "74311",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Defensive-Stance"
 }

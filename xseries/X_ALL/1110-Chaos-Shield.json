@@ -19,16 +19,16 @@
             ]
         }
     ],
-    "name": "Chaos-Shield",
     "fields": [
         {
+            "DESC": "SPWI222.SPL (Chaos Shield)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_CHAOS_SHIELD",
-            "DESC": "SPWI222.SPL (Chaos Shield)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Chaos Shield",
             "STRING_ID": "64319",
-            "STRING_DESC": "Chaos Shield"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Chaos-Shield"
 }

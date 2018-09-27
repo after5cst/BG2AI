@@ -4,7 +4,10 @@
             "SpellReady": null
         },
         "!HasItem('MELFMET',Myself)  // Melf's Minute Meteor",
-        "NumCreatureGT([EVILCUTOFF],3)",
+        [
+            "NumCreatureGT([EVILCUTOFF],3)",
+            "See([EVILCUTOFF.0.TROLL])"
+        ],
         "!Range([EVILCUTOFF],8)",
         "CheckStatLT([EVILCUTOFF],76,RESISTFIRE)",
         {
@@ -20,16 +23,16 @@
             ]
         }
     ],
-    "name": "Melfs-Minute-Meteors",
     "fields": [
         {
+            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_MELF_METEOR",
-            "DESC": "SPWI325.SPL (Melf's Minute Meteors)",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Melf's Minute Meteors",
             "STRING_ID": "38588",
-            "STRING_DESC": "Melf's Minute Meteors"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Melfs-Minute-Meteors"
 }

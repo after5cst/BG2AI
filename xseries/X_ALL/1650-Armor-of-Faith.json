@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         {
             "SeeTarget": null
         },
@@ -19,24 +18,23 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
             ]
         }
     ],
-    "name": "Armor-of-Faith",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_ARMOR_OF_FAITH",
             "DESC": "SPPR111.SPL (Armor of Faith)",
-            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
+            "SPELL": "CLERIC_ARMOR_OF_FAITH",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Armor of Faith",
             "STRING_ID": "25601",
-            "STRING_DESC": "Armor of Faith"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Armor-of-Faith"
 }

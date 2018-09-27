@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],3)",
         {
             "SeeTarget": null
@@ -31,7 +30,6 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }

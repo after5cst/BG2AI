@@ -4,5 +4,6 @@
     [
         "!GlobalTimerNotExpired('BD_Cast','LOCALS')",
         "CheckStatGT(Myself,0,AURACLEANSING)"
-    ]
+    ],
+    "!GlobalTimerNotExpired('X_<STRING_ID>','LOCALS')"
 ]

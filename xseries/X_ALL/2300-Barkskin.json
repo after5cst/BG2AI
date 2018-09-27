@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],3)",
         {
             "SeeTarget": null
@@ -17,24 +16,23 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
             ]
         }
     ],
-    "name": "Barkskin",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_BARKSKIN",
             "DESC": "SPPR202.SPL (Barkskin)",
-            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "WorstAC([PC])",
-            "TARGET": "LastSeenBy(Myself)",
+            "SPELL": "CLERIC_BARKSKIN",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Barkskin",
             "STRING_ID": "12121",
-            "STRING_DESC": "Barkskin"
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Barkskin"
 }

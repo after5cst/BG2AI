@@ -19,14 +19,14 @@
             ]
         }
     ],
-    "name": "Vocalize",
     "fields": [
         {
-            "TARGET": "Myself",
-            "STRING_ID": "12079",
-            "STRING_DESC": "Vocalize",
+            "DESC": "SPWI219.SPL (Vocalize)",
             "SPELL": "WIZARD_VOCALIZE",
-            "DESC": "SPWI219.SPL (Vocalize)"
+            "STRING_DESC": "Vocalize",
+            "STRING_ID": "12079",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Vocalize"
 }

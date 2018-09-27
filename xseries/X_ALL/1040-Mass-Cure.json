@@ -32,16 +32,16 @@
             ]
         }
     ],
-    "name": "Mass-Cure",
     "fields": [
         {
+            "DESC": "SPPR514.SPL (Mass Cure)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_MASS_CURE",
-            "DESC": "SPPR514.SPL (Mass Cure)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Mass Cure",
             "STRING_ID": "7468",
-            "STRING_DESC": "Mass Cure"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Mass-Cure"
 }

@@ -17,16 +17,16 @@
             ]
         }
     ],
-    "name": "Slow-Poison",
     "fields": [
         {
+            "DESC": "SPPR212.SPL (Slow Poison)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_SLOW_POISON",
-            "DESC": "SPPR212.SPL (Slow Poison)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Slow Poison",
             "STRING_ID": "12112",
-            "STRING_DESC": "Slow Poison"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Slow-Poison"
 }

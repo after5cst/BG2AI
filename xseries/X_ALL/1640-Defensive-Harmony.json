@@ -3,8 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Dharm','LOCALS')",
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],3)",
         "CheckStat(Myself,0,CLERIC_DEFENSIVE_HARMONY)",
         "Range([EVILCUTOFF],30)",
@@ -17,24 +15,22 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Dharm','LOCALS',THREE_ROUNDS)",
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
             ]
         }
     ],
-    "name": "Defensive-Harmony",
     "fields": [
         {
+            "DESC": "SPPR406.SPL (Defensive Harmony)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_DEFENSIVE_HARMONY",
-            "DESC": "SPPR406.SPL (Defensive Harmony)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Defensive Harmony",
             "STRING_ID": "22829",
-            "STRING_DESC": "Defensive Harmony"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Defensive-Harmony"
 }

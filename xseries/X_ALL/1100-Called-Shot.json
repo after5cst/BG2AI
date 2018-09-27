@@ -23,14 +23,14 @@
             ]
         }
     ],
-    "name": "Called-Shot",
     "fields": [
         {
-            "TARGET": "Myself",
-            "STRING_ID": "51964",
-            "STRING_DESC": "Called Shot",
+            "DESC": "SPCL121.SPL (Called Shot)",
             "SPELL": "ARCHER_CALL_SHOT",
-            "DESC": "SPCL121.SPL (Called Shot)"
+            "STRING_DESC": "Called Shot",
+            "STRING_ID": "51964",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Called-Shot"
 }

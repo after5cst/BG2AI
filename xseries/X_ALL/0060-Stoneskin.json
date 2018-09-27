@@ -17,16 +17,16 @@
             ]
         }
     ],
-    "name": "Stoneskin",
     "fields": [
         {
+            "DESC": "SPWI408.SPL (Stoneskin)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_STONE_SKIN",
-            "DESC": "SPWI408.SPL (Stoneskin)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Stoneskin",
             "STRING_ID": "25875",
-            "STRING_DESC": "Stoneskin"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Stoneskin"
 }

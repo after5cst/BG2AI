@@ -33,16 +33,16 @@
             ]
         }
     ],
-    "name": "Cure-Light-Wounds",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "SPIN101",
             "DESC": "Cure Light Wounds",
-            "SPELL_TYPE": "SPECIAL",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
+            "HPP": "40",
             "LOOK_FOR": "MostDamagedOf([PC])",
-            "HPP": "40"
+            "SPELL": "SPIN101",
+            "SPELL_TYPE": "SPECIAL",
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Cure-Light-Wounds"
 }

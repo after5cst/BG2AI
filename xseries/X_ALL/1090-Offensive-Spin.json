@@ -24,15 +24,15 @@
             ]
         }
     ],
-    "name": "Offensive-Spin",
     "fields": [
         {
+            "DESC": "SPCL521.SPL (Offensive Spin)",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
-            "STRING_ID": "34655",
-            "STRING_DESC": "Offensive Spin",
             "SPELL": "BLADE_OFFENSIVE_SPIN",
-            "DESC": "SPCL521.SPL (Offensive Spin)"
+            "STRING_DESC": "Offensive Spin",
+            "STRING_ID": "34655",
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Offensive-Spin"
 }

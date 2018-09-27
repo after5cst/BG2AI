@@ -6,7 +6,6 @@
         {
             "SeeParalyzedAlly": null
         },
-        "!GlobalTimerNotExpired('BD_RParal','LOCALS')",
         {
             "AllyTargetNotDangerous": null
         },
@@ -17,7 +16,6 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_RParal','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }

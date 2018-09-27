@@ -21,15 +21,15 @@
             ]
         }
     ],
-    "name": "Armor",
     "fields": [
         {
+            "DESC": "SPWI102.SPL (Armor)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_ARMOR",
-            "DESC": "SPWI102.SPL (Armor)",
-            "TARGET": "Myself",
+            "STRING_DESC": "Armor",
             "STRING_ID": "12031",
-            "STRING_DESC": "Armor"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Armor"
 }

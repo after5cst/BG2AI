@@ -19,15 +19,15 @@
             ]
         }
     ],
-    "name": "Wand-of-Monster-Summoning",
     "fields": [
         {
-            "WAND": "WAND10",
             "DESC": "Wand of Monster Summoning",
             "ITEM": "WAND10",
-            "TARGET": "Myself",
+            "STRING_DESC": "Monster Summoning II",
             "STRING_ID": "12037",
-            "STRING_DESC": "Monster Summoning II"
+            "TARGET": "Myself",
+            "WAND": "WAND10"
         }
-    ]
+    ],
+    "name": "Wand-of-Monster-Summoning"
 }

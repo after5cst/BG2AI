@@ -31,16 +31,16 @@
             ]
         }
     ],
-    "name": "Shield",
     "fields": [
         {
+            "DESC": "SPWI114.SPL (Shield)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "SPELL": "WIZARD_SHIELD",
-            "DESC": "SPWI114.SPL (Shield)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Shield",
             "STRING_ID": "12053",
-            "STRING_DESC": "Shield"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Shield"
 }

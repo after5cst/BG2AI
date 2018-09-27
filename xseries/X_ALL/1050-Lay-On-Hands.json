@@ -33,18 +33,18 @@
             ]
         }
     ],
-    "name": "Lay-On-Hands",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "TARGET": "LastSeenBy(Myself)",
-            "SPELL": "PALADIN_LAY_ON_HANDS",
             "DESC": "SPCL211.SPL (Lay On Hands)",
-            "SPELL_TYPE": "SPECIAL",
-            "LOOK_FOR": "MostDamagedOf([PC])",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "HPP": "40",
+            "LOOK_FOR": "MostDamagedOf([PC])",
+            "SPELL": "PALADIN_LAY_ON_HANDS",
+            "SPELL_TYPE": "SPECIAL",
+            "STRING_DESC": "Lay On Hands",
             "STRING_ID": "12032",
-            "STRING_DESC": "Lay On Hands"
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Lay-On-Hands"
 }

@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_SCLAR','LOCALS')",
         {
             "SeeClarityTarget": null
         },
@@ -14,7 +13,6 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_SCLAR','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }

@@ -17,15 +17,15 @@
             ]
         }
     ],
-    "name": "Iron-Skins",
     "fields": [
         {
+            "DESC": "SPPR506.SPL (Iron Skins)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_IRONSKIN",
-            "DESC": "SPPR506.SPL (Iron Skins)",
-            "TARGET": "Myself",
+            "STRING_DESC": "Iron Skins",
             "STRING_ID": "44941",
-            "STRING_DESC": "Iron Skins"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Iron-Skins"
 }

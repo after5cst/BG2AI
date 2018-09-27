@@ -3,7 +3,7 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Spook','LOCALS')",
+        "NumCreatureGT([EVILCUTOFF],2)",
         {
             "SeeTarget": null
         },
@@ -19,13 +19,13 @@
         {
             "EnemyNotDisabled": null
         },
-        "CheckStatGT(LastSeenBy(Myself),-3,SAVEVSSPELL)",
+        "CheckStatGT(LastSeenBy(Myself),0,SAVEVSSPELL)",
         "CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)",
         "!CheckSpellState(LastSeenBy(Myself),RESIST_FEAR)",
         {
             "TargetNotRaging": null
         },
-        "!CheckStat(LastSeenBy(Myself),5,WIZARD_SPELL_IMMUNITY)",
+        "!CheckStat(LastSeenBy(Myself),7,WIZARD_SPELL_IMMUNITY)",
         {
             "ArcaneCastOK": null
         }
@@ -33,7 +33,6 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Spook','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
@@ -42,35 +41,35 @@
     ],
     "fields": [
         {
-            "DESC": "SPWI125.SPL (Spook)",
+            "DESC": "SPWI205.SPL (Horror)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "SPELL": "WIZARD_SPOOK",
+            "SPELL": "WIZARD_HORROR",
             "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Spook",
-            "STRING_ID": "38586",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
             "TARGET": "LastSeenBy(Myself)"
         },
         {
-            "DESC": "SPWI125.SPL (Spook)",
+            "DESC": "SPWI205.SPL (Horror)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
-            "SPELL": "WIZARD_SPOOK",
+            "SPELL": "WIZARD_HORROR",
             "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Spook",
-            "STRING_ID": "38586",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
             "TARGET": "LastSeenBy(Myself)"
         },
         {
-            "DESC": "SPWI125.SPL (Spook)",
+            "DESC": "SPWI205.SPL (Horror)",
             "FAIL_TYPE": "SPELLFAILUREMAGE",
             "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
-            "SPELL": "WIZARD_SPOOK",
+            "SPELL": "WIZARD_HORROR",
             "SPELL_TYPE": "OFFENSIVE",
-            "STRING_DESC": "Spook",
-            "STRING_ID": "38586",
+            "STRING_DESC": "Horror",
+            "STRING_ID": "12069",
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "name": "Spook"
+    "name": "Horror"
 }

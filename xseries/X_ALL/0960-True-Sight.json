@@ -20,16 +20,16 @@
             ]
         }
     ],
-    "name": "True-Sight",
     "fields": [
         {
+            "DESC": "SPCL232.SPL (True Sight)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "INQUIS_TRUE_SIGHT",
-            "DESC": "SPCL232.SPL (True Sight)",
             "SPELL_TYPE": "SPECIAL",
-            "TARGET": "Myself",
+            "STRING_DESC": "True Sight",
             "STRING_ID": "25633",
-            "STRING_DESC": "True Sight"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "True-Sight"
 }

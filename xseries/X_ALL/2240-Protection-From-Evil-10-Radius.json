@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         "NumCreatureGT([EVILCUTOFF],3)",
         "CheckStat(Myself,0,PROTECTION_FROM_EVIL)",
         [
@@ -30,23 +29,22 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
             ]
         }
     ],
-    "name": "Protection-From-Evil-10-Radius",
     "fields": [
         {
+            "DESC": "SPPR408.SPL (Protection From Evil, 10' Radius)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_PROTECTION_FROM_EVIL_10_FOOT",
-            "DESC": "SPPR408.SPL (Protection From Evil, 10' Radius)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Protection From Evil, 10' Radius",
             "STRING_ID": "12014",
-            "STRING_DESC": "Protection From Evil, 10' Radius"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Protection-From-Evil-10-Radius"
 }

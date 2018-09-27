@@ -18,16 +18,16 @@
             ]
         }
     ],
-    "name": "Zone-of-Sweet-Air",
     "fields": [
         {
+            "DESC": "SPPR318.SPL (Zone of Sweet Air)",
             "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "SPELL": "CLERIC_ZONE_OF_SWEET_AIR",
-            "DESC": "SPPR318.SPL (Zone of Sweet Air)",
             "SPELL_TYPE": "DEFENSIVE",
-            "TARGET": "Myself",
+            "STRING_DESC": "Zone of Sweet Air",
             "STRING_ID": "38581",
-            "STRING_DESC": "Zone of Sweet Air"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Zone-of-Sweet-Air"
 }

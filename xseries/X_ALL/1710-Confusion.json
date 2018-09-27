@@ -31,21 +31,43 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Cast','LOCALS',ONE_ROUND)",
-                "DisplayString(Myself,12051)  // Confusion",
-                "Spell(ThirdNearest([EVILCUTOFF]),WIZARD_CONFUSION)  // SPWI401.SPL (Confusion)"
+                {
+                    "X_Spell": null
+                }
             ]
         }
     ],
-    "name": "Confusion",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREMAGE",
-            "SPELL": "WIZARD_CONFUSION",
             "DESC": "SPWI401.SPL (Confusion)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "[EVILCUTOFF]",
+            "SPELL": "WIZARD_CONFUSION",
             "SPELL_TYPE": "OFFENSIVE",
-            "TARGET": "LastSeenBy(Myself)",
-            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])"
+            "STRING_DESC": "Confusion",
+            "STRING_ID": "12051",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI401.SPL (Confusion)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "SecondNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_CONFUSION",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Confusion",
+            "STRING_ID": "12051",
+            "TARGET": "LastSeenBy(Myself)"
+        },
+        {
+            "DESC": "SPWI401.SPL (Confusion)",
+            "FAIL_TYPE": "SPELLFAILUREMAGE",
+            "LOOK_FOR": "ThirdNearest([EVILCUTOFF])",
+            "SPELL": "WIZARD_CONFUSION",
+            "SPELL_TYPE": "OFFENSIVE",
+            "STRING_DESC": "Confusion",
+            "STRING_ID": "12051",
+            "TARGET": "LastSeenBy(Myself)"
         }
-    ]
+    ],
+    "name": "Confusion"
 }

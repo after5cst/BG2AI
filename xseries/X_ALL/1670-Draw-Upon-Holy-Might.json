@@ -3,7 +3,6 @@
         {
             "SpellReady": null
         },
-        "!GlobalTimerNotExpired('BD_Support','LOCALS')",
         {
             "SeeTarget": null
         },
@@ -19,24 +18,23 @@
     "THEN": [
         {
             "100": [
-                "SetGlobalTimer('BD_Support','LOCALS',TWO_ROUNDS)",
                 {
                     "X_Spell": null
                 }
             ]
         }
     ],
-    "name": "Draw-Upon-Holy-Might",
     "fields": [
         {
-            "FAIL_TYPE": "SPELLFAILUREPRIEST",
-            "SPELL": "CLERIC_DRAW_UPON_HOLY_MIGHT",
             "DESC": "SPPR214.SPL (Draw Upon Holy Might)",
-            "SPELL_TYPE": "DEFENSIVE",
+            "FAIL_TYPE": "SPELLFAILUREPRIEST",
             "LOOK_FOR": "[EVILCUTOFF]",
-            "TARGET": "Myself",
+            "SPELL": "CLERIC_DRAW_UPON_HOLY_MIGHT",
+            "SPELL_TYPE": "DEFENSIVE",
+            "STRING_DESC": "Draw Upon Holy Might",
             "STRING_ID": "12108",
-            "STRING_DESC": "Draw Upon Holy Might"
+            "TARGET": "Myself"
         }
-    ]
+    ],
+    "name": "Draw-Upon-Holy-Might"
 }
