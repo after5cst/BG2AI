@@ -4,6 +4,7 @@
             "SpellReady": null
         },
         "CheckStatGT(Myself,0,LEVELDRAIN)",
+        "CombatCounter(0)",
         {
             "CastingConditionsOK": null
         }
@@ -37,5 +38,5 @@
             "TARGET": "Myself"
         }
     ],
-    "name": "Greater-Restoration"
+    "name": "Restore-Self"
 }

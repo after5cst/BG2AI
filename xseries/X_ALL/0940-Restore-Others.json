@@ -3,6 +3,7 @@
         {
             "SpellReady": null
         },
+        "CombatCounter(0)",
         {
             "SeeTarget": null
         },
@@ -148,5 +149,5 @@
             "TARGET": "LastSeenBy(Myself)"
         }
     ],
-    "name": "Greater-Restoration"
+    "name": "Restore-Others"
 }
