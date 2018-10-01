@@ -2584,6 +2584,10 @@ IF
 	!GlobalTimerNotExpired("X_34800","LOCALS")
 	!CheckSpellState(Myself,LATHANDER_BOON)
 	CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)
+	OR(3)
+		HPPercentLT(Myself, 100)
+		AttackedBy([ANYONE],DEFAULT)
+		Range(NearestEnemyOf(Myself),8)
 	!HasItemEquiped("AMUL21",Myself)  // Amulet of Power
 	!HasItemEquipedReal("BLUN25",Myself)  // Mace of Disruption +2
 	!HasItemEquipedReal("HAMM10",Myself)  // Runehammer +4
@@ -2623,6 +2627,10 @@ IF
 	!GlobalTimerNotExpired("X_55842","LOCALS")
 	!CheckSpellState(Myself,LATHANDER_BOON)
 	CheckStat(Myself,0,LEVEL_DRAIN_IMMUNITY)
+	OR(3)
+		HPPercentLT(Myself, 100)
+		AttackedBy([ANYONE],DEFAULT)
+		Range(NearestEnemyOf(Myself),8)
 	!HasItemEquiped("AMUL21",Myself)  // Amulet of Power
 	!HasItemEquipedReal("BLUN25",Myself)  // Mace of Disruption +2
 	!HasItemEquipedReal("HAMM10",Myself)  // Runehammer +4

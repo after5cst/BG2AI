@@ -4,11 +4,9 @@
             "SpellReady": null
         },
         "!StateCheck(Myself,STATE_MIRRORIMAGE)",
-        [
-            "HPPercentLT(Myself, 100)",
-            "AttackedBy([ANYONE],DEFAULT)",
-            "Range(NearestEnemyOf(Myself),8)"
-        ],
+        {
+            "EnemyMeleeThreat": null
+        },
         {
             "SeeTarget": null
         },
